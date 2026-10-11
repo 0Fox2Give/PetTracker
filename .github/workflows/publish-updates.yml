@@ -1,0 +1,40 @@
+name: Publish update
+run-name: Publish ${{ inputs.version }} on ${{ inputs.channel }}
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        required: true
+        type: string
+      channel:
+        required: true
+        type: choice
+        options: [win-stable, win-beta]
+      feed_sha256:
+        required: true
+        type: string
+permissions:
+  contents: write
+concurrency:
+  group: pet-tracker-publishing
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Build verifier
+        shell: pwsh
+        run: dotnet build tools/ReleaseTools/ReleaseTools.csproj -c Release --nologo
+      - name: Verify and publish
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_VERSION: ${{ inputs.version }}
+          RELEASE_CHANNEL: ${{ inputs.channel }}
+          RELEASE_FEED_SHA256: ${{ inputs.feed_sha256 }}
+        run: ./tools/Promote-GitHubRelease.ps1 -Repository $env:GITHUB_REPOSITORY -Version $env:RELEASE_VERSION -Channel $env:RELEASE_CHANNEL -FeedSHA256 $env:RELEASE_FEED_SHA256

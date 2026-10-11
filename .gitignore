@@ -1,0 +1,8 @@
+**/bin/
+**/obj/
+*.pem
+*.pfx
+*.p12
+*.nupkg
+*.exe
+*.zip

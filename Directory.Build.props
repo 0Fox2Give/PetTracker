@@ -1,0 +1,1 @@
+<Project><PropertyGroup><DebugType>none</DebugType><DebugSymbols>false</DebugSymbols><Deterministic>true</Deterministic><Company>Pet Tracker</Company><Product>Pet Tracker</Product><Authors>Pet Tracker</Authors><Version>0.1.9</Version><RuntimeFrameworkVersion>10.0.12</RuntimeFrameworkVersion><NuGetAudit>false</NuGetAudit></PropertyGroup></Project>
