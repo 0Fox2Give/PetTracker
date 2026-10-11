@@ -26,3 +26,15 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           PET_TRACKER_SIGNING_KEY: ${{ secrets.PET_TRACKER_SIGNING_KEY }}
         run: ./tools/Renew-GitHubFeeds.ps1 -Repository $env:GITHUB_REPOSITORY
+      - name: Record feed health
+        shell: pwsh
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add feed-status.json
+          git commit -m 'Record authenticated feed renewal'
+          if ($LASTEXITCODE -ne 0) { throw 'Could not record renewal' }
+          git pull --rebase origin main
+          if ($LASTEXITCODE -ne 0) { throw 'Could not reconcile renewal record' }
+          git push origin HEAD:main
+          if ($LASTEXITCODE -ne 0) { throw 'Could not publish renewal record' }
