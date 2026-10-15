@@ -1,7 +1,7 @@
 # Pet Tracker
 
 A lightweight Aion 2 overlay for recent pet soul activity, ranks and progress.
-Game portraits are included. No AionFlex or GitHub account is needed to use it.
+Game portraits are included.
 
 ## Download
 
