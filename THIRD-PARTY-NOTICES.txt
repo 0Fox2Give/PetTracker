@@ -1,0 +1,32 @@
+PET TRACKER — THIRD-PARTY NOTICES
+
+SharpPcap 6.3.1 — MIT license
+Copyright Tamir Gal, Chris Morgan and contributors.
+Source: https://github.com/dotpcap/sharppcap
+Package source revision: bfedf297e7410ffcf44e05d14f7fbef304f20895
+
+PacketDotNet 1.4.8 — Mozilla Public License 2.0
+Copyright Chris Morgan and contributors.
+This package is distributed without modifications. Its source is available at:
+https://github.com/dotpcap/packetnet/tree/690707ce56d6e9c266daf6236c4f76ac5035334c
+The complete MPL 2.0 license is included in licenses/PacketDotNet-MPL-2.0.txt.
+
+Microsoft .NET / Windows Desktop runtime 10.0.12; System.Memory 4.6.3;
+System.Runtime.CompilerServices.Unsafe 6.0.0.
+Microsoft runtime license and third-party notices are included in licenses.
+
+Npcap is not redistributed with this package. Download and install it separately
+under its own terms: https://npcap.com/
+
+Aion 2 game names and portraits belong to their respective owners. Portraits
+are included to identify the corresponding pets. Catalog/source relationships
+were assembled from existing local game data, aion2.gaming.tools source records
+and observed gameplay. The product does not claim to be an official game client.
+Pet Tracker's application icon and interface resources are original to the app.
+Velopack 1.2.161 — MIT license. Copyright Velopack Ltd and contributors.
+Source: https://github.com/velopack/velopack/tree/92d6a1c91716729d449034df5c50307dcce39493
+License included in licenses/Velopack-MIT.txt.
+
+Map/source references: https://aion2maps.com/ and https://aion2.gaming.tools/
+Attribution does not establish a license to redistribute game artwork or data.
+See LEGAL.md for the project's intellectual-property and testing notice.
