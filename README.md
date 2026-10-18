@@ -1,52 +1,42 @@
 # Pet Tracker
 
-An independent Windows companion for tracking pet souls and farming progress in **AION 2**.
+A small overlay for **AION 2** that shows your pet ranks and how many souls you still need while you farm.
 
-**Public beta · Windows x64 · Current public installer: 0.1.40**
+**[Download Pet Tracker for Windows](https://github.com/0Fox2Give/PetTracker/releases/download/updates/PetTracker.Desktop-win-stable-Setup.exe)**
 
-[Download the Windows installer](https://github.com/0Fox2Give/PetTracker/releases/download/updates/PetTracker.Desktop-win-stable-Setup.exe) · [Release details](https://github.com/0Fox2Give/PetTracker/releases/tag/updates) · [Report a bug](https://github.com/0Fox2Give/PetTracker/issues/new?template=bug_report.md)
+Public beta · Windows x64 · Version 0.1.40
 
-> Pet Tracker is unofficial and is not affiliated with, endorsed by, or supported by NC/NCSOFT. Publisher approval has not been established. Third-party tools may carry account-enforcement risks; read the [testing and legal notice](LEGAL.md) before using it.
+## What it does
 
-## What you can test
+- Shows recent soul gains and progress toward the next rank.
+- Lists nearby pet mobs the tracker has detected, with an option to hide maxed pets.
+- Lets you search for a pet, check its known sources, and open a farming map.
+- Lets you pin a pet so it stays at the top of the overlay.
 
-- **Recent:** pet soul activity, ranks, progress toward the next rank, and MAX status.
-- **Nearby:** supported pet mobs observed by the game client, matched to your collection.
-- **Find a pet:** search by pet or mob name, view known acquisition sources, and open farming maps.
-- **Pin a pet:** keep a farming goal visible. Hide completed pets and adjust the overlay's appearance.
-- **Updates:** check for new versions and download them from inside the app.
+Nearby doesn't have a fixed detection radius, and some mobs aren't covered yet. Map links show spawn locations. Walking arrows and metre distances are still being worked on.
 
-Nearby is an observation list, not a measured distance radius. Coverage is incomplete, and sightings can expire. Maps show known spawn locations, not live availability. Walking arrows and accurate metre distances are not promised features of this public build.
+## Install
 
-## Get started
+1. If Pet Tracker is already running, quit it from the Windows tray.
+2. Download and run the installer. If the app asks for [Npcap](https://npcap.com/#download), install that separately too.
+3. Open Pet Tracker, then log into your AION 2 character. Your first collection is created automatically.
 
-1. Download the installer above. If an older copy is running, choose **Quit Pet Tracker** from its Windows tray menu first.
-2. Run the installer and open Pet Tracker from its shortcut. [Npcap](https://npcap.com/#download) is required for local capture and is installed separately under its own terms; the app provides setup guidance if it is missing.
-3. **Start Pet Tracker before logging into your character.** The first detected character creates the local collection automatically. No website registration or game password is required.
-4. If you started the tracker while already playing, return to character selection and log back in once. The tracker needs the login collection message to load current ranks and soul totals.
+Already in game? Return to character selection and log back in with the tracker open. This loads your current ranks and soul totals.
 
-In 0.1.40, a new installation may display **Choose your account** before the first character is detected. You do not need to create one manually: log into your character with the tracker running. Clearer first-run wording and additional Abyss mappings are in local testing and are not yet included in this download.
+Version 0.1.40 may say **Choose your account** before it detects your first character. You don't need to create an account manually. Log into the game with the tracker running. The wording fix and more Abyss mob mappings aren't in the public download yet.
 
-For one game account, **Settings → General → Share progress across all characters** connects new alts to the selected collection. Turn it off before using a separate game account, and use **Manage accounts** to keep collections separate.
+## Updates and feedback
 
-## Updates and troubleshooting
+Check **Settings → Updates** for new versions.
 
-Open **Settings → Updates** to check for updates, download, and restart when convenient. Existing collections and preferences are stored separately from the program files.
+If something looks wrong, [report it here](https://github.com/0Fox2Give/PetTracker/issues/new?template=bug_report.md). Include your tracker version, region, and the pet or mob name. For a missing soul gain, mention whether the game showed a soul reward message.
 
-If ranks or totals remain missing after logging in, open **Settings → Help** and save a support report. When reporting a bug, include the app version, region, exact mob/pet name, what you expected, and what appeared in the tracker. For missing soul updates, say whether the game actually displayed a soul reward; a kill alone is not evidence of a reward.
+[Troubleshooting, alts and privacy](SUPPORT.md) · [Release notes](https://github.com/0Fox2Give/PetTracker/releases/tag/updates)
 
-Please redact character names and chat from screenshots. Do not post your collection folder, raw captures, passwords, or other personal information. Reports submitted through GitHub Issues are public.
+## Before you use it
 
-## Privacy and download integrity
+Pet Tracker is unofficial and has no approval from NC/NCSOFT. Using third-party tools can put your game account at risk. The Windows installer is unsigned and may trigger a security warning.
 
-The app processes captured game traffic locally and saves collection progress, preferences, backups, and diagnostics on your PC. Standard installed copies use `%LocalAppData%\PetTracker`; custom portable launches may use another folder. Local diagnostics may contain character information. The shareable support report excludes account/character names and packet samples; review it before posting.
+Your collection stays on your PC; the app doesn't automatically upload it. Updates come from GitHub. This repository hosts downloads and update tools, rather than the full app source.
 
-Update checks and downloads contact GitHub. Links you open for maps or support contact their respective websites and are subject to those services' privacy policies. The app does not automatically upload your collection or support reports.
-
-The Windows installer is **not Authenticode-signed**. In-app updates verify a separate publisher signature and package hashes; this verifies update integrity, not NC approval or a guarantee of safety. Download from this repository and do not bypass a security warning you cannot verify.
-
-## Project and notices
-
-This repository hosts downloads, update-delivery tools, and public verification metadata. It is not the complete application source repository. Game names, artwork, and other third-party material remain the property of their respective rights holders.
-
-See [Legal and testing notice](LEGAL.md) and [Third-party notices](THIRD-PARTY-NOTICES.txt). Included dependency licenses remain applicable. Bug reports and testing feedback are welcome; accuracy, compatibility, and account safety are not guaranteed.
+Read the [legal notice](LEGAL.md) and [third-party notices](THIRD-PARTY-NOTICES.txt) before testing. Game names and artwork belong to their respective owners.
