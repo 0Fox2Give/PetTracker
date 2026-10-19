@@ -32,7 +32,9 @@ Before switching to a separate game account, turn sharing off and use **Manage a
 
 Open **Settings → Updates**, check for an update, and download it. Restart the tracker when you're ready. Collections and preferences are saved separately from the program files.
 
-The public installer is currently **0.1.47**. Downloads and updates are hosted here; the old PetTracker-Testing repository has been retired.
+The public installer is currently **0.1.48**. Downloads and updates are hosted here; the old PetTracker-Testing repository has been retired.
+
+If Restart to update says **Could not safely close capture**, an older version may have missed the successful shutdown. Version 0.1.48 fixes that check. To get past it on an older copy, choose **Quit Pet Tracker** from its Windows tray icon, then download and run the current installer. Do not delete your collection folder. If Quit itself reports a save error, leave the tracker running and save a support report instead.
 
 ## Data stored on your PC
 

@@ -4,7 +4,7 @@ A small overlay for **AION 2** that shows your pet ranks and how many souls you 
 
 **[Download Pet Tracker for Windows](https://github.com/0Fox2Give/PetTracker/releases/download/updates/PetTracker.Desktop-win-stable-Setup.exe)**
 
-Public beta · Windows x64 · Version 0.1.47
+Public beta · Windows x64 · Version 0.1.48
 
 [Setup and troubleshooting](SUPPORT.md) · [What's new](CHANGELOG.md) · [Report a problem](https://github.com/0Fox2Give/PetTracker/issues/new?template=bug_report.md)
 

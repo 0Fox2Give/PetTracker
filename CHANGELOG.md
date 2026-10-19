@@ -1,5 +1,13 @@
 # Release notes
 
+## 0.1.48 — October 19, 2026
+
+- Fixes “Could not safely close capture” when Restart to update incorrectly treats a successful capture shutdown as a failure.
+- Keeps the requirement that capture saves and exits successfully before installation begins.
+
+If an older copy still shows this error, quit Pet Tracker from its Windows tray icon, then run the current installer. Collections and preferences are stored separately and are preserved.
+
+
 ## 0.1.47 — October 19, 2026
 
 - Pet rows now show their family and matching crystal: Cogni, Fera, Natura, Varian or Special. Tags appear in Recent, Nearby, merchant recommendations and Find a pet.
