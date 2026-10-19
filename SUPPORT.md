@@ -1,5 +1,11 @@
 # Pet Tracker help
 
+## Capture unavailable / empty overlay
+
+Live tracking requires [Npcap](https://npcap.com/#download), installed separately. Pet Tracker 0.1.43 does not automatically ask you to install it. Close Pet Tracker, install Npcap from its official website if missing, then reopen Pet Tracker before logging into your character. Follow any restart instructions from the Npcap installer.
+
+If Npcap is already installed, capture can also fail because of Windows permissions or adapter access. Open **Settings → Help** and save a support report. In 0.1.43, **Run connection check** refreshes the displayed status; it does not install or repair the driver. Please include that report in your bug report instead of repeatedly reinstalling.
+
 ## Missing ranks or soul totals
 
 Start the tracker before logging into your character. If it was opened after you were already playing, return to character selection and log back in once. Pet Tracker needs the collection data sent during login.

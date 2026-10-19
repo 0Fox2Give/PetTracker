@@ -22,8 +22,9 @@ Nearby doesn't have a fixed detection radius, and some mobs aren't covered yet. 
 ## Install
 
 1. If Pet Tracker is already running, quit it from the Windows tray.
-2. Download and run the installer. If the app asks for [Npcap](https://npcap.com/#download), install that separately too.
-3. Open Pet Tracker, then log into your AION 2 character. Your first collection is created automatically.
+2. Install [Npcap from its official website](https://npcap.com/#download) if it is not already installed. **Npcap is required for live tracking and is not included with Pet Tracker.** Version 0.1.43 does not automatically prompt you to install it.
+3. Download and run the Pet Tracker installer.
+4. Open Pet Tracker, then log into your AION 2 character. Your first collection is created automatically.
 
 Already in game? Return to character selection and log back in with the tracker open. This loads your current ranks and soul totals.
 
