@@ -1,5 +1,15 @@
 # Release notes
 
+## 0.1.50 — October 19, 2026
+
+- Pin several pets at once. The default is three; choose a limit from one to five in Settings → Tracking. Pins keep their order in Recent and Nearby, and existing pins are preserved.
+- Reorganized settings into Tracking, Overlay, Account, Updates and Help. Removed Windows startup, start-hidden and redundant appearance switches; advanced options stay out of the way.
+- Opening Pet Tracker normally now shows the overlay even if you hid it in the previous session. An empty list stays visible until activity arrives. The optional game-only setting still applies.
+- Updated collection-sync guidance and merchant help to match the new settings pages.
+
+Your collection and pinned pets are preserved. The first-unlock “Rank increase pending” issue remains under investigation. Walking arrows are not included.
+
+
 ## 0.1.49 — October 19, 2026
 
 - Refreshed Find a pet with a smaller search bar, clearer selection, grouped farming locations and soul progress that updates while the window stays open.

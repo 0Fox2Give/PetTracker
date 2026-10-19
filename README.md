@@ -4,7 +4,7 @@ A small overlay for **AION 2** that shows your pet ranks and how many souls you 
 
 **[Download Pet Tracker for Windows](https://github.com/0Fox2Give/PetTracker/releases/download/updates/PetTracker.Desktop-win-stable-Setup.exe)**
 
-Public beta · Windows x64 · Version 0.1.49
+Public beta · Windows x64 · Version 0.1.50
 
 **The app is currently closed-source.** This repository hosts downloads, documentation and update tooling; it does not contain the full Pet Tracker application source.
 
@@ -17,7 +17,7 @@ Use the installer linked above. GitHub's **Code → Download ZIP** and **Source 
 - Shows recent soul gains and progress toward the next rank, with family tags and matching crystal icons.
 - Lists nearby pet mobs the tracker has detected, with an option to hide maxed pets.
 - Lets you search for a pet, check its known sources, and open a farming map. Hover a pet row to see souls remaining when its progress is known.
-- Lets you pin a pet so it stays at the top of the overlay.
+- Lets you pin several pets in a stable order. Choose a limit from one to five in Settings → Tracking (three by default).
 - Shows a Black Cloud Merchant shopping list for chest/merchant pets you have not maxed, with rank, soul progress and price from recently observed offers. Open the shop after your collection synchronizes.
 
 Nearby doesn't have a fixed detection radius, and some mobs aren't covered yet. Map links show spawn locations. Walking arrows and metre distances are still being worked on.
@@ -28,6 +28,8 @@ Nearby doesn't have a fixed detection radius, and some mobs aren't covered yet. 
 2. Install [Npcap from its official website](https://npcap.com/#download) if it is not already installed. **Npcap is required for live tracking and is not included with Pet Tracker.** If capture is unavailable, the app opens connection help with a link to the official Npcap installer.
 3. Download and run the Pet Tracker installer.
 4. Open Pet Tracker, then log into your AION 2 character. Your first collection is created automatically.
+
+A normal launch shows the tracker even if you hid it last time. If you enabled **Only show over Aion 2**, bring the game to the foreground.
 
 Already in game? Return to character selection and log back in with the tracker open. Collection sync happens automatically at character login; there is no separate sync button. If ranks or totals are still missing, check **Settings → Help** for capture status and troubleshooting.
 

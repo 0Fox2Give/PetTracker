@@ -1,5 +1,11 @@
 # Pet Tracker help
 
+## Tracker window is hidden
+
+Version 0.1.50 shows the overlay on a normal launch, even if it was hidden in the previous session. If the app is already running, right-click its Windows tray paw icon and choose **Show / hide tracker**. If **Only show over Aion 2** is enabled, bring the game to the foreground.
+
+If the window opens but contains no pets, check Settings → Help for capture status.
+
 ## Capture unavailable / empty overlay
 
 Live tracking requires [Npcap](https://npcap.com/#download), installed separately. Version 0.1.45 opens connection help when capture is unavailable, with a **Download Npcap** button. Older 0.1.43 copies do not automatically ask you to install it. Close Pet Tracker, install Npcap from its official website if missing, then reopen Pet Tracker before logging into your character. Follow any restart instructions from the Npcap installer.
@@ -12,7 +18,7 @@ Start the tracker before logging into your character. If it was opened after you
 
 There is no sync button. Synchronization happens automatically when the tracker receives that collection data. If capture is unavailable, fix that connection first; logging in again cannot fix a missing capture driver.
 
-The first unlock can still leave a pet showing **Rank increase pending**. This is an open issue, not a confirmed fix in 0.1.49. Logging back in with the tracker running reloads the collection as a workaround. Please report the exact pet, version and region if it happens.
+The first unlock can still leave a pet showing **Rank increase pending**. This is an open issue, not a confirmed fix in 0.1.50. Logging back in with the tracker running reloads the collection as a workaround. Please report the exact pet, version and region if it happens.
 
 If that doesn't help, open **Settings → Help** and save a support report. [Open a bug report](https://github.com/0Fox2Give/PetTracker/issues/new?template=bug_report.md) with your tracker version, region, exact pet or mob name, and what went wrong. If a soul gain is missing, say whether the game displayed a soul reward message.
 
@@ -20,11 +26,11 @@ GitHub issues are public. Review your report before posting, and remove characte
 
 ## Black Cloud Merchant
 
-Keep Pet Tracker running, log in to synchronize your collection, then open the merchant. Recently seen chest/merchant pets that you have not maxed appear in the overlay with your rank, current soul total, shop tab and Kina price. Pets with known farmable mob sources are excluded. **Settings → General → Black Market** controls this list.
+Keep Pet Tracker running, log in to synchronize your collection, then open the merchant. Recently seen chest/merchant pets that you have not maxed appear in the overlay with your rank, current soul total, shop tab and Kina price. Pets with known farmable mob sources are excluded. **Settings → Tracking → Black Cloud Merchant** controls this list.
 
 An empty list may mean none of the observed offers qualify. Recommendations also stay hidden until the collection is synchronized. Stock expires after two minutes or at shop refresh, and clears when the connection changes. Confirm the offer in game before purchasing; the tracker does not buy or refresh anything.
 
-Version 0.1.49 shows merchant status in **Settings → General → Black Market**, including whether capture, collection sync or fresh stock is missing.
+Settings → Tracking → Black Cloud Merchant shows guidance when capture or collection sync is missing.
 
 If the list is missing, enable **Show merchant shopping list in overlay**, check collection sync, then open both **Special** and **Pets** in game. Both tabs are supported for the recorded stock format. Other regions or changed stock formats may need investigation. If an eligible pet is still missing, include its name, shop tab, region and tracker version with a support report. An empty list alone does not establish that tracking worked.
 
@@ -32,15 +38,21 @@ When a recommended pet receives souls, its merchant row shows the updated total 
 
 ## Playing alts
 
-For characters on one game account, enable **Settings → General → Share progress across all characters**. New alts will use the selected collection.
+For characters on one game account, enable **Settings → Account → Share progress across all characters**. New alts will use the selected collection.
 
 Before switching to a separate game account, turn sharing off and use **Manage accounts** to keep its collection separate.
+
+## Pinned pets and settings
+
+Pin pets from Find a pet, or right-click an overlay row. Pins stay in the order added in both Recent and Nearby. Settings → Tracking → Maximum pinned pets allows one to five, with three by default. Lowering the limit keeps existing pins; unpin some before adding more.
+
+Settings are grouped into Tracking, Overlay, Account, Updates and Help. Windows startup and start-hidden options have been removed. Reset this section on Tracking or Overlay preserves your collection, accounts and pinned pets. Older cosmetic preferences are preserved until you reset Overlay.
 
 ## Updating
 
 Open **Settings → Updates**, check for an update, and download it. Restart the tracker when you're ready. Collections and preferences are saved separately from the program files.
 
-The public installer is currently **0.1.49**. Downloads and updates are hosted here; the old PetTracker-Testing repository has been retired.
+The public installer is currently **0.1.50**. Downloads and updates are hosted here; the old PetTracker-Testing repository has been retired.
 
 If Restart to update says **Could not safely close capture**, an older version may have missed the successful shutdown. Version 0.1.48 fixes that check. To get past it on an older copy, choose **Quit Pet Tracker** from its Windows tray icon, then download and run the current installer. Do not delete your collection folder. If Quit itself reports a save error, leave the tracker running and save a support report instead.
 
