@@ -1,8 +1,19 @@
 # Release notes
 
+## 0.1.45 — October 19, 2026
+
+- Black Cloud Merchant recommendations now appear in the overlay with pet rank, tab and observed Kina price. Open the merchant with your collection synchronized. The list excludes maxed pets and pets with known mob sources; random-chest alternatives are included.
+- Capture setup help opens automatically when no capture adapters are available. The Npcap download link is visible directly in Help, and refreshing connection status gives a visible result.
+- Corrected setup instructions: Npcap is required and installed separately, not bundled.
+
+Merchant stock expires after two minutes or at shop refresh and is cleared when the connection changes. Confirm stock before buying. The tracker does not purchase or refresh for you.
+
+Known issues: some players report an unlock-to-Rank-1 transition being missed; its live message is still under investigation. Genus labels and souls-remaining text are not included in this update. Walking arrows and metre distances remain unavailable. Abyss soul-reward coverage still needs live confirmation.
+
+
 ## 0.1.43 — October 18, 2026
 
-Current public beta for Windows x64. [Download the installer](https://github.com/0Fox2Give/PetTracker/releases/download/updates/PetTracker.Desktop-win-stable-Setup.exe).
+Previous public beta for Windows x64. Use the current download linked in the README.
 
 - Removed the confusing account-selection prompt on a first installation. The tracker waits for character login and creates the collection automatically.
 - Added 32 Lower Reshanta mob mappings for Nearby.

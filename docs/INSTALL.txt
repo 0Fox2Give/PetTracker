@@ -6,7 +6,8 @@ https://github.com/0Fox2Give/PetTracker#readme
 Download the Windows installer linked there, not GitHub's source ZIP.
 Quit the old tracker before installing. Npcap is required for live tracking.
 Install it from https://npcap.com/#download if not already installed.
-Npcap is not bundled; Pet Tracker 0.1.43 does not automatically prompt for it.
+Npcap is not bundled. If capture is unavailable, Pet Tracker opens connection
+help with a link to the official Npcap installer.
 Open Pet Tracker before logging into your AION 2 character.
 
 Help and privacy: https://github.com/0Fox2Give/PetTracker/blob/main/SUPPORT.md

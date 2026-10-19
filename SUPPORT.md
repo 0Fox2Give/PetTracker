@@ -2,7 +2,7 @@
 
 ## Capture unavailable / empty overlay
 
-Live tracking requires [Npcap](https://npcap.com/#download), installed separately. Pet Tracker 0.1.43 does not automatically ask you to install it. Close Pet Tracker, install Npcap from its official website if missing, then reopen Pet Tracker before logging into your character. Follow any restart instructions from the Npcap installer.
+Live tracking requires [Npcap](https://npcap.com/#download), installed separately. Version 0.1.45 opens connection help when capture is unavailable, with a **Download Npcap** button. Older 0.1.43 copies do not automatically ask you to install it. Close Pet Tracker, install Npcap from its official website if missing, then reopen Pet Tracker before logging into your character. Follow any restart instructions from the Npcap installer.
 
 If Npcap is already installed, capture can also fail because of Windows permissions or adapter access. Open **Settings → Help** and save a support report. In 0.1.43, **Run connection check** refreshes the displayed status; it does not install or repair the driver. Please include that report in your bug report instead of repeatedly reinstalling.
 
@@ -14,6 +14,12 @@ If that doesn't help, open **Settings → Help** and save a support report. [Ope
 
 GitHub issues are public. Review your report before posting, and remove character names and chat from screenshots. Don't upload your collection folder, raw captures, passwords, or other personal information.
 
+## Black Cloud Merchant
+
+Keep Pet Tracker running, log in to synchronize your collection, then open the merchant. Recently seen chest/merchant pets that you have not maxed appear in the overlay with their shop tab and Kina price. Pets with known farmable mob sources are excluded. **Settings → General → Black Market** controls this list.
+
+An empty list may mean none of the observed offers qualify. Recommendations also stay hidden until the collection is synchronized. Stock expires after two minutes or at shop refresh, and clears when the connection changes. Confirm the offer in game before purchasing; the tracker does not buy or refresh anything.
+
 ## Playing alts
 
 For characters on one game account, enable **Settings → General → Share progress across all characters**. New alts will use the selected collection.
@@ -24,7 +30,7 @@ Before switching to a separate game account, turn sharing off and use **Manage a
 
 Open **Settings → Updates**, check for an update, and download it. Restart the tracker when you're ready. Collections and preferences are saved separately from the program files.
 
-The public installer is currently **0.1.43**. Downloads and updates are hosted here; the old PetTracker-Testing repository has been retired.
+The public installer is currently **0.1.45**. Downloads and updates are hosted here; the old PetTracker-Testing repository has been retired.
 
 ## Data stored on your PC
 

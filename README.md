@@ -4,7 +4,7 @@ A small overlay for **AION 2** that shows your pet ranks and how many souls you 
 
 **[Download Pet Tracker for Windows](https://github.com/0Fox2Give/PetTracker/releases/download/updates/PetTracker.Desktop-win-stable-Setup.exe)**
 
-Public beta · Windows x64 · Version 0.1.43
+Public beta · Windows x64 · Version 0.1.45
 
 [Setup and troubleshooting](SUPPORT.md) · [What's new](CHANGELOG.md) · [Report a problem](https://github.com/0Fox2Give/PetTracker/issues/new?template=bug_report.md)
 
@@ -16,13 +16,14 @@ Use the installer linked above. GitHub's **Code → Download ZIP** and **Source 
 - Lists nearby pet mobs the tracker has detected, with an option to hide maxed pets.
 - Lets you search for a pet, check its known sources, and open a farming map.
 - Lets you pin a pet so it stays at the top of the overlay.
+- Shows a Black Cloud Merchant shopping list for chest/merchant pets you have not maxed, using recently observed offers. Open the shop after your collection synchronizes.
 
 Nearby doesn't have a fixed detection radius, and some mobs aren't covered yet. Map links show spawn locations. Walking arrows and metre distances are still being worked on.
 
 ## Install
 
 1. If Pet Tracker is already running, quit it from the Windows tray.
-2. Install [Npcap from its official website](https://npcap.com/#download) if it is not already installed. **Npcap is required for live tracking and is not included with Pet Tracker.** Version 0.1.43 does not automatically prompt you to install it.
+2. Install [Npcap from its official website](https://npcap.com/#download) if it is not already installed. **Npcap is required for live tracking and is not included with Pet Tracker.** If capture is unavailable, the app opens connection help with a link to the official Npcap installer.
 3. Download and run the Pet Tracker installer.
 4. Open Pet Tracker, then log into your AION 2 character. Your first collection is created automatically.
 
