@@ -1,5 +1,14 @@
 # Release notes
 
+## 0.1.47 — October 19, 2026
+
+- Pet rows now show their family and matching crystal: Cogni, Fera, Natura, Varian or Special. Tags appear in Recent, Nearby, merchant recommendations and Find a pet.
+- When a recommended merchant pet receives souls, its row shows the updated total for 20 seconds, then leaves the shopping list. This works in both Recent and Nearby. The price disappears during that brief feedback period.
+- Removed the "No pet activity in the last ... seconds" message from Recent. No countdown text is shown on merchant rows.
+
+Merchant feedback follows observed soul rewards after an offer was shown. It does not automate purchases or independently confirm a purchase receipt. Capture interruptions still require a fresh collection sync. The reported unlock-to-Rank-1 issue remains under investigation; walking arrows are not included.
+
+
 ## 0.1.46 — October 19, 2026
 
 - Merchant recommendations now show your current rank and soul total (for example, Rank 1 · 10/25 souls), alongside the observed Kina price and shop tab.

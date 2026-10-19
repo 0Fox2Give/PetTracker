@@ -22,10 +22,12 @@ Aion 2 game names and portraits belong to their respective owners. Portraits
 are included to identify the corresponding pets. Catalog/source relationships
 were assembled from existing local game data, aion2.gaming.tools source records
 and observed gameplay. The product does not claim to be an official game client.
-Pet Tracker's application icon and interface resources are original to the app.
+Pet Tracker's application icon and custom interface styling are original to the app.
 Velopack 1.2.161 — MIT license. Copyright Velopack Ltd and contributors.
 Source: https://github.com/velopack/velopack/tree/92d6a1c91716729d449034df5c50307dcce39493
 License included in licenses/Velopack-MIT.txt.
+
+Pet-family soul crystal icons are AION 2 game artwork, copyright NCSOFT / NC Corporation. Included for identification of Cogni, Fera, Natura, Varian and Special families. Source: https://aion2petguide.com/guides/soul-crystal-farm (attributed there to https://aion2guidance.com/). Original colors retained; format converted losslessly from WebP to PNG.
 
 Map/source references: https://aion2maps.com/ and https://aion2.gaming.tools/
 Attribution does not establish a license to redistribute game artwork or data.

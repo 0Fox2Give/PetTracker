@@ -20,6 +20,8 @@ Keep Pet Tracker running, log in to synchronize your collection, then open the m
 
 An empty list may mean none of the observed offers qualify. Recommendations also stay hidden until the collection is synchronized. Stock expires after two minutes or at shop refresh, and clears when the connection changes. Confirm the offer in game before purchasing; the tracker does not buy or refresh anything.
 
+When a recommended pet receives souls, its merchant row shows the updated total for 20 seconds, then disappears. This works in Recent and Nearby. The price disappears during that feedback period, and the same stock cycle does not recommend that pet again. A fresh shop refresh can recommend it again if needed. This follows observed rewards, not an independently decoded purchase receipt.
+
 ## Playing alts
 
 For characters on one game account, enable **Settings → General → Share progress across all characters**. New alts will use the selected collection.
@@ -30,7 +32,7 @@ Before switching to a separate game account, turn sharing off and use **Manage a
 
 Open **Settings → Updates**, check for an update, and download it. Restart the tracker when you're ready. Collections and preferences are saved separately from the program files.
 
-The public installer is currently **0.1.46**. Downloads and updates are hosted here; the old PetTracker-Testing repository has been retired.
+The public installer is currently **0.1.47**. Downloads and updates are hosted here; the old PetTracker-Testing repository has been retired.
 
 ## Data stored on your PC
 
