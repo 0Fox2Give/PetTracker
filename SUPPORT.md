@@ -12,7 +12,7 @@ Start the tracker before logging into your character. If it was opened after you
 
 There is no sync button. Synchronization happens automatically when the tracker receives that collection data. If capture is unavailable, fix that connection first; logging in again cannot fix a missing capture driver.
 
-The first unlock can still leave a pet showing **Rank increase pending**. This is an open issue, not a confirmed fix in 0.1.48. Logging back in with the tracker running reloads the collection as a workaround. Please report the exact pet, version and region if it happens.
+The first unlock can still leave a pet showing **Rank increase pending**. This is an open issue, not a confirmed fix in 0.1.49. Logging back in with the tracker running reloads the collection as a workaround. Please report the exact pet, version and region if it happens.
 
 If that doesn't help, open **Settings → Help** and save a support report. [Open a bug report](https://github.com/0Fox2Give/PetTracker/issues/new?template=bug_report.md) with your tracker version, region, exact pet or mob name, and what went wrong. If a soul gain is missing, say whether the game displayed a soul reward message.
 
@@ -23,6 +23,8 @@ GitHub issues are public. Review your report before posting, and remove characte
 Keep Pet Tracker running, log in to synchronize your collection, then open the merchant. Recently seen chest/merchant pets that you have not maxed appear in the overlay with your rank, current soul total, shop tab and Kina price. Pets with known farmable mob sources are excluded. **Settings → General → Black Market** controls this list.
 
 An empty list may mean none of the observed offers qualify. Recommendations also stay hidden until the collection is synchronized. Stock expires after two minutes or at shop refresh, and clears when the connection changes. Confirm the offer in game before purchasing; the tracker does not buy or refresh anything.
+
+Version 0.1.49 shows merchant status in **Settings → General → Black Market**, including whether capture, collection sync or fresh stock is missing.
 
 If the list is missing, enable **Show merchant shopping list in overlay**, check collection sync, then open both **Special** and **Pets** in game. Both tabs are supported for the recorded stock format. Other regions or changed stock formats may need investigation. If an eligible pet is still missing, include its name, shop tab, region and tracker version with a support report. An empty list alone does not establish that tracking worked.
 
@@ -38,7 +40,7 @@ Before switching to a separate game account, turn sharing off and use **Manage a
 
 Open **Settings → Updates**, check for an update, and download it. Restart the tracker when you're ready. Collections and preferences are saved separately from the program files.
 
-The public installer is currently **0.1.48**. Downloads and updates are hosted here; the old PetTracker-Testing repository has been retired.
+The public installer is currently **0.1.49**. Downloads and updates are hosted here; the old PetTracker-Testing repository has been retired.
 
 If Restart to update says **Could not safely close capture**, an older version may have missed the successful shutdown. Version 0.1.48 fixes that check. To get past it on an older copy, choose **Quit Pet Tracker** from its Windows tray icon, then download and run the current installer. Do not delete your collection folder. If Quit itself reports a save error, leave the tracker running and save a support report instead.
 

@@ -1,5 +1,18 @@
 # Release notes
 
+## 0.1.49 — October 19, 2026
+
+- Refreshed Find a pet with a smaller search bar, clearer selection, grouped farming locations and soul progress that updates while the window stays open.
+- Added souls-remaining tooltips to pet and merchant rows. Unknown or stale balances do not produce a remaining-souls estimate.
+- Added character-login instructions when collection sync is needed. Sync is automatic; there is no separate sync button.
+- Added merchant status in Settings → General to distinguish missing capture, collection sync, missing fresh stock and no current recommendations.
+- Changed the merchant heading to “Pets only from Chests or Black Cloud Merchants” and removed the extra stock reminder beneath the list.
+
+Includes the update-restart fix, family crystal tags and merchant purchase-progress feedback from previous versions.
+
+The reported first unlock getting stuck on “Rank increase pending” remains under investigation. Relogging with Pet Tracker running reloads the collection as a workaround. Walking arrows and measured distances are not included.
+
+
 ## 0.1.48 — October 19, 2026
 
 - Fixes “Could not safely close capture” when Restart to update incorrectly treats a successful capture shutdown as a failure.

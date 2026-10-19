@@ -4,7 +4,7 @@ A small overlay for **AION 2** that shows your pet ranks and how many souls you 
 
 **[Download Pet Tracker for Windows](https://github.com/0Fox2Give/PetTracker/releases/download/updates/PetTracker.Desktop-win-stable-Setup.exe)**
 
-Public beta · Windows x64 · Version 0.1.48
+Public beta · Windows x64 · Version 0.1.49
 
 **The app is currently closed-source.** This repository hosts downloads, documentation and update tooling; it does not contain the full Pet Tracker application source.
 
@@ -16,7 +16,7 @@ Use the installer linked above. GitHub's **Code → Download ZIP** and **Source 
 
 - Shows recent soul gains and progress toward the next rank, with family tags and matching crystal icons.
 - Lists nearby pet mobs the tracker has detected, with an option to hide maxed pets.
-- Lets you search for a pet, check its known sources, and open a farming map.
+- Lets you search for a pet, check its known sources, and open a farming map. Hover a pet row to see souls remaining when its progress is known.
 - Lets you pin a pet so it stays at the top of the overlay.
 - Shows a Black Cloud Merchant shopping list for chest/merchant pets you have not maxed, with rank, soul progress and price from recently observed offers. Open the shop after your collection synchronizes.
 
