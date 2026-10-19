@@ -6,6 +6,10 @@ A small overlay for **AION 2** that shows your pet ranks and how many souls you 
 
 Public beta · Windows x64 · Version 0.1.43
 
+[Setup and troubleshooting](SUPPORT.md) · [What's new](CHANGELOG.md) · [Report a problem](https://github.com/0Fox2Give/PetTracker/issues/new?template=bug_report.md)
+
+Use the installer linked above. GitHub's **Code → Download ZIP** and **Source code** downloads contain this repository, not the installed app. The other release assets support automatic updates and older versions.
+
 ## What it does
 
 - Shows recent soul gains and progress toward the next rank.
@@ -23,8 +27,6 @@ Nearby doesn't have a fixed detection radius, and some mobs aren't covered yet. 
 
 Already in game? Return to character selection and log back in with the tracker open. This loads your current ranks and soul totals.
 
-Version 0.1.43 fixes the first-login account prompt, adds Lower Reshanta mob mappings, and expands the pet finder with regional mobs, dungeon sources, and soul-chest information.
-
 ## Updates and feedback
 
 Check **Settings → Updates** for new versions.
@@ -40,3 +42,15 @@ Pet Tracker is unofficial and has no approval from NC/NCSOFT. Using third-party 
 Your collection stays on your PC; the app doesn't automatically upload it. Updates come from GitHub. This repository hosts downloads and update tools, rather than the full app source.
 
 Read the [legal notice](LEGAL.md) and [third-party notices](THIRD-PARTY-NOTICES.txt) before testing. Game names and artwork belong to their respective owners.
+
+## About this repository
+
+This is the public download and update repository. The full tracker source is not included.
+
+| Looking for | Where to go |
+| --- | --- |
+| Install Pet Tracker | [Windows installer](https://github.com/0Fox2Give/PetTracker/releases/download/updates/PetTracker.Desktop-win-stable-Setup.exe) |
+| Missing ranks, setup, alts or privacy | [Help](SUPPORT.md) |
+| Changes and known issues | [Release notes](CHANGELOG.md) |
+| Update tools and repository structure | [Maintainer guide](docs/MAINTAINING.md) |
+| Component licenses | [Third-party notices](THIRD-PARTY-NOTICES.txt) and [licenses](licenses/) |

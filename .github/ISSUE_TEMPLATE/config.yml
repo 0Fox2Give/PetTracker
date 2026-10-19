@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Download Pet Tracker
+    url: https://github.com/0Fox2Give/PetTracker/releases/tag/updates
+    about: Get the current Windows installer and read release notes.
+  - name: Setup and troubleshooting
+    url: https://github.com/0Fox2Give/PetTracker/blob/main/SUPPORT.md
+    about: Check missing ranks, login setup, updates and privacy before reporting a problem.
