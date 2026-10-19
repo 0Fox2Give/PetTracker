@@ -18,7 +18,7 @@ Before switching to a separate game account, turn sharing off and use **Manage a
 
 Open **Settings → Updates**, check for an update, and download it. Restart the tracker when you're ready. Collections and preferences are saved separately from the program files.
 
-The public installer is currently **0.1.40**. Later local test builds aren't included until a new release is published.
+The public installer is currently **0.1.43**. Downloads and updates are hosted here; the old PetTracker-Testing repository has been retired.
 
 ## Data stored on your PC
 

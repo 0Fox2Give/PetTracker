@@ -4,7 +4,7 @@ A small overlay for **AION 2** that shows your pet ranks and how many souls you 
 
 **[Download Pet Tracker for Windows](https://github.com/0Fox2Give/PetTracker/releases/download/updates/PetTracker.Desktop-win-stable-Setup.exe)**
 
-Public beta · Windows x64 · Version 0.1.40
+Public beta · Windows x64 · Version 0.1.43
 
 ## What it does
 
@@ -23,7 +23,7 @@ Nearby doesn't have a fixed detection radius, and some mobs aren't covered yet. 
 
 Already in game? Return to character selection and log back in with the tracker open. This loads your current ranks and soul totals.
 
-Version 0.1.40 may say **Choose your account** before it detects your first character. You don't need to create an account manually. Log into the game with the tracker running. The wording fix and more Abyss mob mappings aren't in the public download yet.
+Version 0.1.43 fixes the first-login account prompt, adds Lower Reshanta mob mappings, and expands the pet finder with regional mobs, dungeon sources, and soul-chest information.
 
 ## Updates and feedback
 
