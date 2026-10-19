@@ -16,7 +16,7 @@ GitHub issues are public. Review your report before posting, and remove characte
 
 ## Black Cloud Merchant
 
-Keep Pet Tracker running, log in to synchronize your collection, then open the merchant. Recently seen chest/merchant pets that you have not maxed appear in the overlay with their shop tab and Kina price. Pets with known farmable mob sources are excluded. **Settings → General → Black Market** controls this list.
+Keep Pet Tracker running, log in to synchronize your collection, then open the merchant. Recently seen chest/merchant pets that you have not maxed appear in the overlay with your rank, current soul total, shop tab and Kina price. Pets with known farmable mob sources are excluded. **Settings → General → Black Market** controls this list.
 
 An empty list may mean none of the observed offers qualify. Recommendations also stay hidden until the collection is synchronized. Stock expires after two minutes or at shop refresh, and clears when the connection changes. Confirm the offer in game before purchasing; the tracker does not buy or refresh anything.
 
@@ -30,7 +30,7 @@ Before switching to a separate game account, turn sharing off and use **Manage a
 
 Open **Settings → Updates**, check for an update, and download it. Restart the tracker when you're ready. Collections and preferences are saved separately from the program files.
 
-The public installer is currently **0.1.45**. Downloads and updates are hosted here; the old PetTracker-Testing repository has been retired.
+The public installer is currently **0.1.46**. Downloads and updates are hosted here; the old PetTracker-Testing repository has been retired.
 
 ## Data stored on your PC
 

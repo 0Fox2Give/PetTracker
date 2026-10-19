@@ -1,5 +1,14 @@
 # Release notes
 
+## 0.1.46 — October 19, 2026
+
+- Merchant recommendations now show your current rank and soul total (for example, Rank 1 · 10/25 souls), alongside the observed Kina price and shop tab.
+- Soul totals refresh when your balance changes without a rank change. Unknown and estimated totals retain their labels.
+
+Includes the merchant shopping list and capture setup help from 0.1.45. Recommendations still require a synchronized collection and fresh observed stock. No purchases are automated.
+
+The reported unlock-to-Rank-1 issue remains under investigation. Genus labels and walking arrows are not included in this update.
+
 ## 0.1.45 — October 19, 2026
 
 - Black Cloud Merchant recommendations now appear in the overlay with pet rank, tab and observed Kina price. Open the merchant with your collection synchronized. The list excludes maxed pets and pets with known mob sources; random-chest alternatives are included.
