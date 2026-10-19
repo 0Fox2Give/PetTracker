@@ -10,6 +10,10 @@ If Npcap is already installed, capture can also fail because of Windows permissi
 
 Start the tracker before logging into your character. If it was opened after you were already playing, return to character selection and log back in once. Pet Tracker needs the collection data sent during login.
 
+There is no sync button. Synchronization happens automatically when the tracker receives that collection data. If capture is unavailable, fix that connection first; logging in again cannot fix a missing capture driver.
+
+The first unlock can still leave a pet showing **Rank increase pending**. This is an open issue, not a confirmed fix in 0.1.48. Logging back in with the tracker running reloads the collection as a workaround. Please report the exact pet, version and region if it happens.
+
 If that doesn't help, open **Settings → Help** and save a support report. [Open a bug report](https://github.com/0Fox2Give/PetTracker/issues/new?template=bug_report.md) with your tracker version, region, exact pet or mob name, and what went wrong. If a soul gain is missing, say whether the game displayed a soul reward message.
 
 GitHub issues are public. Review your report before posting, and remove character names and chat from screenshots. Don't upload your collection folder, raw captures, passwords, or other personal information.
@@ -19,6 +23,8 @@ GitHub issues are public. Review your report before posting, and remove characte
 Keep Pet Tracker running, log in to synchronize your collection, then open the merchant. Recently seen chest/merchant pets that you have not maxed appear in the overlay with your rank, current soul total, shop tab and Kina price. Pets with known farmable mob sources are excluded. **Settings → General → Black Market** controls this list.
 
 An empty list may mean none of the observed offers qualify. Recommendations also stay hidden until the collection is synchronized. Stock expires after two minutes or at shop refresh, and clears when the connection changes. Confirm the offer in game before purchasing; the tracker does not buy or refresh anything.
+
+If the list is missing, enable **Show merchant shopping list in overlay**, check collection sync, then open both **Special** and **Pets** in game. Both tabs are supported for the recorded stock format. Other regions or changed stock formats may need investigation. If an eligible pet is still missing, include its name, shop tab, region and tracker version with a support report. An empty list alone does not establish that tracking worked.
 
 When a recommended pet receives souls, its merchant row shows the updated total for 20 seconds, then disappears. This works in Recent and Nearby. The price disappears during that feedback period, and the same stock cycle does not recommend that pet again. A fresh shop refresh can recommend it again if needed. This follows observed rewards, not an independently decoded purchase receipt.
 

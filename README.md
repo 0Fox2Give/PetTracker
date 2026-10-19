@@ -6,6 +6,8 @@ A small overlay for **AION 2** that shows your pet ranks and how many souls you 
 
 Public beta · Windows x64 · Version 0.1.48
 
+**The app is currently closed-source.** This repository hosts downloads, documentation and update tooling; it does not contain the full Pet Tracker application source.
+
 [Setup and troubleshooting](SUPPORT.md) · [What's new](CHANGELOG.md) · [Report a problem](https://github.com/0Fox2Give/PetTracker/issues/new?template=bug_report.md)
 
 Use the installer linked above. GitHub's **Code → Download ZIP** and **Source code** downloads contain this repository, not the installed app. The other release assets support automatic updates and older versions.
@@ -27,7 +29,7 @@ Nearby doesn't have a fixed detection radius, and some mobs aren't covered yet. 
 3. Download and run the Pet Tracker installer.
 4. Open Pet Tracker, then log into your AION 2 character. Your first collection is created automatically.
 
-Already in game? Return to character selection and log back in with the tracker open. This loads your current ranks and soul totals.
+Already in game? Return to character selection and log back in with the tracker open. Collection sync happens automatically at character login; there is no separate sync button. If ranks or totals are still missing, check **Settings → Help** for capture status and troubleshooting.
 
 ## Updates and feedback
 
