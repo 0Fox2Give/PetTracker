@@ -1,0 +1,194 @@
+[
+  {
+    "NpcId": 2600029,
+    "PetId": 1005,
+    "NpcName": "Abyss Klaw Mutant",
+    "SoulItemId": 534660004
+  },
+  {
+    "NpcId": 2600002,
+    "PetId": 1029,
+    "NpcName": "Abyss Klaw",
+    "SoulItemId": 534660029
+  },
+  {
+    "NpcId": 2600012,
+    "PetId": 1029,
+    "NpcName": "Abyss Aberrant Klaw",
+    "SoulItemId": 534660029
+  },
+  {
+    "NpcId": 2600042,
+    "PetId": 1200,
+    "NpcName": "Abyss Naga Dark Mage",
+    "SoulItemId": 534660119
+  },
+  {
+    "NpcId": 2600036,
+    "PetId": 1030,
+    "NpcName": "Abyss Nagarant Brawler",
+    "SoulItemId": 534660030
+  },
+  {
+    "NpcId": 2600041,
+    "PetId": 1030,
+    "NpcName": "Abyss Nagarant Warrior",
+    "SoulItemId": 534660030
+  },
+  {
+    "NpcId": 2600024,
+    "PetId": 1089,
+    "NpcName": "Abyss Sulfur Skama",
+    "SoulItemId": 534660090
+  },
+  {
+    "NpcId": 2600052,
+    "PetId": 1014,
+    "NpcName": "Abyss Drakan Scout Beast",
+    "SoulItemId": 534660013
+  },
+  {
+    "NpcId": 2600061,
+    "PetId": 1134,
+    "NpcName": "Abyss Coradon",
+    "SoulItemId": 534660168
+  },
+  {
+    "NpcId": 2600004,
+    "PetId": 1098,
+    "NpcName": "Abyss Karnif",
+    "SoulItemId": 534660099
+  },
+  {
+    "NpcId": 2600014,
+    "PetId": 1098,
+    "NpcName": "Abyss Search Party Karnif",
+    "SoulItemId": 534660099
+  },
+  {
+    "NpcId": 2600048,
+    "PetId": 1016,
+    "NpcName": "Abyss Slink",
+    "SoulItemId": 534660015
+  },
+  {
+    "NpcId": 2600046,
+    "PetId": 1083,
+    "NpcName": "Abyss Odyle Mutated Insectoid",
+    "SoulItemId": 534660084
+  },
+  {
+    "NpcId": 2600045,
+    "PetId": 1117,
+    "NpcName": "Abyss Red Mutated Insectoid",
+    "SoulItemId": 534660086
+  },
+  {
+    "NpcId": 2600047,
+    "PetId": 1121,
+    "NpcName": "Abyss Young Slink",
+    "SoulItemId": 534660155
+  },
+  {
+    "NpcId": 2600027,
+    "PetId": 1207,
+    "NpcName": "Sulfur Agrint",
+    "SoulItemId": 534660199
+  },
+  {
+    "NpcId": 2600071,
+    "PetId": 1207,
+    "NpcName": "Root Agrint",
+    "SoulItemId": 534660199
+  },
+  {
+    "NpcId": 2600069,
+    "PetId": 1214,
+    "NpcName": "Abyss Corrupted Spirit",
+    "SoulItemId": 534660115
+  },
+  {
+    "NpcId": 2600049,
+    "PetId": 1073,
+    "NpcName": "Abyss Nasty Nepenthes",
+    "SoulItemId": 534660074
+  },
+  {
+    "NpcId": 2600066,
+    "PetId": 1178,
+    "NpcName": "Old Tree Spirit Warrior",
+    "SoulItemId": 534660146
+  },
+  {
+    "NpcId": 2600056,
+    "PetId": 1069,
+    "NpcName": "Abyss Rock Spirit",
+    "SoulItemId": 534660070
+  },
+  {
+    "NpcId": 2600028,
+    "PetId": 1209,
+    "NpcName": "Thin Sulfur Agrint",
+    "SoulItemId": 534660113
+  },
+  {
+    "NpcId": 2600026,
+    "PetId": 1027,
+    "NpcName": "Withered Sulfur Agrint",
+    "SoulItemId": 534660026
+  },
+  {
+    "NpcId": 2600050,
+    "PetId": 1219,
+    "NpcName": "Abyss Zelophi",
+    "SoulItemId": 534660117
+  },
+  {
+    "NpcId": 2600051,
+    "PetId": 1110,
+    "NpcName": "Abyssal Kalgolem",
+    "SoulItemId": 534660111
+  },
+  {
+    "NpcId": 2600023,
+    "PetId": 1062,
+    "NpcName": "Abyss Sulfur Slime",
+    "SoulItemId": 534660063
+  },
+  {
+    "NpcId": 2600070,
+    "PetId": 1084,
+    "NpcName": "Root Kalgolem",
+    "SoulItemId": 534660085
+  },
+  {
+    "NpcId": 2600003,
+    "PetId": 1192,
+    "NpcName": "Abyss Rusty Rotan",
+    "SoulItemId": 534660130
+  },
+  {
+    "NpcId": 2600013,
+    "PetId": 1192,
+    "NpcName": "Abyss Old Blade Rotan",
+    "SoulItemId": 534660130
+  },
+  {
+    "NpcId": 2600001,
+    "PetId": 1013,
+    "NpcName": "Abyss Swarm",
+    "SoulItemId": 534660012
+  },
+  {
+    "NpcId": 2600011,
+    "PetId": 1013,
+    "NpcName": "Abyss Aberrant Swarn",
+    "SoulItemId": 534660012
+  },
+  {
+    "NpcId": 2600021,
+    "PetId": 1013,
+    "NpcName": "Abyss Swarm Mutant",
+    "SoulItemId": 534660012
+  }
+]

@@ -1,0 +1,2958 @@
+[
+  {
+    "PetId": 1240,
+    "Kind": "Cash shop",
+    "Instructions": "In-game Menu > Shop > Atelier > Weapons/Wings/Pets > Products. Claim the purchased pet from Shop Storage.",
+    "Window": "Announced offer: September 30 through October 28, 2026, before scheduled maintenance (PDT). Price and current availability are shown in your shop.",
+    "SourceUrl": "https://lounge.plaync.com/feed/82938?country=US&locale=en-US",
+    "CheckedOn": "2026-10-14",
+    "Aliases": [
+      "cash pet",
+      "shop pet",
+      "rabbit"
+    ],
+    "AnnouncedEnd": "2026-10-28"
+  },
+  {
+    "PetId": 1278,
+    "Kind": "Cash shop",
+    "Instructions": "In-game Menu > Shop > Atelier > Weapons/Wings/Pets > Products. Claim the purchased pet from Shop Storage.",
+    "Window": "Announced offer: September 30 through October 28, 2026, before scheduled maintenance (PDT). Price and current availability are shown in your shop.",
+    "SourceUrl": "https://lounge.plaync.com/feed/82938?country=US&locale=en-US",
+    "CheckedOn": "2026-10-14",
+    "Aliases": [
+      "cash pet",
+      "shop pet",
+      "hamster"
+    ],
+    "AnnouncedEnd": "2026-10-28"
+  },
+  {
+    "PetId": 1299,
+    "Kind": "Twitch campaign reward",
+    "Instructions": "Pet: Two was the four-hour viewing reward from participating War for Atreia creators. Check Twitch Drops Inventory for a reward you already earned; this is not a world-map farm.",
+    "Window": "Announced October 7-9, 2026 campaign. The notice left exact start/end times TBD. Claim earned drops before October 30, 2026 at 23:59 PDT.",
+    "SourceUrl": "https://lounge.plaync.com/feed/82965?country=US&locale=en-US",
+    "CheckedOn": "2026-10-14",
+    "Aliases": [
+      "2",
+      "aion 2",
+      "twitch",
+      "War for Atreia"
+    ],
+    "AnnouncedEnd": "2026-10-09"
+  },
+  {
+    "PetId": 1001,
+    "Kind": "Ultimate Founder's Pack",
+    "Instructions": "Black Dragon is included in the Ultimate Founder's Pack. Standard and Deluxe packs do not include this pet. Check your pack entitlement and the official notice.",
+    "Window": "Founder entitlement; this listing does not confirm a current purchase offer.",
+    "SourceUrl": "https://lounge.plaync.com/feed/82968?country=US&locale=en-US",
+    "CheckedOn": "2026-10-14",
+    "Aliases": [
+      "founder",
+      "ultimate"
+    ]
+  },
+  {
+    "PetId": 1204,
+    "Kind": "Launch reward",
+    "Instructions": "The Advance: Pet Chest contains Pagati plus one choice from Papis, Silver Blade Rotan, Konutin Worker or Black Smoke Murute. Check the launch-reward notice for delivery and mailbox deadlines.",
+    "Window": "Launch reward. Distribution and in-game mail expiry have separate deadlines; see the official notice.",
+    "SourceUrl": "https://lounge.plaync.com/feed/82950?country=US&locale=en-US",
+    "CheckedOn": "2026-10-14",
+    "Aliases": [
+      "launch",
+      "advance pet chest"
+    ]
+  },
+  {
+    "PetId": 1111,
+    "Kind": "Daeva Pass shop",
+    "Instructions": "Swift Lugi is offered for 10,000 Daeva Pass Shop Coins: Season 1 in the Pass Shop.",
+    "Window": "Season 1 offer and shop coins expire December 15, 2026, before scheduled maintenance (PST). Check the in-game shop before saving coins.",
+    "SourceUrl": "https://lounge.plaync.com/feed/82940?country=US&locale=en-US",
+    "CheckedOn": "2026-10-14",
+    "Aliases": [
+      "daeva pass",
+      "pass shop",
+      "season 1"
+    ],
+    "AnnouncedEnd": "2026-12-15"
+  },
+  {
+    "PetId": 1009,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/kernon",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Fera",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1021,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/aberrant-odyle-spider",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Fera",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1028,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/krao-mutant",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Varian",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1032,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/elite-keneire",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Fera",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1043,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/elite-ursus",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Fera",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1044,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/aultross-s-doppelganger",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Cogni",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1055,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/grave-rat",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Fera",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1057,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/coradon",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Fera",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1058,
+    "Kind": "Dungeon reward",
+    "Instructions": "Souls: Black Smoke Murute in Fire Temple. Also a possible reward from Pet Soul Chest: Natura (Bound). The pet unlock item is listed in Black Cloud Merchants stock.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/black-smoke-murute",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Black Smoke Murute",
+      "Fire Temple",
+      "Black Cloud Merchants",
+      "Pet Soul Chest: Natura (Bound)"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1077,
+    "Kind": "Dungeon reward",
+    "Instructions": "Souls: Enhanced Harcon in Krao Cave. Also a possible reward from Pet Soul Chest: Varian (Bound). The pet unlock item is listed in Black Cloud Merchants stock.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/harcon",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Enhanced Harcon",
+      "Krao Cave",
+      "Black Cloud Merchants",
+      "Pet Soul Chest: Varian (Bound)"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1078,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/urugugu-brawler",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Cogni",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1079,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/ultimate-wind-spirit",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Natura",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1080,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/sentinel-k-nash",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Cogni",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1081,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/dionae",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Natura",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1082,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/ultimate-fire-spirit",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Natura",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1090,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/ultimate-water-spirit",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Natura",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1091,
+    "Kind": "Dungeon reward",
+    "Instructions": "Souls: Red Spark Ignus in Fire Temple. Also a possible reward from Pet Soul Chest: Natura (Bound). The pet unlock item is listed in Black Cloud Merchants stock.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/red-spark-ignus",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Red Spark Ignus",
+      "Fire Temple",
+      "Black Cloud Merchants",
+      "Pet Soul Chest: Natura (Bound)"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1093,
+    "Kind": "Dungeon reward",
+    "Instructions": "Souls: Phantasmal Lakshmi in Draupnir. Also a possible reward from Pet Soul Chest: Cogni (Bound). The pet unlock item is listed in Black Cloud Merchants stock.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/phantasmal-lakshmi",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Phantasmal Lakshmi",
+      "Draupnir",
+      "Black Cloud Merchants",
+      "Pet Soul Chest: Cogni (Bound)"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1099,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/elite-karnif",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Fera",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1100,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/ultimate-earth-spirit",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Natura",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1102,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/dried-up-forest-guardian",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Natura",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1103,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/pretor-veil-administrator",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Cogni",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1107,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/krao-seal-guardian",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Varian",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1112,
+    "Kind": "Festival shop",
+    "Instructions": "Buy the pet from the Shugo Festival Merchant with 500 Centuryroot Tokens.",
+    "Window": "Check event access and the current in-game shop before spending tokens.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/wandering-merchant-lugi",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Shugo Festival",
+      "Centuryroot Token"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1122,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/young-tog",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Fera",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1132,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/ashen-lupyllini",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Fera",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1133,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/forest-dionae",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Natura",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1138,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/mumu-overseer",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Cogni",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1139,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/swamp-monster",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Varian",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1145,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/mutated-insectoid-valka",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Fera",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1146,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/gatekeeper-pinopi",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Varian",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1158,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/venomous-insect-sram",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Fera",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1160,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/drana-contaminant",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Varian",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1167,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/flame-stone-guardian-statue",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Varian",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1177,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/ancient-spirit",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Natura",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1182,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/elite-soulless-corpse-gnat",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Varian",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1185,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/dratona-tinkerer",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Cogni",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1190,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/elite-poisonous-spore-fungen",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Natura",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1191,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/furious-feruk",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Cogni",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1196,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/elite-dratona",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Cogni",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1198,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/ashen-basilisk",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Fera",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1199,
+    "Kind": "Soul chests & merchants",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Pet unlock: check Black Cloud Merchants for the pet item; shop stock varies.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/flame-barghest",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest",
+      "Fera",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1215,
+    "Kind": "Dungeon reward",
+    "Instructions": "Souls: Predator Saraswati in Draupnir. Also a possible reward from Pet Soul Chest: Cogni (Bound). The pet unlock item is listed in Black Cloud Merchants stock.",
+    "Window": "Check current stock and reward contents in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://corpus.gg/games/aion-2/collections/predator-saraswati",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Predator Saraswati",
+      "Draupnir",
+      "Black Cloud Merchants",
+      "Pet Soul Chest: Cogni (Bound)"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Corpus · published client records"
+  },
+  {
+    "PetId": 1002,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-krall-laborer-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Cogni (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1003,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-forest-specter-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1004,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-fossa-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1005,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-klaw-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Cogni (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1006,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-sparkie-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1007,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-potcrab-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1008,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-baby-odyle-spider-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1010,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-manduri-fighter-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Cogni (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1011,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-skyray-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1012,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-fungie-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1013,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-swarm-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1014,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-drakan-guard-dog-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1015,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-kailin-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1016,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-slink-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1017,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-krall-warshaman-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Cogni (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1018,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-varg-berserker-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Cogni (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1114,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-ashen-spider-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1025,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-mutated-aberrant-odyle-spider-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1022,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-crasaur-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1116,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-withered-branch-spider-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1026,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-krall-warrior-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Cogni (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1027,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-withered-agrint-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1029,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-klaw-scout-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Cogni (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1030,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-nagarant-guardian-warrior-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Cogni (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1031,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-konutin-worker-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1033,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-elite-manduri-fighter-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Cogni (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1034,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-giant-sparkie-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1035,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-skama-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1036,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-lupyllini-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1037,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-male-crestlich-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1038,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-airon-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1039,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-crestlich-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1040,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-aullaeu-shaman-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Cogni (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1041,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-cave-bat-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1042,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-ursus-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1045,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-sylphen-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1046,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-armadon-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1047,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-aberrant-armadon-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1048,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-forest-spirit-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1049,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-mutated-forest-spirit-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1050,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-gravi-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1051,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-magic-gravi-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1052,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-large-leaf-gravi-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1053,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-aberrant-potcrab-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1054,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-mumu-warrior-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Cogni (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1056,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-drakan-probe-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1059,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-giant-bee-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1060,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-starturtle-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1061,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-slime-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1062,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-contaminated-slime-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1063,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-vigilant-oculazen-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1064,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-oculazen-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1065,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-biruta-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Cogni (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1066,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-papis-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1067,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-scorpion-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1069,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-stone-spirit-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1071,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-cadaver-insectoid-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1072,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-tog-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1073,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-nepenthes-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1074,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-kuru-worker-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Cogni (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1075,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-kuru-tinkerer-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Cogni (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1115,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-kuru-overseer-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Cogni (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1083,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-spider-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1084,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-kalgolem-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1117,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-unstable-spider-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1086,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-fungen-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1087,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-pino-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1088,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-pino-worker-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1089,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-aberrant-skama-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1092,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-lesser-wind-spirit-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1094,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-intermediate-wind-spirit-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1095,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-superior-wind-spirit-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1096,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-superior-fire-spirit-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1097,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-karnif-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1098,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-modified-karnif-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1101,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-forest-guardian-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1104,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-manduri-trebuchet-worker-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Cogni (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1105,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-biruta-herbalist-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Cogni (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1106,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-tayga-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1108,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-enhanced-krall-combatant-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Cogni (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1109,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-enhanced-krall-sentry-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Cogni (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1110,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-blue-kalgolem-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1159,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-parasite-swarm-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1209,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-thin-agrint-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1140,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-forest-monster-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1214,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-black-spirit-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1153,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-drana-mutant-brute-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1219,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-zelophi-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1200,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-naga-elite-priest-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Cogni (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1124,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-zaif-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1168,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-lesser-water-spirit-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1169,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-intermediate-water-spirit-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1155,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-superior-water-spirit-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1164,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-lesser-earth-spirit-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1165,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-intermediate-earth-spirit-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1166,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-superior-earth-spirit-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1213,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-lesser-fire-spirit-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1187,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-intermediate-fire-spirit-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1192,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-silver-blade-rotan-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1188,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-vivel-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1147,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-dratona-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Cogni (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1163,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-basilisk-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1172,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-duduka-worker-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1173,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-duduka-trebuchet-worker-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1194,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-guardite-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1184,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-drakan-watcher-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Cogni (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1195,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-dracuni-herbalist-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Cogni (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1162,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-kerubar-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Cogni (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1170,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-kerubian-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Cogni (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1178,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-spirit-kings-bodyguard-warrior-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1216,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-dark-spirit-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1118,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-aberrant-bee-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1119,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-aberrant-coradon-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1120,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-young-kailin-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1121,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-young-slink-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1123,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-young-ursus-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1125,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-aberrant-zaif-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1126,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-aberrant-tog-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1127,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-odyle-stone-spirit-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1128,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-drana-slime-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1129,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-drana-swarm-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1130,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-mutated-cadaver-insectoid-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1131,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-drana-spore-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1134,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-eternal-coradon-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1135,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-ashen-dionae-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1136,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-rafflesia-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1137,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-mumu-worker-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Cogni (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1141,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-marsh-targon-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1142,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-distorted-mutant-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1143,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-mutated-ursus-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1144,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-mutated-forest-guardian-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1148,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-drakana-kalgolem-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1186,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-poison-blood-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1217,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-congealed-drana-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1157,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-cadaver-cleaner-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1156,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-elite-klaw-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Cogni (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1207,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-agrint-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1181,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-brax-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1201,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-modified-lupyllini-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Cogni (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1174,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-drana-predator-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1175,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-faded-predator-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1180,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-faded-mutant-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1154,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-faded-mutant-brute-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1161,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-faded-floater-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1179,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-drana-mutant-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1193,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-addicted-shulak-cart-worker-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Cogni (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1206,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-elite-guardite-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1197,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-watcher-guardite-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1171,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-kerubiel-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Cogni (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1202,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Cogni (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-decomposed-lupyllini-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Cogni (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1218,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-faded-drana-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1176,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-mudthorn-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1208,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-ashen-agrint-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1203,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-tamed-karnif-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1183,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Varian (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-soulless-corpse-gnat-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Varian (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1210,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Natura (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-dry-leaf-agrint-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Natura (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1189,
+    "Kind": "Other sources",
+    "Instructions": "Souls: possible reward from Pet Soul Chest: Fera (Bound). Check Black Cloud Merchants for a pet unlock item; stock varies.",
+    "Window": "Check current chest contents and merchant stock in game. Random rewards do not guarantee this pet.",
+    "SourceUrl": "https://aion2maps.com/items/soul-tamed-zaif-bound/",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pet Soul Chest: Fera (Bound)",
+      "Black Cloud Merchants"
+    ],
+    "SourceLabel": "Source details",
+    "SourceName": "Aion 2 Maps · published client records"
+  },
+  {
+    "PetId": 1343,
+    "Kind": "Cash shop",
+    "Instructions": "In-game Menu > Shop > Atelier > Weapons/Wings/Pets > Products. Claim the purchased pet from Shop Storage.",
+    "Window": "Announced October 14 to November 24, 2026, before scheduled maintenance (PST at the end). Check your shop for local pricing and availability.",
+    "SourceUrl": "https://lounge.plaync.com/feed/84134?country=US&locale=en-US",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Little Ghost",
+      "Halloween",
+      "shop pet"
+    ],
+    "AnnouncedEnd": "2026-11-24"
+  },
+  {
+    "PetId": 1363,
+    "Kind": "Cash shop",
+    "Instructions": "In-game Menu > Shop > Atelier > Weapons/Wings/Pets > Products. Claim the purchased pet from Shop Storage.",
+    "Window": "Announced October 14 to November 24, 2026, before scheduled maintenance (PST at the end). Check your shop for local pricing and availability.",
+    "SourceUrl": "https://lounge.plaync.com/feed/84134?country=US&locale=en-US",
+    "CheckedOn": "2026-10-18",
+    "Aliases": [
+      "Pumpkin Carriage",
+      "Halloween",
+      "shop pet"
+    ],
+    "AnnouncedEnd": "2026-11-24"
+  }
+]

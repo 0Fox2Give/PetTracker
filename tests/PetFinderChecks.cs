@@ -1,0 +1,76 @@
+using PetTracker;
+using System.Text.Json;
+static class PetFinderChecks
+{
+    public static void Run(Action<bool, string> check)
+    {
+        using var worldStream = typeof(PetFinderChecks).Assembly.GetManifestResourceStream("CatalogWorldSources.json")!;
+        using var worldDoc = JsonDocument.Parse(worldStream);
+        var world = worldDoc.RootElement.EnumerateArray().ToArray();
+        check(world.Length == 447 && world.All(r => PetFinder.Directory.Rows.Single(p => p.PetId == r.GetProperty("PetId").GetInt32()).SoulSources!.Any(s => s.NpcId == r.GetProperty("NpcId").GetInt32() && s.Name == r.GetProperty("Name").GetString() && s.Region == r.GetProperty("Region").GetString())), "Every audited world mob retains its exact pet, name and supported region");
+        check(world.All(r => PetFinder.Directory.Rows.Single(p => p.PetId == r.GetProperty("PetId").GetInt32()).Maps.Any(m => m.Region == r.GetProperty("Region").GetString() && m.Url.EndsWith("item:" + r.GetProperty("ItemId").GetInt32()))), "Every audited soul source has a matching region and exact soul-item map filter");
+        using var idsStream = typeof(PetFinderChecks).Assembly.GetManifestResourceStream("CatalogDiscoveryIds.json")!;
+        var expectedIds = JsonSerializer.Deserialize<int[]>(idsStream)!;
+        check(PetFinder.Search("").Select(p => p.Pet.Id).Order().SequenceEqual(expectedIds), "Discovery covers the entire audited 208-pet reference catalog without promoting historical entries");
+        var spider = PetFinder.Entries.Single(p => p.Pet.Id == 1021);
+        check(spider.Acquisition?.Instructions.Contains("Pet Soul Chest: Fera") == true && spider.Creatures.Count == 0 && spider.AvailableMaps.Count == 0, "Aberrant Odyle Spider has a chest route without inventing a world spawn");
+        check(PetFinder.Entries.Single(p => p.Pet.Id == 1025).Creatures.Contains("Marsh Odyle Spider"), "The separate Mutated Aberrant Odyle Spider retains its actual mob sources");
+        check(PetFinder.Search("Krao Cave").Any(p => p.Pet.Id == 1077) && PetFinder.Search("Fire Temple").Any(p => p.Pet.Id == 1192), "Dungeon names find Harcon and Silver Blade Rotan");
+        check(!PetFinder.Search("Gluttonous Egetis").Any() && !PetFinder.Search("Crimson Blizzard Renulf").Any(), "Closed-region mob names do not appear as current farming sources");
+        check(new CreaturePetMappings("", Catalog.Create()).Find(2101278)?.PetId == 1103, "Discovery filtering preserves historical decoder associations");
+        check(PetFinder.Search("Little Ghost").Single().Pet.Id == 1343 && PetFinder.Search("Pumpkin Carriage").Single().Pet.Id == 1363, "October shop additions use their individually sourced pet IDs");
+        check(PetAcquisitions.Find(1112)!.Instructions.Contains("500 Centuryroot Tokens"), "Wandering Merchant Lugi has its festival shop route");
+        check(PetAcquisitions.Find(1021)!.SourceLabel == "Source details" && PetAcquisitions.Find(1343)!.SourceLabel == "Official source", "Community references are distinguished from official shop notices");
+        check(PetFinder.AllowedSourceUrl("https://corpus.gg/games/aion-2/collections/aberrant-odyle-spider") && !PetFinder.AllowedSourceUrl("https://corpus.gg.evil.test/games/aion-2/collections/a") && !PetFinder.AllowedSourceUrl("https://user@corpus.gg/games/aion-2/collections/a") && !PetFinder.AllowedSourceUrl("https://corpus.gg/settings") && !PetFinder.AllowedSourceUrl("https://corpus.gg:444/games/aion-2/collections/a"), "New reference host accepts only HTTPS collection pages and rejects spoofed URLs");
+        var skama = PetFinder.Entries.Single(p => p.Pet.Name == "Skama");
+        check(PetFinder.Search("  fOuL   sKama ").Any(p => p.Pet.Id == skama.Pet.Id), "Mob-name search resolves the linked pet, ignoring case and spacing");
+        check(!PetFinder.Search("this mob does not exist 9837").Any(), "Unknown search does not fabricate a pet match");
+        check(skama.Location!.Maps.Any(m => m.Region == "Verteron" && m.Url.Contains("item:534660035")), "Skama uses the published filtered map destination");
+        check(PetFinder.Directory.Rows.Select(r => r.PetId).Distinct().Count() == Catalog.Entries.Count, "Location directory has one record per catalog pet");
+        check(PetFinder.Directory.Rows.SelectMany(r => r.Maps.Select(m => m.Url).Concat(r.SourceUrl == null ? Array.Empty<string>() : new[] { r.SourceUrl })).All(PetFinder.AllowedUrl), "Every bundled destination is HTTPS on the approved map host");
+        check(!PetFinder.AllowedUrl("https://aion2maps.com.evil.test/") && !PetFinder.AllowedUrl("file:///test") && !PetFinder.AllowedUrl("https://user@aion2maps.com/"), "External link validation rejects host spoofing and file URLs");
+        check(!PetFinder.Entries.Any(p => p.Pet.Name.StartsWith("Pet #") || p.Pet.CatalogName == "TestDummy"), "Finder excludes unresolved and internal catalog records");
+        check(Catalog.Entries.Any(p => p.Id == 1339) && Catalog.Entries.Any(p => p.Id == 9999), "Finder filtering preserves decoder catalog IDs");
+        check(PetFinder.Search("twitch").Single().Pet.Id == 1299 && PetFinder.Search("2").Any(p => p.Pet.Id == 1299), "Twitch and numeric campaign aliases resolve Two");
+        check(PetFinder.Search("rabbit").Any(p => p.Pet.Id == 1240) && PetFinder.Search("hamster").Any(p => p.Pet.Id == 1278), "Shop pets resolve familiar animal names");
+        check(PetAcquisitions.Entries.All(a => Catalog.Entries.Any(p => p.Id == a.PetId) && PetFinder.AllowedSourceUrl(a.SourceUrl)) && PetAcquisitions.Entries.Select(a => a.PetId).Distinct().Count() == PetAcquisitions.Entries.Count, "Acquisition records have unique known pet IDs and approved sources");
+        check(!PetFinder.AllowedSourceUrl("https://lounge.plaync.com.evil.test/feed/82965") && !PetFinder.AllowedSourceUrl("https://user@lounge.plaync.com/feed/82965") && !PetFinder.AllowedSourceUrl("https://lounge.plaync.com/settings"), "Official source validation rejects spoofed hosts and unrelated routes");
+        check(PetAcquisitions.Find(1299)!.Availability(new(2026, 10, 11)).Contains("has passed") && !PetAcquisitions.Find(1240)!.Availability(new(2026, 10, 11)).Contains("has passed"), "Campaign expiry differs from ongoing shop offer");
+        check(new FarmingMap("Verteron", "").Global && !new FarmingMap("Eltnen", "").Global && new FarmingMap("Eltnen", "").Edition.Contains("unverified"), "Regional map coverage does not imply Global availability");
+        check(PetFinder.Entries.SelectMany(p => p.AvailableMaps).All(m => m.Global) && PetFinder.Entries.SelectMany(p => p.Location?.Maps ?? new()).Any(m => !m.Global), "Finder hides unsupported regional destinations without deleting source records");
+        var limited = PetFinder.Entries.First(p => p.Acquisition == null && p.Location?.Maps.Count > 0 && p.AvailableMaps.Count == 0);
+        var unknown = new Profile { Pets = Catalog.Create() };
+        var beforeFilter = JsonSerializer.Serialize(unknown);
+        check(!PetFinder.Search(limited.Pet.Name, unknown).Any(p => p.Pet.Id == limited.Pet.Id), "Regional-only pet with no recorded progress is hidden from discovery");
+        check(JsonSerializer.Serialize(unknown) == beforeFilter && PetFinder.Entries.Any(p => p.Pet.Id == limited.Pet.Id), "Presentation filtering preserves collection bytes and full catalog entry");
+        unknown.Pets[limited.Pet.Id].Level = 0;
+        unknown.Pets[limited.Pet.Id].Souls = 0;
+        check(!limited.VisibleFor(unknown), "An empty catalog counter is not evidence of pet availability");
+        unknown.Pets[limited.Pet.Id].Souls = 1;
+        check(PetFinder.Search(limited.Pet.Name, unknown).Any(p => p.Pet.Id == limited.Pet.Id), "Recorded soul progress keeps an otherwise hidden pet searchable");
+        unknown.Pets[limited.Pet.Id].Souls = null;
+        unknown.Pets[limited.Pet.Id].Level = 1;
+        check(limited.VisibleFor(unknown), "Owned pet remains visible even when its balance or location is unknown");
+        check(!limited.VisibleFor(new Profile { Pets = Catalog.Create() }), "Visibility uses the selected account and does not leak another account's ownership");
+        var profile = new Profile { Pets = Catalog.Create() };
+        var settings = new AppSettings { PinnedPetId = skama.Pet.Id, ExpireInactive = true, HideMaxed = true, RowLimit = 3 };
+        var now = DateTimeOffset.UtcNow;
+        var tracker = new Tracker("", Catalog.Create());
+        tracker.ReadOnlyView(new(3, profile, true, "Live", "", "", new(), null, new() { new(skama.Pet.Id, null, "Foul Skama", now.AddMinutes(-5)), new(1050, null, "", now) }, null, now, 1, 0, 0, 0, settings));
+        var before = JsonSerializer.Serialize(profile);
+        check(Activity.Select(tracker, settings, now).First().PetId == skama.Pet.Id, "Expired pinned target remains above recent activity");
+        check(Activity.Select(tracker, settings, now).Count(a => a.PetId == skama.Pet.Id) == 1, "Pin and recent activity never duplicate a row");
+        profile.Pets[skama.Pet.Id].Level = 3;
+        check(Activity.Select(tracker, settings, now).First().PetId == skama.Pet.Id, "Explicit pinned target remains visible when maxed and Hide maxed is on");
+        settings.PinnedPetId = 1066;
+        check(Activity.Select(tracker, settings, now).First().PetId == 1066, "An unencountered pet can be pinned without a kill");
+        settings.PinnedPetId = null;
+        check(!Activity.Select(tracker, settings, now).Any(a => a.PetId == skama.Pet.Id), "Unpin restores expiry and Hide maxed rules");
+        check(profile.Pets[1066].CurrentSouls == null, "Pinning never invents soul progress");
+        var invalid = new AppSettings { PinnedPetId = int.MaxValue };
+        invalid.Normalize();
+        check(invalid.PinnedPetId == null, "Unknown saved pin is discarded");
+        var restored = JsonSerializer.Deserialize<AppSettings>(JsonSerializer.Serialize(new AppSettings { PinnedPetId = skama.Pet.Id }))!;
+        check(restored.PinnedPetId == skama.Pet.Id, "Pinned target survives settings serialization");
+    }
+}

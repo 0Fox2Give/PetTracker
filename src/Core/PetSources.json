@@ -1,0 +1,4262 @@
+{
+  "Format": 1,
+  "SourceVersion": "AION 2 Global 2.0.5.0 / October 5, 2026",
+  "GeneratedUtc": "2026-10-06T05:06:26.008492+00:00",
+  "Rows": [
+    {
+      "NpcId": 2000925,
+      "PetId": 1136,
+      "CatalogName": "Rafflesia_01_CV01",
+      "InternalName": "M_D1_Com_Rafflesia_01_001",
+      "NpcName": "Rafflesia",
+      "PetName": "Rafflesia",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1136"
+    },
+    {
+      "NpcId": 2000926,
+      "PetId": 1066,
+      "CatalogName": "Papis_01",
+      "InternalName": "M_D1_Com_Papis_01_02",
+      "NpcName": "Faded Papis",
+      "PetName": "Papis",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1066"
+    },
+    {
+      "NpcId": 2000927,
+      "PetId": 1066,
+      "CatalogName": "Papis_01",
+      "InternalName": "M_D1_Com_Papis_01_03",
+      "NpcName": "Faded Papis",
+      "PetName": "Papis",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1066"
+    },
+    {
+      "NpcId": 2000928,
+      "PetId": 1066,
+      "CatalogName": "Papis_01",
+      "InternalName": "M_D1_Com_Papis_01_04",
+      "NpcName": "Faded Papis",
+      "PetName": "Papis",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1066"
+    },
+    {
+      "NpcId": 2000929,
+      "PetId": 1066,
+      "CatalogName": "Papis_01",
+      "InternalName": "M_D1_Com_Papis_01_05",
+      "NpcName": "Faded Papis",
+      "PetName": "Papis",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1066"
+    },
+    {
+      "NpcId": 2000951,
+      "PetId": 1066,
+      "CatalogName": "Papis_01",
+      "InternalName": "M_D1_Com_Papis_01_09",
+      "NpcName": "Faded Papis",
+      "PetName": "Papis",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1066"
+    },
+    {
+      "NpcId": 2000952,
+      "PetId": 1119,
+      "CatalogName": "Coradon_01_V01",
+      "InternalName": "M_D1_Com_Coradon_01_05",
+      "NpcName": "Aberrant Coradon",
+      "PetName": "Aberrant Coradon",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1119"
+    },
+    {
+      "NpcId": 2000954,
+      "PetId": 1181,
+      "CatalogName": "Brax_01",
+      "InternalName": "M_D1_Com_Brax_01_02",
+      "NpcName": "Brax",
+      "PetName": "Brax",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1181"
+    },
+    {
+      "NpcId": 2000955,
+      "PetId": 1118,
+      "CatalogName": "Bee_01_V01",
+      "InternalName": "M_D1_Com_Bee_01_03",
+      "NpcName": "Black Armor Bee",
+      "PetName": "Aberrant Bee",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1118"
+    },
+    {
+      "NpcId": 2000956,
+      "PetId": 1116,
+      "CatalogName": "OdSpider_03_V01",
+      "InternalName": "M_D1_Com_OdSpider_03_V01_07",
+      "NpcName": "Withered Branch Spider",
+      "PetName": "Withered Branch Spider",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1116"
+    },
+    {
+      "NpcId": 2000957,
+      "PetId": 1116,
+      "CatalogName": "OdSpider_03_V01",
+      "InternalName": "M_D1_Com_OdSpider_03_V01_08",
+      "NpcName": "Withered Branch Spider",
+      "PetName": "Withered Branch Spider",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1116"
+    },
+    {
+      "NpcId": 2100002,
+      "PetId": 1084,
+      "CatalogName": "Kalgolem_01",
+      "InternalName": "M_L1_StoneElemental_01",
+      "NpcName": "Hard Kalgolem",
+      "PetName": "Kalgolem",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1084"
+    },
+    {
+      "NpcId": 2100004,
+      "PetId": 1045,
+      "CatalogName": "Muta_01",
+      "InternalName": "M_L1_Muta_01",
+      "NpcName": "Highland Sylphen",
+      "PetName": "Sylphen",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1045"
+    },
+    {
+      "NpcId": 2100006,
+      "PetId": 1126,
+      "CatalogName": "Tog_01_CV01",
+      "InternalName": "M_L1_Tog_01",
+      "NpcName": "Cairn Tog",
+      "PetName": "Aberrant Tog",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1126"
+    },
+    {
+      "NpcId": 2100009,
+      "PetId": 1066,
+      "CatalogName": "Papis_01",
+      "InternalName": "M_L1_CV_BF_Papis_01_001",
+      "NpcName": "Gentle Papis",
+      "PetName": "Papis",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1066"
+    },
+    {
+      "NpcId": 2100015,
+      "PetId": 1034,
+      "CatalogName": "SparkyOd_02",
+      "InternalName": "M_L1_Spakle_01",
+      "NpcName": "Splendent Hill Sparkie",
+      "PetName": "Giant Sparkie",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1034"
+    },
+    {
+      "NpcId": 2100021,
+      "PetId": 1141,
+      "CatalogName": "BigMan_01_V02",
+      "InternalName": "M_L1_SwampMan_01",
+      "NpcName": "Marsh Targon",
+      "PetName": "Marsh Targon",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1141"
+    },
+    {
+      "NpcId": 2100022,
+      "PetId": 1048,
+      "CatalogName": "ForestEle_01",
+      "InternalName": "M_L1_TreeBranch_01",
+      "NpcName": "Marsh Vine Spirit",
+      "PetName": "Forest Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1048"
+    },
+    {
+      "NpcId": 2100023,
+      "PetId": 1045,
+      "CatalogName": "Muta_01",
+      "InternalName": "M_L1_ER_Muta_01",
+      "NpcName": "Ellun River Sylphen",
+      "PetName": "Sylphen",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1045"
+    },
+    {
+      "NpcId": 2100025,
+      "PetId": 1062,
+      "CatalogName": "Slime_02",
+      "InternalName": "M_L1_SwampSlime_01",
+      "NpcName": "Marsh Slime",
+      "PetName": "Contaminated Slime",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1062"
+    },
+    {
+      "NpcId": 2100030,
+      "PetId": 1025,
+      "CatalogName": "OdSpider_04_V01",
+      "InternalName": "M_L1_ER_OdSpider_04_V01_001",
+      "NpcName": "Marsh Odyle Spider",
+      "PetName": "Mutated Aberrant Odyle Spider",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1025"
+    },
+    {
+      "NpcId": 2100031,
+      "PetId": 1035,
+      "CatalogName": "Fish_01",
+      "InternalName": "M_L1_SwampFish_01",
+      "NpcName": "Foul Skama",
+      "PetName": "Skama",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1035"
+    },
+    {
+      "NpcId": 2100032,
+      "PetId": 1007,
+      "CatalogName": "Crab_01",
+      "InternalName": "M_L1_ER_Crab_01_001",
+      "NpcName": "Marsh Moss Potcrab",
+      "PetName": "Potcrab",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1007"
+    },
+    {
+      "NpcId": 2100033,
+      "PetId": 1060,
+      "CatalogName": "Starturtle_01",
+      "InternalName": "M_L1_ER_Turtle_01",
+      "NpcName": "Coastal Starturtle",
+      "PetName": "Starturtle",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1060"
+    },
+    {
+      "NpcId": 2100034,
+      "PetId": 1008,
+      "CatalogName": "OdSpider_01",
+      "InternalName": "M_L1_ER_OdSpider",
+      "NpcName": "Coastal Odyle Spider",
+      "PetName": "Baby Odyle Spider",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1008"
+    },
+    {
+      "NpcId": 2100037,
+      "PetId": 1039,
+      "CatalogName": "Crestlich_01",
+      "InternalName": "M_L1_Crestlich_01",
+      "NpcName": "Stonebeak Crestlich",
+      "PetName": "Crestlich",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1039"
+    },
+    {
+      "NpcId": 2100041,
+      "PetId": 1012,
+      "CatalogName": "Fungy_01",
+      "InternalName": "M_L1_ValleyFungy_01",
+      "NpcName": "Red Cap Fungie",
+      "PetName": "Fungie",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1012"
+    },
+    {
+      "NpcId": 2100047,
+      "PetId": 1011,
+      "CatalogName": "Skyray_01",
+      "InternalName": "M_L1_Skyray_01",
+      "NpcName": "Small Forest Skyray",
+      "PetName": "Skyray",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1011"
+    },
+    {
+      "NpcId": 2100048,
+      "PetId": 1011,
+      "CatalogName": "Skyray_01",
+      "InternalName": "M_L1_Skyray_02",
+      "NpcName": "Ellun River Falls Skyray",
+      "PetName": "Skyray",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1011"
+    },
+    {
+      "NpcId": 2100070,
+      "PetId": 1098,
+      "CatalogName": "Kalnif_02",
+      "InternalName": "M_L1_VF_Karnif_02",
+      "NpcName": "Scouting Karnif",
+      "PetName": "Modified Karnif",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1098"
+    },
+    {
+      "NpcId": 2100072,
+      "PetId": 1109,
+      "CatalogName": "KrallWar_01_V02",
+      "InternalName": "M_L1_VF_KrallWar_03_1",
+      "NpcName": "Enhanced Krall Sentry",
+      "PetName": "Enhanced Krall Sentry",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1109"
+    },
+    {
+      "NpcId": 2100073,
+      "PetId": 1026,
+      "CatalogName": "KrallWar_01",
+      "InternalName": "M_L1_VF_KrallWar_05_1",
+      "NpcName": "Krall Assault Trooper",
+      "PetName": "Krall Warrior",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1026"
+    },
+    {
+      "NpcId": 2100074,
+      "PetId": 1017,
+      "CatalogName": "KrallPrst_01",
+      "InternalName": "M_L1_VF_KrallPrst_01",
+      "NpcName": "Krall Warshaman",
+      "PetName": "Krall Warshaman",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1017"
+    },
+    {
+      "NpcId": 2100075,
+      "PetId": 1002,
+      "CatalogName": "KrallReg_01",
+      "InternalName": "M_L1_VF_KrallReg_01",
+      "NpcName": "Krall Armed Soldier",
+      "PetName": "Krall Laborer",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1002"
+    },
+    {
+      "NpcId": 2100078,
+      "PetId": 1005,
+      "CatalogName": "Neuth_01",
+      "InternalName": "M_L1_VF_Neuth_01",
+      "NpcName": "Wandering Klaw",
+      "PetName": "Klaw",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1005"
+    },
+    {
+      "NpcId": 2100079,
+      "PetId": 1156,
+      "CatalogName": "Neuth_03",
+      "InternalName": "M_L1_VF_Neuth_01_Named_01",
+      "NpcName": "Bodyguard Teegant",
+      "PetName": "Elite Klaw",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1156"
+    },
+    {
+      "NpcId": 2100096,
+      "PetId": 1098,
+      "CatalogName": "Kalnif_02",
+      "InternalName": "M_L1_VF_Karnif_A1_02",
+      "NpcName": "Unruly Karnif",
+      "PetName": "Modified Karnif",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1098"
+    },
+    {
+      "NpcId": 2100097,
+      "PetId": 1108,
+      "CatalogName": "KrallWar_01_V01",
+      "InternalName": "M_L1_VF_KrallWar_10",
+      "NpcName": "Enhanced Krall Combatant",
+      "PetName": "Enhanced Krall Combatant",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1108"
+    },
+    {
+      "NpcId": 2100130,
+      "PetId": 1098,
+      "CatalogName": "Kalnif_02",
+      "InternalName": "M_L1_VF_Karnif_A1_01",
+      "NpcName": "Trained Karnif",
+      "PetName": "Modified Karnif",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1098"
+    },
+    {
+      "NpcId": 2100142,
+      "PetId": 1048,
+      "CatalogName": "ForestEle_01",
+      "InternalName": "M_L1_BF_EllunRiverForestSpirit_01",
+      "NpcName": "Contaminated Vine Spirit",
+      "PetName": "Forest Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1048"
+    },
+    {
+      "NpcId": 2100143,
+      "PetId": 1207,
+      "CatalogName": "Agrint_01",
+      "InternalName": "M_L1_BF_EllunRiverAgrint_01",
+      "NpcName": "Decaying Agrint",
+      "PetName": "Agrint",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1207"
+    },
+    {
+      "NpcId": 2100144,
+      "PetId": 1038,
+      "CatalogName": "Airon_01",
+      "InternalName": "M_L1_BF_EllunRiverAiron_01",
+      "NpcName": "Smallbeak Airon",
+      "PetName": "Airon",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1038"
+    },
+    {
+      "NpcId": 2100145,
+      "PetId": 1126,
+      "CatalogName": "Tog_01_CV01",
+      "InternalName": "M_L1_BF_EllunRiverTog_01_002",
+      "NpcName": "Hungry Tog",
+      "PetName": "Aberrant Tog",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1126"
+    },
+    {
+      "NpcId": 2100150,
+      "PetId": 1039,
+      "CatalogName": "Crestlich_01",
+      "InternalName": "M_L1_BF_EllunRiverCrestlich_01_001",
+      "NpcName": "Ellun River Crestlich Female",
+      "PetName": "Crestlich",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1039"
+    },
+    {
+      "NpcId": 2100151,
+      "PetId": 1037,
+      "CatalogName": "Crestlich_02",
+      "InternalName": "M_L1_BF_EllunRiverCrestlich_02_001",
+      "NpcName": "Ellun River Crestlich Male",
+      "PetName": "Male Crestlich",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1037"
+    },
+    {
+      "NpcId": 2100157,
+      "PetId": 1031,
+      "CatalogName": "Conuti_02",
+      "InternalName": "M_L1_TF_Conuti_02_001",
+      "NpcName": "Tolbas Konutin Worker",
+      "PetName": "Konutin Worker",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1031"
+    },
+    {
+      "NpcId": 2100160,
+      "PetId": 1073,
+      "CatalogName": "Rafflesia_01",
+      "InternalName": "M_L1_TF_BF_Rafflesia_01_001",
+      "NpcName": "Tolbas Nepenthes",
+      "PetName": "Nepenthes",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1073"
+    },
+    {
+      "NpcId": 2100163,
+      "PetId": 1004,
+      "CatalogName": "Fossa_01",
+      "InternalName": "M_L1_TF_Fossa_01_001",
+      "NpcName": "Patrolling Fossa",
+      "PetName": "Fossa",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1004"
+    },
+    {
+      "NpcId": 2100165,
+      "PetId": 1016,
+      "CatalogName": "Lepisma_01",
+      "InternalName": "M_L1_TF_BF_Lepisma_01_001",
+      "NpcName": "Tolbas Slink",
+      "PetName": "Slink",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1016"
+    },
+    {
+      "NpcId": 2100172,
+      "PetId": 1042,
+      "CatalogName": "Ursuss_01",
+      "InternalName": "M_L1_TF_Ursuss_01_001",
+      "NpcName": "Hardhorn Ursus",
+      "PetName": "Ursus",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1042"
+    },
+    {
+      "NpcId": 2100173,
+      "PetId": 1123,
+      "CatalogName": "Ursuss_01_V01",
+      "InternalName": "M_L1_TF_Ursuss_01_V01_001",
+      "NpcName": "Baby Horn Ursus",
+      "PetName": "Young Ursus",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1123"
+    },
+    {
+      "NpcId": 2100174,
+      "PetId": 1097,
+      "CatalogName": "Kalnif_01",
+      "InternalName": "M_L1_TF_Kalnif_01",
+      "NpcName": "Ferocious Karnif",
+      "PetName": "Karnif",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1097"
+    },
+    {
+      "NpcId": 2100179,
+      "PetId": 1210,
+      "CatalogName": "Agrint_01_V02",
+      "InternalName": "M_L1_TF_Agrint_01",
+      "NpcName": "Forest Agrint",
+      "PetName": "Dry Leaf Agrint",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1210"
+    },
+    {
+      "NpcId": 2100180,
+      "PetId": 1074,
+      "CatalogName": "Kuru_01",
+      "InternalName": "M_L1_TF_Kuru_01_001",
+      "NpcName": "Tolbas Kuru Worker",
+      "PetName": "Kuru Worker",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1074"
+    },
+    {
+      "NpcId": 2100181,
+      "PetId": 1075,
+      "CatalogName": "Kuru_02",
+      "InternalName": "M_L1_TF_Kuru_02_001",
+      "NpcName": "Tolbas Kuru Tinkerer",
+      "PetName": "Kuru Tinkerer",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1075"
+    },
+    {
+      "NpcId": 2100182,
+      "PetId": 1011,
+      "CatalogName": "Skyray_01",
+      "InternalName": "M_L1_TF_WaterSkyray_01",
+      "NpcName": "Tolbas Forest Lake Skyray",
+      "PetName": "Skyray",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1011"
+    },
+    {
+      "NpcId": 2100183,
+      "PetId": 1065,
+      "CatalogName": "VirotaWar_01",
+      "InternalName": "M_L1_TF_Virota_01",
+      "NpcName": "Biruta Wanderer",
+      "PetName": "Biruta",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1065"
+    },
+    {
+      "NpcId": 2100188,
+      "PetId": 1016,
+      "CatalogName": "Lepisma_01",
+      "InternalName": "M_L1_BF_EllunRiverLepisma_01",
+      "NpcName": "Wetland Slink",
+      "PetName": "Slink",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1016"
+    },
+    {
+      "NpcId": 2100189,
+      "PetId": 1121,
+      "CatalogName": "Lepisma_01_V01",
+      "InternalName": "M_L1_BF_EllunRiverLepisma_03",
+      "NpcName": "Young Wetland Slink",
+      "PetName": "Young Slink",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1121"
+    },
+    {
+      "NpcId": 2100215,
+      "PetId": 1022,
+      "CatalogName": "Phaini_01",
+      "InternalName": "M_L1_BF_EllunRiverPhaini_02",
+      "NpcName": "Aquascale Crasaur",
+      "PetName": "Crasaur",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1022"
+    },
+    {
+      "NpcId": 2100216,
+      "PetId": 1038,
+      "CatalogName": "Airon_01",
+      "InternalName": "M_L1_BF_EllunRiverAiron_02",
+      "NpcName": "Pointbeak Airon",
+      "PetName": "Airon",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1038"
+    },
+    {
+      "NpcId": 2100217,
+      "PetId": 1181,
+      "CatalogName": "Brax_01",
+      "InternalName": "M_L1_BF_EllunRiverBraxA_02",
+      "NpcName": "Field Brax",
+      "PetName": "Brax",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1181"
+    },
+    {
+      "NpcId": 2100219,
+      "PetId": 1045,
+      "CatalogName": "Muta_01",
+      "InternalName": "M_L1_BF_EllunRiverMuta_01",
+      "NpcName": "Ellun River Sylphen",
+      "PetName": "Sylphen",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1045"
+    },
+    {
+      "NpcId": 2100220,
+      "PetId": 1066,
+      "CatalogName": "Papis_01",
+      "InternalName": "M_L1_BF_EllunRiverPapis_01_001",
+      "NpcName": "Ellun River Papis",
+      "PetName": "Papis",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1066"
+    },
+    {
+      "NpcId": 2100231,
+      "PetId": 1168,
+      "CatalogName": "WaterEle_01",
+      "InternalName": "M_L1_ER_WaterEle_01_002",
+      "NpcName": "Water Spirit",
+      "PetName": "Lesser Water Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1168"
+    },
+    {
+      "NpcId": 2100273,
+      "PetId": 1006,
+      "CatalogName": "SparkyOd_01",
+      "InternalName": "M_L1_VF_Sparky_01",
+      "NpcName": "Wild Sparkie",
+      "PetName": "Sparkie",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1006"
+    },
+    {
+      "NpcId": 2100283,
+      "PetId": 1114,
+      "CatalogName": "OdSpider_03",
+      "InternalName": "M_L1_BF_EllunRiverOdSpider_02",
+      "NpcName": "White Shell Octaside",
+      "PetName": "Ashen Spider",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1114"
+    },
+    {
+      "NpcId": 2100285,
+      "PetId": 1052,
+      "CatalogName": "Gravi_03",
+      "InternalName": "M_L1_BF_EllunRiverGravi_03_001",
+      "NpcName": "Ellun River Hill Gravi",
+      "PetName": "Large Leaf Gravi",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1052"
+    },
+    {
+      "NpcId": 2100286,
+      "PetId": 1118,
+      "CatalogName": "Bee_01_V01",
+      "InternalName": "M_L1_BF_EllunRiverBees_01",
+      "NpcName": "Black Pattern Bee",
+      "PetName": "Aberrant Bee",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1118"
+    },
+    {
+      "NpcId": 2100288,
+      "PetId": 1126,
+      "CatalogName": "Tog_01_CV01",
+      "InternalName": "M_L1_BF_EllunRiverTog_01_003",
+      "NpcName": "Field Tog",
+      "PetName": "Aberrant Tog",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1126"
+    },
+    {
+      "NpcId": 2100303,
+      "PetId": 1181,
+      "CatalogName": "Brax_01",
+      "InternalName": "M_L1_BF_EllunRiverBraxA_03",
+      "NpcName": "Hungry Brax",
+      "PetName": "Brax",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1181"
+    },
+    {
+      "NpcId": 2100305,
+      "PetId": 1006,
+      "CatalogName": "SparkyOd_01",
+      "InternalName": "M_L1_BF_EllunRiverSparky_02",
+      "NpcName": "Meadow Sparkie",
+      "PetName": "Sparkie",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1006"
+    },
+    {
+      "NpcId": 2100348,
+      "PetId": 1097,
+      "CatalogName": "Kalnif_01",
+      "InternalName": "M_L1_TF_Kalnif_01_001",
+      "NpcName": "Tolbas Karnif",
+      "PetName": "Karnif",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1097"
+    },
+    {
+      "NpcId": 2100349,
+      "PetId": 1097,
+      "CatalogName": "Kalnif_01",
+      "InternalName": "M_L1_TF_Kalnif_01_002",
+      "NpcName": "Ferocious Tolbas Karnif",
+      "PetName": "Karnif",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1097"
+    },
+    {
+      "NpcId": 2100350,
+      "PetId": 1140,
+      "CatalogName": "BigMan_01_V01",
+      "InternalName": "M_L1_TF_BigMan_01_V02",
+      "NpcName": "Tolbas Forest Targon",
+      "PetName": "Forest Monster",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1140"
+    },
+    {
+      "NpcId": 2100376,
+      "PetId": 1035,
+      "CatalogName": "Fish_01",
+      "InternalName": "M_L1_BF_EllunRiverFish_01",
+      "NpcName": "Lake Skama",
+      "PetName": "Skama",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1035"
+    },
+    {
+      "NpcId": 2100453,
+      "PetId": 1047,
+      "CatalogName": "Mole_01_V01",
+      "InternalName": "M_L1_CV_BlueDranaMole_01",
+      "NpcName": "Splendent Armadon",
+      "PetName": "Aberrant Armadon",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1047"
+    },
+    {
+      "NpcId": 2100454,
+      "PetId": 1110,
+      "CatalogName": "Kalgolem_02",
+      "InternalName": "M_L1_CV_EarthElementalOd_01",
+      "NpcName": "Splendent Kalgolem",
+      "PetName": "Blue Kalgolem",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1110"
+    },
+    {
+      "NpcId": 2100456,
+      "PetId": 1086,
+      "CatalogName": "Fungus_01",
+      "InternalName": "M_L1_CV_Fungus_01",
+      "NpcName": "Red Cap Fungen",
+      "PetName": "Fungen",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1086"
+    },
+    {
+      "NpcId": 2100458,
+      "PetId": 1219,
+      "CatalogName": "Jellofi_01",
+      "InternalName": "M_L1_ER_WaterEle_01_001",
+      "NpcName": "Coastal Zelophi",
+      "PetName": "Zelophi",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1219"
+    },
+    {
+      "NpcId": 2100460,
+      "PetId": 1214,
+      "CatalogName": "DarkEle_01",
+      "InternalName": "M_L1_ER_DarkEle_01_001",
+      "NpcName": "Contaminated Spirit",
+      "PetName": "Black Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1214"
+    },
+    {
+      "NpcId": 2100472,
+      "PetId": 1045,
+      "CatalogName": "Muta_01",
+      "InternalName": "M_L1_TF_Muta_02",
+      "NpcName": "Aberrant Sylphen",
+      "PetName": "Sylphen",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1045"
+    },
+    {
+      "NpcId": 2100473,
+      "PetId": 1121,
+      "CatalogName": "Lepisma_01_V01",
+      "InternalName": "M_L1_TF_BF_Lepisma_01_V01",
+      "NpcName": "Tolbas Young Slink",
+      "PetName": "Young Slink",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1121"
+    },
+    {
+      "NpcId": 2100480,
+      "PetId": 1002,
+      "CatalogName": "KrallReg_01",
+      "InternalName": "M_L1_VF_KrallWar_13",
+      "NpcName": "Krall Sentinel",
+      "PetName": "Krall Laborer",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1002"
+    },
+    {
+      "NpcId": 2100481,
+      "PetId": 1098,
+      "CatalogName": "Kalnif_02",
+      "InternalName": "M_L1_VF_Karnif_R_01",
+      "NpcName": "Sensitive Karnif",
+      "PetName": "Modified Karnif",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1098"
+    },
+    {
+      "NpcId": 2100550,
+      "PetId": 1118,
+      "CatalogName": "Bee_01_V01",
+      "InternalName": "M_L1_BF_PilgrimsRidge_Bee_02_01",
+      "NpcName": "Stripe Bee",
+      "PetName": "Aberrant Bee",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1118"
+    },
+    {
+      "NpcId": 2100551,
+      "PetId": 1059,
+      "CatalogName": "Bee_01",
+      "InternalName": "M_L1_BF_PilgrimsRidge_Bee_01_01",
+      "NpcName": "Giant Stripe Bee",
+      "PetName": "Giant Bee",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1059"
+    },
+    {
+      "NpcId": 2100552,
+      "PetId": 1042,
+      "CatalogName": "Ursuss_01",
+      "InternalName": "M_L1_BF_PilgrimsRidge_Ursuss_01",
+      "NpcName": "Ridge Ursus",
+      "PetName": "Ursus",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1042"
+    },
+    {
+      "NpcId": 2100554,
+      "PetId": 1130,
+      "CatalogName": "AltBug_01_CV02",
+      "InternalName": "M_L1_BF_PilgrimsRidge_Odspider_V02",
+      "NpcName": "Ridge Spider",
+      "PetName": "Mutated Cadaver Insectoid",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1130"
+    },
+    {
+      "NpcId": 2100555,
+      "PetId": 1048,
+      "CatalogName": "ForestEle_01",
+      "InternalName": "M_L1_BF_PilgrimsRidge_ForestEle_01",
+      "NpcName": "Ridge Forest Spirit",
+      "PetName": "Forest Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1048"
+    },
+    {
+      "NpcId": 2100556,
+      "PetId": 1011,
+      "CatalogName": "Skyray_01",
+      "InternalName": "M_L1_BF_PilgrimsRidge_Skyray_01",
+      "NpcName": "Ridge Skyray",
+      "PetName": "Skyray",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1011"
+    },
+    {
+      "NpcId": 2100557,
+      "PetId": 1033,
+      "CatalogName": "ManduriWar_01_V01",
+      "InternalName": "M_L1_BF_PilgrimsRidge_ManDuriWar_01_V01_001",
+      "NpcName": "Wandering Manduri Fighter",
+      "PetName": "Elite Manduri Fighter",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1033"
+    },
+    {
+      "NpcId": 2100558,
+      "PetId": 1125,
+      "CatalogName": "Zaif_01_CV02",
+      "InternalName": "M_L1_BF_PilgrimsRidge_Zaif_01_001",
+      "NpcName": "Yellow-Maned Zaif",
+      "PetName": "Aberrant Zaif",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1125"
+    },
+    {
+      "NpcId": 2100560,
+      "PetId": 1042,
+      "CatalogName": "Ursuss_01",
+      "InternalName": "M_L1_BF_PilgrimsRidge_Ursuss_02",
+      "NpcName": "Ridge Violent Ursus",
+      "PetName": "Ursus",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1042"
+    },
+    {
+      "NpcId": 2100565,
+      "PetId": 1045,
+      "CatalogName": "Muta_01",
+      "InternalName": "M_L1_BF_PilgrimsRidge_Muta_01",
+      "NpcName": "Ridge Sylphen",
+      "PetName": "Sylphen",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1045"
+    },
+    {
+      "NpcId": 2100566,
+      "PetId": 1189,
+      "CatalogName": "Zaif_01_V01",
+      "InternalName": "M_L1_BF_PilgrimsRidge_Zaif_01_002",
+      "NpcName": "Marauders Zaif",
+      "PetName": "Tamed Zaif",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1189"
+    },
+    {
+      "NpcId": 2100569,
+      "PetId": 1033,
+      "CatalogName": "ManduriWar_01_V01",
+      "InternalName": "M_L1_BF_PilgrimsRidge_ManDuriWar_01_V01_002",
+      "NpcName": "Wandering Manduri Fighter",
+      "PetName": "Elite Manduri Fighter",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1033"
+    },
+    {
+      "NpcId": 2100573,
+      "PetId": 1124,
+      "CatalogName": "Zaif_01",
+      "InternalName": "M_L1_AH_A_Zaif_01",
+      "NpcName": "Rock Hill Zaif",
+      "PetName": "Zaif",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1124"
+    },
+    {
+      "NpcId": 2100583,
+      "PetId": 1188,
+      "CatalogName": "GraveBat_01",
+      "InternalName": "M_L1_AH_A_GraveBat_01_001",
+      "NpcName": "Highland Vivel",
+      "PetName": "Vivel",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1188"
+    },
+    {
+      "NpcId": 2100600,
+      "PetId": 1216,
+      "CatalogName": "Specter_01",
+      "InternalName": "M_L1_AC_A_Specter_01",
+      "NpcName": "Corrupted Spirit",
+      "PetName": "Dark Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1216"
+    },
+    {
+      "NpcId": 2100601,
+      "PetId": 1003,
+      "CatalogName": "ForestWisp_01",
+      "InternalName": "M_L1_AC_A_ForestWisp_01",
+      "NpcName": "Canyon Vine Spirit",
+      "PetName": "Forest Specter",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1003"
+    },
+    {
+      "NpcId": 2100605,
+      "PetId": 1092,
+      "CatalogName": "WindEle_01",
+      "InternalName": "M_L1_AC_WindEle_01",
+      "NpcName": "Air Spirit",
+      "PetName": "Lesser Wind Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1092"
+    },
+    {
+      "NpcId": 2100607,
+      "PetId": 1011,
+      "CatalogName": "Skyray_01",
+      "InternalName": "M_L1_AC_Skyray_01",
+      "NpcName": "Canyon Skyray",
+      "PetName": "Skyray",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1011"
+    },
+    {
+      "NpcId": 2100608,
+      "PetId": 1022,
+      "CatalogName": "Phaini_01",
+      "InternalName": "M_L1_AC_Phaini_01",
+      "NpcName": "Docile Crasaur",
+      "PetName": "Crasaur",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1022"
+    },
+    {
+      "NpcId": 2100609,
+      "PetId": 1038,
+      "CatalogName": "Airon_01",
+      "InternalName": "M_L1_AC_Airon_01",
+      "NpcName": "Hardbeak Airon",
+      "PetName": "Airon",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1038"
+    },
+    {
+      "NpcId": 2100610,
+      "PetId": 1007,
+      "CatalogName": "Crab_01",
+      "InternalName": "M_L1_AC_Crab_01",
+      "NpcName": "Flat Potcrab",
+      "PetName": "Potcrab",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1007"
+    },
+    {
+      "NpcId": 2100611,
+      "PetId": 1048,
+      "CatalogName": "ForestEle_01",
+      "InternalName": "M_L1_AC_ForestEle_01",
+      "NpcName": "Deep Canyon Forest Spirit",
+      "PetName": "Forest Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1048"
+    },
+    {
+      "NpcId": 2100612,
+      "PetId": 1027,
+      "CatalogName": "Agrint_02",
+      "InternalName": "M_L1_AC_Agrint_02",
+      "NpcName": "Withered Canyon Agrint",
+      "PetName": "Withered Agrint",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1027"
+    },
+    {
+      "NpcId": 2100613,
+      "PetId": 1011,
+      "CatalogName": "Skyray_01",
+      "InternalName": "M_L1_AC_Skyray_02",
+      "NpcName": "Canyon Lake Skyray",
+      "PetName": "Skyray",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1011"
+    },
+    {
+      "NpcId": 2100650,
+      "PetId": 1050,
+      "CatalogName": "Gravi_01",
+      "InternalName": "M_L1_RI_A_Gravi_01",
+      "NpcName": "Red Stalk Gravi",
+      "PetName": "Gravi",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1050"
+    },
+    {
+      "NpcId": 2100651,
+      "PetId": 1052,
+      "CatalogName": "Gravi_03",
+      "InternalName": "M_L1_RI_A_Gravi_02",
+      "NpcName": "Large Leaf Gravi",
+      "PetName": "Large Leaf Gravi",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1052"
+    },
+    {
+      "NpcId": 2100652,
+      "PetId": 1027,
+      "CatalogName": "Agrint_02",
+      "InternalName": "M_L1_RI_A_Agrint_02_001",
+      "NpcName": "Thin Agrint",
+      "PetName": "Withered Agrint",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1027"
+    },
+    {
+      "NpcId": 2100653,
+      "PetId": 1165,
+      "CatalogName": "EarthEle_02",
+      "InternalName": "M_L1_RI_A_EarthEle_01",
+      "NpcName": "Wandering Earth Spirit",
+      "PetName": "Intermediate Earth Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1165"
+    },
+    {
+      "NpcId": 2100654,
+      "PetId": 1066,
+      "CatalogName": "Papis_01",
+      "InternalName": "M_L1_RI_Papis_01",
+      "NpcName": "Garden Papis",
+      "PetName": "Papis",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1066"
+    },
+    {
+      "NpcId": 2100655,
+      "PetId": 1042,
+      "CatalogName": "Ursuss_01",
+      "InternalName": "M_L1_RI_Ursuss_01",
+      "NpcName": "Confused Ursus",
+      "PetName": "Ursus",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1042"
+    },
+    {
+      "NpcId": 2100656,
+      "PetId": 1216,
+      "CatalogName": "Specter_01",
+      "InternalName": "M_L1_RI_B_Specter_01",
+      "NpcName": "Wandering Dark Spirit",
+      "PetName": "Dark Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1216"
+    },
+    {
+      "NpcId": 2100657,
+      "PetId": 1169,
+      "CatalogName": "WaterEle_02",
+      "InternalName": "M_L1_RI_B_WaterEle_01",
+      "NpcName": "Wandering Water Spirit",
+      "PetName": "Intermediate Water Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1169"
+    },
+    {
+      "NpcId": 2100658,
+      "PetId": 1094,
+      "CatalogName": "WindEle_02",
+      "InternalName": "M_L1_RI_B_WindEle_01",
+      "NpcName": "Wandering Wind Spirit",
+      "PetName": "Intermediate Wind Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1094"
+    },
+    {
+      "NpcId": 2100659,
+      "PetId": 1051,
+      "CatalogName": "Gravi_02",
+      "InternalName": "M_L1_RI_B_Gravi_01",
+      "NpcName": "Illusion Magic Gravi",
+      "PetName": "Magic Gravi",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1051"
+    },
+    {
+      "NpcId": 2100660,
+      "PetId": 1101,
+      "CatalogName": "ForestArc_01",
+      "InternalName": "M_L1_RI_A_ForestArc_01",
+      "NpcName": "Garden Guardian",
+      "PetName": "Forest Guardian",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1101"
+    },
+    {
+      "NpcId": 2100662,
+      "PetId": 1003,
+      "CatalogName": "ForestWisp_01",
+      "InternalName": "M_L1_RI_BF_ForestWisp_01",
+      "NpcName": "Tainted Vine Specter",
+      "PetName": "Forest Specter",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1003"
+    },
+    {
+      "NpcId": 2100663,
+      "PetId": 1025,
+      "CatalogName": "OdSpider_04_V01",
+      "InternalName": "M_L1_RI_BF_OdSpider_04_V01_001",
+      "NpcName": "Garden Spider",
+      "PetName": "Mutated Aberrant Odyle Spider",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1025"
+    },
+    {
+      "NpcId": 2100664,
+      "PetId": 1096,
+      "CatalogName": "FireEle_03",
+      "InternalName": "M_L1_RI_FireEle_03_001",
+      "NpcName": "Hellfire Spirit",
+      "PetName": "Superior Fire Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1096"
+    },
+    {
+      "NpcId": 2100665,
+      "PetId": 1155,
+      "CatalogName": "WaterEle_03",
+      "InternalName": "M_L1_RI_WaterEle_03_001",
+      "NpcName": "Torrent Spirit",
+      "PetName": "Superior Water Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1155"
+    },
+    {
+      "NpcId": 2100666,
+      "PetId": 1095,
+      "CatalogName": "WindEle_03",
+      "InternalName": "M_L1_RI_WindEle_03",
+      "NpcName": "Brisk Spirit",
+      "PetName": "Superior Wind Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1095"
+    },
+    {
+      "NpcId": 2100667,
+      "PetId": 1166,
+      "CatalogName": "EarthEle_03",
+      "InternalName": "M_L1_RI_EarthEle_03_001",
+      "NpcName": "Peculiar Rock Spirit",
+      "PetName": "Superior Earth Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1166"
+    },
+    {
+      "NpcId": 2100698,
+      "PetId": 1207,
+      "CatalogName": "Agrint_01",
+      "InternalName": "M_L1_RI_BF_Agrint_01_V02_001",
+      "NpcName": "Old Agrint",
+      "PetName": "Agrint",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1207"
+    },
+    {
+      "NpcId": 2100699,
+      "PetId": 1119,
+      "CatalogName": "Coradon_01_V01",
+      "InternalName": "M_L1_RI_BF_Coradon_01_01",
+      "NpcName": "Garden Coradon",
+      "PetName": "Aberrant Coradon",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1119"
+    },
+    {
+      "NpcId": 2100700,
+      "PetId": 1084,
+      "CatalogName": "Kalgolem_01",
+      "InternalName": "M_L1_AH_B_Kalgolem_01",
+      "NpcName": "Ashen Kalgolem",
+      "PetName": "Kalgolem",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1084"
+    },
+    {
+      "NpcId": 2100709,
+      "PetId": 1067,
+      "CatalogName": "Scorpion_01",
+      "InternalName": "M_L1_AH_C_Scorpion_01",
+      "NpcName": "Contaminated Scorpion",
+      "PetName": "Scorpion",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1067"
+    },
+    {
+      "NpcId": 2100710,
+      "PetId": 1089,
+      "CatalogName": "Fish_01_V01",
+      "InternalName": "M_L1_AH_C_Fish_01_V01",
+      "NpcName": "Yellow-Tailed Skama",
+      "PetName": "Aberrant Skama",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1089"
+    },
+    {
+      "NpcId": 2100711,
+      "PetId": 1049,
+      "CatalogName": "ForestEle_01_V01",
+      "InternalName": "M_L1_AH_C_ForestEle_01_V01",
+      "NpcName": "Mutated Vine Bundle",
+      "PetName": "Mutated Forest Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1049"
+    },
+    {
+      "NpcId": 2100712,
+      "PetId": 1194,
+      "CatalogName": "Guardit_01",
+      "InternalName": "M_L1_AH_C_Guardit_01",
+      "NpcName": "Uncontrollable Guardite",
+      "PetName": "Guardite",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1194"
+    },
+    {
+      "NpcId": 2100714,
+      "PetId": 1207,
+      "CatalogName": "Agrint_01",
+      "InternalName": "M_L1_AH_C_Agrint_01",
+      "NpcName": "Contaminated Agrint",
+      "PetName": "Agrint",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1207"
+    },
+    {
+      "NpcId": 2100715,
+      "PetId": 1049,
+      "CatalogName": "ForestEle_01_V01",
+      "InternalName": "M_L1_AH_C_ForestEle_01",
+      "NpcName": "Contaminated Vine Bundle",
+      "PetName": "Mutated Forest Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1049"
+    },
+    {
+      "NpcId": 2100716,
+      "PetId": 1197,
+      "CatalogName": "Guardit_02",
+      "InternalName": "M_L1_AH_C_Guardit_02",
+      "NpcName": "Contaminated Guardite",
+      "PetName": "Watcher Guardite",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1197"
+    },
+    {
+      "NpcId": 2100717,
+      "PetId": 1062,
+      "CatalogName": "Slime_02",
+      "InternalName": "M_L1_AH_C_Slime_01",
+      "NpcName": "Contaminated Poison Slime",
+      "PetName": "Contaminated Slime",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1062"
+    },
+    {
+      "NpcId": 2100718,
+      "PetId": 1206,
+      "CatalogName": "Guardit_03",
+      "InternalName": "M_L1_AH_C_Guardit_Named",
+      "NpcName": "Divine Ansas",
+      "PetName": "Elite Guardite",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1206"
+    },
+    {
+      "NpcId": 2100740,
+      "PetId": 1181,
+      "CatalogName": "Brax_01",
+      "InternalName": "M_L1_AH_BF_Brax_01_001",
+      "NpcName": "Docile Highland Brax",
+      "PetName": "Brax",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1181"
+    },
+    {
+      "NpcId": 2100741,
+      "PetId": 1038,
+      "CatalogName": "Airon_01",
+      "InternalName": "M_L1_AH_BF_Airon_01_001",
+      "NpcName": "Longbeak Highland Airon",
+      "PetName": "Airon",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1038"
+    },
+    {
+      "NpcId": 2100742,
+      "PetId": 1097,
+      "CatalogName": "Kalnif_01",
+      "InternalName": "M_L1_AH_BF_Kalnif_01_001",
+      "NpcName": "Toughmane Highland Karnif",
+      "PetName": "Karnif",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1097"
+    },
+    {
+      "NpcId": 2100743,
+      "PetId": 1045,
+      "CatalogName": "Muta_01",
+      "InternalName": "M_L1_AH_BF_Muta_01_001",
+      "NpcName": "Highland Sylphen",
+      "PetName": "Sylphen",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1045"
+    },
+    {
+      "NpcId": 2100744,
+      "PetId": 1073,
+      "CatalogName": "Rafflesia_01",
+      "InternalName": "M_L1_AH_BF_Rafflesia_01_001",
+      "NpcName": "Scarlet Highland Nepenthes",
+      "PetName": "Nepenthes",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1073"
+    },
+    {
+      "NpcId": 2100745,
+      "PetId": 1025,
+      "CatalogName": "OdSpider_04_V01",
+      "InternalName": "M_L1_AH_BF_OdSpider_04_V01_001",
+      "NpcName": "Highland Odyle Spider",
+      "PetName": "Mutated Aberrant Odyle Spider",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1025"
+    },
+    {
+      "NpcId": 2100746,
+      "PetId": 1036,
+      "CatalogName": "Lufilini_02",
+      "InternalName": "M_L1_AH_BF_Lufilini_02_001",
+      "NpcName": "Tail Feather Lupyllini",
+      "PetName": "Lupyllini",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1036"
+    },
+    {
+      "NpcId": 2100747,
+      "PetId": 1202,
+      "CatalogName": "Lufilini_01_V01",
+      "InternalName": "M_L1_AH_BF_Lufilini_01_V01_001",
+      "NpcName": "Contaminated Highland Lupyllini",
+      "PetName": "Decomposed Lupyllini",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1202"
+    },
+    {
+      "NpcId": 2100748,
+      "PetId": 1124,
+      "CatalogName": "Zaif_01",
+      "InternalName": "M_L1_AH_BF_Zaif_01_001",
+      "NpcName": "Highland Forest Zaif",
+      "PetName": "Zaif",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1124"
+    },
+    {
+      "NpcId": 2100750,
+      "PetId": 1037,
+      "CatalogName": "Crestlich_02",
+      "InternalName": "M_L1_BF_AH_Crestlich_02_001",
+      "NpcName": "Highland Crestlich Male",
+      "PetName": "Male Crestlich",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1037"
+    },
+    {
+      "NpcId": 2100751,
+      "PetId": 1047,
+      "CatalogName": "Mole_01_V01",
+      "InternalName": "M_L1_BF_AH_Mole_01_V01_001",
+      "NpcName": "Highland Wild Armadon",
+      "PetName": "Aberrant Armadon",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1047"
+    },
+    {
+      "NpcId": 2100752,
+      "PetId": 1097,
+      "CatalogName": "Kalnif_01",
+      "InternalName": "M_L1_AH_BF_Kalnif_01_002",
+      "NpcName": "Highland Karnif",
+      "PetName": "Karnif",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1097"
+    },
+    {
+      "NpcId": 2100753,
+      "PetId": 1006,
+      "CatalogName": "SparkyOd_01",
+      "InternalName": "M_L1_BF_AH_SparkyOd_01_002",
+      "NpcName": "Highland Odyle Sparkie",
+      "PetName": "Sparkie",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1006"
+    },
+    {
+      "NpcId": 2100793,
+      "PetId": 1126,
+      "CatalogName": "Tog_01_CV01",
+      "InternalName": "M_L1_BF_AH_Tog_01_CV01_001",
+      "NpcName": "Wild Stripe Tog",
+      "PetName": "Aberrant Tog",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1126"
+    },
+    {
+      "NpcId": 2100795,
+      "PetId": 1006,
+      "CatalogName": "SparkyOd_01",
+      "InternalName": "M_L1_BF_AH_SparkyOd_01_001",
+      "NpcName": "Highland Odyle Sparkie",
+      "PetName": "Sparkie",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1006"
+    },
+    {
+      "NpcId": 2100796,
+      "PetId": 1034,
+      "CatalogName": "SparkyOd_02",
+      "InternalName": "M_L1_BF_AH_SparkyOd_02_001",
+      "NpcName": "Highland Giant Odyle Sparkie",
+      "PetName": "Giant Sparkie",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1034"
+    },
+    {
+      "NpcId": 2100797,
+      "PetId": 1124,
+      "CatalogName": "Zaif_01",
+      "InternalName": "M_L1_BF_AH__Zaif_01_001",
+      "NpcName": "Highland Zaif",
+      "PetName": "Zaif",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1124"
+    },
+    {
+      "NpcId": 2100799,
+      "PetId": 1039,
+      "CatalogName": "Crestlich_01",
+      "InternalName": "M_L1_BF_AH_Crestlich_01_001",
+      "NpcName": "Highland Crestlich Female",
+      "PetName": "Crestlich",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1039"
+    },
+    {
+      "NpcId": 2100802,
+      "PetId": 1097,
+      "CatalogName": "Kalnif_01",
+      "InternalName": "M_L1_BF_KFP_Kalnif_01_001",
+      "NpcName": "Tamed Karnif",
+      "PetName": "Karnif",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1097"
+    },
+    {
+      "NpcId": 2100805,
+      "PetId": 1097,
+      "CatalogName": "Kalnif_01",
+      "InternalName": "M_L1_BF_KFP_Kalnif_01_002",
+      "NpcName": "Tamed Karnif",
+      "PetName": "Karnif",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1097"
+    },
+    {
+      "NpcId": 2100807,
+      "PetId": 1214,
+      "CatalogName": "DarkEle_01",
+      "InternalName": "M_L1_BF_KFP_DarkEle_01",
+      "NpcName": "Distorted Spirit",
+      "PetName": "Black Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1214"
+    },
+    {
+      "NpcId": 2100808,
+      "PetId": 1060,
+      "CatalogName": "Starturtle_01",
+      "InternalName": "M_L1_BF_KFP_Starturtle_01_001",
+      "NpcName": "Pond Starturtle",
+      "PetName": "Starturtle",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1060"
+    },
+    {
+      "NpcId": 2100812,
+      "PetId": 1069,
+      "CatalogName": "EarthEleOd_01",
+      "InternalName": "M_L1_BF_KFP_EarthEleOd_01_001",
+      "NpcName": "Hill Stone Spirit",
+      "PetName": "Stone Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1069"
+    },
+    {
+      "NpcId": 2100813,
+      "PetId": 1124,
+      "CatalogName": "Zaif_01",
+      "InternalName": "M_L1_BF_KFP_Fossa_01_001",
+      "NpcName": "Hill Zaif",
+      "PetName": "Zaif",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1124"
+    },
+    {
+      "NpcId": 2100815,
+      "PetId": 1201,
+      "CatalogName": "Lufilini_01",
+      "InternalName": "M_L1_BF_KFP_Lufilini_02_001",
+      "NpcName": "Lupyllini Test Subject",
+      "PetName": "Modified Lupyllini",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1201"
+    },
+    {
+      "NpcId": 2100816,
+      "PetId": 1104,
+      "CatalogName": "ManduriRng_01",
+      "InternalName": "M_L1_BF_KFP_Manduri_01",
+      "NpcName": "Hill Manduri",
+      "PetName": "Manduri Trebuchet Worker",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1104"
+    },
+    {
+      "NpcId": 2100817,
+      "PetId": 1042,
+      "CatalogName": "Ursuss_01",
+      "InternalName": "M_L1_BF_KFP_Ursuss_01",
+      "NpcName": "Hill Ursus",
+      "PetName": "Ursus",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1042"
+    },
+    {
+      "NpcId": 2100818,
+      "PetId": 1123,
+      "CatalogName": "Ursuss_01_V01",
+      "InternalName": "M_L1_BF_KFP_UrsussBaby_01",
+      "NpcName": "Hill Young Ursus",
+      "PetName": "Young Ursus",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1123"
+    },
+    {
+      "NpcId": 2100819,
+      "PetId": 1126,
+      "CatalogName": "Tog_01_CV01",
+      "InternalName": "M_L1_BF_KFP_Tog_01",
+      "NpcName": "Hill Tog",
+      "PetName": "Aberrant Tog",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1126"
+    },
+    {
+      "NpcId": 2100821,
+      "PetId": 1119,
+      "CatalogName": "Coradon_01_V01",
+      "InternalName": "M_L1_BF_KFP_Coradon_01",
+      "NpcName": "Hill Coradon",
+      "PetName": "Aberrant Coradon",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1119"
+    },
+    {
+      "NpcId": 2100828,
+      "PetId": 1119,
+      "CatalogName": "Coradon_01_V01",
+      "InternalName": "M_L1_BF_KFP_Coradon_02",
+      "NpcName": "Hill Coradon",
+      "PetName": "Aberrant Coradon",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1119"
+    },
+    {
+      "NpcId": 2100832,
+      "PetId": 1011,
+      "CatalogName": "Skyray_01",
+      "InternalName": "M_L1_BF_KFP_Skyray_01",
+      "NpcName": "Pond Skyray",
+      "PetName": "Skyray",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1011"
+    },
+    {
+      "NpcId": 2100854,
+      "PetId": 1064,
+      "CatalogName": "Oculazen_02",
+      "InternalName": "M_L1_DP_Oculazen_02_001",
+      "NpcName": "Labor Manager Oculazen",
+      "PetName": "Oculazen",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1064"
+    },
+    {
+      "NpcId": 2100855,
+      "PetId": 1017,
+      "CatalogName": "KrallPrst_01",
+      "InternalName": "M_L1_DP_KrallPrst_01_001",
+      "NpcName": "Modified Krall Healer",
+      "PetName": "Krall Warshaman",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1017"
+    },
+    {
+      "NpcId": 2100866,
+      "PetId": 1056,
+      "CatalogName": "BeritraC_06",
+      "InternalName": "M_L1_DP_BeritraC_06_001",
+      "NpcName": "Drana Processing Maintenance Machine",
+      "PetName": "Drakan Probe",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1056"
+    },
+    {
+      "NpcId": 2100867,
+      "PetId": 1195,
+      "CatalogName": "Dracuni_01",
+      "InternalName": "M_L1_DP_Dracuni_01_002",
+      "NpcName": "Dracuni Processing Laborer",
+      "PetName": "Dracuni Herbalist",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1195"
+    },
+    {
+      "NpcId": 2100872,
+      "PetId": 1184,
+      "CatalogName": "Drakan_02",
+      "InternalName": "M_L1_DP_R_DrakanElite_02_001",
+      "NpcName": "Processing Facility Drakan Scout",
+      "PetName": "Drakan Watcher",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1184"
+    },
+    {
+      "NpcId": 2100901,
+      "PetId": 1147,
+      "CatalogName": "Dratona_01",
+      "InternalName": "M_L1_RF_Dratona_01_001",
+      "NpcName": "Scarlet Forest Dratona",
+      "PetName": "Dratona",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1147"
+    },
+    {
+      "NpcId": 2100907,
+      "PetId": 1035,
+      "CatalogName": "Fish_01",
+      "InternalName": "M_L1_RF_Fish_01_001",
+      "NpcName": "Drana Mutated Skama",
+      "PetName": "Skama",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1035"
+    },
+    {
+      "NpcId": 2100908,
+      "PetId": 1053,
+      "CatalogName": "Crab_01_V01",
+      "InternalName": "M_L1_RF_Crab_01_V01_001",
+      "NpcName": "Drana Mutated Potcrab",
+      "PetName": "Aberrant Potcrab",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1053"
+    },
+    {
+      "NpcId": 2100910,
+      "PetId": 1026,
+      "CatalogName": "KrallWar_01",
+      "InternalName": "M_L1_RF_KrallReinforcedWarrior_01",
+      "NpcName": "Modified Krall Warrior",
+      "PetName": "Krall Warrior",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1026"
+    },
+    {
+      "NpcId": 2100911,
+      "PetId": 1041,
+      "CatalogName": "CaveBat_01",
+      "InternalName": "M_L1_RF_CaveBat_01_001",
+      "NpcName": "Drana Mutated Bat",
+      "PetName": "Cave Bat",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1041"
+    },
+    {
+      "NpcId": 2100914,
+      "PetId": 1002,
+      "CatalogName": "KrallReg_01",
+      "InternalName": "M_L1_RF_KrallRegressed_01",
+      "NpcName": "Mutated Krall Laborer",
+      "PetName": "Krall Laborer",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1002"
+    },
+    {
+      "NpcId": 2100950,
+      "PetId": 1040,
+      "CatalogName": "OwlMag_01",
+      "InternalName": "M_L1_OV_OwlMag_01_01",
+      "NpcName": "Aullaeu Apprentice Shaman",
+      "PetName": "Aullaeu Shaman",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1040"
+    },
+    {
+      "NpcId": 2100953,
+      "PetId": 1087,
+      "CatalogName": "Pino_01",
+      "InternalName": "M_L1_OV_Pino_01_01",
+      "NpcName": "Pino Worker",
+      "PetName": "Pino",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1087"
+    },
+    {
+      "NpcId": 2100954,
+      "PetId": 1087,
+      "CatalogName": "Pino_01",
+      "InternalName": "M_L1_OV_Pino_01_02",
+      "NpcName": "Pino Laborer",
+      "PetName": "Pino",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1087"
+    },
+    {
+      "NpcId": 2100955,
+      "PetId": 1088,
+      "CatalogName": "Pino_02",
+      "InternalName": "M_L1_OV_Pino_02_01",
+      "NpcName": "Harsh Pino Worker",
+      "PetName": "Pino Worker",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1088"
+    },
+    {
+      "NpcId": 2100964,
+      "PetId": 1074,
+      "CatalogName": "Kuru_01",
+      "InternalName": "M_L1_OV_Kuru_01_01",
+      "NpcName": "Harsh Kuru Tinkerer",
+      "PetName": "Kuru Worker",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1074"
+    },
+    {
+      "NpcId": 2100986,
+      "PetId": 1006,
+      "CatalogName": "SparkyOd_01",
+      "InternalName": "M_L1_OV_BF_SparkyOd_01",
+      "NpcName": "Aullaeu Forest Sparkie",
+      "PetName": "Sparkie",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1006"
+    },
+    {
+      "NpcId": 2100987,
+      "PetId": 1034,
+      "CatalogName": "SparkyOd_02",
+      "InternalName": "M_L1_OV_BF_SparkyOd_02",
+      "NpcName": "Aullaeu Forest Giant Sparkie",
+      "PetName": "Giant Sparkie",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1034"
+    },
+    {
+      "NpcId": 2100992,
+      "PetId": 1006,
+      "CatalogName": "SparkyOd_01",
+      "InternalName": "M_L1_OV_BF_SparkyOd_03",
+      "NpcName": "Highland Sparkie",
+      "PetName": "Sparkie",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1006"
+    },
+    {
+      "NpcId": 2100993,
+      "PetId": 1034,
+      "CatalogName": "SparkyOd_02",
+      "InternalName": "M_L1_OV_BF_SparkyOd_04",
+      "NpcName": "Highland Giant Sparkie",
+      "PetName": "Giant Sparkie",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1034"
+    },
+    {
+      "NpcId": 2101002,
+      "PetId": 1014,
+      "CatalogName": "BeritraC_03",
+      "InternalName": "M_L1_Nahid_B_BeritraC_03_A_001",
+      "NpcName": "Drakan Guard Dog",
+      "PetName": "Drakan Guard Dog",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1014"
+    },
+    {
+      "NpcId": 2101005,
+      "PetId": 1026,
+      "CatalogName": "KrallWar_01",
+      "InternalName": "M_L1_Nahid_C_BeritraB_01_B_001",
+      "NpcName": "Krall Test Subject",
+      "PetName": "Krall Warrior",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1026"
+    },
+    {
+      "NpcId": 2101009,
+      "PetId": 1014,
+      "CatalogName": "BeritraC_03",
+      "InternalName": "M_L1_Nahid_B_BeritraC_03_C_001",
+      "NpcName": "Nahid Drakan Guard Dog",
+      "PetName": "Drakan Guard Dog",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1014"
+    },
+    {
+      "NpcId": 2101014,
+      "PetId": 1056,
+      "CatalogName": "BeritraC_06",
+      "InternalName": "M_L1_Nahid_C_BeritraC_06_D_001",
+      "NpcName": "Intruder Seeker",
+      "PetName": "Drakan Probe",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1056"
+    },
+    {
+      "NpcId": 2101021,
+      "PetId": 1015,
+      "CatalogName": "Kailin_01",
+      "InternalName": "M_L1_BF_EllunRiverKailin_01_001",
+      "NpcName": "Ellun River Kailin",
+      "PetName": "Kailin",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1015"
+    },
+    {
+      "NpcId": 2101022,
+      "PetId": 1120,
+      "CatalogName": "Kailin_01_V01",
+      "InternalName": "M_L1_BF_EllunRiverKailin_01_002",
+      "NpcName": "Ellun River Young Kailin",
+      "PetName": "Young Kailin",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1120"
+    },
+    {
+      "NpcId": 2101023,
+      "PetId": 1117,
+      "CatalogName": "Spider_01_V01",
+      "InternalName": "M_L1_OV_BF_Spier_01_V01_01",
+      "NpcName": "Aullaeu Forest Odyle Spider",
+      "PetName": "Unstable Spider",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1117"
+    },
+    {
+      "NpcId": 2101075,
+      "PetId": 1162,
+      "CatalogName": "Cherubim_01",
+      "InternalName": "M_FE_IoE_Cherubim_01_001",
+      "NpcName": "Eternal Kerubar",
+      "PetName": "Kerubar",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1162"
+    },
+    {
+      "NpcId": 2101076,
+      "PetId": 1170,
+      "CatalogName": "Cherubim_02",
+      "InternalName": "M_FE_IoE_Cherubim_02_001",
+      "NpcName": "Eternal Kerubian",
+      "PetName": "Kerubian",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1170"
+    },
+    {
+      "NpcId": 2101077,
+      "PetId": 1171,
+      "CatalogName": "Cherubim_03",
+      "InternalName": "M_FE_IoE_Cherubim_03_001",
+      "NpcName": "Eternal Kerubiel",
+      "PetName": "Kerubiel",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1171"
+    },
+    {
+      "NpcId": 2101079,
+      "PetId": 1162,
+      "CatalogName": "Cherubim_01",
+      "InternalName": "M_FE_IoE_Cherubim_01_002",
+      "NpcName": "Eternal Kerubar",
+      "PetName": "Kerubar",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1162"
+    },
+    {
+      "NpcId": 2101080,
+      "PetId": 1170,
+      "CatalogName": "Cherubim_02",
+      "InternalName": "M_FE_IoE_Cherubim_02_002",
+      "NpcName": "Eternal Kerubian",
+      "PetName": "Kerubian",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1170"
+    },
+    {
+      "NpcId": 2101082,
+      "PetId": 1060,
+      "CatalogName": "Starturtle_01",
+      "InternalName": "M_FE_IoE_Starturtle_01_001",
+      "NpcName": "Eternal Starturtle",
+      "PetName": "Starturtle",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1060"
+    },
+    {
+      "NpcId": 2101083,
+      "PetId": 1022,
+      "CatalogName": "Phaini_01",
+      "InternalName": "M_FE_IoE_Phaini_01_001",
+      "NpcName": "Eternal Crasaur",
+      "PetName": "Crasaur",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1022"
+    },
+    {
+      "NpcId": 2101085,
+      "PetId": 1219,
+      "CatalogName": "Jellofi_01",
+      "InternalName": "M_FE_IoE_Jellofi_01_001",
+      "NpcName": "Eternal Zelophi",
+      "PetName": "Zelophi",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1219"
+    },
+    {
+      "NpcId": 2101086,
+      "PetId": 1201,
+      "CatalogName": "Lufilini_01",
+      "InternalName": "M_FE_IoE_Lufilini_01_001",
+      "NpcName": "Eternal Lupyllini",
+      "PetName": "Modified Lupyllini",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1201"
+    },
+    {
+      "NpcId": 2101087,
+      "PetId": 1213,
+      "CatalogName": "FireEle_01",
+      "InternalName": "M_FE_IoE_FireEle_01_001",
+      "NpcName": "Eternal Fire Spirit",
+      "PetName": "Lesser Fire Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1213"
+    },
+    {
+      "NpcId": 2101088,
+      "PetId": 1168,
+      "CatalogName": "WaterEle_01",
+      "InternalName": "M_FE_IoE_WaterEle_01_001",
+      "NpcName": "Eternal Water Spirit",
+      "PetName": "Lesser Water Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1168"
+    },
+    {
+      "NpcId": 2101089,
+      "PetId": 1164,
+      "CatalogName": "EarthEle_01",
+      "InternalName": "M_FE_IoE_EarthEle_01_001",
+      "NpcName": "Eternal Earth Spirit",
+      "PetName": "Lesser Earth Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1164"
+    },
+    {
+      "NpcId": 2101096,
+      "PetId": 1092,
+      "CatalogName": "WindEle_01",
+      "InternalName": "M_FE_IoE_WindEle_01",
+      "NpcName": "Eternal Wind Spirit",
+      "PetName": "Lesser Wind Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1092"
+    },
+    {
+      "NpcId": 2101097,
+      "PetId": 1016,
+      "CatalogName": "Lepisma_01",
+      "InternalName": "M_FE_IoE_Lepisma_01_V01_001",
+      "NpcName": "Eternal Slink",
+      "PetName": "Slink",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1016"
+    },
+    {
+      "NpcId": 2101098,
+      "PetId": 1007,
+      "CatalogName": "Crab_01",
+      "InternalName": "M_FE_IoE_Crab_01_001",
+      "NpcName": "Eternal Moss Crab",
+      "PetName": "Potcrab",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1007"
+    },
+    {
+      "NpcId": 2101099,
+      "PetId": 1207,
+      "CatalogName": "Agrint_01",
+      "InternalName": "M_FE_IoE_Agrint_01_001",
+      "NpcName": "Eternal Agrint",
+      "PetName": "Agrint",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1207"
+    },
+    {
+      "NpcId": 2101100,
+      "PetId": 1187,
+      "CatalogName": "FireEle_02",
+      "InternalName": "M_FE_IoE_FireEle_02_001",
+      "NpcName": "Violent Fire Spirit",
+      "PetName": "Intermediate Fire Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1187"
+    },
+    {
+      "NpcId": 2101101,
+      "PetId": 1169,
+      "CatalogName": "WaterEle_02",
+      "InternalName": "M_FE_IoE_WaterEle_02_001",
+      "NpcName": "Violent Water Spirit",
+      "PetName": "Intermediate Water Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1169"
+    },
+    {
+      "NpcId": 2101102,
+      "PetId": 1165,
+      "CatalogName": "EarthEle_02",
+      "InternalName": "M_FE_IoE_EarthEle_02_001",
+      "NpcName": "Violent Earth Spirit",
+      "PetName": "Intermediate Earth Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1165"
+    },
+    {
+      "NpcId": 2101103,
+      "PetId": 1094,
+      "CatalogName": "WindEle_02",
+      "InternalName": "M_FE_IoE_WindEle_02",
+      "NpcName": "Violent Wind Spirit",
+      "PetName": "Intermediate Wind Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1094"
+    },
+    {
+      "NpcId": 2101123,
+      "PetId": 1011,
+      "CatalogName": "Skyray_01",
+      "InternalName": "M_L1_ER_WaterSkyray_01",
+      "NpcName": "Ellun River Lake Skyray",
+      "PetName": "Skyray",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1011"
+    },
+    {
+      "NpcId": 2101124,
+      "PetId": 1011,
+      "CatalogName": "Skyray_01",
+      "InternalName": "M_L1_CV_WaterSkyray_01",
+      "NpcName": "Cantas Valley Skyray",
+      "PetName": "Skyray",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1011"
+    },
+    {
+      "NpcId": 2101125,
+      "PetId": 1050,
+      "CatalogName": "Gravi_01",
+      "InternalName": "M_L1_TF_Gravi_01_001",
+      "NpcName": "Tolbas Gravi",
+      "PetName": "Gravi",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1050"
+    },
+    {
+      "NpcId": 2101126,
+      "PetId": 1051,
+      "CatalogName": "Gravi_02",
+      "InternalName": "M_L1_TF_Gravi_02_001",
+      "NpcName": "Tolbas Magic Gravi",
+      "PetName": "Magic Gravi",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1051"
+    },
+    {
+      "NpcId": 2101132,
+      "PetId": 1011,
+      "CatalogName": "Skyray_01",
+      "InternalName": "M_L1_BF_AH_WaterSkyray_01",
+      "NpcName": "Lake Skyray",
+      "PetName": "Skyray",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1011"
+    },
+    {
+      "NpcId": 2101133,
+      "PetId": 1074,
+      "CatalogName": "Kuru_01",
+      "InternalName": "M_FE_IoE_Kuru_01",
+      "NpcName": "Eternal Kuru Worker",
+      "PetName": "Kuru Worker",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1074"
+    },
+    {
+      "NpcId": 2101134,
+      "PetId": 1075,
+      "CatalogName": "Kuru_02",
+      "InternalName": "M_FE_IoE_Kuru_02",
+      "NpcName": "Eternal Kuru Tinkerer",
+      "PetName": "Kuru Tinkerer",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1075"
+    },
+    {
+      "NpcId": 2101135,
+      "PetId": 1153,
+      "CatalogName": "DranaVar_02",
+      "InternalName": "M_FE_IoE_DranaVar_02_01",
+      "NpcName": "Eternal Drana Mutant",
+      "PetName": "Drana Mutant Brute",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1153"
+    },
+    {
+      "NpcId": 2101136,
+      "PetId": 1074,
+      "CatalogName": "Kuru_01",
+      "InternalName": "M_FE_IoE_Oditium_Kuru_01",
+      "NpcName": "Eternal Kuru Worker",
+      "PetName": "Kuru Worker",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1074"
+    },
+    {
+      "NpcId": 2101137,
+      "PetId": 1075,
+      "CatalogName": "Kuru_02",
+      "InternalName": "M_FE_IoE_Oditium_Kuru_02",
+      "NpcName": "Eternal Kuru Tinkerer",
+      "PetName": "Kuru Tinkerer",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1075"
+    },
+    {
+      "NpcId": 2101139,
+      "PetId": 1115,
+      "CatalogName": "Kuru_03",
+      "InternalName": "M_FE_IoE_Kuru_03",
+      "NpcName": "Eternal Kuru Overseer",
+      "PetName": "Kuru Overseer",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1115"
+    },
+    {
+      "NpcId": 2101278,
+      "PetId": 1103,
+      "CatalogName": "PretorBoss_01",
+      "InternalName": "M_L2_Named_EOR_PretorBoss_01",
+      "NpcName": "Gluttonous Egetis",
+      "PetName": "Pretor Veil Administrator",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1103"
+    },
+    {
+      "NpcId": 2110501,
+      "PetId": 1129,
+      "CatalogName": "AbyssSwarm_01_CV01",
+      "InternalName": "M_L1_IoC_AbyssSwarm_01_CV01_001",
+      "NpcName": "Crimson Drana Swarm",
+      "PetName": "Drana Swarm",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1129"
+    },
+    {
+      "NpcId": 2110502,
+      "PetId": 1131,
+      "CatalogName": "ForestEle_01_CV01",
+      "InternalName": "M_L1_IoC_ForestEle_01_CV01_001",
+      "NpcName": "Crimson Mutated Spore",
+      "PetName": "Drana Spore",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1131"
+    },
+    {
+      "NpcId": 2110503,
+      "PetId": 1153,
+      "CatalogName": "DranaVar_02",
+      "InternalName": "M_L1_IoC_DranaVar_02_001",
+      "NpcName": "Crimson Drana Mutant",
+      "PetName": "Drana Mutant Brute",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1153"
+    },
+    {
+      "NpcId": 2110505,
+      "PetId": 1174,
+      "CatalogName": "DranaVar_03",
+      "InternalName": "M_L1_IoC_DranaVar_03_001",
+      "NpcName": "Crimson Drana Predator",
+      "PetName": "Drana Predator",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1174"
+    },
+    {
+      "NpcId": 2110506,
+      "PetId": 1010,
+      "CatalogName": "ManduriWar_01",
+      "InternalName": "M_L1_IoC_DranaManduriWarrior_01",
+      "NpcName": "Crimson Manduri Fighter",
+      "PetName": "Manduri Fighter",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1010"
+    },
+    {
+      "NpcId": 2110507,
+      "PetId": 1104,
+      "CatalogName": "ManduriRng_01",
+      "InternalName": "M_L1_IoC_DranaManduriRanger_01",
+      "NpcName": "Crimson Manduri Slinger",
+      "PetName": "Manduri Trebuchet Worker",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1104"
+    },
+    {
+      "NpcId": 2110508,
+      "PetId": 1209,
+      "CatalogName": "Agrint_01_V01",
+      "InternalName": "M_L1_IoC_Agrint_01_V01_001",
+      "NpcName": "Crimson Agrint",
+      "PetName": "Thin Agrint",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1209"
+    },
+    {
+      "NpcId": 2110509,
+      "PetId": 1117,
+      "CatalogName": "Spider_01_V01",
+      "InternalName": "M_L1_IoC_Spider_01_V01_001",
+      "NpcName": "Crimson Spider",
+      "PetName": "Unstable Spider",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1117"
+    },
+    {
+      "NpcId": 2110512,
+      "PetId": 1053,
+      "CatalogName": "Crab_01_V01",
+      "InternalName": "M_L1_IoC_Crab_01_V01_001",
+      "NpcName": "Eternal Moss Crab",
+      "PetName": "Aberrant Potcrab",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1053"
+    },
+    {
+      "NpcId": 2110513,
+      "PetId": 1136,
+      "CatalogName": "Rafflesia_01_CV01",
+      "InternalName": "M_L1_IoC_Rafflesia_01_CV01_001",
+      "NpcName": "Crimson Rafflesia",
+      "PetName": "Rafflesia",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1136"
+    },
+    {
+      "NpcId": 2300104,
+      "PetId": 1077,
+      "CatalogName": "KraoElite_03",
+      "InternalName": "M_PD_Krao_KraoElite_03",
+      "NpcName": "Enhanced Harcon",
+      "PetName": "Harcon",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1077"
+    },
+    {
+      "NpcId": 2300310,
+      "PetId": 1192,
+      "CatalogName": "Rotan_01",
+      "InternalName": "M_PD_Fire_Temple_Rotan_001",
+      "NpcName": "Silver Blade Rotan",
+      "PetName": "Silver Blade Rotan",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1192"
+    },
+    {
+      "NpcId": 2300311,
+      "PetId": 1091,
+      "CatalogName": "FireGuard_01",
+      "InternalName": "M_PD_Fire_Temple_FireGuard_001",
+      "NpcName": "Red Spark Ignus",
+      "PetName": "Red Spark Ignus",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1091"
+    },
+    {
+      "NpcId": 2300312,
+      "PetId": 1058,
+      "CatalogName": "AshGuard_01",
+      "InternalName": "M_PD_Fire_Temple_AshGuard_001",
+      "NpcName": "Black Smoke Murute",
+      "PetName": "Black Smoke Murute",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1058"
+    },
+    {
+      "NpcId": 2300401,
+      "PetId": 1093,
+      "CatalogName": "NagaElite_01",
+      "InternalName": "M_PD_Draupnir_NagaElite_01",
+      "NpcName": "Phantasmal Lakshmi",
+      "PetName": "Phantasmal Lakshmi",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1093"
+    },
+    {
+      "NpcId": 2300403,
+      "PetId": 1215,
+      "CatalogName": "NagaElite_02",
+      "InternalName": "M_PD_Draupnir_NagaElite_02",
+      "NpcName": "Predator Saraswati",
+      "PetName": "Predator Saraswati",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1215"
+    },
+    {
+      "NpcId": 2310104,
+      "PetId": 1077,
+      "CatalogName": "KraoElite_03",
+      "InternalName": "M_PD_Krao_KraoElite_03_Easy",
+      "NpcName": "Enhanced Harcon",
+      "PetName": "Harcon",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1077"
+    },
+    {
+      "NpcId": 2310310,
+      "PetId": 1192,
+      "CatalogName": "Rotan_01",
+      "InternalName": "M_PD_Fire_Temple_Rotan_001_Easy",
+      "NpcName": "Silver Blade Rotan",
+      "PetName": "Silver Blade Rotan",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1192"
+    },
+    {
+      "NpcId": 2310311,
+      "PetId": 1091,
+      "CatalogName": "FireGuard_01",
+      "InternalName": "M_PD_Fire_Temple_FireGuard_001_Easy",
+      "NpcName": "Red Spark Ignus",
+      "PetName": "Red Spark Ignus",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1091"
+    },
+    {
+      "NpcId": 2310312,
+      "PetId": 1058,
+      "CatalogName": "AshGuard_01",
+      "InternalName": "M_PD_Fire_Temple_AshGuard_001_Easy",
+      "NpcName": "Black Smoke Murute",
+      "PetName": "Black Smoke Murute",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1058"
+    },
+    {
+      "NpcId": 2310401,
+      "PetId": 1093,
+      "CatalogName": "NagaElite_01",
+      "InternalName": "M_PD_Draupnir_NagaElite_01_easy",
+      "NpcName": "Phantasmal Lakshmi",
+      "PetName": "Phantasmal Lakshmi",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1093"
+    },
+    {
+      "NpcId": 2310403,
+      "PetId": 1215,
+      "CatalogName": "NagaElite_02",
+      "InternalName": "M_PD_Draupnir_NagaElite_02_easy",
+      "NpcName": "Predator Saraswati",
+      "PetName": "Predator Saraswati",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1215"
+    },
+    {
+      "NpcId": 2320104,
+      "PetId": 1077,
+      "CatalogName": "KraoElite_03",
+      "InternalName": "M_PD_Krao_KraoElite_03_hard",
+      "NpcName": "Enhanced Harcon",
+      "PetName": "Harcon",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1077"
+    },
+    {
+      "NpcId": 2320310,
+      "PetId": 1192,
+      "CatalogName": "Rotan_01",
+      "InternalName": "M_PD_Fire_Temple_Rotan_001_hard",
+      "NpcName": "Silver Blade Rotan",
+      "PetName": "Silver Blade Rotan",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1192"
+    },
+    {
+      "NpcId": 2320311,
+      "PetId": 1091,
+      "CatalogName": "FireGuard_01",
+      "InternalName": "M_PD_Fire_Temple_FireGuard_001_hard",
+      "NpcName": "Red Spark Ignus",
+      "PetName": "Red Spark Ignus",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1091"
+    },
+    {
+      "NpcId": 2320312,
+      "PetId": 1058,
+      "CatalogName": "AshGuard_01",
+      "InternalName": "M_PD_Fire_Temple_AshGuard_001_hard",
+      "NpcName": "Black Smoke Murute",
+      "PetName": "Black Smoke Murute",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1058"
+    },
+    {
+      "NpcId": 2320401,
+      "PetId": 1093,
+      "CatalogName": "NagaElite_01",
+      "InternalName": "M_PD_Draupnir_NagaElite_01_hard",
+      "NpcName": "Phantasmal Lakshmi",
+      "PetName": "Phantasmal Lakshmi",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1093"
+    },
+    {
+      "NpcId": 2320403,
+      "PetId": 1215,
+      "CatalogName": "NagaElite_02",
+      "InternalName": "M_PD_Draupnir_NagaElite_02_hard",
+      "NpcName": "Predator Saraswati",
+      "PetName": "Predator Saraswati",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1215"
+    },
+    {
+      "NpcId": 2400001,
+      "PetId": 1179,
+      "CatalogName": "DranaVar_01",
+      "InternalName": "M_D1_DC_DranaVar_A_01",
+      "NpcName": "Twisted Mutant",
+      "PetName": "Drana Mutant",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1179"
+    },
+    {
+      "NpcId": 2400002,
+      "PetId": 1046,
+      "CatalogName": "Mole_01",
+      "InternalName": "M_D1_DC_DranaMole_01",
+      "NpcName": "Red Shell Mole",
+      "PetName": "Armadon",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1046"
+    },
+    {
+      "NpcId": 2400004,
+      "PetId": 1202,
+      "CatalogName": "Lufilini_01_V01",
+      "InternalName": "M_D1_DC_Lufilini_01_V01_01",
+      "NpcName": "Decomposed Lupyllini",
+      "PetName": "Decomposed Lupyllini",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1202"
+    },
+    {
+      "NpcId": 2400009,
+      "PetId": 1217,
+      "CatalogName": "DranaVar_06",
+      "InternalName": "M_D1_DC_Incomplete_01",
+      "NpcName": "Congealed Drana",
+      "PetName": "Congealed Drana",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1217"
+    },
+    {
+      "NpcId": 2400010,
+      "PetId": 1174,
+      "CatalogName": "DranaVar_03",
+      "InternalName": "M_D1_DC_DranaPredator_01",
+      "NpcName": "Drana Predator",
+      "PetName": "Drana Predator",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1174"
+    },
+    {
+      "NpcId": 2400014,
+      "PetId": 1148,
+      "CatalogName": "Kalgolem_01_V02",
+      "InternalName": "M_D1_CC_DranaWorm_01",
+      "NpcName": "Crash Site Kalgolem",
+      "PetName": "Drakana Kalgolem",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1148"
+    },
+    {
+      "NpcId": 2400015,
+      "PetId": 1128,
+      "CatalogName": "Slime_02_CV01",
+      "InternalName": "M_D1_CC_DranaMole_01",
+      "NpcName": "Drana Slime",
+      "PetName": "Drana Slime",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1128"
+    },
+    {
+      "NpcId": 2400018,
+      "PetId": 1071,
+      "CatalogName": "AltBug_01",
+      "InternalName": "M_D1_DC_CorpseBug_01",
+      "NpcName": "Drana Cadaver Insectoid",
+      "PetName": "Cadaver Insectoid",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1071"
+    },
+    {
+      "NpcId": 2400054,
+      "PetId": 1209,
+      "CatalogName": "Agrint_01_V01",
+      "InternalName": "M_D1_UC_Agrint_01_001",
+      "NpcName": "Red Eye Agrint",
+      "PetName": "Thin Agrint",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1209"
+    },
+    {
+      "NpcId": 2400056,
+      "PetId": 1136,
+      "CatalogName": "Rafflesia_01_CV01",
+      "InternalName": "M_D1_UC_Kalnif_01_001",
+      "NpcName": "Rafflesia",
+      "PetName": "Rafflesia",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1136"
+    },
+    {
+      "NpcId": 2400057,
+      "PetId": 1188,
+      "CatalogName": "GraveBat_01",
+      "InternalName": "M_D1_UC_GraveBat_01_001",
+      "NpcName": "Vampire Vivel",
+      "PetName": "Vivel",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1188"
+    },
+    {
+      "NpcId": 2400061,
+      "PetId": 1049,
+      "CatalogName": "ForestEle_01_V01",
+      "InternalName": "M_D1_UC_GraveSoul_01_001",
+      "NpcName": "Condensed Specter",
+      "PetName": "Mutated Forest Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1049"
+    },
+    {
+      "NpcId": 2400080,
+      "PetId": 1013,
+      "CatalogName": "AbyssSwarm_01",
+      "InternalName": "M_D1_UC_DranaSwarm_01",
+      "NpcName": "Contaminated Swarm",
+      "PetName": "Swarm",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1013"
+    },
+    {
+      "NpcId": 2400116,
+      "PetId": 1147,
+      "CatalogName": "Dratona_01",
+      "InternalName": "M_D1_SW_Dratona_02_01",
+      "NpcName": "Dratona Tinkerer",
+      "PetName": "Dratona",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1147"
+    },
+    {
+      "NpcId": 2400143,
+      "PetId": 1056,
+      "CatalogName": "BeritraC_06",
+      "InternalName": "M_D1_SW_BeritraC_06_01",
+      "NpcName": "Outpost Probe",
+      "PetName": "Drakan Probe",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1056"
+    },
+    {
+      "NpcId": 2400161,
+      "PetId": 1147,
+      "CatalogName": "Dratona_01",
+      "InternalName": "M_D1_SH_BeritraC_05_01",
+      "NpcName": "Dratona Supporter",
+      "PetName": "Dratona",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1147"
+    },
+    {
+      "NpcId": 2400162,
+      "PetId": 1056,
+      "CatalogName": "BeritraC_06",
+      "InternalName": "M_D1_SH_BeritraC_06_01",
+      "NpcName": "Drakan Probe",
+      "PetName": "Drakan Probe",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1056"
+    },
+    {
+      "NpcId": 2400163,
+      "PetId": 1011,
+      "CatalogName": "Skyray_01",
+      "InternalName": "M_D1_SH_Skyray_01_01",
+      "NpcName": "Tranein Skyray",
+      "PetName": "Skyray",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1011"
+    },
+    {
+      "NpcId": 2400214,
+      "PetId": 1144,
+      "CatalogName": "ForestArc_01_CV01",
+      "InternalName": "M_D1_MF_ForestGuardianArcher_01",
+      "NpcName": "Mutated Forest Guardian",
+      "PetName": "Mutated Forest Guardian",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1144"
+    },
+    {
+      "NpcId": 2400217,
+      "PetId": 1143,
+      "CatalogName": "Ursuss_01_CV01",
+      "InternalName": "M_D1_MF_Ursuss_01_001",
+      "NpcName": "Ashen Ursus",
+      "PetName": "Mutated Ursus",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1143"
+    },
+    {
+      "NpcId": 2400221,
+      "PetId": 1207,
+      "CatalogName": "Agrint_01",
+      "InternalName": "M_D1_MF_Agrint_01",
+      "NpcName": "Mutated Elim",
+      "PetName": "Agrint",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1207"
+    },
+    {
+      "NpcId": 2400225,
+      "PetId": 1140,
+      "CatalogName": "BigMan_01_V01",
+      "InternalName": "M_D1_MF_BigMan_01_002",
+      "NpcName": "Burned Forester",
+      "PetName": "Forest Monster",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1140"
+    },
+    {
+      "NpcId": 2400230,
+      "PetId": 1114,
+      "CatalogName": "OdSpider_03",
+      "InternalName": "M_D1_MF_OdSpider_Spike_02",
+      "NpcName": "Ashen Spider",
+      "PetName": "Ashen Spider",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1114"
+    },
+    {
+      "NpcId": 2400240,
+      "PetId": 1163,
+      "CatalogName": "Basilisk_01",
+      "InternalName": "M_D1_MF_DranaMole_01_003",
+      "NpcName": "Black Ash Basilisk",
+      "PetName": "Basilisk",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1163"
+    },
+    {
+      "NpcId": 2400248,
+      "PetId": 1135,
+      "CatalogName": "Dionaea_01_V01",
+      "InternalName": "M_D1_MF_Dionaea_01_V01_001",
+      "NpcName": "Ashen Dionae",
+      "PetName": "Ashen Dionae",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1135"
+    },
+    {
+      "NpcId": 2400249,
+      "PetId": 1046,
+      "CatalogName": "Mole_01",
+      "InternalName": "M_D1_MF_DranaMole_01",
+      "NpcName": "Withered Armadon",
+      "PetName": "Armadon",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1046"
+    },
+    {
+      "NpcId": 2400254,
+      "PetId": 1004,
+      "CatalogName": "Fossa_01",
+      "InternalName": "M_D1_SH_AltKnifeDog_01_001",
+      "NpcName": "Daeva Renegade Fossa",
+      "PetName": "Fossa",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1004"
+    },
+    {
+      "NpcId": 2400257,
+      "PetId": 1203,
+      "CatalogName": "Kalnif_01_V01",
+      "InternalName": "M_D1_SH_Kalnif_01_001",
+      "NpcName": "Blades Karnif",
+      "PetName": "Tamed Karnif",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1203"
+    },
+    {
+      "NpcId": 2400275,
+      "PetId": 1157,
+      "CatalogName": "Imp_01",
+      "InternalName": "M_D1_SH_Imp_01_01",
+      "NpcName": "Ruins Corpse Cleaner",
+      "PetName": "Cadaver Cleaner",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1157"
+    },
+    {
+      "NpcId": 2400301,
+      "PetId": 1069,
+      "CatalogName": "EarthEleOd_01",
+      "InternalName": "M_D1_PF_EarthEleOd_01_01",
+      "NpcName": "Faded Stone Spirit",
+      "PetName": "Stone Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1069"
+    },
+    {
+      "NpcId": 2400302,
+      "PetId": 1095,
+      "CatalogName": "WindEle_03",
+      "InternalName": "M_D1_PF_WindEle_01_01",
+      "NpcName": "Whirlwind Spirit",
+      "PetName": "Superior Wind Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1095"
+    },
+    {
+      "NpcId": 2400303,
+      "PetId": 1096,
+      "CatalogName": "FireEle_03",
+      "InternalName": "M_D1_PF_FireEle_01_01",
+      "NpcName": "Flame Spirit",
+      "PetName": "Superior Fire Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1096"
+    },
+    {
+      "NpcId": 2400306,
+      "PetId": 1155,
+      "CatalogName": "WaterEle_03",
+      "InternalName": "M_D1_PF_WaterEle_01_01",
+      "NpcName": "Water Mist Spirit",
+      "PetName": "Superior Water Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1155"
+    },
+    {
+      "NpcId": 2400307,
+      "PetId": 1050,
+      "CatalogName": "Gravi_01",
+      "InternalName": "M_D1_PF_Gravi_02_01",
+      "NpcName": "Pink Gravi",
+      "PetName": "Gravi",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1050"
+    },
+    {
+      "NpcId": 2400310,
+      "PetId": 1166,
+      "CatalogName": "EarthEle_03",
+      "InternalName": "M_D1_PF_EarthEle_01_01",
+      "NpcName": "Corroded Soil Spirit",
+      "PetName": "Superior Earth Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1166"
+    },
+    {
+      "NpcId": 2400311,
+      "PetId": 1186,
+      "CatalogName": "FafBlood_02",
+      "InternalName": "M_D1_PF_FafBlood_02_01",
+      "NpcName": "Cursed Poison Blood",
+      "PetName": "Poison Blood",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1186"
+    },
+    {
+      "NpcId": 2400312,
+      "PetId": 1142,
+      "CatalogName": "BigMan_01_CV01",
+      "InternalName": "M_D1_PF_BigMan_01_01",
+      "NpcName": "Consumed Spirit Guardian",
+      "PetName": "Distorted Mutant",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1142"
+    },
+    {
+      "NpcId": 2400313,
+      "PetId": 1029,
+      "CatalogName": "Neuth_02",
+      "InternalName": "M_D1_PF_Neuth_02_01",
+      "NpcName": "Consumed Klaw",
+      "PetName": "Klaw Scout",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1029"
+    },
+    {
+      "NpcId": 2400319,
+      "PetId": 1117,
+      "CatalogName": "Spider_01_V01",
+      "InternalName": "M_D1_PF_Spider_01_V01_01",
+      "NpcName": "Flame Rock Spider",
+      "PetName": "Unstable Spider",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1117"
+    },
+    {
+      "NpcId": 2400320,
+      "PetId": 1061,
+      "CatalogName": "Slime_01",
+      "InternalName": "M_D1_PF_Slime_01_01",
+      "NpcName": "Unruly Slime",
+      "PetName": "Slime",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1061"
+    },
+    {
+      "NpcId": 2400324,
+      "PetId": 1092,
+      "CatalogName": "WindEle_01",
+      "InternalName": "M_D1_PF_WindEle_02_01",
+      "NpcName": "Soft Breeze Spirit",
+      "PetName": "Lesser Wind Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1092"
+    },
+    {
+      "NpcId": 2400325,
+      "PetId": 1213,
+      "CatalogName": "FireEle_01",
+      "InternalName": "M_D1_PF_FireEle_02_01",
+      "NpcName": "Burning Ember Spirit",
+      "PetName": "Lesser Fire Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1213"
+    },
+    {
+      "NpcId": 2400327,
+      "PetId": 1022,
+      "CatalogName": "Phaini_01",
+      "InternalName": "M_D1_PF_Phaini_01_01",
+      "NpcName": "Sensitive Crasaur",
+      "PetName": "Crasaur",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1022"
+    },
+    {
+      "NpcId": 2400328,
+      "PetId": 1084,
+      "CatalogName": "Kalgolem_01",
+      "InternalName": "M_D1_PF_AshGuard_01_01",
+      "NpcName": "Angry Kalgolem",
+      "PetName": "Kalgolem",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1084"
+    },
+    {
+      "NpcId": 2400329,
+      "PetId": 1051,
+      "CatalogName": "Gravi_02",
+      "InternalName": "M_D1_PF_Gravi_02_02",
+      "NpcName": "Purifying Forest Magic Gravi",
+      "PetName": "Magic Gravi",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1051"
+    },
+    {
+      "NpcId": 2400337,
+      "PetId": 1048,
+      "CatalogName": "ForestEle_01",
+      "InternalName": "M_D1_PF_ForestSpirit_01_01",
+      "NpcName": "Forest Spirit",
+      "PetName": "Forest Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1048"
+    },
+    {
+      "NpcId": 2400341,
+      "PetId": 1034,
+      "CatalogName": "SparkyOd_02",
+      "InternalName": "M_D1_PF_SparkyOd_02_02",
+      "NpcName": "Withered Branch Odyle Sparkie",
+      "PetName": "Giant Sparkie",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1034"
+    },
+    {
+      "NpcId": 2400342,
+      "PetId": 1052,
+      "CatalogName": "Gravi_03",
+      "InternalName": "M_D1_PF_Gravi_03_02",
+      "NpcName": "Large Leaf Gravi",
+      "PetName": "Large Leaf Gravi",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1052"
+    },
+    {
+      "NpcId": 2400350,
+      "PetId": 1054,
+      "CatalogName": "SkurvWar_01",
+      "InternalName": "M_D1_DR_SkurvWar_01_001",
+      "NpcName": "Mumu Watcher",
+      "PetName": "Mumu Warrior",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1054"
+    },
+    {
+      "NpcId": 2400351,
+      "PetId": 1137,
+      "CatalogName": "SkurvWar_02",
+      "InternalName": "M_D1_DR_SkurvWar_02_001",
+      "NpcName": "Mumu Worker",
+      "PetName": "Mumu Worker",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1137"
+    },
+    {
+      "NpcId": 2400359,
+      "PetId": 1014,
+      "CatalogName": "BeritraC_03",
+      "InternalName": "M_D1_DR_Fossa_01_001",
+      "NpcName": "Drakan Guard Dog",
+      "PetName": "Drakan Guard Dog",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1014"
+    },
+    {
+      "NpcId": 2400362,
+      "PetId": 1045,
+      "CatalogName": "Muta_01",
+      "InternalName": "M_D1_DR_Muta_01_001",
+      "NpcName": "Sylphen",
+      "PetName": "Sylphen",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1045"
+    },
+    {
+      "NpcId": 2400363,
+      "PetId": 1007,
+      "CatalogName": "Crab_01",
+      "InternalName": "M_D1_DR_Crab_01_001",
+      "NpcName": "Moss Crab",
+      "PetName": "Potcrab",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1007"
+    },
+    {
+      "NpcId": 2400364,
+      "PetId": 1063,
+      "CatalogName": "Oculazen_01",
+      "InternalName": "M_D1_DR_Oculazen_01_001",
+      "NpcName": "Vigilant Oculazen",
+      "PetName": "Vigilant Oculazen",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1063"
+    },
+    {
+      "NpcId": 2400374,
+      "PetId": 1060,
+      "CatalogName": "Starturtle_01",
+      "InternalName": "M_D1_DR_Starturtle_01_001",
+      "NpcName": "Beach Starturtle",
+      "PetName": "Starturtle",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1060"
+    },
+    {
+      "NpcId": 2400375,
+      "PetId": 1181,
+      "CatalogName": "Brax_01",
+      "InternalName": "M_D1_DR_Brax_01_001",
+      "NpcName": "Brax",
+      "PetName": "Brax",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1181"
+    },
+    {
+      "NpcId": 2400376,
+      "PetId": 1042,
+      "CatalogName": "Ursuss_01",
+      "InternalName": "M_D1_DR_Ursuss_01_01",
+      "NpcName": "Ursus",
+      "PetName": "Ursus",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1042"
+    },
+    {
+      "NpcId": 2400377,
+      "PetId": 1123,
+      "CatalogName": "Ursuss_01_V01",
+      "InternalName": "M_D1_DR_Ursuss_01_02",
+      "NpcName": "Young Ursus",
+      "PetName": "Young Ursus",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1123"
+    },
+    {
+      "NpcId": 2400378,
+      "PetId": 1202,
+      "CatalogName": "Lufilini_01_V01",
+      "InternalName": "M_D1_DR_Lufilini_01_V01_001",
+      "NpcName": "Decomposed Lupyllini",
+      "PetName": "Decomposed Lupyllini",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1202"
+    },
+    {
+      "NpcId": 2400380,
+      "PetId": 1147,
+      "CatalogName": "Dratona_01",
+      "InternalName": "M_D1_DR_Dratona_01",
+      "NpcName": "Dratona",
+      "PetName": "Dratona",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1147"
+    },
+    {
+      "NpcId": 2400382,
+      "PetId": 1056,
+      "CatalogName": "BeritraC_06",
+      "InternalName": "M_D1_DR_BeritraC_06_01",
+      "NpcName": "Drana Processing Maintenance Machine",
+      "PetName": "Drakan Probe",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1056"
+    },
+    {
+      "NpcId": 2400384,
+      "PetId": 1184,
+      "CatalogName": "Drakan_02",
+      "InternalName": "M_D1_DR_Drakan_02_01",
+      "NpcName": "Drakan Manager",
+      "PetName": "Drakan Watcher",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1184"
+    },
+    {
+      "NpcId": 2400385,
+      "PetId": 1018,
+      "CatalogName": "Varg_03",
+      "InternalName": "M_D1_DR_Varg_03_01",
+      "NpcName": "Varg Berserker",
+      "PetName": "Varg Berserker",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1018"
+    },
+    {
+      "NpcId": 2400390,
+      "PetId": 1137,
+      "CatalogName": "SkurvWar_02",
+      "InternalName": "M_D1_DR_SkurvWar_02_002",
+      "NpcName": "Escaped Mumu Worker",
+      "PetName": "Mumu Worker",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1137"
+    },
+    {
+      "NpcId": 2400391,
+      "PetId": 1202,
+      "CatalogName": "Lufilini_01_V01",
+      "InternalName": "M_D1_DR_Lufilini_01_01",
+      "NpcName": "Ferocious Lupyllini",
+      "PetName": "Decomposed Lupyllini",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1202"
+    },
+    {
+      "NpcId": 2400412,
+      "PetId": 1157,
+      "CatalogName": "Imp_01",
+      "InternalName": "M_D1_BR_Imp_01_01",
+      "NpcName": "Ferocious Cadaver Cleaner",
+      "PetName": "Cadaver Cleaner",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1157"
+    },
+    {
+      "NpcId": 2400413,
+      "PetId": 1183,
+      "CatalogName": "CorpeSpider_01_V01",
+      "InternalName": "M_D1_BR_CorpeSpider_01_01",
+      "NpcName": "Soulless Corpse Gnat",
+      "PetName": "Soulless Corpse Gnat",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1183"
+    },
+    {
+      "NpcId": 2400414,
+      "PetId": 1004,
+      "CatalogName": "Fossa_01",
+      "InternalName": "M_D1_BR_Fossa_01_01",
+      "NpcName": "Tamed Beast",
+      "PetName": "Fossa",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1004"
+    },
+    {
+      "NpcId": 2400415,
+      "PetId": 1207,
+      "CatalogName": "Agrint_01",
+      "InternalName": "M_D1_BR_Agrint_01_01",
+      "NpcName": "Ruin Agrint",
+      "PetName": "Agrint",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1207"
+    },
+    {
+      "NpcId": 2400418,
+      "PetId": 1157,
+      "CatalogName": "Imp_01",
+      "InternalName": "M_D1_BR_Imp_01_02",
+      "NpcName": "Ferocious Cadaver Cleaner",
+      "PetName": "Cadaver Cleaner",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1157"
+    },
+    {
+      "NpcId": 2400455,
+      "PetId": 1193,
+      "CatalogName": "AddShulack_03",
+      "InternalName": "M_D1_FD_AddShulack_03_001",
+      "NpcName": "Rampaging Shulak Cart Worker",
+      "PetName": "Addicted Shulak Cart Worker",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1193"
+    },
+    {
+      "NpcId": 2400456,
+      "PetId": 1013,
+      "CatalogName": "AbyssSwarm_01",
+      "InternalName": "M_D1_FD_AbyssSwarm_01_01",
+      "NpcName": "Giant Ore Insectoid",
+      "PetName": "Swarm",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1013"
+    },
+    {
+      "NpcId": 2400466,
+      "PetId": 1034,
+      "CatalogName": "SparkyOd_02",
+      "InternalName": "M_D1_FD_SparkyOd_02_01",
+      "NpcName": "Fafnite Luminous Sparkie",
+      "PetName": "Giant Sparkie",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1034"
+    },
+    {
+      "NpcId": 2400470,
+      "PetId": 1067,
+      "CatalogName": "Scorpion_01",
+      "InternalName": "M_D1_FD_Scorpion_01_01",
+      "NpcName": "Ore Scorpion",
+      "PetName": "Scorpion",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1067"
+    },
+    {
+      "NpcId": 2400471,
+      "PetId": 1110,
+      "CatalogName": "Kalgolem_02",
+      "InternalName": "M_D1_FD_Kalgolem_01_01",
+      "NpcName": "Blue Kalgolem",
+      "PetName": "Blue Kalgolem",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1110"
+    },
+    {
+      "NpcId": 2400473,
+      "PetId": 1159,
+      "CatalogName": "AbyssSwarm_02",
+      "InternalName": "M_D1_FD_AbyssSwarm_02_01",
+      "NpcName": "Giant Ore Insectoid Adult",
+      "PetName": "Parasite Swarm",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1159"
+    },
+    {
+      "NpcId": 2400476,
+      "PetId": 1154,
+      "CatalogName": "DranaVar_02_CV01",
+      "InternalName": "M_D1_FD_DranaVar_02_CV01_001",
+      "NpcName": "Faded Mutant Brute",
+      "PetName": "Faded Mutant Brute",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1154"
+    },
+    {
+      "NpcId": 2400477,
+      "PetId": 1180,
+      "CatalogName": "DranaVar_01_CV01",
+      "InternalName": "M_D1_FD_DranaVar_01_CV01_001",
+      "NpcName": "Faded Mutant",
+      "PetName": "Faded Mutant",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1180"
+    },
+    {
+      "NpcId": 2400478,
+      "PetId": 1218,
+      "CatalogName": "DranaVar_06_CV01",
+      "InternalName": "M_D1_FD_DranaVar_06_CV01_001",
+      "NpcName": "Faded Chunk",
+      "PetName": "Faded Drana",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1218"
+    },
+    {
+      "NpcId": 2400479,
+      "PetId": 1161,
+      "CatalogName": "DranaVar_04_CV01",
+      "InternalName": "M_D1_FD_DranaVar_04_CV01_001",
+      "NpcName": "Faded Floater",
+      "PetName": "Faded Floater",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1161"
+    },
+    {
+      "NpcId": 2400480,
+      "PetId": 1175,
+      "CatalogName": "DranaVar_03_CV01",
+      "InternalName": "M_D1_FD_DranaVar_03_CV01_001",
+      "NpcName": "Faded Predator",
+      "PetName": "Faded Predator",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1175"
+    },
+    {
+      "NpcId": 2400481,
+      "PetId": 1176,
+      "CatalogName": "FafBlood_02_CV01",
+      "InternalName": "M_D1_FD_FafBlood_02_CV01_001",
+      "NpcName": "Addicted Mudthorn",
+      "PetName": "Mudthorn",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1176"
+    },
+    {
+      "NpcId": 2400503,
+      "PetId": 1203,
+      "CatalogName": "Kalnif_01_V01",
+      "InternalName": "M_D1_WGC_AltKnife_03_01",
+      "NpcName": "Tamed Blades Beast",
+      "PetName": "Tamed Karnif",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1203"
+    },
+    {
+      "NpcId": 2400519,
+      "PetId": 1060,
+      "CatalogName": "Starturtle_01",
+      "InternalName": "M_D1_WGC_Starturtle_01_001",
+      "NpcName": "Starturtle",
+      "PetName": "Starturtle",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1060"
+    },
+    {
+      "NpcId": 2400520,
+      "PetId": 1016,
+      "CatalogName": "Lepisma_01",
+      "InternalName": "M_D1_WGC_Lepisma_01_V01_001",
+      "NpcName": "Coastal Slink",
+      "PetName": "Slink",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1016"
+    },
+    {
+      "NpcId": 2400564,
+      "PetId": 1106,
+      "CatalogName": "Tayga_01",
+      "InternalName": "M_D1_EGC_Tayga_01_01",
+      "NpcName": "Search Party Tayga",
+      "PetName": "Tayga",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1106"
+    },
+    {
+      "NpcId": 2400567,
+      "PetId": 1038,
+      "CatalogName": "Airon_01",
+      "InternalName": "M_D1_EGC_Airon_01_01",
+      "NpcName": "Canyon Airon",
+      "PetName": "Airon",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1038"
+    },
+    {
+      "NpcId": 2400568,
+      "PetId": 1038,
+      "CatalogName": "Airon_01",
+      "InternalName": "M_D1_EGC_Airon_01_02",
+      "NpcName": "Baby Canyon Airon",
+      "PetName": "Airon",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1038"
+    },
+    {
+      "NpcId": 2400570,
+      "PetId": 1054,
+      "CatalogName": "SkurvWar_01",
+      "InternalName": "M_D1_EGC_SkurvWar_01_01",
+      "NpcName": "Gribade Mumu Warrior",
+      "PetName": "Mumu Warrior",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1054"
+    },
+    {
+      "NpcId": 2400578,
+      "PetId": 1125,
+      "CatalogName": "Zaif_01_CV02",
+      "InternalName": "M_D1_EGC_Zaif_01_CV02_001",
+      "NpcName": "Golden Zaif",
+      "PetName": "Aberrant Zaif",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1125"
+    },
+    {
+      "NpcId": 2400583,
+      "PetId": 1106,
+      "CatalogName": "Tayga_01",
+      "InternalName": "M_D1_EGC_Tayga_01_02",
+      "NpcName": "Guard Troopers Tayga",
+      "PetName": "Tayga",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1106"
+    },
+    {
+      "NpcId": 2400587,
+      "PetId": 1014,
+      "CatalogName": "BeritraC_03",
+      "InternalName": "M_D1_EGC_BeritraC_03_01",
+      "NpcName": "Drakan Patrol Armed Beast",
+      "PetName": "Drakan Guard Dog",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1014"
+    },
+    {
+      "NpcId": 2400591,
+      "PetId": 1184,
+      "CatalogName": "Drakan_02",
+      "InternalName": "M_D1_EGC_Drakan_02_01",
+      "NpcName": "Drakan Patrol Watcher",
+      "PetName": "Drakan Watcher",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1184"
+    },
+    {
+      "NpcId": 2400594,
+      "PetId": 1066,
+      "CatalogName": "Papis_01",
+      "InternalName": "M_D1_Com_Papis_01_10",
+      "NpcName": "Faded Papis",
+      "PetName": "Papis",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1066"
+    },
+    {
+      "NpcId": 2400605,
+      "PetId": 1033,
+      "CatalogName": "ManduriWar_01_V01",
+      "InternalName": "M_D1_BCV_BlackClaw_05_01",
+      "NpcName": "Black Claw Manduri Fighter",
+      "PetName": "Elite Manduri Fighter",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1033"
+    },
+    {
+      "NpcId": 2400606,
+      "PetId": 1054,
+      "CatalogName": "SkurvWar_01",
+      "InternalName": "M_D1_BCV_KrallWar_03_01",
+      "NpcName": "Mumu Watcher",
+      "PetName": "Mumu Warrior",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1054"
+    },
+    {
+      "NpcId": 2400609,
+      "PetId": 1018,
+      "CatalogName": "Varg_03",
+      "InternalName": "M_D1_BCV_KrallWar_01_V01_01",
+      "NpcName": "Chief's Bodyguard",
+      "PetName": "Varg Berserker",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1018"
+    },
+    {
+      "NpcId": 2400611,
+      "PetId": 1106,
+      "CatalogName": "Tayga_01",
+      "InternalName": "M_D1_BCV_Tayga_01_01",
+      "NpcName": "Tamed Tayga",
+      "PetName": "Tayga",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1106"
+    },
+    {
+      "NpcId": 2400612,
+      "PetId": 1172,
+      "CatalogName": "Duduka_01",
+      "InternalName": "M_D1_BCV_Duduka_01",
+      "NpcName": "Duduka Worker",
+      "PetName": "Duduka Worker",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1172"
+    },
+    {
+      "NpcId": 2400613,
+      "PetId": 1173,
+      "CatalogName": "Duduka_02",
+      "InternalName": "M_D1_BCV_Duduka_02",
+      "NpcName": "Duduka Slinger",
+      "PetName": "Duduka Trebuchet Worker",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1173"
+    },
+    {
+      "NpcId": 2400615,
+      "PetId": 1104,
+      "CatalogName": "ManduriRng_01",
+      "InternalName": "M_D1_BCV_DranaManduriRanger_01_01",
+      "NpcName": "Black Claw Manduri Scout",
+      "PetName": "Manduri Trebuchet Worker",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1104"
+    },
+    {
+      "NpcId": 2400617,
+      "PetId": 1010,
+      "CatalogName": "ManduriWar_01",
+      "InternalName": "M_D1_BCV_DranaManduriWarrior_01_01",
+      "NpcName": "Black Claw Manduri Combatant",
+      "PetName": "Manduri Fighter",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1010"
+    },
+    {
+      "NpcId": 2400655,
+      "PetId": 1014,
+      "CatalogName": "BeritraC_03",
+      "InternalName": "M_D1_LF_BeritraC_03_01",
+      "NpcName": "Lagta Brigade Guard Dog",
+      "PetName": "Drakan Guard Dog",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1014"
+    },
+    {
+      "NpcId": 2400658,
+      "PetId": 1056,
+      "CatalogName": "BeritraC_06",
+      "InternalName": "M_D1_LF_BeritraC_06_01",
+      "NpcName": "Lagta Brigade Seeker",
+      "PetName": "Drakan Probe",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1056"
+    },
+    {
+      "NpcId": 2400707,
+      "PetId": 1176,
+      "CatalogName": "FafBlood_02_CV01",
+      "InternalName": "M_D1_IS_FafBlood_02_CV01_001",
+      "NpcName": "Remnant of Subspace",
+      "PetName": "Mudthorn",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1176"
+    },
+    {
+      "NpcId": 2400708,
+      "PetId": 1214,
+      "CatalogName": "DarkEle_01",
+      "InternalName": "M_D1_IS_DarkEle_01_001",
+      "NpcName": "Black Spirit",
+      "PetName": "Black Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1214"
+    },
+    {
+      "NpcId": 2400711,
+      "PetId": 1064,
+      "CatalogName": "Oculazen_02",
+      "InternalName": "M_D1_IS_Oculazen_01_001",
+      "NpcName": "Oculazen",
+      "PetName": "Oculazen",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1064"
+    },
+    {
+      "NpcId": 2400731,
+      "PetId": 1051,
+      "CatalogName": "Gravi_02",
+      "InternalName": "M_D1_IOS_Gravi_02_01",
+      "NpcName": "Unstable Gravi",
+      "PetName": "Magic Gravi",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1051"
+    },
+    {
+      "NpcId": 2400734,
+      "PetId": 1127,
+      "CatalogName": "EarthEleOd_01_CV01",
+      "InternalName": "M_D1_IOS_EarthEleOd_01_CV01_01",
+      "NpcName": "Faded Odyle Spirit",
+      "PetName": "Odyle Stone Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1127"
+    },
+    {
+      "NpcId": 2400735,
+      "PetId": 1136,
+      "CatalogName": "Rafflesia_01_CV01",
+      "InternalName": "M_D1_IOS_Rafflesia_01_CV01_01",
+      "NpcName": "Unstable Rafflesia",
+      "PetName": "Rafflesia",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1136"
+    },
+    {
+      "NpcId": 2400736,
+      "PetId": 1015,
+      "CatalogName": "Kailin_01",
+      "InternalName": "M_D1_IOS_Kailin_01_01",
+      "NpcName": "Unstable Kailin",
+      "PetName": "Kailin",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1015"
+    },
+    {
+      "NpcId": 2400737,
+      "PetId": 1120,
+      "CatalogName": "Kailin_01_V01",
+      "InternalName": "M_D1_IOS_Kailin_01_V01_01",
+      "NpcName": "Unstable Young Kailin",
+      "PetName": "Young Kailin",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1120"
+    },
+    {
+      "NpcId": 2400738,
+      "PetId": 1169,
+      "CatalogName": "WaterEle_02",
+      "InternalName": "M_D1_IOS_WaterEle_01_01",
+      "NpcName": "Unstable Intermediate Water Spirit",
+      "PetName": "Intermediate Water Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1169"
+    },
+    {
+      "NpcId": 2400739,
+      "PetId": 1155,
+      "CatalogName": "WaterEle_03",
+      "InternalName": "M_D1_IOS_WaterEle_03_01",
+      "NpcName": "Unstable Superior Water Spirit",
+      "PetName": "Superior Water Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1155"
+    },
+    {
+      "NpcId": 2400743,
+      "PetId": 1186,
+      "CatalogName": "FafBlood_02",
+      "InternalName": "M_D1_IOS_FafBlood_02_V01_01",
+      "NpcName": "Unstable Poison Blood",
+      "PetName": "Poison Blood",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1186"
+    },
+    {
+      "NpcId": 2400744,
+      "PetId": 1025,
+      "CatalogName": "OdSpider_04_V01",
+      "InternalName": "M_D1_IOS_OdSpider_04_V02_01",
+      "NpcName": "Unstable Ashen Spider",
+      "PetName": "Mutated Aberrant Odyle Spider",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1025"
+    },
+    {
+      "NpcId": 2400745,
+      "PetId": 1117,
+      "CatalogName": "Spider_01_V01",
+      "InternalName": "M_D1_IOS_Spider_01_V01_01",
+      "NpcName": "Unstable Poison Blood Spider",
+      "PetName": "Unstable Spider",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1117"
+    },
+    {
+      "NpcId": 2400746,
+      "PetId": 1195,
+      "CatalogName": "Dracuni_01",
+      "InternalName": "M_D1_IOS_Dracuni_01_01",
+      "NpcName": "Poison Blood Gatherer",
+      "PetName": "Dracuni Herbalist",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1195"
+    },
+    {
+      "NpcId": 2400748,
+      "PetId": 1187,
+      "CatalogName": "FireEle_02",
+      "InternalName": "M_D1_IOS_FireEle_01_01",
+      "NpcName": "Unstable Intermediate Fire Spirit",
+      "PetName": "Intermediate Fire Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1187"
+    },
+    {
+      "NpcId": 2400749,
+      "PetId": 1096,
+      "CatalogName": "FireEle_03",
+      "InternalName": "M_D1_IOS_FireEle_03_01",
+      "NpcName": "Unstable Superior Fire Spirit",
+      "PetName": "Superior Fire Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1096"
+    },
+    {
+      "NpcId": 2400750,
+      "PetId": 1208,
+      "CatalogName": "Agrint_01_CV01",
+      "InternalName": "M_D1_IOS_Agrint_01_CV01_01",
+      "NpcName": "Unstable Agrint",
+      "PetName": "Ashen Agrint",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1208"
+    },
+    {
+      "NpcId": 2400751,
+      "PetId": 1144,
+      "CatalogName": "ForestArc_01_CV01",
+      "InternalName": "M_D1_IOS_ForestArc_01_CV01_01",
+      "NpcName": "Unstable Forest Guardian",
+      "PetName": "Mutated Forest Guardian",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1144"
+    },
+    {
+      "NpcId": 2400755,
+      "PetId": 1007,
+      "CatalogName": "Crab_01",
+      "InternalName": "M_D1_IOS_Crab_01_01",
+      "NpcName": "Coastal Moss Crab",
+      "PetName": "Potcrab",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1007"
+    },
+    {
+      "NpcId": 2400801,
+      "PetId": 1162,
+      "CatalogName": "Cherubim_01",
+      "InternalName": "M_D1_IoI_Cherubim_01_001",
+      "NpcName": "Kerubar",
+      "PetName": "Kerubar",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1162"
+    },
+    {
+      "NpcId": 2400802,
+      "PetId": 1170,
+      "CatalogName": "Cherubim_02",
+      "InternalName": "M_D1_IoI_Cherubim_02_001",
+      "NpcName": "Kerubian",
+      "PetName": "Kerubian",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1170"
+    },
+    {
+      "NpcId": 2400803,
+      "PetId": 1171,
+      "CatalogName": "Cherubim_03",
+      "InternalName": "M_D1_IoI_Cherubim_03_001",
+      "NpcName": "Kerubiel",
+      "PetName": "Kerubiel",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1171"
+    },
+    {
+      "NpcId": 2400808,
+      "PetId": 1060,
+      "CatalogName": "Starturtle_01",
+      "InternalName": "M_D1_IoI_Starturtle_01_001",
+      "NpcName": "Starturtle",
+      "PetName": "Starturtle",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1060"
+    },
+    {
+      "NpcId": 2400809,
+      "PetId": 1022,
+      "CatalogName": "Phaini_01",
+      "InternalName": "M_D1_IoI_Phaini_01_001",
+      "NpcName": "Crasaur",
+      "PetName": "Crasaur",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1022"
+    },
+    {
+      "NpcId": 2400811,
+      "PetId": 1219,
+      "CatalogName": "Jellofi_01",
+      "InternalName": "M_D1_IoI_Jellofi_01_001",
+      "NpcName": "Zelophi",
+      "PetName": "Zelophi",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1219"
+    },
+    {
+      "NpcId": 2400812,
+      "PetId": 1007,
+      "CatalogName": "Crab_01",
+      "InternalName": "M_D1_IoI_Crab_01_001",
+      "NpcName": "Coastal Moss Crab",
+      "PetName": "Potcrab",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1007"
+    },
+    {
+      "NpcId": 2400813,
+      "PetId": 1136,
+      "CatalogName": "Rafflesia_01_CV01",
+      "InternalName": "M_D1_IoI_Rafflesia_01_001",
+      "NpcName": "Rafflesia",
+      "PetName": "Rafflesia",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1136"
+    },
+    {
+      "NpcId": 2400814,
+      "PetId": 1201,
+      "CatalogName": "Lufilini_01",
+      "InternalName": "M_D1_IoI_Lufilini_03_001",
+      "NpcName": "Modified Lupyllini",
+      "PetName": "Modified Lupyllini",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1201"
+    },
+    {
+      "NpcId": 2400815,
+      "PetId": 1096,
+      "CatalogName": "FireEle_03",
+      "InternalName": "M_D1_IoI_FireEle_03_001",
+      "NpcName": "Immortal Fire Spirit Guardian",
+      "PetName": "Superior Fire Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1096"
+    },
+    {
+      "NpcId": 2400816,
+      "PetId": 1155,
+      "CatalogName": "WaterEle_03",
+      "InternalName": "M_D1_IoI_WaterEle_03_001",
+      "NpcName": "Immortal Water Spirit Guardian",
+      "PetName": "Superior Water Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1155"
+    },
+    {
+      "NpcId": 2400817,
+      "PetId": 1166,
+      "CatalogName": "EarthEle_03",
+      "InternalName": "M_D1_IoI_EarthEle_03_001",
+      "NpcName": "Immortal Earth Spirit Guardian",
+      "PetName": "Superior Earth Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1166"
+    },
+    {
+      "NpcId": 2400818,
+      "PetId": 1095,
+      "CatalogName": "WindEle_03",
+      "InternalName": "M_D1_IoI_WindEle_03",
+      "NpcName": "Immortal Wind Spirit Guardian",
+      "PetName": "Superior Wind Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1095"
+    },
+    {
+      "NpcId": 2400819,
+      "PetId": 1016,
+      "CatalogName": "Lepisma_01",
+      "InternalName": "M_D1_IoI_Lepisma_01_V01_001",
+      "NpcName": "Coastal Slink",
+      "PetName": "Slink",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1016"
+    },
+    {
+      "NpcId": 2400821,
+      "PetId": 1187,
+      "CatalogName": "FireEle_02",
+      "InternalName": "M_D1_IoI_FireEle_02_001",
+      "NpcName": "Immortal Fire Spirit",
+      "PetName": "Intermediate Fire Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1187"
+    },
+    {
+      "NpcId": 2400822,
+      "PetId": 1169,
+      "CatalogName": "WaterEle_02",
+      "InternalName": "M_D1_IoI_WaterEle_02_001",
+      "NpcName": "Immortal Water Spirit",
+      "PetName": "Intermediate Water Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1169"
+    },
+    {
+      "NpcId": 2400823,
+      "PetId": 1165,
+      "CatalogName": "EarthEle_02",
+      "InternalName": "M_D1_IoI_EarthEle_02_001",
+      "NpcName": "Immortal Earth Spirit",
+      "PetName": "Intermediate Earth Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1165"
+    },
+    {
+      "NpcId": 2400824,
+      "PetId": 1094,
+      "CatalogName": "WindEle_02",
+      "InternalName": "M_D1_IoI_WindEle_02",
+      "NpcName": "Immortal Wind Spirit",
+      "PetName": "Intermediate Wind Spirit",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1094"
+    },
+    {
+      "NpcId": 2400825,
+      "PetId": 1207,
+      "CatalogName": "Agrint_01",
+      "InternalName": "M_D1_IoI_Agrint_01_001",
+      "NpcName": "Island Agrint",
+      "PetName": "Agrint",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1207"
+    },
+    {
+      "NpcId": 2400831,
+      "PetId": 1074,
+      "CatalogName": "Kuru_01",
+      "InternalName": "M_D1_IoI_Kuru_01_001",
+      "NpcName": "Kuru Worker",
+      "PetName": "Kuru Worker",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1074"
+    },
+    {
+      "NpcId": 2400832,
+      "PetId": 1075,
+      "CatalogName": "Kuru_02",
+      "InternalName": "M_D1_IoI_Kuru_02_001",
+      "NpcName": "Kuru Tinkerer",
+      "PetName": "Kuru Tinkerer",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1075"
+    },
+    {
+      "NpcId": 2400833,
+      "PetId": 1115,
+      "CatalogName": "Kuru_03",
+      "InternalName": "M_D1_IoI_Kuru_03_001",
+      "NpcName": "Kuru Overseer",
+      "PetName": "Kuru Overseer",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1115"
+    },
+    {
+      "NpcId": 2400834,
+      "PetId": 1153,
+      "CatalogName": "DranaVar_02",
+      "InternalName": "M_D1_IoI_DranaVar_02_002",
+      "NpcName": "Drana Mutant",
+      "PetName": "Drana Mutant Brute",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1153"
+    },
+    {
+      "NpcId": 2400900,
+      "PetId": 1118,
+      "CatalogName": "Bee_01_V01",
+      "InternalName": "M_D1_Com_Bee_01_01",
+      "NpcName": "Black Armor Bee",
+      "PetName": "Aberrant Bee",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1118"
+    },
+    {
+      "NpcId": 2400902,
+      "PetId": 1116,
+      "CatalogName": "OdSpider_03_V01",
+      "InternalName": "M_D1_Com_OdSpider_03_V01_01",
+      "NpcName": "Withered Branch Spider",
+      "PetName": "Withered Branch Spider",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1116"
+    },
+    {
+      "NpcId": 2400903,
+      "PetId": 1066,
+      "CatalogName": "Papis_01",
+      "InternalName": "M_D1_Com_Papis_01_01",
+      "NpcName": "Faded Papis",
+      "PetName": "Papis",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1066"
+    },
+    {
+      "NpcId": 2400905,
+      "PetId": 1015,
+      "CatalogName": "Kailin_01",
+      "InternalName": "M_D1_Com_Kailin_01_01",
+      "NpcName": "Kailin",
+      "PetName": "Kailin",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1015"
+    },
+    {
+      "NpcId": 2400906,
+      "PetId": 1120,
+      "CatalogName": "Kailin_01_V01",
+      "InternalName": "M_D1_Com_Kailin_01_02",
+      "NpcName": "Young Kailin",
+      "PetName": "Young Kailin",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1120"
+    },
+    {
+      "NpcId": 2400907,
+      "PetId": 1119,
+      "CatalogName": "Coradon_01_V01",
+      "InternalName": "M_D1_Com_Coradon_01_01",
+      "NpcName": "Aberrant Coradon",
+      "PetName": "Aberrant Coradon",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1119"
+    },
+    {
+      "NpcId": 2400909,
+      "PetId": 1016,
+      "CatalogName": "Lepisma_01",
+      "InternalName": "M_D1_Com_Lepisma_01_01",
+      "NpcName": "Slink",
+      "PetName": "Slink",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1016"
+    },
+    {
+      "NpcId": 2400910,
+      "PetId": 1121,
+      "CatalogName": "Lepisma_01_V01",
+      "InternalName": "M_D1_Com_Lepisma_01_02",
+      "NpcName": "Young Slink",
+      "PetName": "Young Slink",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1121"
+    },
+    {
+      "NpcId": 2400911,
+      "PetId": 1202,
+      "CatalogName": "Lufilini_01_V01",
+      "InternalName": "M_D1_Com_Lufilini_01_01",
+      "NpcName": "Decomposed Lupyllini",
+      "PetName": "Decomposed Lupyllini",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1202"
+    },
+    {
+      "NpcId": 2400912,
+      "PetId": 1072,
+      "CatalogName": "Tog_01",
+      "InternalName": "M_D1_Com_Tog_01_01",
+      "NpcName": "Tog",
+      "PetName": "Tog",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1072"
+    },
+    {
+      "NpcId": 2400914,
+      "PetId": 1181,
+      "CatalogName": "Brax_01",
+      "InternalName": "M_D1_Com_Brax_01_01",
+      "NpcName": "Brax",
+      "PetName": "Brax",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1181"
+    },
+    {
+      "NpcId": 2400916,
+      "PetId": 1042,
+      "CatalogName": "Ursuss_01",
+      "InternalName": "M_D1_Com_Ursuss_01_01",
+      "NpcName": "Ursus",
+      "PetName": "Ursus",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1042"
+    },
+    {
+      "NpcId": 2400917,
+      "PetId": 1123,
+      "CatalogName": "Ursuss_01_V01",
+      "InternalName": "M_D1_Com_Ursuss_01_02",
+      "NpcName": "Young Ursus",
+      "PetName": "Young Ursus",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1123"
+    },
+    {
+      "NpcId": 2400919,
+      "PetId": 1105,
+      "CatalogName": "VirotaRag_01",
+      "InternalName": "M_D1_Com_VirotaRag_01_01",
+      "NpcName": "Biruta Herbalist",
+      "PetName": "Biruta Herbalist",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1105"
+    },
+    {
+      "NpcId": 2400920,
+      "PetId": 1065,
+      "CatalogName": "VirotaWar_01",
+      "InternalName": "M_D1_Com_VirotaWar_01_01",
+      "NpcName": "Biruta Wanderer",
+      "PetName": "Biruta",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1065"
+    },
+    {
+      "NpcId": 2400930,
+      "PetId": 1118,
+      "CatalogName": "Bee_01_V01",
+      "InternalName": "M_D1_Com_Bee_01_02",
+      "NpcName": "Black Armor Bee",
+      "PetName": "Aberrant Bee",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1118"
+    },
+    {
+      "NpcId": 2400933,
+      "PetId": 1116,
+      "CatalogName": "OdSpider_03_V01",
+      "InternalName": "M_D1_Com_OdSpider_03_V01_04",
+      "NpcName": "Withered Branch Spider",
+      "PetName": "Withered Branch Spider",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1116"
+    },
+    {
+      "NpcId": 2400934,
+      "PetId": 1015,
+      "CatalogName": "Kailin_01",
+      "InternalName": "M_D1_Com_Kailin_01_03",
+      "NpcName": "Kailin",
+      "PetName": "Kailin",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1015"
+    },
+    {
+      "NpcId": 2400935,
+      "PetId": 1120,
+      "CatalogName": "Kailin_01_V01",
+      "InternalName": "M_D1_Com_Kailin_01_04",
+      "NpcName": "Young Kailin",
+      "PetName": "Young Kailin",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1120"
+    },
+    {
+      "NpcId": 2400936,
+      "PetId": 1126,
+      "CatalogName": "Tog_01_CV01",
+      "InternalName": "M_D1_Com_Tog_01_03",
+      "NpcName": "Aberrant Tog",
+      "PetName": "Aberrant Tog",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1126"
+    },
+    {
+      "NpcId": 2400938,
+      "PetId": 1066,
+      "CatalogName": "Papis_01",
+      "InternalName": "M_D1_Com_Papis_01_06",
+      "NpcName": "Faded Papis",
+      "PetName": "Papis",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1066"
+    },
+    {
+      "NpcId": 2400939,
+      "PetId": 1116,
+      "CatalogName": "OdSpider_03_V01",
+      "InternalName": "M_D1_Com_OdSpider_03_V01_05",
+      "NpcName": "Withered Branch Spider",
+      "PetName": "Withered Branch Spider",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1116"
+    },
+    {
+      "NpcId": 2400940,
+      "PetId": 1066,
+      "CatalogName": "Papis_01",
+      "InternalName": "M_D1_Com_Papis_01_07",
+      "NpcName": "Faded Papis",
+      "PetName": "Papis",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1066"
+    },
+    {
+      "NpcId": 2400941,
+      "PetId": 1134,
+      "CatalogName": "Coradon_01_V04",
+      "InternalName": "M_D1_Com_Coradon_01_03",
+      "NpcName": "Eternal Coradon",
+      "PetName": "Eternal Coradon",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1134"
+    },
+    {
+      "NpcId": 2400943,
+      "PetId": 1016,
+      "CatalogName": "Lepisma_01",
+      "InternalName": "M_D1_Com_Lepisma_01_03",
+      "NpcName": "Slink",
+      "PetName": "Slink",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1016"
+    },
+    {
+      "NpcId": 2400945,
+      "PetId": 1011,
+      "CatalogName": "Skyray_01",
+      "InternalName": "M_D1_Com_Skyray_01_01",
+      "NpcName": "Lake Skyray",
+      "PetName": "Skyray",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1011"
+    },
+    {
+      "NpcId": 2400946,
+      "PetId": 1116,
+      "CatalogName": "OdSpider_03_V01",
+      "InternalName": "M_D1_Com_OdSpider_03_V01_06",
+      "NpcName": "Withered Branch Spider",
+      "PetName": "Withered Branch Spider",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1116"
+    },
+    {
+      "NpcId": 2400947,
+      "PetId": 1066,
+      "CatalogName": "Papis_01",
+      "InternalName": "M_D1_Com_Papis_01_08",
+      "NpcName": "Faded Papis",
+      "PetName": "Papis",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1066"
+    },
+    {
+      "NpcId": 2400948,
+      "PetId": 1116,
+      "CatalogName": "OdSpider_03_V01",
+      "InternalName": "M_D1_Com_OdSpider_03_V02_001",
+      "NpcName": "Withered Branch Spider",
+      "PetName": "Withered Branch Spider",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1116"
+    },
+    {
+      "NpcId": 2400949,
+      "PetId": 1136,
+      "CatalogName": "Rafflesia_01_CV01",
+      "InternalName": "M_D1_Com_Rafflesia_01_002",
+      "NpcName": "Rafflesia",
+      "PetName": "Rafflesia",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1136"
+    },
+    {
+      "NpcId": 2400950,
+      "PetId": 1121,
+      "CatalogName": "Lepisma_01_V01",
+      "InternalName": "M_D1_Com_Lepisma_01_V01_001",
+      "NpcName": "Young Slink",
+      "PetName": "Young Slink",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1121"
+    },
+    {
+      "NpcId": 2406035,
+      "PetId": 1196,
+      "CatalogName": "Dratona_03",
+      "InternalName": "M_D2_PF_Dratona_03_CV01_001_01",
+      "NpcName": "Predator Colossus Balakh",
+      "PetName": "Elite Dratona",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1196"
+    },
+    {
+      "NpcId": 2406071,
+      "PetId": 1099,
+      "CatalogName": "KalnifElite_01",
+      "InternalName": "M_D2_NS_Kalgolem_04_001",
+      "NpcName": "Crimson Blizzard Renulf",
+      "PetName": "Elite Karnif",
+      "SourceUrl": "https://aion2.gaming.tools/pets/1099"
+    },
+    {
+      "NpcId": 2600029,
+      "PetId": 1005,
+      "CatalogName": "Neuth_01",
+      "InternalName": "",
+      "NpcName": "Abyss Klaw Mutant",
+      "PetName": "Klaw",
+      "SourceUrl": "https://aion2maps.com/map/assets/pets.json",
+      "Source": "Global client pet-drop and Lower Reshanta spawn tables, retrieved 2026-10-15"
+    },
+    {
+      "NpcId": 2600002,
+      "PetId": 1029,
+      "CatalogName": "Neuth_02",
+      "InternalName": "",
+      "NpcName": "Abyss Klaw",
+      "PetName": "Klaw Scout",
+      "SourceUrl": "https://aion2maps.com/map/assets/pets.json",
+      "Source": "Global client pet-drop and Lower Reshanta spawn tables, retrieved 2026-10-15"
+    },
+    {
+      "NpcId": 2600012,
+      "PetId": 1029,
+      "CatalogName": "Neuth_02",
+      "InternalName": "",
+      "NpcName": "Abyss Aberrant Klaw",
+      "PetName": "Klaw Scout",
+      "SourceUrl": "https://aion2maps.com/map/assets/pets.json",
+      "Source": "Global client pet-drop and Lower Reshanta spawn tables, retrieved 2026-10-15"
+    },
+    {
+      "NpcId": 2600042,
+      "PetId": 1200,
+      "CatalogName": "NagaElite_03",
+      "InternalName": "",
+      "NpcName": "Abyss Naga Dark Mage",
+      "PetName": "Naga Elite Priest",
+      "SourceUrl": "https://aion2maps.com/map/assets/pets.json",
+      "Source": "Global client pet-drop and Lower Reshanta spawn tables, retrieved 2026-10-15"
+    },
+    {
+      "NpcId": 2600036,
+      "PetId": 1030,
+      "CatalogName": "NagaElite_04",
+      "InternalName": "",
+      "NpcName": "Abyss Nagarant Brawler",
+      "PetName": "Nagarant Guardian Warrior",
+      "SourceUrl": "https://aion2maps.com/map/assets/pets.json",
+      "Source": "Global client pet-drop and Lower Reshanta spawn tables, retrieved 2026-10-15"
+    },
+    {
+      "NpcId": 2600041,
+      "PetId": 1030,
+      "CatalogName": "NagaElite_04",
+      "InternalName": "",
+      "NpcName": "Abyss Nagarant Warrior",
+      "PetName": "Nagarant Guardian Warrior",
+      "SourceUrl": "https://aion2maps.com/map/assets/pets.json",
+      "Source": "Global client pet-drop and Lower Reshanta spawn tables, retrieved 2026-10-15"
+    },
+    {
+      "NpcId": 2600024,
+      "PetId": 1089,
+      "CatalogName": "Fish_01_V01",
+      "InternalName": "",
+      "NpcName": "Abyss Sulfur Skama",
+      "PetName": "Aberrant Skama",
+      "SourceUrl": "https://aion2maps.com/map/assets/pets.json",
+      "Source": "Global client pet-drop and Lower Reshanta spawn tables, retrieved 2026-10-15"
+    },
+    {
+      "NpcId": 2600052,
+      "PetId": 1014,
+      "CatalogName": "BeritraC_03",
+      "InternalName": "",
+      "NpcName": "Abyss Drakan Scout Beast",
+      "PetName": "Drakan Watchdog",
+      "SourceUrl": "https://aion2maps.com/map/assets/pets.json",
+      "Source": "Global client pet-drop and Lower Reshanta spawn tables, retrieved 2026-10-15"
+    },
+    {
+      "NpcId": 2600061,
+      "PetId": 1134,
+      "CatalogName": "Coradon_01_V04",
+      "InternalName": "",
+      "NpcName": "Abyss Coradon",
+      "PetName": "Eternal Coradon",
+      "SourceUrl": "https://aion2maps.com/map/assets/pets.json",
+      "Source": "Global client pet-drop and Lower Reshanta spawn tables, retrieved 2026-10-15"
+    },
+    {
+      "NpcId": 2600004,
+      "PetId": 1098,
+      "CatalogName": "Kalnif_02",
+      "InternalName": "",
+      "NpcName": "Abyss Karnif",
+      "PetName": "Modified Karnif",
+      "SourceUrl": "https://aion2maps.com/map/assets/pets.json",
+      "Source": "Global client pet-drop and Lower Reshanta spawn tables, retrieved 2026-10-15"
+    },
+    {
+      "NpcId": 2600014,
+      "PetId": 1098,
+      "CatalogName": "Kalnif_02",
+      "InternalName": "",
+      "NpcName": "Abyss Search Party Karnif",
+      "PetName": "Modified Karnif",
+      "SourceUrl": "https://aion2maps.com/map/assets/pets.json",
+      "Source": "Global client pet-drop and Lower Reshanta spawn tables, retrieved 2026-10-15"
+    },
+    {
+      "NpcId": 2600048,
+      "PetId": 1016,
+      "CatalogName": "Lepisma_01",
+      "InternalName": "",
+      "NpcName": "Abyss Slink",
+      "PetName": "Slink",
+      "SourceUrl": "https://aion2maps.com/map/assets/pets.json",
+      "Source": "Global client pet-drop and Lower Reshanta spawn tables, retrieved 2026-10-15"
+    },
+    {
+      "NpcId": 2600046,
+      "PetId": 1083,
+      "CatalogName": "Spider_01",
+      "InternalName": "",
+      "NpcName": "Abyss Odyle Mutated Insectoid",
+      "PetName": "Spider",
+      "SourceUrl": "https://aion2maps.com/map/assets/pets.json",
+      "Source": "Global client pet-drop and Lower Reshanta spawn tables, retrieved 2026-10-15"
+    },
+    {
+      "NpcId": 2600045,
+      "PetId": 1117,
+      "CatalogName": "Spider_01_V01",
+      "InternalName": "",
+      "NpcName": "Abyss Red Mutated Insectoid",
+      "PetName": "Unstable Spider",
+      "SourceUrl": "https://aion2maps.com/map/assets/pets.json",
+      "Source": "Global client pet-drop and Lower Reshanta spawn tables, retrieved 2026-10-15"
+    },
+    {
+      "NpcId": 2600047,
+      "PetId": 1121,
+      "CatalogName": "Lepisma_01_V01",
+      "InternalName": "",
+      "NpcName": "Abyss Young Slink",
+      "PetName": "Young Slink",
+      "SourceUrl": "https://aion2maps.com/map/assets/pets.json",
+      "Source": "Global client pet-drop and Lower Reshanta spawn tables, retrieved 2026-10-15"
+    },
+    {
+      "NpcId": 2600027,
+      "PetId": 1207,
+      "CatalogName": "Agrint_01",
+      "InternalName": "",
+      "NpcName": "Sulfur Agrint",
+      "PetName": "Agrint",
+      "SourceUrl": "https://aion2maps.com/map/assets/pets.json",
+      "Source": "Global client pet-drop and Lower Reshanta spawn tables, retrieved 2026-10-15"
+    },
+    {
+      "NpcId": 2600071,
+      "PetId": 1207,
+      "CatalogName": "Agrint_01",
+      "InternalName": "",
+      "NpcName": "Root Agrint",
+      "PetName": "Agrint",
+      "SourceUrl": "https://aion2maps.com/map/assets/pets.json",
+      "Source": "Global client pet-drop and Lower Reshanta spawn tables, retrieved 2026-10-15"
+    },
+    {
+      "NpcId": 2600069,
+      "PetId": 1214,
+      "CatalogName": "DarkEle_01",
+      "InternalName": "",
+      "NpcName": "Abyss Corrupted Spirit",
+      "PetName": "Black Spirit",
+      "SourceUrl": "https://aion2maps.com/map/assets/pets.json",
+      "Source": "Global client pet-drop and Lower Reshanta spawn tables, retrieved 2026-10-15"
+    },
+    {
+      "NpcId": 2600049,
+      "PetId": 1073,
+      "CatalogName": "Rafflesia_01",
+      "InternalName": "",
+      "NpcName": "Abyss Nasty Nepenthes",
+      "PetName": "Nepenthes",
+      "SourceUrl": "https://aion2maps.com/map/assets/pets.json",
+      "Source": "Global client pet-drop and Lower Reshanta spawn tables, retrieved 2026-10-15"
+    },
+    {
+      "NpcId": 2600066,
+      "PetId": 1178,
+      "CatalogName": "EleGuard_01",
+      "InternalName": "",
+      "NpcName": "Old Tree Spirit Warrior",
+      "PetName": "Spirit King's Bodyguard Warrior",
+      "SourceUrl": "https://aion2maps.com/map/assets/pets.json",
+      "Source": "Global client pet-drop and Lower Reshanta spawn tables, retrieved 2026-10-15"
+    },
+    {
+      "NpcId": 2600056,
+      "PetId": 1069,
+      "CatalogName": "EarthEleOd_01",
+      "InternalName": "",
+      "NpcName": "Abyss Rock Spirit",
+      "PetName": "Stone Spirit",
+      "SourceUrl": "https://aion2maps.com/map/assets/pets.json",
+      "Source": "Global client pet-drop and Lower Reshanta spawn tables, retrieved 2026-10-15"
+    },
+    {
+      "NpcId": 2600028,
+      "PetId": 1209,
+      "CatalogName": "Agrint_01_V01",
+      "InternalName": "",
+      "NpcName": "Thin Sulfur Agrint",
+      "PetName": "Thin Agrint",
+      "SourceUrl": "https://aion2maps.com/map/assets/pets.json",
+      "Source": "Global client pet-drop and Lower Reshanta spawn tables, retrieved 2026-10-15"
+    },
+    {
+      "NpcId": 2600026,
+      "PetId": 1027,
+      "CatalogName": "Agrint_02",
+      "InternalName": "",
+      "NpcName": "Withered Sulfur Agrint",
+      "PetName": "Withered Agrint",
+      "SourceUrl": "https://aion2maps.com/map/assets/pets.json",
+      "Source": "Global client pet-drop and Lower Reshanta spawn tables, retrieved 2026-10-15"
+    },
+    {
+      "NpcId": 2600050,
+      "PetId": 1219,
+      "CatalogName": "Jellofi_01",
+      "InternalName": "",
+      "NpcName": "Abyss Zelophi",
+      "PetName": "Zelophi",
+      "SourceUrl": "https://aion2maps.com/map/assets/pets.json",
+      "Source": "Global client pet-drop and Lower Reshanta spawn tables, retrieved 2026-10-15"
+    },
+    {
+      "NpcId": 2600051,
+      "PetId": 1110,
+      "CatalogName": "Kalgolem_02",
+      "InternalName": "",
+      "NpcName": "Abyssal Kalgolem",
+      "PetName": "Blue Kalgolem",
+      "SourceUrl": "https://aion2maps.com/map/assets/pets.json",
+      "Source": "Global client pet-drop and Lower Reshanta spawn tables, retrieved 2026-10-15"
+    },
+    {
+      "NpcId": 2600023,
+      "PetId": 1062,
+      "CatalogName": "Slime_02",
+      "InternalName": "",
+      "NpcName": "Abyss Sulfur Slime",
+      "PetName": "Contaminated Slime",
+      "SourceUrl": "https://aion2maps.com/map/assets/pets.json",
+      "Source": "Global client pet-drop and Lower Reshanta spawn tables, retrieved 2026-10-15"
+    },
+    {
+      "NpcId": 2600070,
+      "PetId": 1084,
+      "CatalogName": "Kalgolem_01",
+      "InternalName": "",
+      "NpcName": "Root Kalgolem",
+      "PetName": "Kalgolem",
+      "SourceUrl": "https://aion2maps.com/map/assets/pets.json",
+      "Source": "Global client pet-drop and Lower Reshanta spawn tables, retrieved 2026-10-15"
+    },
+    {
+      "NpcId": 2600003,
+      "PetId": 1192,
+      "CatalogName": "Rotan_01",
+      "InternalName": "",
+      "NpcName": "Abyss Rusty Rotan",
+      "PetName": "Silver Blade Rotan",
+      "SourceUrl": "https://aion2maps.com/map/assets/pets.json",
+      "Source": "Global client pet-drop and Lower Reshanta spawn tables, retrieved 2026-10-15"
+    },
+    {
+      "NpcId": 2600013,
+      "PetId": 1192,
+      "CatalogName": "Rotan_01",
+      "InternalName": "",
+      "NpcName": "Abyss Old Blade Rotan",
+      "PetName": "Silver Blade Rotan",
+      "SourceUrl": "https://aion2maps.com/map/assets/pets.json",
+      "Source": "Global client pet-drop and Lower Reshanta spawn tables, retrieved 2026-10-15"
+    },
+    {
+      "NpcId": 2600001,
+      "PetId": 1013,
+      "CatalogName": "AbyssSwarm_01",
+      "InternalName": "",
+      "NpcName": "Abyss Swarm",
+      "PetName": "Swarm",
+      "SourceUrl": "https://aion2maps.com/map/assets/pets.json",
+      "Source": "Global client pet-drop and Lower Reshanta spawn tables, retrieved 2026-10-15"
+    },
+    {
+      "NpcId": 2600011,
+      "PetId": 1013,
+      "CatalogName": "AbyssSwarm_01",
+      "InternalName": "",
+      "NpcName": "Abyss Aberrant Swarn",
+      "PetName": "Swarm",
+      "SourceUrl": "https://aion2maps.com/map/assets/pets.json",
+      "Source": "Global client pet-drop and Lower Reshanta spawn tables, retrieved 2026-10-15"
+    },
+    {
+      "NpcId": 2600021,
+      "PetId": 1013,
+      "CatalogName": "AbyssSwarm_01",
+      "InternalName": "",
+      "NpcName": "Abyss Swarm Mutant",
+      "PetName": "Swarm",
+      "SourceUrl": "https://aion2maps.com/map/assets/pets.json",
+      "Source": "Global client pet-drop and Lower Reshanta spawn tables, retrieved 2026-10-15"
+    }
+  ],
+  "SourceSupplements": [
+    {
+      "Region": "Chaotic Lower Reshanta",
+      "RetrievedDate": "2026-10-15",
+      "PetDropSource": "https://aion2maps.com/map/assets/pets.json",
+      "NpcSource": "https://aion2maps.com/map/assets/maps/Abyss_Reshanta_A/monsters.json",
+      "DropSource": "https://aion2maps.com/map/assets/maps/Abyss_Reshanta_A/drops.json",
+      "RowsAdded": 32,
+      "Note": "Global client patch 20 data, not an observed live drop guarantee."
+    }
+  ]
+}

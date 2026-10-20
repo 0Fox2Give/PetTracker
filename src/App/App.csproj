@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <OutputType>WinExe</OutputType>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <AssemblyName>PetTracker</AssemblyName>
+    <Company>Pet Tracker</Company>
+    <Product>Pet Tracker</Product>
+    <ApplicationIcon>../../assets/PetTracker.ico</ApplicationIcon>
+    <StartupObject>PetTracker.Program</StartupObject>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Core/Core.csproj" />
+    <ProjectReference Include="../Updates/Updates.csproj" />
+    <Content Include="../../assets/PetTracker.ico" Link="PetTracker.ico" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="../../assets/portraits/*.png" Link="portraits/%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(UpdatePublisherFile)' != ''">
+    <EmbeddedResource Include="$(UpdatePublisherFile)" LogicalName="PetTracker.UpdatePublisher.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="../../assets/crystals/*.png" Link="Crystals/%(Filename)%(Extension)" />
+  </ItemGroup>
+</Project>

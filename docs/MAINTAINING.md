@@ -1,6 +1,6 @@
-# Maintaining the download repository
+# Maintaining Pet Tracker
 
-Players should start with the [README](../README.md). This repository contains public documentation, update-client code and release tools; it is not a complete tracker source checkout.
+Players should start with the [README](../README.md). This repository contains the full application source, tests, documentation and release tools. See [BUILDING.md](BUILDING.md) for local and CI builds.
 
 ## File layout
 
@@ -12,7 +12,9 @@ Players should start with the [README](../README.md). This repository contains p
 | `LEGAL.md`, `THIRD-PARTY-NOTICES.txt`, `licenses/` | Project notices and dependency licenses |
 | `docs/` | Maintainer documentation and plain-text installation reference |
 | `.github/` | Bug-report template and publishing/renewal workflows |
-| `src/Updates/` | Update verification and lifecycle code |
+| `src/` | Application, capture worker, core, setup and update code |
+| `tests/`, `assets/` | Regression fixtures and shipped assets |
+| `LICENSE`, `NOTICE` | GPLv3 terms for project code and licensing scope |
 | `tools/` | Release verification, promotion and feed renewal |
 | `Directory.Build.props` | Shared build properties for these tools |
 | `publisher.json` | Pinned feed address and public verification key; not a private signing key |

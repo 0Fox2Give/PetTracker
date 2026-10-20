@@ -1,0 +1,6204 @@
+{
+  "VerifiedUtc": "2026-10-18",
+  "Provider": "https://aion2maps.com",
+  "Rows": [
+    {
+      "PetId": 1001,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1002,
+      "SourceUrl": "https://aion2maps.com/items/soul-krall-laborer-bound/",
+      "Maps": [
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660001"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2100075,
+          "Name": "Krall Armed Soldier",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100480,
+          "Name": "Krall Sentinel",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100914,
+          "Name": "Mutated Krall Laborer",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1003,
+      "SourceUrl": "https://aion2maps.com/items/soul-forest-specter-bound/",
+      "Maps": [
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660002"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2100601,
+          "Name": "Canyon Vine Spirit",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100662,
+          "Name": "Tainted Vine Specter",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1004,
+      "SourceUrl": "https://aion2maps.com/items/soul-fossa-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660003"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660003"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660003"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660003"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400254,
+          "Name": "Daeva Renegade Fossa",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400414,
+          "Name": "Tamed Beast",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100163,
+          "Name": "Patrolling Fossa",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1005,
+      "SourceUrl": "https://aion2maps.com/items/soul-klaw-bound/",
+      "Maps": [
+        {
+          "Region": "Chaotic Lower Reshanta",
+          "Url": "https://aion2maps.com/chaotic-lower-reshanta/?show=item:534660004"
+        },
+        {
+          "Region": "Chaotic Middle Reshanta",
+          "Url": "https://aion2maps.com/chaotic-middle-reshanta/?show=item:534660004"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660004"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2600029,
+          "Name": "Abyss Klaw Mutant",
+          "Region": "Chaotic Lower Reshanta"
+        },
+        {
+          "NpcId": 2100078,
+          "Name": "Wandering Klaw",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1006,
+      "SourceUrl": "https://aion2maps.com/items/soul-sparkie-bound/",
+      "Maps": [
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660005"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2100986,
+          "Name": "Aullaeu Forest Sparkie",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100753,
+          "Name": "Highland Odyle Sparkie",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100795,
+          "Name": "Highland Odyle Sparkie",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100992,
+          "Name": "Highland Sparkie",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100305,
+          "Name": "Meadow Sparkie",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100273,
+          "Name": "Wild Sparkie",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1007,
+      "SourceUrl": "https://aion2maps.com/items/soul-potcrab-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660006"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660006"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660006"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400755,
+          "Name": "Coastal Moss Crab",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400812,
+          "Name": "Coastal Moss Crab",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400363,
+          "Name": "Moss Crab",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2101098,
+          "Name": "Eternal Moss Crab",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100610,
+          "Name": "Flat Potcrab",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100032,
+          "Name": "Marsh Moss Potcrab",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1008,
+      "SourceUrl": "https://aion2maps.com/items/soul-baby-odyle-spider-bound/",
+      "Maps": [
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660007"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2100034,
+          "Name": "Coastal Odyle Spider",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1009,
+      "SourceUrl": "https://aion2maps.com/items/soul-kernon-bound/",
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1010,
+      "SourceUrl": "https://aion2maps.com/items/soul-manduri-fighter-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660009"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660009"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660009"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400617,
+          "Name": "Black Claw Manduri Combatant",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2110506,
+          "Name": "Crimson Manduri Fighter",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1011,
+      "SourceUrl": "https://aion2maps.com/items/soul-skyray-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660010"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660010"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400945,
+          "Name": "Lake Skyray",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400163,
+          "Name": "Tranein Skyray",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2101124,
+          "Name": "Cantas Valley Skyray",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100613,
+          "Name": "Canyon Lake Skyray",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100607,
+          "Name": "Canyon Skyray",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100048,
+          "Name": "Ellun River Falls Skyray",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2101123,
+          "Name": "Ellun River Lake Skyray",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2101132,
+          "Name": "Lake Skyray",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100832,
+          "Name": "Pond Skyray",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100556,
+          "Name": "Ridge Skyray",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100047,
+          "Name": "Small Forest Skyray",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100182,
+          "Name": "Tolbas Forest Lake Skyray",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1012,
+      "SourceUrl": "https://aion2maps.com/items/soul-fungie-bound/",
+      "Maps": [
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660011"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2100041,
+          "Name": "Red Cap Fungie",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1013,
+      "SourceUrl": "https://aion2maps.com/items/soul-swarm-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660012"
+        },
+        {
+          "Region": "Chaotic Lower Reshanta",
+          "Url": "https://aion2maps.com/chaotic-lower-reshanta/?show=item:534660012"
+        },
+        {
+          "Region": "Chaotic Middle Reshanta",
+          "Url": "https://aion2maps.com/chaotic-middle-reshanta/?show=item:534660012"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400080,
+          "Name": "Contaminated Swarm",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400456,
+          "Name": "Giant Ore Insectoid",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2600011,
+          "Name": "Abyss Aberrant Swarn",
+          "Region": "Chaotic Lower Reshanta"
+        },
+        {
+          "NpcId": 2600001,
+          "Name": "Abyss Swarm",
+          "Region": "Chaotic Lower Reshanta"
+        },
+        {
+          "NpcId": 2600021,
+          "Name": "Abyss Swarm Mutant",
+          "Region": "Chaotic Lower Reshanta"
+        }
+      ]
+    },
+    {
+      "PetId": 1014,
+      "SourceUrl": "https://aion2maps.com/items/soul-drakan-guard-dog-bound/",
+      "Maps": [
+        {
+          "Region": "Chaotic Lower Reshanta",
+          "Url": "https://aion2maps.com/chaotic-lower-reshanta/?show=item:534660013"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660013"
+        },
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660013"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400587,
+          "Name": "Drakan Patrol Armed Beast",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400655,
+          "Name": "Lagta Brigade Guard Dog",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400359,
+          "Name": "Tamed Tayga",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2600052,
+          "Name": "Abyss Drakan Scout Beast",
+          "Region": "Chaotic Lower Reshanta"
+        },
+        {
+          "NpcId": 2101002,
+          "Name": "Drakan Guard Dog",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2101009,
+          "Name": "Nahid Drakan Guard Dog",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1015,
+      "SourceUrl": "https://aion2maps.com/items/soul-kailin-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660014"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660014"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660014"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400905,
+          "Name": "Kailin",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400934,
+          "Name": "Kailin",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400736,
+          "Name": "Unstable Kailin",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2101021,
+          "Name": "Ellun River Kailin",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1016,
+      "SourceUrl": "https://aion2maps.com/items/soul-slink-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660015"
+        },
+        {
+          "Region": "Chaotic Lower Reshanta",
+          "Url": "https://aion2maps.com/chaotic-lower-reshanta/?show=item:534660015"
+        },
+        {
+          "Region": "Chaotic Middle Reshanta",
+          "Url": "https://aion2maps.com/chaotic-middle-reshanta/?show=item:534660015"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660015"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660015"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400520,
+          "Name": "Coastal Slink",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400819,
+          "Name": "Coastal Slink",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400909,
+          "Name": "Slink",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400943,
+          "Name": "Slink",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2600048,
+          "Name": "Abyss Slink",
+          "Region": "Chaotic Lower Reshanta"
+        },
+        {
+          "NpcId": 2101097,
+          "Name": "Eternal Slink",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100165,
+          "Name": "Tolbas Slink",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100188,
+          "Name": "Wetland Slink",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1017,
+      "SourceUrl": "https://aion2maps.com/items/soul-krall-warshaman-bound/",
+      "Maps": [
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660016"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2100074,
+          "Name": "Krall Warshaman",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100855,
+          "Name": "Modified Krall Healer",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1018,
+      "SourceUrl": "https://aion2maps.com/items/soul-varg-berserker-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660017"
+        },
+        {
+          "Region": "Chaotic Middle Reshanta",
+          "Url": "https://aion2maps.com/chaotic-middle-reshanta/?show=item:534660017"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400609,
+          "Name": "Chief's Bodyguard",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400385,
+          "Name": "Varg Berserker",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1021,
+      "SourceUrl": "https://aion2maps.com/items/soul-aberrant-odyle-spider-bound/",
+      "Maps": [
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660024"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1022,
+      "SourceUrl": "https://aion2maps.com/items/soul-crasaur-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660021"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660021"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400809,
+          "Name": "Crasaur",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400327,
+          "Name": "Sensitive Crasaur",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100215,
+          "Name": "Aquascale Crasaur",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100608,
+          "Name": "Docile Crasaur",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2101083,
+          "Name": "Eternal Crasaur",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1025,
+      "SourceUrl": "https://aion2maps.com/items/soul-mutated-aberrant-odyle-spider-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660020"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660020"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660020"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400744,
+          "Name": "Unstable Ashen Spider",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100663,
+          "Name": "Garden Spider",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100745,
+          "Name": "Highland Odyle Spider",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100030,
+          "Name": "Marsh Odyle Spider",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1026,
+      "SourceUrl": "https://aion2maps.com/items/soul-krall-warrior-bound/",
+      "Maps": [
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660025"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2100073,
+          "Name": "Krall Assault Trooper",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2101005,
+          "Name": "Krall Test Subject",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100910,
+          "Name": "Modified Krall Warrior",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1027,
+      "SourceUrl": "https://aion2maps.com/items/soul-withered-agrint-bound/",
+      "Maps": [
+        {
+          "Region": "Chaotic Lower Reshanta",
+          "Url": "https://aion2maps.com/chaotic-lower-reshanta/?show=item:534660026"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660026"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660026"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2600026,
+          "Name": "Withered Sulfur Agrint",
+          "Region": "Chaotic Lower Reshanta"
+        },
+        {
+          "NpcId": 2100652,
+          "Name": "Thin Agrint",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100612,
+          "Name": "Withered Canyon Agrint",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1028,
+      "SourceUrl": "https://aion2maps.com/items/soul-krao-mutant-bound/",
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1029,
+      "SourceUrl": "https://aion2maps.com/items/soul-klaw-scout-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660029"
+        },
+        {
+          "Region": "Chaotic Lower Reshanta",
+          "Url": "https://aion2maps.com/chaotic-lower-reshanta/?show=item:534660029"
+        },
+        {
+          "Region": "Chaotic Middle Reshanta",
+          "Url": "https://aion2maps.com/chaotic-middle-reshanta/?show=item:534660029"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400313,
+          "Name": "Consumed Klaw",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2600012,
+          "Name": "Abyss Aberrant Klaw",
+          "Region": "Chaotic Lower Reshanta"
+        },
+        {
+          "NpcId": 2600002,
+          "Name": "Abyss Klaw",
+          "Region": "Chaotic Lower Reshanta"
+        }
+      ]
+    },
+    {
+      "PetId": 1030,
+      "SourceUrl": "https://aion2maps.com/items/soul-nagarant-guardian-warrior-bound/",
+      "Maps": [
+        {
+          "Region": "Chaotic Lower Reshanta",
+          "Url": "https://aion2maps.com/chaotic-lower-reshanta/?show=item:534660030"
+        },
+        {
+          "Region": "Chaotic Middle Reshanta",
+          "Url": "https://aion2maps.com/chaotic-middle-reshanta/?show=item:534660030"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660030"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2600036,
+          "Name": "Abyss Nagarant Brawler",
+          "Region": "Chaotic Lower Reshanta"
+        },
+        {
+          "NpcId": 2600041,
+          "Name": "Abyss Nagarant Warrior",
+          "Region": "Chaotic Lower Reshanta"
+        }
+      ]
+    },
+    {
+      "PetId": 1031,
+      "SourceUrl": "https://aion2maps.com/items/soul-konutin-worker-bound/",
+      "Maps": [
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660031"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2100157,
+          "Name": "Tolbas Konutin Worker",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1032,
+      "SourceUrl": "https://aion2maps.com/items/soul-elite-keneire-bound/",
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1033,
+      "SourceUrl": "https://aion2maps.com/items/soul-elite-manduri-fighter-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660033"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660033"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400605,
+          "Name": "Black Claw Manduri Fighter",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100557,
+          "Name": "Wandering Manduri Fighter",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100569,
+          "Name": "Wandering Manduri Fighter",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1034,
+      "SourceUrl": "https://aion2maps.com/items/soul-giant-sparkie-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660034"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660034"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660034"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400466,
+          "Name": "Fafnite Luminous Sparkie",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400341,
+          "Name": "Withered Branch Odyle Sparkie",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100987,
+          "Name": "Aullaeu Forest Giant Sparkie",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100796,
+          "Name": "Highland Giant Odyle Sparkie",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100993,
+          "Name": "Highland Giant Sparkie",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100015,
+          "Name": "Splendent Hill Sparkie",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1035,
+      "SourceUrl": "https://aion2maps.com/items/soul-skama-bound/",
+      "Maps": [
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660035"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660035"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2100907,
+          "Name": "Drana Mutated Skama",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100031,
+          "Name": "Foul Skama",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100376,
+          "Name": "Lake Skama",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1036,
+      "SourceUrl": "https://aion2maps.com/items/soul-lupyllini-bound/",
+      "Maps": [
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660037"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660037"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2100746,
+          "Name": "Tail Feather Lupyllini",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1037,
+      "SourceUrl": "https://aion2maps.com/items/soul-male-crestlich-bound/",
+      "Maps": [
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660038"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2100151,
+          "Name": "Ellun River Crestlich Male",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100750,
+          "Name": "Highland Crestlich Male",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1038,
+      "SourceUrl": "https://aion2maps.com/items/soul-airon-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660039"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660039"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660039"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400568,
+          "Name": "Baby Canyon Airon",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400567,
+          "Name": "Canyon Airon",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100609,
+          "Name": "Hardbeak Airon",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100741,
+          "Name": "Longbeak Highland Airon",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100216,
+          "Name": "Pointbeak Airon",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100144,
+          "Name": "Smallbeak Airon",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1039,
+      "SourceUrl": "https://aion2maps.com/items/soul-crestlich-bound/",
+      "Maps": [
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660040"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660040"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2100150,
+          "Name": "Ellun River Crestlich Female",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100799,
+          "Name": "Highland Crestlich Female",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100037,
+          "Name": "Stonebeak Crestlich",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1040,
+      "SourceUrl": "https://aion2maps.com/items/soul-aullaeu-shaman-bound/",
+      "Maps": [
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660041"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2100950,
+          "Name": "Aullaeu Apprentice Shaman",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1041,
+      "SourceUrl": "https://aion2maps.com/items/soul-cave-bat-bound/",
+      "Maps": [
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660042"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660042"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2100911,
+          "Name": "Drana Mutated Bat",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1042,
+      "SourceUrl": "https://aion2maps.com/items/soul-ursus-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660043"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660043"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400376,
+          "Name": "Ursus",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400916,
+          "Name": "Ursus",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100655,
+          "Name": "Confused Ursus",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100172,
+          "Name": "Hardhorn Ursus",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100817,
+          "Name": "Hill Ursus",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100552,
+          "Name": "Ridge Ursus",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100560,
+          "Name": "Ridge Violent Ursus",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1043,
+      "SourceUrl": "https://aion2maps.com/items/soul-elite-ursus-bound/",
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1044,
+      "SourceUrl": "https://aion2maps.com/items/soul-aultrosss-doppelganger-bound/",
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1045,
+      "SourceUrl": "https://aion2maps.com/items/soul-sylphen-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660046"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660046"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660046"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400362,
+          "Name": "Sylphen",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100472,
+          "Name": "Aberrant Sylphen",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100023,
+          "Name": "Ellun River Sylphen",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100219,
+          "Name": "Ellun River Sylphen",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100743,
+          "Name": "Highland Sylphen",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100004,
+          "Name": "Meadow Sylphen",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100565,
+          "Name": "Ridge Sylphen",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1046,
+      "SourceUrl": "https://aion2maps.com/items/soul-armadon-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660047"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660047"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400002,
+          "Name": "Red Shell Mole",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400249,
+          "Name": "Withered Armadon",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1047,
+      "SourceUrl": "https://aion2maps.com/items/soul-aberrant-armadon-bound/",
+      "Maps": [
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660048"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660048"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660048"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2100751,
+          "Name": "Highland Wild Armadon",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100453,
+          "Name": "Splendent Armadon",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1048,
+      "SourceUrl": "https://aion2maps.com/items/soul-forest-spirit-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660049"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660049"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660049"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400337,
+          "Name": "Forest Spirit",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100142,
+          "Name": "Contaminated Vine Spirit",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100611,
+          "Name": "Deep Canyon Forest Spirit",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100022,
+          "Name": "Marsh Vine Spirit",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100555,
+          "Name": "Ridge Forest Spirit",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1049,
+      "SourceUrl": "https://aion2maps.com/items/soul-mutated-forest-spirit-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660050"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660050"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660050"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400061,
+          "Name": "Condensed Specter",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100715,
+          "Name": "Contaminated Vine Bundle",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100711,
+          "Name": "Mutated Vine Bundle",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1050,
+      "SourceUrl": "https://aion2maps.com/items/soul-gravi-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660051"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660051"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660051"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400307,
+          "Name": "Pink Gravi",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100650,
+          "Name": "Red Stalk Gravi",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2101125,
+          "Name": "Tolbas Gravi",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1051,
+      "SourceUrl": "https://aion2maps.com/items/soul-magic-gravi-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660052"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660052"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660052"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400329,
+          "Name": "Purifying Forest Magic Gravi",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400731,
+          "Name": "Unstable Gravi",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100659,
+          "Name": "Illusion Magic Gravi",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2101126,
+          "Name": "Tolbas Magic Gravi",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1052,
+      "SourceUrl": "https://aion2maps.com/items/soul-large-leaf-gravi-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660053"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660053"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660053"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400342,
+          "Name": "Large Leaf Gravi",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100285,
+          "Name": "Ellun River Hill Gravi",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100651,
+          "Name": "Large Leaf Gravi",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1053,
+      "SourceUrl": "https://aion2maps.com/items/soul-aberrant-potcrab-bound/",
+      "Maps": [
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660054"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2100908,
+          "Name": "Drana Mutated Potcrab",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2110512,
+          "Name": "Eternal Moss Crab",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1054,
+      "SourceUrl": "https://aion2maps.com/items/soul-mumu-warrior-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660055"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400570,
+          "Name": "Gribade Mumu Warrior",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400350,
+          "Name": "Mumu Watcher",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400606,
+          "Name": "Mumu Watcher",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1055,
+      "SourceUrl": "https://aion2maps.com/items/soul-grave-rat-bound/",
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1056,
+      "SourceUrl": "https://aion2maps.com/items/soul-drakan-probe-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660057"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660057"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660057"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400162,
+          "Name": "Drakan Probe",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400382,
+          "Name": "Drana Processing Maintenance Machine",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400658,
+          "Name": "Lagta Brigade Seeker",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400143,
+          "Name": "Outpost Probe",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100866,
+          "Name": "Drana Processing Maintenance Machine",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2101014,
+          "Name": "Intruder Seeker",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1057,
+      "SourceUrl": "https://aion2maps.com/items/soul-coradon-bound/",
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1058,
+      "SourceUrl": "https://aion2maps.com/items/soul-black-smoke-murute-bound/",
+      "Maps": [],
+      "SoulSources": [
+        {
+          "NpcId": 2300312,
+          "Name": "Black Smoke Murute",
+          "Region": "Fire Temple"
+        },
+        {
+          "NpcId": 2310312,
+          "Name": "Black Smoke Murute",
+          "Region": "Fire Temple"
+        },
+        {
+          "NpcId": 2320312,
+          "Name": "Black Smoke Murute",
+          "Region": "Fire Temple"
+        }
+      ]
+    },
+    {
+      "PetId": 1059,
+      "SourceUrl": "https://aion2maps.com/items/soul-giant-bee-bound/",
+      "Maps": [
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660060"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660060"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2100551,
+          "Name": "Giant Stripe Bee",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1060,
+      "SourceUrl": "https://aion2maps.com/items/soul-starturtle-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660061"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660061"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660061"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660061"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400374,
+          "Name": "Beach Starturtle",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400519,
+          "Name": "Starturtle",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400808,
+          "Name": "Starturtle",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100033,
+          "Name": "Coastal Starturtle",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2101082,
+          "Name": "Eternal Starturtle",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100808,
+          "Name": "Pond Starturtle",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1061,
+      "SourceUrl": "https://aion2maps.com/items/soul-slime-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660062"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400320,
+          "Name": "Unruly Slime",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1062,
+      "SourceUrl": "https://aion2maps.com/items/soul-contaminated-slime-bound/",
+      "Maps": [
+        {
+          "Region": "Chaotic Lower Reshanta",
+          "Url": "https://aion2maps.com/chaotic-lower-reshanta/?show=item:534660063"
+        },
+        {
+          "Region": "Chaotic Middle Reshanta",
+          "Url": "https://aion2maps.com/chaotic-middle-reshanta/?show=item:534660063"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660063"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2600023,
+          "Name": "Abyss Sulfur Slime",
+          "Region": "Chaotic Lower Reshanta"
+        },
+        {
+          "NpcId": 2100717,
+          "Name": "Contaminated Poison Slime",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100025,
+          "Name": "Marsh Slime",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1063,
+      "SourceUrl": "https://aion2maps.com/items/soul-vigilant-oculazen-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660064"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660064"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400364,
+          "Name": "Vigilant Oculazen",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1064,
+      "SourceUrl": "https://aion2maps.com/items/soul-oculazen-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660065"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660065"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400711,
+          "Name": "Oculazen",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100854,
+          "Name": "Labor Manager Oculazen",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1065,
+      "SourceUrl": "https://aion2maps.com/items/soul-biruta-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660066"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660066"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660066"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400920,
+          "Name": "Biruta Wanderer",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100183,
+          "Name": "Wandering Biruta",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1066,
+      "SourceUrl": "https://aion2maps.com/items/soul-papis-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660067"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660067"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660067"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660067"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2000926,
+          "Name": "Faded Papis",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2000927,
+          "Name": "Faded Papis",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2000928,
+          "Name": "Faded Papis",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2000929,
+          "Name": "Faded Papis",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2000951,
+          "Name": "Faded Papis",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400594,
+          "Name": "Faded Papis",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400903,
+          "Name": "Faded Papis",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400938,
+          "Name": "Faded Papis",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400940,
+          "Name": "Faded Papis",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400947,
+          "Name": "Faded Papis",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100220,
+          "Name": "Ellun River Papis",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100654,
+          "Name": "Garden Papis",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100009,
+          "Name": "Gentle Papis",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1067,
+      "SourceUrl": "https://aion2maps.com/items/soul-scorpion-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660068"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660068"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660068"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400470,
+          "Name": "Ore Scorpion",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100709,
+          "Name": "Contaminated Scorpion",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1068,
+      "SourceUrl": "https://aion2maps.com/items/soul-krao-test-subject-bound/",
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1069,
+      "SourceUrl": "https://aion2maps.com/items/soul-stone-spirit-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660070"
+        },
+        {
+          "Region": "Chaotic Lower Reshanta",
+          "Url": "https://aion2maps.com/chaotic-lower-reshanta/?show=item:534660070"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660070"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400301,
+          "Name": "Faded Stone Spirit",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2600056,
+          "Name": "Abyss Rock Spirit",
+          "Region": "Chaotic Lower Reshanta"
+        },
+        {
+          "NpcId": 2100812,
+          "Name": "Hill Stone Spirit",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1071,
+      "SourceUrl": "https://aion2maps.com/items/soul-cadaver-insectoid-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660072"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400018,
+          "Name": "Drana Cadaver Insectoid",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1072,
+      "SourceUrl": "https://aion2maps.com/items/soul-tog-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660073"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400912,
+          "Name": "Tog",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1073,
+      "SourceUrl": "https://aion2maps.com/items/soul-nepenthes-bound/",
+      "Maps": [
+        {
+          "Region": "Chaotic Lower Reshanta",
+          "Url": "https://aion2maps.com/chaotic-lower-reshanta/?show=item:534660074"
+        },
+        {
+          "Region": "Chaotic Middle Reshanta",
+          "Url": "https://aion2maps.com/chaotic-middle-reshanta/?show=item:534660074"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660074"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2600049,
+          "Name": "Abyss Nasty Nepenthes",
+          "Region": "Chaotic Lower Reshanta"
+        },
+        {
+          "NpcId": 2100744,
+          "Name": "Scarlet Highland Nepenthes",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100160,
+          "Name": "Tolbas Nepenthes",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1074,
+      "SourceUrl": "https://aion2maps.com/items/soul-kuru-worker-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660075"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660075"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400831,
+          "Name": "Kuru Worker",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2101133,
+          "Name": "Eternal Kuru Worker",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2101136,
+          "Name": "Eternal Kuru Worker",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100964,
+          "Name": "Harsh Kuru Tinkerer",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100180,
+          "Name": "Tolbas Kuru Worker",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1075,
+      "SourceUrl": "https://aion2maps.com/items/soul-kuru-tinkerer-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660076"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660076"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400832,
+          "Name": "Kuru Tinkerer",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2101134,
+          "Name": "Eternal Kuru Tinkerer",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2101137,
+          "Name": "Eternal Kuru Tinkerer",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100181,
+          "Name": "Tolbas Kuru Tinkerer",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1077,
+      "SourceUrl": "https://aion2maps.com/items/soul-harcon-bound/",
+      "Maps": [],
+      "SoulSources": [
+        {
+          "NpcId": 2300104,
+          "Name": "Enhanced Harcon",
+          "Region": "Krao Cave"
+        },
+        {
+          "NpcId": 2310104,
+          "Name": "Enhanced Harcon",
+          "Region": "Krao Cave"
+        },
+        {
+          "NpcId": 2320104,
+          "Name": "Enhanced Harcon",
+          "Region": "Krao Cave"
+        }
+      ]
+    },
+    {
+      "PetId": 1078,
+      "SourceUrl": "https://aion2maps.com/items/soul-urugugu-brawler-bound/",
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1079,
+      "SourceUrl": "https://aion2maps.com/items/soul-ultimate-wind-spirit-bound/",
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1080,
+      "SourceUrl": "https://aion2maps.com/items/soul-sentinel-knash-bound/",
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1081,
+      "SourceUrl": "https://aion2maps.com/items/soul-dionae-bound/",
+      "Maps": [
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660082"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1082,
+      "SourceUrl": "https://aion2maps.com/items/soul-ultimate-fire-spirit-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660083"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1083,
+      "SourceUrl": "https://aion2maps.com/items/soul-spider-bound/",
+      "Maps": [
+        {
+          "Region": "Chaotic Lower Reshanta",
+          "Url": "https://aion2maps.com/chaotic-lower-reshanta/?show=item:534660084"
+        },
+        {
+          "Region": "Chaotic Middle Reshanta",
+          "Url": "https://aion2maps.com/chaotic-middle-reshanta/?show=item:534660084"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2600046,
+          "Name": "Abyss Odyle Mutated Insectoid",
+          "Region": "Chaotic Lower Reshanta"
+        }
+      ]
+    },
+    {
+      "PetId": 1084,
+      "SourceUrl": "https://aion2maps.com/items/soul-kalgolem-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660085"
+        },
+        {
+          "Region": "Chaotic Lower Reshanta",
+          "Url": "https://aion2maps.com/chaotic-lower-reshanta/?show=item:534660085"
+        },
+        {
+          "Region": "Chaotic Middle Reshanta",
+          "Url": "https://aion2maps.com/chaotic-middle-reshanta/?show=item:534660085"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660085"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660085"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400328,
+          "Name": "Angry Kalgolem",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2600070,
+          "Name": "Root Kalgolem",
+          "Region": "Chaotic Lower Reshanta"
+        },
+        {
+          "NpcId": 2100700,
+          "Name": "Ashen Kalgolem",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100002,
+          "Name": "Hard Kalgolem",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1086,
+      "SourceUrl": "https://aion2maps.com/items/soul-fungen-bound/",
+      "Maps": [
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660087"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2100456,
+          "Name": "Red Cap Fungen",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1087,
+      "SourceUrl": "https://aion2maps.com/items/soul-pino-bound/",
+      "Maps": [
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660088"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2100954,
+          "Name": "Pino Laborer",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100953,
+          "Name": "Pino Worker",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1088,
+      "SourceUrl": "https://aion2maps.com/items/soul-pino-worker-bound/",
+      "Maps": [
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660089"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2100955,
+          "Name": "Harsh Pino Worker",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1089,
+      "SourceUrl": "https://aion2maps.com/items/soul-aberrant-skama-bound/",
+      "Maps": [
+        {
+          "Region": "Chaotic Lower Reshanta",
+          "Url": "https://aion2maps.com/chaotic-lower-reshanta/?show=item:534660090"
+        },
+        {
+          "Region": "Chaotic Middle Reshanta",
+          "Url": "https://aion2maps.com/chaotic-middle-reshanta/?show=item:534660090"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660090"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660090"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2600024,
+          "Name": "Abyss Sulfur Skama",
+          "Region": "Chaotic Lower Reshanta"
+        },
+        {
+          "NpcId": 2100710,
+          "Name": "Yellow-Tailed Skama",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1090,
+      "SourceUrl": "https://aion2maps.com/items/soul-ultimate-water-spirit-bound/",
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1091,
+      "SourceUrl": "https://aion2maps.com/items/soul-red-spark-ignus-bound/",
+      "Maps": [],
+      "SoulSources": [
+        {
+          "NpcId": 2300311,
+          "Name": "Red Spark Ignus",
+          "Region": "Fire Temple"
+        },
+        {
+          "NpcId": 2310311,
+          "Name": "Red Spark Ignus",
+          "Region": "Fire Temple"
+        },
+        {
+          "NpcId": 2320311,
+          "Name": "Red Spark Ignus",
+          "Region": "Fire Temple"
+        }
+      ]
+    },
+    {
+      "PetId": 1092,
+      "SourceUrl": "https://aion2maps.com/items/soul-lesser-wind-spirit-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660093"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660093"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400324,
+          "Name": "Soft Breeze Spirit",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100605,
+          "Name": "Air Spirit",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2101096,
+          "Name": "Eternal Wind Spirit",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1093,
+      "SourceUrl": "https://aion2maps.com/items/soul-phantasmal-lakshmi-bound/",
+      "Maps": [],
+      "SoulSources": [
+        {
+          "NpcId": 2300401,
+          "Name": "Phantasmal Lakshmi",
+          "Region": "Draupnir"
+        },
+        {
+          "NpcId": 2310401,
+          "Name": "Phantasmal Lakshmi",
+          "Region": "Draupnir"
+        },
+        {
+          "NpcId": 2320401,
+          "Name": "Phantasmal Lakshmi",
+          "Region": "Draupnir"
+        }
+      ]
+    },
+    {
+      "PetId": 1094,
+      "SourceUrl": "https://aion2maps.com/items/soul-intermediate-wind-spirit-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660095"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660095"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400824,
+          "Name": "Immortal Wind Spirit",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2101103,
+          "Name": "Violent Wind Spirit",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100658,
+          "Name": "Wandering Wind Spirit",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1095,
+      "SourceUrl": "https://aion2maps.com/items/soul-superior-wind-spirit-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660096"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660096"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400818,
+          "Name": "Immortal Wind Spirit Guardian",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400302,
+          "Name": "Whirlwind Spirit",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100666,
+          "Name": "Brisk Spirit",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1096,
+      "SourceUrl": "https://aion2maps.com/items/soul-superior-fire-spirit-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660097"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660097"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660097"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400303,
+          "Name": "Flame Spirit",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400815,
+          "Name": "Immortal Fire Spirit Guardian",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400749,
+          "Name": "Unstable Superior Fire Spirit",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100664,
+          "Name": "Hellfire Spirit",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1097,
+      "SourceUrl": "https://aion2maps.com/items/soul-karnif-bound/",
+      "Maps": [
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660098"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660098"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2100174,
+          "Name": "Ferocious Karnif",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100349,
+          "Name": "Ferocious Tolbas Karnif",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100752,
+          "Name": "Highland Karnif",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100802,
+          "Name": "Tamed Karnif",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100805,
+          "Name": "Tamed Karnif",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100348,
+          "Name": "Tolbas Karnif",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100742,
+          "Name": "Toughmane Highland Karnif",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1098,
+      "SourceUrl": "https://aion2maps.com/items/soul-modified-karnif-bound/",
+      "Maps": [
+        {
+          "Region": "Chaotic Lower Reshanta",
+          "Url": "https://aion2maps.com/chaotic-lower-reshanta/?show=item:534660099"
+        },
+        {
+          "Region": "Chaotic Middle Reshanta",
+          "Url": "https://aion2maps.com/chaotic-middle-reshanta/?show=item:534660099"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660099"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660099"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2600004,
+          "Name": "Abyss Karnif",
+          "Region": "Chaotic Lower Reshanta"
+        },
+        {
+          "NpcId": 2600014,
+          "Name": "Abyss Search Party Karnif",
+          "Region": "Chaotic Lower Reshanta"
+        },
+        {
+          "NpcId": 2100070,
+          "Name": "Scouting Karnif",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100481,
+          "Name": "Sensitive Karnif",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100130,
+          "Name": "Trained Karnif",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100096,
+          "Name": "Unruly Karnif",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1099,
+      "SourceUrl": "https://aion2maps.com/items/soul-elite-karnif-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660100"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1100,
+      "SourceUrl": "https://aion2maps.com/items/soul-ultimate-earth-spirit-bound/",
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1101,
+      "SourceUrl": "https://aion2maps.com/items/soul-forest-guardian-bound/",
+      "Maps": [
+        {
+          "Region": "Chaotic Middle Reshanta",
+          "Url": "https://aion2maps.com/chaotic-middle-reshanta/?show=item:534660102"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660102"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2100660,
+          "Name": "Garden Guardian",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1102,
+      "SourceUrl": "https://aion2maps.com/items/soul-dried-up-forest-guardian-bound/",
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1103,
+      "SourceUrl": "https://aion2maps.com/items/soul-pretor-veil-administrator-bound/",
+      "Maps": [
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660104"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1104,
+      "SourceUrl": "https://aion2maps.com/items/soul-manduri-trebuchet-worker-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660105"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660105"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660105"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400615,
+          "Name": "Black Claw Manduri Scout",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2110507,
+          "Name": "Crimson Manduri Slinger",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100816,
+          "Name": "Hill Manduri",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1105,
+      "SourceUrl": "https://aion2maps.com/items/soul-biruta-herbalist-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660106"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660106"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400919,
+          "Name": "Biruta Herbalist",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1106,
+      "SourceUrl": "https://aion2maps.com/items/soul-tayga-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660107"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400583,
+          "Name": "Guard Troopers Tayga",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400564,
+          "Name": "Search Party Tayga",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400611,
+          "Name": "Tamed Tayga",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1107,
+      "SourceUrl": "https://aion2maps.com/items/soul-krao-seal-guardian-bound/",
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1108,
+      "SourceUrl": "https://aion2maps.com/items/soul-enhanced-krall-combatant-bound/",
+      "Maps": [
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660109"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2100097,
+          "Name": "Enhanced Krall Combatant",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1109,
+      "SourceUrl": "https://aion2maps.com/items/soul-enhanced-krall-sentry-bound/",
+      "Maps": [
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660110"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2100072,
+          "Name": "Enhanced Krall Sentry",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1110,
+      "SourceUrl": "https://aion2maps.com/items/soul-blue-kalgolem-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660111"
+        },
+        {
+          "Region": "Chaotic Lower Reshanta",
+          "Url": "https://aion2maps.com/chaotic-lower-reshanta/?show=item:534660111"
+        },
+        {
+          "Region": "Chaotic Middle Reshanta",
+          "Url": "https://aion2maps.com/chaotic-middle-reshanta/?show=item:534660111"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660111"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400471,
+          "Name": "Blue Kalgolem",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2600051,
+          "Name": "Abyssal Kalgolem",
+          "Region": "Chaotic Lower Reshanta"
+        },
+        {
+          "NpcId": 2100454,
+          "Name": "Splendent Kalgolem",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1111,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1112,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1113,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1114,
+      "SourceUrl": "https://aion2maps.com/items/soul-ashen-spider-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660019"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660019"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660019"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400230,
+          "Name": "Ashen Spider",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100283,
+          "Name": "White Shell Octaside",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1115,
+      "SourceUrl": "https://aion2maps.com/items/soul-kuru-overseer-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660077"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660077"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400833,
+          "Name": "Kuru Overseer",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2101139,
+          "Name": "Eternal Kuru Overseer",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1116,
+      "SourceUrl": "https://aion2maps.com/items/soul-withered-branch-spider-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660023"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660023"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2000956,
+          "Name": "Withered Branch Spider",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2000957,
+          "Name": "Withered Branch Spider",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400902,
+          "Name": "Withered Branch Spider",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400933,
+          "Name": "Withered Branch Spider",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400939,
+          "Name": "Withered Branch Spider",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400946,
+          "Name": "Withered Branch Spider",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400948,
+          "Name": "Withered Branch Spider",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1117,
+      "SourceUrl": "https://aion2maps.com/items/soul-unstable-spider-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660086"
+        },
+        {
+          "Region": "Chaotic Lower Reshanta",
+          "Url": "https://aion2maps.com/chaotic-lower-reshanta/?show=item:534660086"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660086"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400319,
+          "Name": "Flame Rock Spider",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400745,
+          "Name": "Unstable Poison Blood Spider",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2600045,
+          "Name": "Abyss Red Mutated Insectoid",
+          "Region": "Chaotic Lower Reshanta"
+        },
+        {
+          "NpcId": 2101023,
+          "Name": "Aullaeu Forest Odyle Spider",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2110509,
+          "Name": "Crimson Spider",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1118,
+      "SourceUrl": "https://aion2maps.com/items/soul-aberrant-bee-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660152"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660152"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660152"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2000955,
+          "Name": "Black Armor Bee",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400900,
+          "Name": "Black Armor Bee",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400930,
+          "Name": "Black Armor Bee",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100286,
+          "Name": "Black Pattern Bee",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100550,
+          "Name": "Stripe Bee",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1119,
+      "SourceUrl": "https://aion2maps.com/items/soul-aberrant-coradon-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660153"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660153"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660153"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2000952,
+          "Name": "Aberrant Coradon",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400907,
+          "Name": "Coradon",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100699,
+          "Name": "Garden Coradon",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100821,
+          "Name": "Hill Coradon",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100828,
+          "Name": "Hill Coradon",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1120,
+      "SourceUrl": "https://aion2maps.com/items/soul-young-kailin-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660154"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660154"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660154"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660154"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400737,
+          "Name": "Unstable Young Kailin",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400906,
+          "Name": "Young Kailin",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400935,
+          "Name": "Young Kailin",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2101022,
+          "Name": "Ellun River Young Kailin",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1121,
+      "SourceUrl": "https://aion2maps.com/items/soul-young-slink-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660155"
+        },
+        {
+          "Region": "Chaotic Lower Reshanta",
+          "Url": "https://aion2maps.com/chaotic-lower-reshanta/?show=item:534660155"
+        },
+        {
+          "Region": "Chaotic Middle Reshanta",
+          "Url": "https://aion2maps.com/chaotic-middle-reshanta/?show=item:534660155"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660155"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660155"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400910,
+          "Name": "Young Slink",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400950,
+          "Name": "Young Slink",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2600047,
+          "Name": "Abyss Young Slink",
+          "Region": "Chaotic Lower Reshanta"
+        },
+        {
+          "NpcId": 2100473,
+          "Name": "Tolbas Young Slink",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100189,
+          "Name": "Young Wetland Slink",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1122,
+      "SourceUrl": "https://aion2maps.com/items/soul-young-tog-bound/",
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1123,
+      "SourceUrl": "https://aion2maps.com/items/soul-young-ursus-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660157"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660157"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400377,
+          "Name": "Young Ursus",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400917,
+          "Name": "Young Ursus",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100173,
+          "Name": "Baby Horn Ursus",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100818,
+          "Name": "Hill Young Ursus",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1124,
+      "SourceUrl": "https://aion2maps.com/items/soul-zaif-bound/",
+      "Maps": [
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660121"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2100748,
+          "Name": "Highland Forest Zaif",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100797,
+          "Name": "Highland Zaif",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100813,
+          "Name": "Hill Zaif",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100573,
+          "Name": "Rock Hill Zaif",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1125,
+      "SourceUrl": "https://aion2maps.com/items/soul-aberrant-zaif-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660159"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660159"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660159"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400578,
+          "Name": "Golden Zaif",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100558,
+          "Name": "Yellow-Maned Zaif",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1126,
+      "SourceUrl": "https://aion2maps.com/items/soul-aberrant-tog-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660160"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660160"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660160"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400936,
+          "Name": "Aberrant Tog",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100006,
+          "Name": "Cairn Tog",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100288,
+          "Name": "Field Tog",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100819,
+          "Name": "Hill Tog",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100145,
+          "Name": "Hungry Tog",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100793,
+          "Name": "Wild Stripe Tog",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1127,
+      "SourceUrl": "https://aion2maps.com/items/soul-odyle-stone-spirit-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660161"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400734,
+          "Name": "Faded Odyle Spirit",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1128,
+      "SourceUrl": "https://aion2maps.com/items/soul-drana-slime-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660162"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660162"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400015,
+          "Name": "Drana Slime",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1129,
+      "SourceUrl": "https://aion2maps.com/items/soul-drana-swarm-bound/",
+      "Maps": [
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660163"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2110501,
+          "Name": "Crimson Drana Swarm",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1130,
+      "SourceUrl": "https://aion2maps.com/items/soul-mutated-cadaver-insectoid-bound/",
+      "Maps": [
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660164"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2100554,
+          "Name": "Ridge Spider",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1131,
+      "SourceUrl": "https://aion2maps.com/items/soul-drana-spore-bound/",
+      "Maps": [
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660165"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2110502,
+          "Name": "Crimson Mutated Spore",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1132,
+      "SourceUrl": "https://aion2maps.com/items/soul-ashen-lupyllini-bound/",
+      "Maps": [
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660166"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660166"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1133,
+      "SourceUrl": "https://aion2maps.com/items/soul-forest-dionae-bound/",
+      "Maps": [
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660167"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1134,
+      "SourceUrl": "https://aion2maps.com/items/soul-eternal-coradon-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660168"
+        },
+        {
+          "Region": "Chaotic Lower Reshanta",
+          "Url": "https://aion2maps.com/chaotic-lower-reshanta/?show=item:534660168"
+        },
+        {
+          "Region": "Chaotic Middle Reshanta",
+          "Url": "https://aion2maps.com/chaotic-middle-reshanta/?show=item:534660168"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660168"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400941,
+          "Name": "Eternal Coradon",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2600061,
+          "Name": "Abyss Coradon",
+          "Region": "Chaotic Lower Reshanta"
+        }
+      ]
+    },
+    {
+      "PetId": 1135,
+      "SourceUrl": "https://aion2maps.com/items/soul-ashen-dionae-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660169"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400248,
+          "Name": "Ashen Dionae",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1136,
+      "SourceUrl": "https://aion2maps.com/items/soul-rafflesia-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660170"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660170"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2000925,
+          "Name": "Rafflesia",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400056,
+          "Name": "Rafflesia",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400813,
+          "Name": "Rafflesia",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400949,
+          "Name": "Rafflesia",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400735,
+          "Name": "Unstable Rafflesia",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2110513,
+          "Name": "Crimson Rafflesia",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1137,
+      "SourceUrl": "https://aion2maps.com/items/soul-mumu-worker-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660171"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400390,
+          "Name": "Escaped Mumu Worker",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400351,
+          "Name": "Mumu Worker",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1138,
+      "SourceUrl": "https://aion2maps.com/items/soul-mumu-overseer-bound/",
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1139,
+      "SourceUrl": "https://aion2maps.com/items/soul-swamp-monster-bound/",
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1140,
+      "SourceUrl": "https://aion2maps.com/items/soul-forest-monster-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660114"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660114"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400225,
+          "Name": "Burned Forester",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100350,
+          "Name": "Tolbas Forest Targon",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1141,
+      "SourceUrl": "https://aion2maps.com/items/soul-marsh-targon-bound/",
+      "Maps": [
+        {
+          "Region": "Chaotic Middle Reshanta",
+          "Url": "https://aion2maps.com/chaotic-middle-reshanta/?show=item:534660175"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660175"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2100021,
+          "Name": "Marsh Targon",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1142,
+      "SourceUrl": "https://aion2maps.com/items/soul-distorted-mutant-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660176"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400312,
+          "Name": "Consumed Spirit Guardian",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1143,
+      "SourceUrl": "https://aion2maps.com/items/soul-mutated-ursus-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660177"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400217,
+          "Name": "Ashen Ursus",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1144,
+      "SourceUrl": "https://aion2maps.com/items/soul-mutated-forest-guardian-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660178"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400214,
+          "Name": "Mutated Forest Guardian",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400751,
+          "Name": "Unstable Forest Guardian",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1145,
+      "SourceUrl": "https://aion2maps.com/items/soul-mutated-insectoid-valka-bound/",
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1146,
+      "SourceUrl": "https://aion2maps.com/items/soul-gatekeeper-pinopi-bound/",
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1147,
+      "SourceUrl": "https://aion2maps.com/items/soul-dratona-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660135"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660135"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400380,
+          "Name": "Dratona",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400161,
+          "Name": "Dratona Supporter",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400116,
+          "Name": "Dratona Tinkerer",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100901,
+          "Name": "Scarlet Forest Dratona",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1148,
+      "SourceUrl": "https://aion2maps.com/items/soul-drakana-kalgolem-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660182"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660182"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660182"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400014,
+          "Name": "Crash Site Kalgolem",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1149,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1150,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1151,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1152,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1153,
+      "SourceUrl": "https://aion2maps.com/items/soul-drana-mutant-brute-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660116"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660116"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660116"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400834,
+          "Name": "Drana Mutant",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2110503,
+          "Name": "Crimson Drana Mutant",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2101135,
+          "Name": "Eternal Drana Mutant",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1154,
+      "SourceUrl": "https://aion2maps.com/items/soul-faded-mutant-brute-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660205"
+        },
+        {
+          "Region": "Chaotic Middle Reshanta",
+          "Url": "https://aion2maps.com/chaotic-middle-reshanta/?show=item:534660205"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400476,
+          "Name": "Faded Mutant Brute",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1155,
+      "SourceUrl": "https://aion2maps.com/items/soul-superior-water-spirit-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660124"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660124"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400816,
+          "Name": "Immortal Water Spirit Guardian",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400739,
+          "Name": "Unstable Superior Water Spirit",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400306,
+          "Name": "Water Mist Spirit",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100665,
+          "Name": "Torrent Spirit",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1156,
+      "SourceUrl": "https://aion2maps.com/items/soul-elite-klaw-bound/",
+      "Maps": [
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660194"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2100079,
+          "Name": "Bodyguard Teegant",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1157,
+      "SourceUrl": "https://aion2maps.com/items/soul-cadaver-cleaner-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660191"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660191"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660191"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400412,
+          "Name": "Ferocious Cadaver Cleaner",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400418,
+          "Name": "Ferocious Cadaver Cleaner",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400275,
+          "Name": "Ruins Corpse Cleaner",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1158,
+      "SourceUrl": "https://aion2maps.com/items/soul-venomous-insect-sram-bound/",
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1159,
+      "SourceUrl": "https://aion2maps.com/items/soul-parasite-swarm-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660112"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400473,
+          "Name": "Giant Ore Insectoid Adult",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1160,
+      "SourceUrl": "https://aion2maps.com/items/soul-drana-contaminant-bound/",
+      "Maps": [
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660189"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1161,
+      "SourceUrl": "https://aion2maps.com/items/soul-faded-floater-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660206"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400479,
+          "Name": "Faded Floater",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1162,
+      "SourceUrl": "https://aion2maps.com/items/soul-kerubar-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660144"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660144"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400801,
+          "Name": "Kerubar",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2101075,
+          "Name": "Eternal Kerubar",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2101079,
+          "Name": "Eternal Kerubar",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1163,
+      "SourceUrl": "https://aion2maps.com/items/soul-basilisk-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660136"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660136"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400240,
+          "Name": "Black Ash Basilisk",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1164,
+      "SourceUrl": "https://aion2maps.com/items/soul-lesser-earth-spirit-bound/",
+      "Maps": [
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660125"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2101089,
+          "Name": "Eternal Earth Spirit",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1165,
+      "SourceUrl": "https://aion2maps.com/items/soul-intermediate-earth-spirit-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660126"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660126"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400823,
+          "Name": "Immortal Earth Spirit",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2101102,
+          "Name": "Violent Earth Spirit",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100653,
+          "Name": "Wandering Earth Spirit",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1166,
+      "SourceUrl": "https://aion2maps.com/items/soul-superior-earth-spirit-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660127"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660127"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400310,
+          "Name": "Corroded Soil Spirit",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400817,
+          "Name": "Immortal Earth Spirit Guardian",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100667,
+          "Name": "Peculiar Rock Spirit",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1167,
+      "SourceUrl": "https://aion2maps.com/items/soul-flame-stone-guardian-statue-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660132"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1168,
+      "SourceUrl": "https://aion2maps.com/items/soul-lesser-water-spirit-bound/",
+      "Maps": [
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660122"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2101088,
+          "Name": "Eternal Water Spirit",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100231,
+          "Name": "Water Spirit",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1169,
+      "SourceUrl": "https://aion2maps.com/items/soul-intermediate-water-spirit-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660123"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660123"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400822,
+          "Name": "Immortal Water Spirit",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400738,
+          "Name": "Unstable Intermediate Water Spirit",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2101101,
+          "Name": "Violent Water Spirit",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100657,
+          "Name": "Wandering Water Spirit",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1170,
+      "SourceUrl": "https://aion2maps.com/items/soul-kerubian-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660145"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660145"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400802,
+          "Name": "Kerubian",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2101076,
+          "Name": "Eternal Kerubian",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2101080,
+          "Name": "Eternal Kerubian",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1171,
+      "SourceUrl": "https://aion2maps.com/items/soul-kerubiel-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660212"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660212"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400803,
+          "Name": "Kerubiel",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2101077,
+          "Name": "Eternal Kerubiel",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1172,
+      "SourceUrl": "https://aion2maps.com/items/soul-duduka-worker-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660139"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400612,
+          "Name": "Duduka Worker",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1173,
+      "SourceUrl": "https://aion2maps.com/items/soul-duduka-trebuchet-worker-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660140"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400613,
+          "Name": "Duduka Slinger",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1174,
+      "SourceUrl": "https://aion2maps.com/items/soul-drana-predator-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660202"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660202"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400010,
+          "Name": "Drana Predator",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2110505,
+          "Name": "Crimson Drana Predator",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1175,
+      "SourceUrl": "https://aion2maps.com/items/soul-faded-predator-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660203"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400480,
+          "Name": "Faded Predator",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1176,
+      "SourceUrl": "https://aion2maps.com/items/soul-mudthorn-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660216"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660216"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400481,
+          "Name": "Addicted Mudthorn",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400707,
+          "Name": "Remnant of Subspace",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1177,
+      "SourceUrl": "https://aion2maps.com/items/soul-ancient-spirit-bound/",
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1178,
+      "SourceUrl": "https://aion2maps.com/items/soul-spirit-kings-bodyguard-warrior-bound/",
+      "Maps": [
+        {
+          "Region": "Chaotic Lower Reshanta",
+          "Url": "https://aion2maps.com/chaotic-lower-reshanta/?show=item:534660146"
+        },
+        {
+          "Region": "Chaotic Middle Reshanta",
+          "Url": "https://aion2maps.com/chaotic-middle-reshanta/?show=item:534660146"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2600066,
+          "Name": "Old Tree Spirit Warrior",
+          "Region": "Chaotic Lower Reshanta"
+        }
+      ]
+    },
+    {
+      "PetId": 1179,
+      "SourceUrl": "https://aion2maps.com/items/soul-drana-mutant-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660207"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400001,
+          "Name": "Twisted Mutant",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1180,
+      "SourceUrl": "https://aion2maps.com/items/soul-faded-mutant-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660204"
+        },
+        {
+          "Region": "Chaotic Middle Reshanta",
+          "Url": "https://aion2maps.com/chaotic-middle-reshanta/?show=item:534660204"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400477,
+          "Name": "Faded Mutant",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1181,
+      "SourceUrl": "https://aion2maps.com/items/soul-brax-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660200"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660200"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660200"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2000954,
+          "Name": "Brax",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400375,
+          "Name": "Brax",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400914,
+          "Name": "Brax",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100740,
+          "Name": "Docile Highland Brax",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100217,
+          "Name": "Field Brax",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100303,
+          "Name": "Hungry Brax",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1182,
+      "SourceUrl": "https://aion2maps.com/items/soul-elite-soulless-corpse-gnat-bound/",
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1183,
+      "SourceUrl": "https://aion2maps.com/items/soul-soulless-corpse-gnat-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660224"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660224"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400413,
+          "Name": "Soulless Corpse Gnat",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1184,
+      "SourceUrl": "https://aion2maps.com/items/soul-drakan-watcher-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660142"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660142"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660142"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400384,
+          "Name": "Drakan Manager",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400591,
+          "Name": "Drakan Patrol Watcher",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100872,
+          "Name": "Processing Facility Drakan Scout",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1185,
+      "SourceUrl": "https://aion2maps.com/items/soul-dratona-tinkerer-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660220"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1186,
+      "SourceUrl": "https://aion2maps.com/items/soul-poison-blood-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660188"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660188"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660188"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400311,
+          "Name": "Cursed Poison Blood",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400743,
+          "Name": "Unstable Poison Blood",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1187,
+      "SourceUrl": "https://aion2maps.com/items/soul-intermediate-fire-spirit-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660129"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660129"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660129"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400821,
+          "Name": "Immortal Fire Spirit",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400748,
+          "Name": "Unstable Intermediate Fire Spirit",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2101100,
+          "Name": "Violent Fire Spirit",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1188,
+      "SourceUrl": "https://aion2maps.com/items/soul-vivel-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660134"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660134"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660134"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400057,
+          "Name": "Vampire Vivel",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100583,
+          "Name": "Highland Vivel",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1189,
+      "SourceUrl": "https://aion2maps.com/items/soul-tamed-zaif-bound/",
+      "Maps": [
+        {
+          "Region": "Chaotic Middle Reshanta",
+          "Url": "https://aion2maps.com/chaotic-middle-reshanta/?show=item:534660226"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660226"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660226"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2100566,
+          "Name": "Marauders Zaif",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1190,
+      "SourceUrl": "https://aion2maps.com/items/soul-elite-poisonous-spore-fungen-bound/",
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1191,
+      "SourceUrl": "https://aion2maps.com/items/soul-furious-feruk-bound/",
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1192,
+      "SourceUrl": "https://aion2maps.com/items/soul-silver-blade-rotan-bound/",
+      "Maps": [
+        {
+          "Region": "Chaotic Lower Reshanta",
+          "Url": "https://aion2maps.com/chaotic-lower-reshanta/?show=item:534660130"
+        },
+        {
+          "Region": "Chaotic Middle Reshanta",
+          "Url": "https://aion2maps.com/chaotic-middle-reshanta/?show=item:534660130"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660130"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2600013,
+          "Name": "Abyss Old Blade Rotan",
+          "Region": "Chaotic Lower Reshanta"
+        },
+        {
+          "NpcId": 2600003,
+          "Name": "Abyss Rusty Rotan",
+          "Region": "Chaotic Lower Reshanta"
+        },
+        {
+          "NpcId": 2300310,
+          "Name": "Silver Blade Rotan",
+          "Region": "Fire Temple"
+        },
+        {
+          "NpcId": 2310310,
+          "Name": "Silver Blade Rotan",
+          "Region": "Fire Temple"
+        },
+        {
+          "NpcId": 2320310,
+          "Name": "Silver Blade Rotan",
+          "Region": "Fire Temple"
+        }
+      ]
+    },
+    {
+      "PetId": 1193,
+      "SourceUrl": "https://aion2maps.com/items/soul-addicted-shulak-cart-worker-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660209"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400455,
+          "Name": "Rampaging Shulak Cart Worker",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1194,
+      "SourceUrl": "https://aion2maps.com/items/soul-guardite-bound/",
+      "Maps": [
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660141"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2100712,
+          "Name": "Uncontrollable Guardite",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1195,
+      "SourceUrl": "https://aion2maps.com/items/soul-dracuni-herbalist-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660143"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660143"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400746,
+          "Name": "Poison Blood Gatherer",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100867,
+          "Name": "Dracuni Processing Laborer",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1196,
+      "SourceUrl": "https://aion2maps.com/items/soul-elite-dratona-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660193"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1197,
+      "SourceUrl": "https://aion2maps.com/items/soul-watcher-guardite-bound/",
+      "Maps": [
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660211"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2100716,
+          "Name": "Contaminated Guardite",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1198,
+      "SourceUrl": "https://aion2maps.com/items/soul-ashen-basilisk-bound/",
+      "Maps": [
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660218"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660218"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1199,
+      "SourceUrl": "https://aion2maps.com/items/soul-flame-barghest-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660131"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1200,
+      "SourceUrl": "https://aion2maps.com/items/soul-naga-elite-priest-bound/",
+      "Maps": [
+        {
+          "Region": "Chaotic Lower Reshanta",
+          "Url": "https://aion2maps.com/chaotic-lower-reshanta/?show=item:534660119"
+        },
+        {
+          "Region": "Chaotic Middle Reshanta",
+          "Url": "https://aion2maps.com/chaotic-middle-reshanta/?show=item:534660119"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660119"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2600042,
+          "Name": "Abyss Naga Dark Mage",
+          "Region": "Chaotic Lower Reshanta"
+        }
+      ]
+    },
+    {
+      "PetId": 1201,
+      "SourceUrl": "https://aion2maps.com/items/soul-modified-lupyllini-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660201"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660201"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660201"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400814,
+          "Name": "Modified Lupyllini",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2101086,
+          "Name": "Eternal Lupyllini",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100815,
+          "Name": "Lupyllini Test Subject",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1202,
+      "SourceUrl": "https://aion2maps.com/items/soul-decomposed-lupyllini-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660214"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660214"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660214"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660214"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400004,
+          "Name": "Decomposed Lupyllini",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400378,
+          "Name": "Decomposed Lupyllini",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400911,
+          "Name": "Decomposed Lupyllini",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400391,
+          "Name": "Ferocious Lupyllini",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2100747,
+          "Name": "Contaminated Highland Lupyllini",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1203,
+      "SourceUrl": "https://aion2maps.com/items/soul-tamed-karnif-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660219"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660219"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660219"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400257,
+          "Name": "Blades Karnif",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400503,
+          "Name": "Tamed Blades Beast",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1204,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1205,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1206,
+      "SourceUrl": "https://aion2maps.com/items/soul-elite-guardite-bound/",
+      "Maps": [
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660210"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2100718,
+          "Name": "Divine Ansas",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1207,
+      "SourceUrl": "https://aion2maps.com/items/soul-agrint-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660199"
+        },
+        {
+          "Region": "Chaotic Lower Reshanta",
+          "Url": "https://aion2maps.com/chaotic-lower-reshanta/?show=item:534660199"
+        },
+        {
+          "Region": "Chaotic Middle Reshanta",
+          "Url": "https://aion2maps.com/chaotic-middle-reshanta/?show=item:534660199"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660199"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400825,
+          "Name": "Island Agrint",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400221,
+          "Name": "Mutated Elim",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2400415,
+          "Name": "Ruin Agrint",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2600071,
+          "Name": "Root Agrint",
+          "Region": "Chaotic Lower Reshanta"
+        },
+        {
+          "NpcId": 2600027,
+          "Name": "Sulfur Agrint",
+          "Region": "Chaotic Lower Reshanta"
+        },
+        {
+          "NpcId": 2100714,
+          "Name": "Contaminated Agrint",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100143,
+          "Name": "Decaying Agrint",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2101099,
+          "Name": "Eternal Agrint",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100698,
+          "Name": "Old Agrint",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1208,
+      "SourceUrl": "https://aion2maps.com/items/soul-ashen-agrint-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660217"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660217"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400750,
+          "Name": "Unstable Agrint",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1209,
+      "SourceUrl": "https://aion2maps.com/items/soul-thin-agrint-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660113"
+        },
+        {
+          "Region": "Chaotic Lower Reshanta",
+          "Url": "https://aion2maps.com/chaotic-lower-reshanta/?show=item:534660113"
+        },
+        {
+          "Region": "Chaotic Middle Reshanta",
+          "Url": "https://aion2maps.com/chaotic-middle-reshanta/?show=item:534660113"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660113"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660113"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400054,
+          "Name": "Red Eye Agrint",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2600028,
+          "Name": "Thin Sulfur Agrint",
+          "Region": "Chaotic Lower Reshanta"
+        },
+        {
+          "NpcId": 2110508,
+          "Name": "Crimson Agrint",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1210,
+      "SourceUrl": "https://aion2maps.com/items/soul-dry-leaf-agrint-bound/",
+      "Maps": [
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660225"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660225"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2100179,
+          "Name": "Forest Agrint",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1211,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1212,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1213,
+      "SourceUrl": "https://aion2maps.com/items/soul-lesser-fire-spirit-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660128"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660128"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660128"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400325,
+          "Name": "Burning Ember Spirit",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2101087,
+          "Name": "Eternal Fire Spirit",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1214,
+      "SourceUrl": "https://aion2maps.com/items/soul-black-spirit-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660115"
+        },
+        {
+          "Region": "Chaotic Lower Reshanta",
+          "Url": "https://aion2maps.com/chaotic-lower-reshanta/?show=item:534660115"
+        },
+        {
+          "Region": "Chaotic Middle Reshanta",
+          "Url": "https://aion2maps.com/chaotic-middle-reshanta/?show=item:534660115"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660115"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400708,
+          "Name": "Black Spirit",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2600069,
+          "Name": "Abyss Corrupted Spirit",
+          "Region": "Chaotic Lower Reshanta"
+        },
+        {
+          "NpcId": 2100460,
+          "Name": "Contaminated Spirit",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100807,
+          "Name": "Distorted Spirit",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1215,
+      "SourceUrl": "https://aion2maps.com/items/soul-predator-saraswati-bound/",
+      "Maps": [],
+      "SoulSources": [
+        {
+          "NpcId": 2300403,
+          "Name": "Predator Saraswati",
+          "Region": "Draupnir"
+        },
+        {
+          "NpcId": 2310403,
+          "Name": "Predator Saraswati",
+          "Region": "Draupnir"
+        },
+        {
+          "NpcId": 2320403,
+          "Name": "Predator Saraswati",
+          "Region": "Draupnir"
+        }
+      ]
+    },
+    {
+      "PetId": 1216,
+      "SourceUrl": "https://aion2maps.com/items/soul-dark-spirit-bound/",
+      "Maps": [
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660149"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2100600,
+          "Name": "Corrupted Spirit",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2100656,
+          "Name": "Wandering Dark Spirit",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1217,
+      "SourceUrl": "https://aion2maps.com/items/soul-congealed-drana-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660190"
+        },
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660190"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400009,
+          "Name": "Congealed Drana",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1218,
+      "SourceUrl": "https://aion2maps.com/items/soul-faded-drana-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660215"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400478,
+          "Name": "Faded Chunk",
+          "Region": "Altgard"
+        }
+      ]
+    },
+    {
+      "PetId": 1219,
+      "SourceUrl": "https://aion2maps.com/items/soul-zelophi-bound/",
+      "Maps": [
+        {
+          "Region": "Altgard",
+          "Url": "https://aion2maps.com/altgard/?show=item:534660117"
+        },
+        {
+          "Region": "Chaotic Lower Reshanta",
+          "Url": "https://aion2maps.com/chaotic-lower-reshanta/?show=item:534660117"
+        },
+        {
+          "Region": "Chaotic Middle Reshanta",
+          "Url": "https://aion2maps.com/chaotic-middle-reshanta/?show=item:534660117"
+        },
+        {
+          "Region": "Verteron",
+          "Url": "https://aion2maps.com/verteron/?show=item:534660117"
+        }
+      ],
+      "SoulSources": [
+        {
+          "NpcId": 2400811,
+          "Name": "Zelophi",
+          "Region": "Altgard"
+        },
+        {
+          "NpcId": 2600050,
+          "Name": "Abyss Zelophi",
+          "Region": "Chaotic Lower Reshanta"
+        },
+        {
+          "NpcId": 2100458,
+          "Name": "Coastal Zelophi",
+          "Region": "Verteron"
+        },
+        {
+          "NpcId": 2101085,
+          "Name": "Eternal Zelophi",
+          "Region": "Verteron"
+        }
+      ]
+    },
+    {
+      "PetId": 1220,
+      "SourceUrl": "https://aion2maps.com/items/soul-ashpile-forester-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660227"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1221,
+      "SourceUrl": "https://aion2maps.com/items/soul-ashen-forester-bound/",
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1222,
+      "SourceUrl": "https://aion2maps.com/items/soul-varg-shaman-bound/",
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1223,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1224,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1225,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1226,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1230,
+      "SourceUrl": "https://aion2maps.com/items/soul-test-subject-hoka-bound/",
+      "Maps": [
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660230"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1236,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1238,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1240,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1241,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1242,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1243,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1244,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1245,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1246,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1247,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1248,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1249,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1250,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1251,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1252,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1253,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1259,
+      "SourceUrl": "https://aion2maps.com/items/soul-kurpak-krall-supporter-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660278"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1260,
+      "SourceUrl": "https://aion2maps.com/items/soul-lava-stone-spirit-bound/",
+      "Maps": [
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660275"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660275"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1261,
+      "SourceUrl": "https://aion2maps.com/items/soul-gravarax-bound/",
+      "Maps": [
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660276"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1262,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1263,
+      "SourceUrl": "https://aion2maps.com/items/soul-driznak-bound/",
+      "Maps": [
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660240"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1264,
+      "SourceUrl": "https://aion2maps.com/items/soul-snowfield-frugon-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660237"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1265,
+      "SourceUrl": "https://aion2maps.com/items/soul-tuka-bound/",
+      "Maps": [
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660235"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1266,
+      "SourceUrl": "https://aion2maps.com/items/soul-icecap-pachyron-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660238"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1267,
+      "SourceUrl": "https://aion2maps.com/items/soul-snowfield-debry-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660236"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1268,
+      "SourceUrl": "https://aion2maps.com/items/soul-desert-lamphu-bound/",
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1269,
+      "SourceUrl": "https://aion2maps.com/items/soul-lagur-bound/",
+      "Maps": [
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660239"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1270,
+      "SourceUrl": "https://aion2maps.com/items/soul-floofy-bound/",
+      "Maps": [
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660234"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1271,
+      "SourceUrl": "https://aion2maps.com/items/soul-ghula-bound/",
+      "Maps": [
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660233"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1272,
+      "SourceUrl": "https://aion2maps.com/items/soul-pokus-bound/",
+      "Maps": [
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660253"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1273,
+      "SourceUrl": "https://aion2maps.com/items/soul-draconute-shaman-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660241"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1274,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1275,
+      "SourceUrl": "https://aion2maps.com/items/soul-snowfield-tuka-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660242"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1276,
+      "SourceUrl": "https://aion2maps.com/items/soul-debry-bound/",
+      "Maps": [
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660244"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1277,
+      "SourceUrl": "https://aion2maps.com/items/soul-snowfield-stone-spirit-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660245"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1278,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1279,
+      "SourceUrl": "https://aion2maps.com/items/soul-lava-gravarax-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660246"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1280,
+      "SourceUrl": "https://aion2maps.com/items/soul-snowfield-floofy-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660248"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1281,
+      "SourceUrl": "https://aion2maps.com/items/soul-pachyron-bound/",
+      "Maps": [
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660266"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660266"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1282,
+      "SourceUrl": "https://aion2maps.com/items/soul-lava-pokus-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660247"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1283,
+      "SourceUrl": "https://aion2maps.com/items/soul-snowfield-trogas-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660252"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1284,
+      "SourceUrl": "https://aion2maps.com/items/soul-snowfield-torba-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660251"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1285,
+      "SourceUrl": "https://aion2maps.com/items/soul-trogas-bound/",
+      "Maps": [
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660243"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1286,
+      "SourceUrl": "https://aion2maps.com/items/soul-desert-small-latoha-bound/",
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1287,
+      "SourceUrl": "https://aion2maps.com/items/soul-desert-swift-latoha-bound/",
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1289,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1290,
+      "SourceUrl": "https://aion2maps.com/items/soul-desert-magic-latoha-bound/",
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1291,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1292,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1299,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1300,
+      "SourceUrl": "https://aion2maps.com/items/soul-iralcig-small-latoha-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660255"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1301,
+      "SourceUrl": "https://aion2maps.com/items/soul-iralcig-swift-latoha-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660254"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1302,
+      "SourceUrl": "https://aion2maps.com/items/soul-torba-bound/",
+      "Maps": [
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660256"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1303,
+      "SourceUrl": "https://aion2maps.com/items/soul-frugon-bound/",
+      "Maps": [
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660257"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1304,
+      "SourceUrl": "https://aion2maps.com/items/soul-gray-ursus-bound/",
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1305,
+      "SourceUrl": "https://aion2maps.com/items/soul-snowfield-lamphu-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660259"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1306,
+      "SourceUrl": "https://aion2maps.com/items/soul-snowfield-kalgolem-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660260"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1307,
+      "SourceUrl": "https://aion2maps.com/items/soul-lava-maned-kailin-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660261"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1308,
+      "SourceUrl": "https://aion2maps.com/items/soul-lava-starturtle-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660262"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1309,
+      "SourceUrl": "https://aion2maps.com/items/soul-ice-ghula-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660263"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1310,
+      "SourceUrl": "https://aion2maps.com/items/soul-iralcig-magic-latoha-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660270"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1311,
+      "SourceUrl": "https://aion2maps.com/items/soul-kurpak-krall-scout-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660267"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1312,
+      "SourceUrl": "https://aion2maps.com/items/soul-kurpak-krall-enforcer-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660268"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1313,
+      "SourceUrl": "https://aion2maps.com/items/soul-snowfield-lagur-bound/",
+      "Maps": [
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660265"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660265"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1314,
+      "SourceUrl": "https://aion2maps.com/items/soul-obsidian-driznak-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660269"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1315,
+      "SourceUrl": "https://aion2maps.com/items/soul-icecap-kailin-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660277"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1316,
+      "SourceUrl": "https://aion2maps.com/items/soul-ashpile-durgal-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660271"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1317,
+      "SourceUrl": "https://aion2maps.com/items/soul-durgal-bound/",
+      "Maps": [
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660272"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1318,
+      "SourceUrl": "https://aion2maps.com/items/soul-red-fur-durgal-bound/",
+      "Maps": [
+        {
+          "Region": "Eltnen",
+          "Url": "https://aion2maps.com/eltnen/?show=item:534660273"
+        },
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660273"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1319,
+      "SourceUrl": "https://aion2maps.com/items/soul-icecap-durgal-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660274"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1320,
+      "SourceUrl": "https://aion2maps.com/items/soul-snowfield-zaif-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660280"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1321,
+      "SourceUrl": "https://aion2maps.com/items/soul-young-snowfield-zaif-bound/",
+      "Maps": [
+        {
+          "Region": "Morheim",
+          "Url": "https://aion2maps.com/morheim/?show=item:534660281"
+        }
+      ],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1322,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1323,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1325,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1339,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1340,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1341,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1342,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1343,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1344,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 1363,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 9000,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 9002,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    },
+    {
+      "PetId": 9999,
+      "SourceUrl": null,
+      "Maps": [],
+      "SoulSources": []
+    }
+  ],
+  "AuditNote": "Supported world regions crosschecked against Global pet/NPC associations and soul-item drops; dungeon sources corroborated separately. Historical closed-region map links retained but hidden. See docs/Catalog audit.md."
+}

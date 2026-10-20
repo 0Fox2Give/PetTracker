@@ -1,15 +1,186 @@
-Pet Tracker - Windows public beta
+PET TRACKER
+Aion 2 pet collection tracker • Windows x64 • beta
 
-Download and installation instructions:
-https://github.com/0Fox2Give/PetTracker#readme
+GET STARTED
+1. Download the installer from github.com/0Fox2Give/PetTracker/releases/tag/updates.
+   Run PetTracker.Desktop-win-stable-Setup.exe to install Pet Tracker.
+2. Install Npcap from https://npcap.com/#download if not already installed.
+   Npcap is required for live tracking and is not bundled with Pet Tracker.
+   Launch Pet Tracker from your desktop or Start menu before starting Aion 2.
+   A normal launch shows the tracker even if you hid it in the previous session.
+   If Only show over Aion 2 is enabled, bring the game to the foreground.
+3. Your first detected character creates My account and imports its collection.
+   No account selection or setup is needed. If the game was already logged in
+   when tracking started, return to character selection and log in again once.
 
-Download the Windows installer linked there, not GitHub's source ZIP.
-Quit the old tracker before installing. Npcap is required for live tracking.
-Install it from https://npcap.com/#download if not already installed.
-Npcap is not bundled. If capture is unavailable, Pet Tracker opens connection
-help with a link to the official Npcap installer.
-Open Pet Tracker before logging into your AION 2 character.
+No website account or sign-in is required. The app runtime and game portraits
+are included. If capture is unavailable, Pet Tracker opens connection help with
+a link to Npcap's official installer. Npcap installation may need Windows
+administrator approval. Follow its restart instructions, then restart Pet Tracker.
 
-Help and privacy: https://github.com/0Fox2Give/PetTracker/blob/main/SUPPORT.md
-Legal notice: https://github.com/0Fox2Give/PetTracker/blob/main/LEGAL.md
-Third-party notices: https://github.com/0Fox2Give/PetTracker/blob/main/THIRD-PARTY-NOTICES.txt
+BLACK CLOUD MERCHANT
+Open the merchant with Pet Tracker running and your collection synchronized.
+The overlay lists recently seen chest/merchant pets that you have not maxed,
+with their rank, soul progress, shop tab and Kina price. Pets with known mob sources are excluded.
+No purchase is made for you. Confirm the stock in game before buying.
+Offers hide after two minutes, at shop refresh, or when tracking loses continuity.
+Settings > Tracking > Black Cloud Merchant controls the shopping list. It replaces the
+desktop merchant notification; rank notification settings are separate.
+
+PET TRACKER
+Drag the header to move the tracker. Its gear opens Settings. Use the Windows
+tray paw icon if the tracker is hidden, fixed or passing clicks to the game.
+Double-click the tray icon to open Settings. Use Aion 2's Pets menu for the full
+collection; this addon focuses on recent activity and your pinned farming targets.
+
+Five recent pet types appear by default. Inactive rows fade after 20 seconds.
+New soul rewards or supported participated kills renew that pet's row. Expiry
+only hides activity; your collection remains saved. Hide maxed is optional.
+
+Only received souls update points. Unranked uses /5, Rank 1 /25, Rank 2 /75 and
+Rank 3 shows MAX. If stream continuity is lost, valid rewards still refresh the
+recent list while point totals stay last-known until a fresh collection arrives. A promoted pet with an unknown current balance
+shows ? rather than an invented total. Start tracking before logging into Aion 2
+so the initial collection can be received.
+The independent combat decoder covers limited verified forms; received soul
+rewards are the primary source of pet activity.
+
+NEARBY
+Nearby lists pet mobs reported to your game client; it has no measured radius.
+Sightings older than 15 seconds show a Last seen label. Settings > Tracking lets
+you hide unrefreshed mobs after 15, 30, 60, 120 or 300 seconds. New installations
+use 60 seconds; existing preferences are preserved. Stationary mobs may expire
+without leaving the area. Game-reported removals clear sightings immediately.
+Pinned pets remain visible and say Not currently observed when no sighting remains.
+Observations never add souls or change saved progress.
+With Unfinished first, Nearby uses name order within unfinished and maxed groups.
+Routine sightings do not reshuffle the list. Recent only explicitly sorts newest
+first; Closest to next rank follows progress with name order for ties. Pins stay first.
+
+FIND A PET
+Use the search icon in the tracker header or Find a pet in its tray menu. Search
+by pet or mob name, then choose a region to open its farming map in your browser.
+You can also right-click a recent pet and choose Find on map. Maps show known
+spawn locations, not whether a mob is currently alive. Region access can vary.
+Pets without a verified map link say so.
+
+Pin this pet keeps a target at the top in Recent and Nearby until you unpin it.
+Pin up to three pets by default. Settings > Tracking > Maximum pinned pets lets
+you choose a limit from one to five. Pins stay in the order you added them.
+Right-click a tracker row or use Find a pet to pin or unpin an individual pet.
+Pins stay visible even with expiry or Hide maxed. The row limit grows if needed
+to leave room for other activity. Lowering the pin limit preserves existing pins;
+unpin some before adding more. Your old single pin is kept when upgrading.
+Pins save automatically and never change soul totals.
+
+BLACK MARKET
+Find a pet includes a Black Market watchlist for pets without a confirmed
+farmable mob source. Random-chest alternatives are included; maxed pets are hidden.
+Start tracking before login, then open the shop's Special or Pets tab to read
+offers. Seen in Black Market shows supported offers recently received from the
+game, with their observed price. Opening another tab replaces the observation.
+Check the shop before buying: offers clear after two minutes, their refresh time,
+or a connection/character change. Unsupported stock layouts are not displayed.
+The tracker cannot check unopened shops or notify about unseen future stock.
+
+Settings > Tracking > Black Cloud Merchant controls the overlay shopping list and explains
+whether capture, collection sync or fresh stock is missing. Recommendations need
+a synchronized collection and verified progress for a non-max pet on the watchlist.
+After a recommended pet receives souls, its row shows the updated total for 20
+seconds, then leaves the shopping list. This works in Recent and Nearby. It follows
+observed rewards, not an independently decoded purchase receipt. The tracker never
+buys items, refreshes the shop, or changes your totals from an offer.
+
+Collection sync is automatic at character login; there is no sync button. Leave
+Pet Tracker running, return to character selection, then log back in. If totals
+are still missing, check Settings > Help. The first unlock can still get stuck on
+Rank increase pending; this remains under investigation. Relogging is a workaround.
+Hover a pet row to see souls remaining when its current progress is known.
+
+ACCOUNTS
+Pets are account-wide. If you use one game account, enable Settings > Account >
+Account > Share progress across all characters to connect new alts automatically
+with your selected collection. Start the tracker before logging in. Turn sharing
+off before using a different game account. Existing profiles are preserved and a
+backup is made when enabling sharing.
+
+For multiple game accounts, use Manage accounts to choose the correct collection
+and link the detected character. Account assignment is local because no stable
+game-account field has been verified. Do not create a separate collection for
+every alt.
+
+YOUR DATA
+Pet progress and preferences save automatically. Updates keep
+them separately from program files under %LocalAppData%\PetTracker. Background
+backups and automatic recovery handle missing or damaged local data; restored
+points remain last-known until the game confirms current values. No manual
+collection import, export, backup or restore is needed. Share the clean installer
+or portable ZIP with friends, not your private local data folder.
+
+SETTINGS
+Tracking: mode, row limit, pin limit, Hide maxed and the merchant shopping list.
+Expand Sorting and timing for sort order and Recent/Nearby expiry controls.
+Overlay: size, background opacity, game-only visibility and click behavior.
+More overlay options contains the shortcut, Hide when empty and reduced motion.
+Rank notifications contains desktop notification and sound preferences.
+Account: shared-character progress, account management and collection sync help.
+Windows startup and start-hidden preferences have been retired. The installed
+app removes its recognized legacy startup entry on launch when Windows allows it.
+Old cosmetic preferences are kept; Reset this section on Overlay restores the
+standard appearance as well as its visible controls. Tracking reset preserves
+accounts and pinned pets. Account settings have no reset action.
+Updates: check and download releases, choose Stable or Beta, then restart to install.
+The installed edition checks for updates automatically. Download and restart from
+Settings > Updates; automatic downloading is optional. Your game stays open.
+Older copies need this installer once to enable future updates. Quit the older
+tracker through its tray menu before installing. Saved data stays on this PC.
+Help: connection assessment and a support report you can copy or save. Reports
+exclude character/account names, chat, packet samples and private file paths.
+Nothing is uploaded automatically.
+
+Display settings save automatically. Reset this section restores only that page's
+preferences; it preserves pet progress, accounts, connection overrides and pins.
+Hide when empty automatically hides an idle connected tracker. The tray Show
+action or tracker shortcut can reveal it; new activity restores automatic hiding.
+Connection overrides are under Help > Advanced troubleshooting > Connection
+overrides. Refresh adapters lists available choices; Automatic is recommended.
+Apply connection options saves these fields and restarts capture. Restarting may
+require a new game collection; do not repeatedly relog before checking status.
+
+Closing a window keeps capture running. Quit Pet Tracker in the tray menu stops
+it. The portable ZIP must be extracted before running; it uses the same default
+data location as the installed app. Run one copy for your chosen data location.
+
+BETA STATUS
+This release includes replayed tracking/recovery checks and actual WPF interaction
+checks. Update delivery and installation are tested separately from live game accuracy.
+Tracking across characters and clean friend-PC installation still need wider
+testing. The Windows installer is currently unsigned.
+
+Npcap official download: https://npcap.com/#download
+FINDER SOURCES
+Search by pet or linked mob name. Unnamed/internal catalog records are hidden.
+Shop and campaign pets show verified acquisition instructions and an official
+source link where available. Unknown acquisition routes are labeled unverified.
+Only currently supported regions appear. Map markers show known spawn locations,
+not live proximity or guaranteed current availability.
+
+NEARBY PET MOBS
+Use Recent / Nearby below the tracker header, or Settings > Tracking > Tracker mode.
+Recent keeps your existing reward list. Nearby lists supported pet mobs reported
+by the game client before you attack. Several mobs sharing a pet use one row.
+Hide maxed, row limit, sort, portraits, progress bars and your pinned targets work
+in both modes. A pinned target remains visible even when it is not nearby.
+
+Nearby does not measure distance, scan the map or reveal undiscovered mobs. Only
+verified mob-to-pet links are shown. Soul totals and ranks still come from the
+collection/reward tracker; seeing a mob never adds souls or kills.
+
+Mobs leave the list when a removal/death is received. Capture interruptions,
+character/connection changes and fresh local-player records clear sightings.
+Help > Advanced troubleshooting > Nearby observation timeout supports 60, 120 or
+300 seconds (default 120). A stationary mob can time out until the client reports
+it again. The Recent expiry timer does not apply to Nearby. Start tracking before
+entering an area so its appearance messages can be observed.
+
+Walking direction arrows and distance readouts are not included in this release.

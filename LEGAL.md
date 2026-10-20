@@ -20,7 +20,7 @@ AION 2 names, game artwork, portraits, and other game material belong to their r
 
 The distributed software includes third-party components with their own licenses and notices. Those terms continue to apply; retain the notices supplied with the download. See [Third-party notices](THIRD-PARTY-NOTICES.txt) and the accompanying `licenses` directory. Npcap is obtained separately from its publisher under its own license.
 
-Publication of this repository does not, by itself, grant a blanket license to copy or redistribute all code, data, or assets. Any express license supplied for a component controls that component. Do not assume that this project's notice overrides third-party rights.
+Original Pet Tracker application code, tests and tooling are released under GNU GPL version 3 only; see [LICENSE](LICENSE) and [NOTICE](NOTICE). Game artwork and third-party material are outside that grant. Dependency licenses and third-party rights continue to apply.
 
 ## Beta limitations and disclaimer
 

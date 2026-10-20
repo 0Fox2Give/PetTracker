@@ -1,0 +1,42 @@
+name: Build and test source
+on:
+  push:
+    branches: [main]
+    paths-ignore: ['feed-status.json']
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: windows-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+      - name: Configure package cache
+        shell: pwsh
+        run: '"NUGET_PACKAGES=$env:USERPROFILE/.nuget/packages" >> $env:GITHUB_ENV'
+      - name: Run regression suites
+        shell: pwsh
+        run: ./tools/Test.ps1
+      - name: Build unsigned developer package
+        shell: pwsh
+        run: ./Build.ps1
+      - uses: actions/upload-artifact@v4
+        with:
+          name: developer-build-${{ github.sha }}
+          path: |
+            release/
+            package-verification.json
+          retention-days: 7
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-evidence-${{ github.sha }}
+          path: test-results/
+          retention-days: 7

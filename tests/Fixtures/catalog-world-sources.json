@@ -1,0 +1,3131 @@
+[
+  {
+    "PetId": 1040,
+    "ItemId": 534660041,
+    "NpcId": 2100950,
+    "Name": "Aullaeu Apprentice Shaman",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1065,
+    "ItemId": 534660066,
+    "NpcId": 2100183,
+    "Name": "Wandering Biruta",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1202,
+    "ItemId": 534660214,
+    "NpcId": 2100747,
+    "Name": "Contaminated Highland Lupyllini",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1195,
+    "ItemId": 534660143,
+    "NpcId": 2100867,
+    "Name": "Dracuni Processing Laborer",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1184,
+    "ItemId": 534660142,
+    "NpcId": 2100872,
+    "Name": "Processing Facility Drakan Scout",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1147,
+    "ItemId": 534660135,
+    "NpcId": 2100901,
+    "Name": "Scarlet Forest Dratona",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1156,
+    "ItemId": 534660194,
+    "NpcId": 2100079,
+    "Name": "Bodyguard Teegant",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1033,
+    "ItemId": 534660033,
+    "NpcId": 2100557,
+    "Name": "Wandering Manduri Fighter",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1033,
+    "ItemId": 534660033,
+    "NpcId": 2100569,
+    "Name": "Wandering Manduri Fighter",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1108,
+    "ItemId": 534660109,
+    "NpcId": 2100097,
+    "Name": "Enhanced Krall Combatant",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1109,
+    "ItemId": 534660110,
+    "NpcId": 2100072,
+    "Name": "Enhanced Krall Sentry",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1162,
+    "ItemId": 534660144,
+    "NpcId": 2101075,
+    "Name": "Eternal Kerubar",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1162,
+    "ItemId": 534660144,
+    "NpcId": 2101079,
+    "Name": "Eternal Kerubar",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1170,
+    "ItemId": 534660145,
+    "NpcId": 2101076,
+    "Name": "Eternal Kerubian",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1170,
+    "ItemId": 534660145,
+    "NpcId": 2101080,
+    "Name": "Eternal Kerubian",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1171,
+    "ItemId": 534660212,
+    "NpcId": 2101077,
+    "Name": "Eternal Kerubiel",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1005,
+    "ItemId": 534660004,
+    "NpcId": 2100078,
+    "Name": "Wandering Klaw",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1002,
+    "ItemId": 534660001,
+    "NpcId": 2100075,
+    "Name": "Krall Armed Soldier",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1002,
+    "ItemId": 534660001,
+    "NpcId": 2100480,
+    "Name": "Krall Sentinel",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1002,
+    "ItemId": 534660001,
+    "NpcId": 2100914,
+    "Name": "Mutated Krall Laborer",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1026,
+    "ItemId": 534660025,
+    "NpcId": 2100073,
+    "Name": "Krall Assault Trooper",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1026,
+    "ItemId": 534660025,
+    "NpcId": 2100910,
+    "Name": "Modified Krall Warrior",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1026,
+    "ItemId": 534660025,
+    "NpcId": 2101005,
+    "Name": "Krall Test Subject",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1017,
+    "ItemId": 534660016,
+    "NpcId": 2100074,
+    "Name": "Krall Warshaman",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1017,
+    "ItemId": 534660016,
+    "NpcId": 2100855,
+    "Name": "Modified Krall Healer",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1115,
+    "ItemId": 534660077,
+    "NpcId": 2101139,
+    "Name": "Eternal Kuru Overseer",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1075,
+    "ItemId": 534660076,
+    "NpcId": 2100181,
+    "Name": "Tolbas Kuru Tinkerer",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1075,
+    "ItemId": 534660076,
+    "NpcId": 2101134,
+    "Name": "Eternal Kuru Tinkerer",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1075,
+    "ItemId": 534660076,
+    "NpcId": 2101137,
+    "Name": "Eternal Kuru Tinkerer",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1074,
+    "ItemId": 534660075,
+    "NpcId": 2100180,
+    "Name": "Tolbas Kuru Worker",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1074,
+    "ItemId": 534660075,
+    "NpcId": 2100964,
+    "Name": "Harsh Kuru Tinkerer",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1074,
+    "ItemId": 534660075,
+    "NpcId": 2101133,
+    "Name": "Eternal Kuru Worker",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1074,
+    "ItemId": 534660075,
+    "NpcId": 2101136,
+    "Name": "Eternal Kuru Worker",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1010,
+    "ItemId": 534660009,
+    "NpcId": 2110506,
+    "Name": "Crimson Manduri Fighter",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1104,
+    "ItemId": 534660105,
+    "NpcId": 2100816,
+    "Name": "Hill Manduri",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1104,
+    "ItemId": 534660105,
+    "NpcId": 2110507,
+    "Name": "Crimson Manduri Slinger",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1201,
+    "ItemId": 534660201,
+    "NpcId": 2100815,
+    "Name": "Lupyllini Test Subject",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1201,
+    "ItemId": 534660201,
+    "NpcId": 2101086,
+    "Name": "Eternal Lupyllini",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1047,
+    "ItemId": 534660048,
+    "NpcId": 2100453,
+    "Name": "Splendent Armadon",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1047,
+    "ItemId": 534660048,
+    "NpcId": 2100751,
+    "Name": "Highland Wild Armadon",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1118,
+    "ItemId": 534660152,
+    "NpcId": 2100286,
+    "Name": "Black Pattern Bee",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1118,
+    "ItemId": 534660152,
+    "NpcId": 2100550,
+    "Name": "Stripe Bee",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1119,
+    "ItemId": 534660153,
+    "NpcId": 2100699,
+    "Name": "Garden Coradon",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1119,
+    "ItemId": 534660153,
+    "NpcId": 2100821,
+    "Name": "Hill Coradon",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1119,
+    "ItemId": 534660153,
+    "NpcId": 2100828,
+    "Name": "Hill Coradon",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1053,
+    "ItemId": 534660054,
+    "NpcId": 2100908,
+    "Name": "Drana Mutated Potcrab",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1053,
+    "ItemId": 534660054,
+    "NpcId": 2110512,
+    "Name": "Eternal Moss Crab",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1089,
+    "ItemId": 534660090,
+    "NpcId": 2100710,
+    "Name": "Yellow-Tailed Skama",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1126,
+    "ItemId": 534660160,
+    "NpcId": 2100006,
+    "Name": "Cairn Tog",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1126,
+    "ItemId": 534660160,
+    "NpcId": 2100145,
+    "Name": "Hungry Tog",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1126,
+    "ItemId": 534660160,
+    "NpcId": 2100288,
+    "Name": "Field Tog",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1126,
+    "ItemId": 534660160,
+    "NpcId": 2100793,
+    "Name": "Wild Stripe Tog",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1126,
+    "ItemId": 534660160,
+    "NpcId": 2100819,
+    "Name": "Hill Tog",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1125,
+    "ItemId": 534660159,
+    "NpcId": 2100558,
+    "Name": "Yellow-Maned Zaif",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1038,
+    "ItemId": 534660039,
+    "NpcId": 2100144,
+    "Name": "Smallbeak Airon",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1038,
+    "ItemId": 534660039,
+    "NpcId": 2100216,
+    "Name": "Pointbeak Airon",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1038,
+    "ItemId": 534660039,
+    "NpcId": 2100609,
+    "Name": "Hardbeak Airon",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1038,
+    "ItemId": 534660039,
+    "NpcId": 2100741,
+    "Name": "Longbeak Highland Airon",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1114,
+    "ItemId": 534660019,
+    "NpcId": 2100283,
+    "Name": "White Shell Octaside",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1008,
+    "ItemId": 534660007,
+    "NpcId": 2100034,
+    "Name": "Coastal Odyle Spider",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1181,
+    "ItemId": 534660200,
+    "NpcId": 2100217,
+    "Name": "Field Brax",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1181,
+    "ItemId": 534660200,
+    "NpcId": 2100303,
+    "Name": "Hungry Brax",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1181,
+    "ItemId": 534660200,
+    "NpcId": 2100740,
+    "Name": "Docile Highland Brax",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1041,
+    "ItemId": 534660042,
+    "NpcId": 2100911,
+    "Name": "Drana Mutated Bat",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1022,
+    "ItemId": 534660021,
+    "NpcId": 2100215,
+    "Name": "Aquascale Crasaur",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1022,
+    "ItemId": 534660021,
+    "NpcId": 2100608,
+    "Name": "Docile Crasaur",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1022,
+    "ItemId": 534660021,
+    "NpcId": 2101083,
+    "Name": "Eternal Crasaur",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1039,
+    "ItemId": 534660040,
+    "NpcId": 2100037,
+    "Name": "Stonebeak Crestlich",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1039,
+    "ItemId": 534660040,
+    "NpcId": 2100150,
+    "Name": "Ellun River Crestlich Female",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1039,
+    "ItemId": 534660040,
+    "NpcId": 2100799,
+    "Name": "Highland Crestlich Female",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1014,
+    "ItemId": 534660013,
+    "NpcId": 2101002,
+    "Name": "Drakan Guard Dog",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1014,
+    "ItemId": 534660013,
+    "NpcId": 2101009,
+    "Name": "Nahid Drakan Guard Dog",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1004,
+    "ItemId": 534660003,
+    "NpcId": 2100163,
+    "Name": "Patrolling Fossa",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1059,
+    "ItemId": 534660060,
+    "NpcId": 2100551,
+    "Name": "Giant Stripe Bee",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1034,
+    "ItemId": 534660034,
+    "NpcId": 2100015,
+    "Name": "Splendent Hill Sparkie",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1034,
+    "ItemId": 534660034,
+    "NpcId": 2100796,
+    "Name": "Highland Giant Odyle Sparkie",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1034,
+    "ItemId": 534660034,
+    "NpcId": 2100987,
+    "Name": "Aullaeu Forest Giant Sparkie",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1034,
+    "ItemId": 534660034,
+    "NpcId": 2100993,
+    "Name": "Highland Giant Sparkie",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1015,
+    "ItemId": 534660014,
+    "NpcId": 2101021,
+    "Name": "Ellun River Kailin",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1097,
+    "ItemId": 534660098,
+    "NpcId": 2100174,
+    "Name": "Ferocious Karnif",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1097,
+    "ItemId": 534660098,
+    "NpcId": 2100348,
+    "Name": "Tolbas Karnif",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1097,
+    "ItemId": 534660098,
+    "NpcId": 2100349,
+    "Name": "Ferocious Tolbas Karnif",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1097,
+    "ItemId": 534660098,
+    "NpcId": 2100742,
+    "Name": "Toughmane Highland Karnif",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1097,
+    "ItemId": 534660098,
+    "NpcId": 2100752,
+    "Name": "Highland Karnif",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1097,
+    "ItemId": 534660098,
+    "NpcId": 2100802,
+    "Name": "Tamed Karnif",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1097,
+    "ItemId": 534660098,
+    "NpcId": 2100805,
+    "Name": "Tamed Karnif",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1036,
+    "ItemId": 534660037,
+    "NpcId": 2100746,
+    "Name": "Tail Feather Lupyllini",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1037,
+    "ItemId": 534660038,
+    "NpcId": 2100151,
+    "Name": "Ellun River Crestlich Male",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1037,
+    "ItemId": 534660038,
+    "NpcId": 2100750,
+    "Name": "Highland Crestlich Male",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1098,
+    "ItemId": 534660099,
+    "NpcId": 2100070,
+    "Name": "Scouting Karnif",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1098,
+    "ItemId": 534660099,
+    "NpcId": 2100096,
+    "Name": "Unruly Karnif",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1098,
+    "ItemId": 534660099,
+    "NpcId": 2100130,
+    "Name": "Trained Karnif",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1098,
+    "ItemId": 534660099,
+    "NpcId": 2100481,
+    "Name": "Sensitive Karnif",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1025,
+    "ItemId": 534660020,
+    "NpcId": 2100030,
+    "Name": "Marsh Odyle Spider",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1025,
+    "ItemId": 534660020,
+    "NpcId": 2100663,
+    "Name": "Garden Spider",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1025,
+    "ItemId": 534660020,
+    "NpcId": 2100745,
+    "Name": "Highland Odyle Spider",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1130,
+    "ItemId": 534660164,
+    "NpcId": 2100554,
+    "Name": "Ridge Spider",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1066,
+    "ItemId": 534660067,
+    "NpcId": 2100009,
+    "Name": "Gentle Papis",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1066,
+    "ItemId": 534660067,
+    "NpcId": 2100220,
+    "Name": "Ellun River Papis",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1066,
+    "ItemId": 534660067,
+    "NpcId": 2100654,
+    "Name": "Garden Papis",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1007,
+    "ItemId": 534660006,
+    "NpcId": 2100032,
+    "Name": "Marsh Moss Potcrab",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1007,
+    "ItemId": 534660006,
+    "NpcId": 2100610,
+    "Name": "Flat Potcrab",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1007,
+    "ItemId": 534660006,
+    "NpcId": 2101098,
+    "Name": "Eternal Moss Crab",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1067,
+    "ItemId": 534660068,
+    "NpcId": 2100709,
+    "Name": "Contaminated Scorpion",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1035,
+    "ItemId": 534660035,
+    "NpcId": 2100031,
+    "Name": "Foul Skama",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1035,
+    "ItemId": 534660035,
+    "NpcId": 2100376,
+    "Name": "Lake Skama",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1035,
+    "ItemId": 534660035,
+    "NpcId": 2100907,
+    "Name": "Drana Mutated Skama",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1011,
+    "ItemId": 534660010,
+    "NpcId": 2100047,
+    "Name": "Small Forest Skyray",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1011,
+    "ItemId": 534660010,
+    "NpcId": 2100048,
+    "Name": "Ellun River Falls Skyray",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1011,
+    "ItemId": 534660010,
+    "NpcId": 2100182,
+    "Name": "Tolbas Forest Lake Skyray",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1011,
+    "ItemId": 534660010,
+    "NpcId": 2100556,
+    "Name": "Ridge Skyray",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1011,
+    "ItemId": 534660010,
+    "NpcId": 2100607,
+    "Name": "Canyon Skyray",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1011,
+    "ItemId": 534660010,
+    "NpcId": 2100613,
+    "Name": "Canyon Lake Skyray",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1011,
+    "ItemId": 534660010,
+    "NpcId": 2100832,
+    "Name": "Pond Skyray",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1011,
+    "ItemId": 534660010,
+    "NpcId": 2101123,
+    "Name": "Ellun River Lake Skyray",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1011,
+    "ItemId": 534660010,
+    "NpcId": 2101124,
+    "Name": "Cantas Valley Skyray",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1011,
+    "ItemId": 534660010,
+    "NpcId": 2101132,
+    "Name": "Lake Skyray",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1016,
+    "ItemId": 534660015,
+    "NpcId": 2100165,
+    "Name": "Tolbas Slink",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1016,
+    "ItemId": 534660015,
+    "NpcId": 2100188,
+    "Name": "Wetland Slink",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1016,
+    "ItemId": 534660015,
+    "NpcId": 2101097,
+    "Name": "Eternal Slink",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1006,
+    "ItemId": 534660005,
+    "NpcId": 2100273,
+    "Name": "Wild Sparkie",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1006,
+    "ItemId": 534660005,
+    "NpcId": 2100305,
+    "Name": "Meadow Sparkie",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1006,
+    "ItemId": 534660005,
+    "NpcId": 2100753,
+    "Name": "Highland Odyle Sparkie",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1006,
+    "ItemId": 534660005,
+    "NpcId": 2100795,
+    "Name": "Highland Odyle Sparkie",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1006,
+    "ItemId": 534660005,
+    "NpcId": 2100986,
+    "Name": "Aullaeu Forest Sparkie",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1006,
+    "ItemId": 534660005,
+    "NpcId": 2100992,
+    "Name": "Highland Sparkie",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1060,
+    "ItemId": 534660061,
+    "NpcId": 2100033,
+    "Name": "Coastal Starturtle",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1060,
+    "ItemId": 534660061,
+    "NpcId": 2100808,
+    "Name": "Pond Starturtle",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1060,
+    "ItemId": 534660061,
+    "NpcId": 2101082,
+    "Name": "Eternal Starturtle",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1045,
+    "ItemId": 534660046,
+    "NpcId": 2100004,
+    "Name": "Meadow Sylphen",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1045,
+    "ItemId": 534660046,
+    "NpcId": 2100023,
+    "Name": "Ellun River Sylphen",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1045,
+    "ItemId": 534660046,
+    "NpcId": 2100219,
+    "Name": "Ellun River Sylphen",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1045,
+    "ItemId": 534660046,
+    "NpcId": 2100472,
+    "Name": "Aberrant Sylphen",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1045,
+    "ItemId": 534660046,
+    "NpcId": 2100565,
+    "Name": "Ridge Sylphen",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1045,
+    "ItemId": 534660046,
+    "NpcId": 2100743,
+    "Name": "Highland Sylphen",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1189,
+    "ItemId": 534660226,
+    "NpcId": 2100566,
+    "Name": "Marauders Zaif",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1117,
+    "ItemId": 534660086,
+    "NpcId": 2101023,
+    "Name": "Aullaeu Forest Odyle Spider",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1117,
+    "ItemId": 534660086,
+    "NpcId": 2110509,
+    "Name": "Crimson Spider",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1042,
+    "ItemId": 534660043,
+    "NpcId": 2100172,
+    "Name": "Hardhorn Ursus",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1042,
+    "ItemId": 534660043,
+    "NpcId": 2100552,
+    "Name": "Ridge Ursus",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1042,
+    "ItemId": 534660043,
+    "NpcId": 2100560,
+    "Name": "Ridge Violent Ursus",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1042,
+    "ItemId": 534660043,
+    "NpcId": 2100655,
+    "Name": "Confused Ursus",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1042,
+    "ItemId": 534660043,
+    "NpcId": 2100817,
+    "Name": "Hill Ursus",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1188,
+    "ItemId": 534660134,
+    "NpcId": 2100583,
+    "Name": "Highland Vivel",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1120,
+    "ItemId": 534660154,
+    "NpcId": 2101022,
+    "Name": "Ellun River Young Kailin",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1121,
+    "ItemId": 534660155,
+    "NpcId": 2100189,
+    "Name": "Young Wetland Slink",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1121,
+    "ItemId": 534660155,
+    "NpcId": 2100473,
+    "Name": "Tolbas Young Slink",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1123,
+    "ItemId": 534660157,
+    "NpcId": 2100173,
+    "Name": "Baby Horn Ursus",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1123,
+    "ItemId": 534660157,
+    "NpcId": 2100818,
+    "Name": "Hill Young Ursus",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1124,
+    "ItemId": 534660121,
+    "NpcId": 2100573,
+    "Name": "Rock Hill Zaif",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1124,
+    "ItemId": 534660121,
+    "NpcId": 2100748,
+    "Name": "Highland Forest Zaif",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1124,
+    "ItemId": 534660121,
+    "NpcId": 2100797,
+    "Name": "Highland Zaif",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1124,
+    "ItemId": 534660121,
+    "NpcId": 2100813,
+    "Name": "Hill Zaif",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1207,
+    "ItemId": 534660199,
+    "NpcId": 2100143,
+    "Name": "Decaying Agrint",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1207,
+    "ItemId": 534660199,
+    "NpcId": 2100698,
+    "Name": "Old Agrint",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1207,
+    "ItemId": 534660199,
+    "NpcId": 2100714,
+    "Name": "Contaminated Agrint",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1207,
+    "ItemId": 534660199,
+    "NpcId": 2101099,
+    "Name": "Eternal Agrint",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1214,
+    "ItemId": 534660115,
+    "NpcId": 2100460,
+    "Name": "Contaminated Spirit",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1214,
+    "ItemId": 534660115,
+    "NpcId": 2100807,
+    "Name": "Distorted Spirit",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1131,
+    "ItemId": 534660165,
+    "NpcId": 2110502,
+    "Name": "Crimson Mutated Spore",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1210,
+    "ItemId": 534660225,
+    "NpcId": 2100179,
+    "Name": "Forest Agrint",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1101,
+    "ItemId": 534660102,
+    "NpcId": 2100660,
+    "Name": "Garden Guardian",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1003,
+    "ItemId": 534660002,
+    "NpcId": 2100601,
+    "Name": "Canyon Vine Spirit",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1003,
+    "ItemId": 534660002,
+    "NpcId": 2100662,
+    "Name": "Tainted Vine Specter",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1048,
+    "ItemId": 534660049,
+    "NpcId": 2100022,
+    "Name": "Marsh Vine Spirit",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1048,
+    "ItemId": 534660049,
+    "NpcId": 2100142,
+    "Name": "Contaminated Vine Spirit",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1048,
+    "ItemId": 534660049,
+    "NpcId": 2100555,
+    "Name": "Ridge Forest Spirit",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1048,
+    "ItemId": 534660049,
+    "NpcId": 2100611,
+    "Name": "Deep Canyon Forest Spirit",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1086,
+    "ItemId": 534660087,
+    "NpcId": 2100456,
+    "Name": "Red Cap Fungen",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1012,
+    "ItemId": 534660011,
+    "NpcId": 2100041,
+    "Name": "Red Cap Fungie",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1050,
+    "ItemId": 534660051,
+    "NpcId": 2100650,
+    "Name": "Red Stalk Gravi",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1050,
+    "ItemId": 534660051,
+    "NpcId": 2101125,
+    "Name": "Tolbas Gravi",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1165,
+    "ItemId": 534660126,
+    "NpcId": 2100653,
+    "Name": "Wandering Earth Spirit",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1165,
+    "ItemId": 534660126,
+    "NpcId": 2101102,
+    "Name": "Violent Earth Spirit",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1187,
+    "ItemId": 534660129,
+    "NpcId": 2101100,
+    "Name": "Violent Fire Spirit",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1169,
+    "ItemId": 534660123,
+    "NpcId": 2100657,
+    "Name": "Wandering Water Spirit",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1169,
+    "ItemId": 534660123,
+    "NpcId": 2101101,
+    "Name": "Violent Water Spirit",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1094,
+    "ItemId": 534660095,
+    "NpcId": 2100658,
+    "Name": "Wandering Wind Spirit",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1094,
+    "ItemId": 534660095,
+    "NpcId": 2101103,
+    "Name": "Violent Wind Spirit",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1031,
+    "ItemId": 534660031,
+    "NpcId": 2100157,
+    "Name": "Tolbas Konutin Worker",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1052,
+    "ItemId": 534660053,
+    "NpcId": 2100285,
+    "Name": "Ellun River Hill Gravi",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1052,
+    "ItemId": 534660053,
+    "NpcId": 2100651,
+    "Name": "Large Leaf Gravi",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1164,
+    "ItemId": 534660125,
+    "NpcId": 2101089,
+    "Name": "Eternal Earth Spirit",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1213,
+    "ItemId": 534660128,
+    "NpcId": 2101087,
+    "Name": "Eternal Fire Spirit",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1168,
+    "ItemId": 534660122,
+    "NpcId": 2100231,
+    "Name": "Water Spirit",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1168,
+    "ItemId": 534660122,
+    "NpcId": 2101088,
+    "Name": "Eternal Water Spirit",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1092,
+    "ItemId": 534660093,
+    "NpcId": 2100605,
+    "Name": "Air Spirit",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1092,
+    "ItemId": 534660093,
+    "NpcId": 2101096,
+    "Name": "Eternal Wind Spirit",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1051,
+    "ItemId": 534660052,
+    "NpcId": 2100659,
+    "Name": "Illusion Magic Gravi",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1051,
+    "ItemId": 534660052,
+    "NpcId": 2101126,
+    "Name": "Tolbas Magic Gravi",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1049,
+    "ItemId": 534660050,
+    "NpcId": 2100711,
+    "Name": "Mutated Vine Bundle",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1049,
+    "ItemId": 534660050,
+    "NpcId": 2100715,
+    "Name": "Contaminated Vine Bundle",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1073,
+    "ItemId": 534660074,
+    "NpcId": 2100160,
+    "Name": "Tolbas Nepenthes",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1073,
+    "ItemId": 534660074,
+    "NpcId": 2100744,
+    "Name": "Scarlet Highland Nepenthes",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1136,
+    "ItemId": 534660170,
+    "NpcId": 2110513,
+    "Name": "Crimson Rafflesia",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1069,
+    "ItemId": 534660070,
+    "NpcId": 2100812,
+    "Name": "Hill Stone Spirit",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1166,
+    "ItemId": 534660127,
+    "NpcId": 2100667,
+    "Name": "Peculiar Rock Spirit",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1096,
+    "ItemId": 534660097,
+    "NpcId": 2100664,
+    "Name": "Hellfire Spirit",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1155,
+    "ItemId": 534660124,
+    "NpcId": 2100665,
+    "Name": "Torrent Spirit",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1095,
+    "ItemId": 534660096,
+    "NpcId": 2100666,
+    "Name": "Brisk Spirit",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1209,
+    "ItemId": 534660113,
+    "NpcId": 2110508,
+    "Name": "Crimson Agrint",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1027,
+    "ItemId": 534660026,
+    "NpcId": 2100612,
+    "Name": "Withered Canyon Agrint",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1027,
+    "ItemId": 534660026,
+    "NpcId": 2100652,
+    "Name": "Thin Agrint",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1219,
+    "ItemId": 534660117,
+    "NpcId": 2100458,
+    "Name": "Coastal Zelophi",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1219,
+    "ItemId": 534660117,
+    "NpcId": 2101085,
+    "Name": "Eternal Zelophi",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1110,
+    "ItemId": 534660111,
+    "NpcId": 2100454,
+    "Name": "Splendent Kalgolem",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1062,
+    "ItemId": 534660063,
+    "NpcId": 2100025,
+    "Name": "Marsh Slime",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1062,
+    "ItemId": 534660063,
+    "NpcId": 2100717,
+    "Name": "Contaminated Poison Slime",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1216,
+    "ItemId": 534660149,
+    "NpcId": 2100600,
+    "Name": "Corrupted Spirit",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1216,
+    "ItemId": 534660149,
+    "NpcId": 2100656,
+    "Name": "Wandering Dark Spirit",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1056,
+    "ItemId": 534660057,
+    "NpcId": 2100866,
+    "Name": "Drana Processing Maintenance Machine",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1056,
+    "ItemId": 534660057,
+    "NpcId": 2101014,
+    "Name": "Intruder Seeker",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1153,
+    "ItemId": 534660116,
+    "NpcId": 2101135,
+    "Name": "Eternal Drana Mutant",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1153,
+    "ItemId": 534660116,
+    "NpcId": 2110503,
+    "Name": "Crimson Drana Mutant",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1174,
+    "ItemId": 534660202,
+    "NpcId": 2110505,
+    "Name": "Crimson Drana Predator",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1129,
+    "ItemId": 534660163,
+    "NpcId": 2110501,
+    "Name": "Crimson Drana Swarm",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1206,
+    "ItemId": 534660210,
+    "NpcId": 2100718,
+    "Name": "Divine Ansas",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1140,
+    "ItemId": 534660114,
+    "NpcId": 2100350,
+    "Name": "Tolbas Forest Targon",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1194,
+    "ItemId": 534660141,
+    "NpcId": 2100712,
+    "Name": "Uncontrollable Guardite",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1084,
+    "ItemId": 534660085,
+    "NpcId": 2100002,
+    "Name": "Hard Kalgolem",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1084,
+    "ItemId": 534660085,
+    "NpcId": 2100700,
+    "Name": "Ashen Kalgolem",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1141,
+    "ItemId": 534660175,
+    "NpcId": 2100021,
+    "Name": "Marsh Targon",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1064,
+    "ItemId": 534660065,
+    "NpcId": 2100854,
+    "Name": "Labor Manager Oculazen",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1087,
+    "ItemId": 534660088,
+    "NpcId": 2100953,
+    "Name": "Pino Worker",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1087,
+    "ItemId": 534660088,
+    "NpcId": 2100954,
+    "Name": "Pino Laborer",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1088,
+    "ItemId": 534660089,
+    "NpcId": 2100955,
+    "Name": "Harsh Pino Worker",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1197,
+    "ItemId": 534660211,
+    "NpcId": 2100716,
+    "Name": "Contaminated Guardite",
+    "Region": "Verteron"
+  },
+  {
+    "PetId": 1193,
+    "ItemId": 534660209,
+    "NpcId": 2400455,
+    "Name": "Rampaging Shulak Cart Worker",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1065,
+    "ItemId": 534660066,
+    "NpcId": 2400920,
+    "Name": "Biruta Wanderer",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1105,
+    "ItemId": 534660106,
+    "NpcId": 2400919,
+    "Name": "Biruta Herbalist",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1202,
+    "ItemId": 534660214,
+    "NpcId": 2400004,
+    "Name": "Decomposed Lupyllini",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1202,
+    "ItemId": 534660214,
+    "NpcId": 2400378,
+    "Name": "Decomposed Lupyllini",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1202,
+    "ItemId": 534660214,
+    "NpcId": 2400391,
+    "Name": "Ferocious Lupyllini",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1202,
+    "ItemId": 534660214,
+    "NpcId": 2400911,
+    "Name": "Decomposed Lupyllini",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1195,
+    "ItemId": 534660143,
+    "NpcId": 2400746,
+    "Name": "Poison Blood Gatherer",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1184,
+    "ItemId": 534660142,
+    "NpcId": 2400384,
+    "Name": "Drakan Manager",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1184,
+    "ItemId": 534660142,
+    "NpcId": 2400591,
+    "Name": "Drakan Patrol Watcher",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1147,
+    "ItemId": 534660135,
+    "NpcId": 2400116,
+    "Name": "Dratona Tinkerer",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1147,
+    "ItemId": 534660135,
+    "NpcId": 2400161,
+    "Name": "Dratona Supporter",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1147,
+    "ItemId": 534660135,
+    "NpcId": 2400380,
+    "Name": "Dratona",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1033,
+    "ItemId": 534660033,
+    "NpcId": 2400605,
+    "Name": "Black Claw Manduri Fighter",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1162,
+    "ItemId": 534660144,
+    "NpcId": 2400801,
+    "Name": "Kerubar",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1170,
+    "ItemId": 534660145,
+    "NpcId": 2400802,
+    "Name": "Kerubian",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1171,
+    "ItemId": 534660212,
+    "NpcId": 2400803,
+    "Name": "Kerubiel",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1029,
+    "ItemId": 534660029,
+    "NpcId": 2400313,
+    "Name": "Consumed Klaw",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1115,
+    "ItemId": 534660077,
+    "NpcId": 2400833,
+    "Name": "Kuru Overseer",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1075,
+    "ItemId": 534660076,
+    "NpcId": 2400832,
+    "Name": "Kuru Tinkerer",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1074,
+    "ItemId": 534660075,
+    "NpcId": 2400831,
+    "Name": "Kuru Worker",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1010,
+    "ItemId": 534660009,
+    "NpcId": 2400617,
+    "Name": "Black Claw Manduri Combatant",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1104,
+    "ItemId": 534660105,
+    "NpcId": 2400615,
+    "Name": "Black Claw Manduri Scout",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1201,
+    "ItemId": 534660201,
+    "NpcId": 2400814,
+    "Name": "Modified Lupyllini",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1054,
+    "ItemId": 534660055,
+    "NpcId": 2400350,
+    "Name": "Mumu Watcher",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1054,
+    "ItemId": 534660055,
+    "NpcId": 2400570,
+    "Name": "Gribade Mumu Warrior",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1054,
+    "ItemId": 534660055,
+    "NpcId": 2400606,
+    "Name": "Mumu Watcher",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1137,
+    "ItemId": 534660171,
+    "NpcId": 2400351,
+    "Name": "Mumu Worker",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1137,
+    "ItemId": 534660171,
+    "NpcId": 2400390,
+    "Name": "Escaped Mumu Worker",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1018,
+    "ItemId": 534660017,
+    "NpcId": 2400385,
+    "Name": "Varg Berserker",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1018,
+    "ItemId": 534660017,
+    "NpcId": 2400609,
+    "Name": "Chief's Bodyguard",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1118,
+    "ItemId": 534660152,
+    "NpcId": 2000955,
+    "Name": "Black Armor Bee",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1118,
+    "ItemId": 534660152,
+    "NpcId": 2400900,
+    "Name": "Black Armor Bee",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1118,
+    "ItemId": 534660152,
+    "NpcId": 2400930,
+    "Name": "Black Armor Bee",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1119,
+    "ItemId": 534660153,
+    "NpcId": 2000952,
+    "Name": "Aberrant Coradon",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1119,
+    "ItemId": 534660153,
+    "NpcId": 2400907,
+    "Name": "Coradon",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1126,
+    "ItemId": 534660160,
+    "NpcId": 2400936,
+    "Name": "Aberrant Tog",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1125,
+    "ItemId": 534660159,
+    "NpcId": 2400578,
+    "Name": "Golden Zaif",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1038,
+    "ItemId": 534660039,
+    "NpcId": 2400567,
+    "Name": "Canyon Airon",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1038,
+    "ItemId": 534660039,
+    "NpcId": 2400568,
+    "Name": "Baby Canyon Airon",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1046,
+    "ItemId": 534660047,
+    "NpcId": 2400002,
+    "Name": "Red Shell Mole",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1046,
+    "ItemId": 534660047,
+    "NpcId": 2400249,
+    "Name": "Withered Armadon",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1114,
+    "ItemId": 534660019,
+    "NpcId": 2400230,
+    "Name": "Ashen Spider",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1163,
+    "ItemId": 534660136,
+    "NpcId": 2400240,
+    "Name": "Black Ash Basilisk",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1181,
+    "ItemId": 534660200,
+    "NpcId": 2000954,
+    "Name": "Brax",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1181,
+    "ItemId": 534660200,
+    "NpcId": 2400375,
+    "Name": "Brax",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1181,
+    "ItemId": 534660200,
+    "NpcId": 2400914,
+    "Name": "Brax",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1071,
+    "ItemId": 534660072,
+    "NpcId": 2400018,
+    "Name": "Drana Cadaver Insectoid",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1022,
+    "ItemId": 534660021,
+    "NpcId": 2400327,
+    "Name": "Sensitive Crasaur",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1022,
+    "ItemId": 534660021,
+    "NpcId": 2400809,
+    "Name": "Crasaur",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1014,
+    "ItemId": 534660013,
+    "NpcId": 2400359,
+    "Name": "Tamed Tayga",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1014,
+    "ItemId": 534660013,
+    "NpcId": 2400587,
+    "Name": "Drakan Patrol Armed Beast",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1014,
+    "ItemId": 534660013,
+    "NpcId": 2400655,
+    "Name": "Lagta Brigade Guard Dog",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1134,
+    "ItemId": 534660168,
+    "NpcId": 2400941,
+    "Name": "Eternal Coradon",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1004,
+    "ItemId": 534660003,
+    "NpcId": 2400254,
+    "Name": "Daeva Renegade Fossa",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1004,
+    "ItemId": 534660003,
+    "NpcId": 2400414,
+    "Name": "Tamed Beast",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1034,
+    "ItemId": 534660034,
+    "NpcId": 2400341,
+    "Name": "Withered Branch Odyle Sparkie",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1034,
+    "ItemId": 534660034,
+    "NpcId": 2400466,
+    "Name": "Fafnite Luminous Sparkie",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1015,
+    "ItemId": 534660014,
+    "NpcId": 2400736,
+    "Name": "Unstable Kailin",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1015,
+    "ItemId": 534660014,
+    "NpcId": 2400905,
+    "Name": "Kailin",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1015,
+    "ItemId": 534660014,
+    "NpcId": 2400934,
+    "Name": "Kailin",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1025,
+    "ItemId": 534660020,
+    "NpcId": 2400744,
+    "Name": "Unstable Ashen Spider",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1143,
+    "ItemId": 534660177,
+    "NpcId": 2400217,
+    "Name": "Ashen Ursus",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1066,
+    "ItemId": 534660067,
+    "NpcId": 2000926,
+    "Name": "Faded Papis",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1066,
+    "ItemId": 534660067,
+    "NpcId": 2000927,
+    "Name": "Faded Papis",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1066,
+    "ItemId": 534660067,
+    "NpcId": 2000928,
+    "Name": "Faded Papis",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1066,
+    "ItemId": 534660067,
+    "NpcId": 2000929,
+    "Name": "Faded Papis",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1066,
+    "ItemId": 534660067,
+    "NpcId": 2000951,
+    "Name": "Faded Papis",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1066,
+    "ItemId": 534660067,
+    "NpcId": 2400594,
+    "Name": "Faded Papis",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1066,
+    "ItemId": 534660067,
+    "NpcId": 2400903,
+    "Name": "Faded Papis",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1066,
+    "ItemId": 534660067,
+    "NpcId": 2400938,
+    "Name": "Faded Papis",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1066,
+    "ItemId": 534660067,
+    "NpcId": 2400940,
+    "Name": "Faded Papis",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1066,
+    "ItemId": 534660067,
+    "NpcId": 2400947,
+    "Name": "Faded Papis",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1007,
+    "ItemId": 534660006,
+    "NpcId": 2400363,
+    "Name": "Moss Crab",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1007,
+    "ItemId": 534660006,
+    "NpcId": 2400755,
+    "Name": "Coastal Moss Crab",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1007,
+    "ItemId": 534660006,
+    "NpcId": 2400812,
+    "Name": "Coastal Moss Crab",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1067,
+    "ItemId": 534660068,
+    "NpcId": 2400470,
+    "Name": "Ore Scorpion",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1011,
+    "ItemId": 534660010,
+    "NpcId": 2400163,
+    "Name": "Tranein Skyray",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1011,
+    "ItemId": 534660010,
+    "NpcId": 2400945,
+    "Name": "Lake Skyray",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1016,
+    "ItemId": 534660015,
+    "NpcId": 2400520,
+    "Name": "Coastal Slink",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1016,
+    "ItemId": 534660015,
+    "NpcId": 2400819,
+    "Name": "Coastal Slink",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1016,
+    "ItemId": 534660015,
+    "NpcId": 2400909,
+    "Name": "Slink",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1016,
+    "ItemId": 534660015,
+    "NpcId": 2400943,
+    "Name": "Slink",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1060,
+    "ItemId": 534660061,
+    "NpcId": 2400374,
+    "Name": "Beach Starturtle",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1060,
+    "ItemId": 534660061,
+    "NpcId": 2400519,
+    "Name": "Starturtle",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1060,
+    "ItemId": 534660061,
+    "NpcId": 2400808,
+    "Name": "Starturtle",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1045,
+    "ItemId": 534660046,
+    "NpcId": 2400362,
+    "Name": "Sylphen",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1203,
+    "ItemId": 534660219,
+    "NpcId": 2400257,
+    "Name": "Blades Karnif",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1203,
+    "ItemId": 534660219,
+    "NpcId": 2400503,
+    "Name": "Tamed Blades Beast",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1106,
+    "ItemId": 534660107,
+    "NpcId": 2400564,
+    "Name": "Search Party Tayga",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1106,
+    "ItemId": 534660107,
+    "NpcId": 2400583,
+    "Name": "Guard Troopers Tayga",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1106,
+    "ItemId": 534660107,
+    "NpcId": 2400611,
+    "Name": "Tamed Tayga",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1072,
+    "ItemId": 534660073,
+    "NpcId": 2400912,
+    "Name": "Tog",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1117,
+    "ItemId": 534660086,
+    "NpcId": 2400319,
+    "Name": "Flame Rock Spider",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1117,
+    "ItemId": 534660086,
+    "NpcId": 2400745,
+    "Name": "Unstable Poison Blood Spider",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1042,
+    "ItemId": 534660043,
+    "NpcId": 2400376,
+    "Name": "Ursus",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1042,
+    "ItemId": 534660043,
+    "NpcId": 2400916,
+    "Name": "Ursus",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1188,
+    "ItemId": 534660134,
+    "NpcId": 2400057,
+    "Name": "Vampire Vivel",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1116,
+    "ItemId": 534660023,
+    "NpcId": 2000956,
+    "Name": "Withered Branch Spider",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1116,
+    "ItemId": 534660023,
+    "NpcId": 2000957,
+    "Name": "Withered Branch Spider",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1116,
+    "ItemId": 534660023,
+    "NpcId": 2400902,
+    "Name": "Withered Branch Spider",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1116,
+    "ItemId": 534660023,
+    "NpcId": 2400933,
+    "Name": "Withered Branch Spider",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1116,
+    "ItemId": 534660023,
+    "NpcId": 2400939,
+    "Name": "Withered Branch Spider",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1116,
+    "ItemId": 534660023,
+    "NpcId": 2400946,
+    "Name": "Withered Branch Spider",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1116,
+    "ItemId": 534660023,
+    "NpcId": 2400948,
+    "Name": "Withered Branch Spider",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1120,
+    "ItemId": 534660154,
+    "NpcId": 2400737,
+    "Name": "Unstable Young Kailin",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1120,
+    "ItemId": 534660154,
+    "NpcId": 2400906,
+    "Name": "Young Kailin",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1120,
+    "ItemId": 534660154,
+    "NpcId": 2400935,
+    "Name": "Young Kailin",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1121,
+    "ItemId": 534660155,
+    "NpcId": 2400910,
+    "Name": "Young Slink",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1121,
+    "ItemId": 534660155,
+    "NpcId": 2400950,
+    "Name": "Young Slink",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1123,
+    "ItemId": 534660157,
+    "NpcId": 2400377,
+    "Name": "Young Ursus",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1123,
+    "ItemId": 534660157,
+    "NpcId": 2400917,
+    "Name": "Young Ursus",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1207,
+    "ItemId": 534660199,
+    "NpcId": 2400221,
+    "Name": "Mutated Elim",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1207,
+    "ItemId": 534660199,
+    "NpcId": 2400415,
+    "Name": "Ruin Agrint",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1207,
+    "ItemId": 534660199,
+    "NpcId": 2400825,
+    "Name": "Island Agrint",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1208,
+    "ItemId": 534660217,
+    "NpcId": 2400750,
+    "Name": "Unstable Agrint",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1135,
+    "ItemId": 534660169,
+    "NpcId": 2400248,
+    "Name": "Ashen Dionae",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1214,
+    "ItemId": 534660115,
+    "NpcId": 2400708,
+    "Name": "Black Spirit",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1048,
+    "ItemId": 534660049,
+    "NpcId": 2400337,
+    "Name": "Forest Spirit",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1050,
+    "ItemId": 534660051,
+    "NpcId": 2400307,
+    "Name": "Pink Gravi",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1165,
+    "ItemId": 534660126,
+    "NpcId": 2400823,
+    "Name": "Immortal Earth Spirit",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1187,
+    "ItemId": 534660129,
+    "NpcId": 2400748,
+    "Name": "Unstable Intermediate Fire Spirit",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1187,
+    "ItemId": 534660129,
+    "NpcId": 2400821,
+    "Name": "Immortal Fire Spirit",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1169,
+    "ItemId": 534660123,
+    "NpcId": 2400738,
+    "Name": "Unstable Intermediate Water Spirit",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1169,
+    "ItemId": 534660123,
+    "NpcId": 2400822,
+    "Name": "Immortal Water Spirit",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1094,
+    "ItemId": 534660095,
+    "NpcId": 2400824,
+    "Name": "Immortal Wind Spirit",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1052,
+    "ItemId": 534660053,
+    "NpcId": 2400342,
+    "Name": "Large Leaf Gravi",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1213,
+    "ItemId": 534660128,
+    "NpcId": 2400325,
+    "Name": "Burning Ember Spirit",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1092,
+    "ItemId": 534660093,
+    "NpcId": 2400324,
+    "Name": "Soft Breeze Spirit",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1051,
+    "ItemId": 534660052,
+    "NpcId": 2400329,
+    "Name": "Purifying Forest Magic Gravi",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1051,
+    "ItemId": 534660052,
+    "NpcId": 2400731,
+    "Name": "Unstable Gravi",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1144,
+    "ItemId": 534660178,
+    "NpcId": 2400214,
+    "Name": "Mutated Forest Guardian",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1144,
+    "ItemId": 534660178,
+    "NpcId": 2400751,
+    "Name": "Unstable Forest Guardian",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1049,
+    "ItemId": 534660050,
+    "NpcId": 2400061,
+    "Name": "Condensed Specter",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1127,
+    "ItemId": 534660161,
+    "NpcId": 2400734,
+    "Name": "Faded Odyle Spirit",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1136,
+    "ItemId": 534660170,
+    "NpcId": 2000925,
+    "Name": "Rafflesia",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1136,
+    "ItemId": 534660170,
+    "NpcId": 2400056,
+    "Name": "Rafflesia",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1136,
+    "ItemId": 534660170,
+    "NpcId": 2400735,
+    "Name": "Unstable Rafflesia",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1136,
+    "ItemId": 534660170,
+    "NpcId": 2400813,
+    "Name": "Rafflesia",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1136,
+    "ItemId": 534660170,
+    "NpcId": 2400949,
+    "Name": "Rafflesia",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1069,
+    "ItemId": 534660070,
+    "NpcId": 2400301,
+    "Name": "Faded Stone Spirit",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1166,
+    "ItemId": 534660127,
+    "NpcId": 2400310,
+    "Name": "Corroded Soil Spirit",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1166,
+    "ItemId": 534660127,
+    "NpcId": 2400817,
+    "Name": "Immortal Earth Spirit Guardian",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1096,
+    "ItemId": 534660097,
+    "NpcId": 2400303,
+    "Name": "Flame Spirit",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1096,
+    "ItemId": 534660097,
+    "NpcId": 2400749,
+    "Name": "Unstable Superior Fire Spirit",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1096,
+    "ItemId": 534660097,
+    "NpcId": 2400815,
+    "Name": "Immortal Fire Spirit Guardian",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1155,
+    "ItemId": 534660124,
+    "NpcId": 2400306,
+    "Name": "Water Mist Spirit",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1155,
+    "ItemId": 534660124,
+    "NpcId": 2400739,
+    "Name": "Unstable Superior Water Spirit",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1155,
+    "ItemId": 534660124,
+    "NpcId": 2400816,
+    "Name": "Immortal Water Spirit Guardian",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1095,
+    "ItemId": 534660096,
+    "NpcId": 2400302,
+    "Name": "Whirlwind Spirit",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1095,
+    "ItemId": 534660096,
+    "NpcId": 2400818,
+    "Name": "Immortal Wind Spirit Guardian",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1209,
+    "ItemId": 534660113,
+    "NpcId": 2400054,
+    "Name": "Red Eye Agrint",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1219,
+    "ItemId": 534660117,
+    "NpcId": 2400811,
+    "Name": "Zelophi",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1110,
+    "ItemId": 534660111,
+    "NpcId": 2400471,
+    "Name": "Blue Kalgolem",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1157,
+    "ItemId": 534660191,
+    "NpcId": 2400275,
+    "Name": "Ruins Corpse Cleaner",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1157,
+    "ItemId": 534660191,
+    "NpcId": 2400412,
+    "Name": "Ferocious Cadaver Cleaner",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1157,
+    "ItemId": 534660191,
+    "NpcId": 2400418,
+    "Name": "Ferocious Cadaver Cleaner",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1217,
+    "ItemId": 534660190,
+    "NpcId": 2400009,
+    "Name": "Congealed Drana",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1142,
+    "ItemId": 534660176,
+    "NpcId": 2400312,
+    "Name": "Consumed Spirit Guardian",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1056,
+    "ItemId": 534660057,
+    "NpcId": 2400143,
+    "Name": "Outpost Probe",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1056,
+    "ItemId": 534660057,
+    "NpcId": 2400162,
+    "Name": "Drakan Probe",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1056,
+    "ItemId": 534660057,
+    "NpcId": 2400382,
+    "Name": "Drana Processing Maintenance Machine",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1056,
+    "ItemId": 534660057,
+    "NpcId": 2400658,
+    "Name": "Lagta Brigade Seeker",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1148,
+    "ItemId": 534660182,
+    "NpcId": 2400014,
+    "Name": "Crash Site Kalgolem",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1179,
+    "ItemId": 534660207,
+    "NpcId": 2400001,
+    "Name": "Twisted Mutant",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1153,
+    "ItemId": 534660116,
+    "NpcId": 2400834,
+    "Name": "Drana Mutant",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1174,
+    "ItemId": 534660202,
+    "NpcId": 2400010,
+    "Name": "Drana Predator",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1128,
+    "ItemId": 534660162,
+    "NpcId": 2400015,
+    "Name": "Drana Slime",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1173,
+    "ItemId": 534660140,
+    "NpcId": 2400613,
+    "Name": "Duduka Slinger",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1172,
+    "ItemId": 534660139,
+    "NpcId": 2400612,
+    "Name": "Duduka Worker",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1218,
+    "ItemId": 534660215,
+    "NpcId": 2400478,
+    "Name": "Faded Chunk",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1161,
+    "ItemId": 534660206,
+    "NpcId": 2400479,
+    "Name": "Faded Floater",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1180,
+    "ItemId": 534660204,
+    "NpcId": 2400477,
+    "Name": "Faded Mutant",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1154,
+    "ItemId": 534660205,
+    "NpcId": 2400476,
+    "Name": "Faded Mutant Brute",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1175,
+    "ItemId": 534660203,
+    "NpcId": 2400480,
+    "Name": "Faded Predator",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1140,
+    "ItemId": 534660114,
+    "NpcId": 2400225,
+    "Name": "Burned Forester",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1084,
+    "ItemId": 534660085,
+    "NpcId": 2400328,
+    "Name": "Angry Kalgolem",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1176,
+    "ItemId": 534660216,
+    "NpcId": 2400481,
+    "Name": "Addicted Mudthorn",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1176,
+    "ItemId": 534660216,
+    "NpcId": 2400707,
+    "Name": "Remnant of Subspace",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1064,
+    "ItemId": 534660065,
+    "NpcId": 2400711,
+    "Name": "Oculazen",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1159,
+    "ItemId": 534660112,
+    "NpcId": 2400473,
+    "Name": "Giant Ore Insectoid Adult",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1186,
+    "ItemId": 534660188,
+    "NpcId": 2400311,
+    "Name": "Cursed Poison Blood",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1186,
+    "ItemId": 534660188,
+    "NpcId": 2400743,
+    "Name": "Unstable Poison Blood",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1061,
+    "ItemId": 534660062,
+    "NpcId": 2400320,
+    "Name": "Unruly Slime",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1183,
+    "ItemId": 534660224,
+    "NpcId": 2400413,
+    "Name": "Soulless Corpse Gnat",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1013,
+    "ItemId": 534660012,
+    "NpcId": 2400080,
+    "Name": "Contaminated Swarm",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1013,
+    "ItemId": 534660012,
+    "NpcId": 2400456,
+    "Name": "Giant Ore Insectoid",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1063,
+    "ItemId": 534660064,
+    "NpcId": 2400364,
+    "Name": "Vigilant Oculazen",
+    "Region": "Altgard"
+  },
+  {
+    "PetId": 1005,
+    "ItemId": 534660004,
+    "NpcId": 2600029,
+    "Name": "Abyss Klaw Mutant",
+    "Region": "Chaotic Lower Reshanta"
+  },
+  {
+    "PetId": 1029,
+    "ItemId": 534660029,
+    "NpcId": 2600002,
+    "Name": "Abyss Klaw",
+    "Region": "Chaotic Lower Reshanta"
+  },
+  {
+    "PetId": 1029,
+    "ItemId": 534660029,
+    "NpcId": 2600012,
+    "Name": "Abyss Aberrant Klaw",
+    "Region": "Chaotic Lower Reshanta"
+  },
+  {
+    "PetId": 1200,
+    "ItemId": 534660119,
+    "NpcId": 2600042,
+    "Name": "Abyss Naga Dark Mage",
+    "Region": "Chaotic Lower Reshanta"
+  },
+  {
+    "PetId": 1030,
+    "ItemId": 534660030,
+    "NpcId": 2600036,
+    "Name": "Abyss Nagarant Brawler",
+    "Region": "Chaotic Lower Reshanta"
+  },
+  {
+    "PetId": 1030,
+    "ItemId": 534660030,
+    "NpcId": 2600041,
+    "Name": "Abyss Nagarant Warrior",
+    "Region": "Chaotic Lower Reshanta"
+  },
+  {
+    "PetId": 1089,
+    "ItemId": 534660090,
+    "NpcId": 2600024,
+    "Name": "Abyss Sulfur Skama",
+    "Region": "Chaotic Lower Reshanta"
+  },
+  {
+    "PetId": 1014,
+    "ItemId": 534660013,
+    "NpcId": 2600052,
+    "Name": "Abyss Drakan Scout Beast",
+    "Region": "Chaotic Lower Reshanta"
+  },
+  {
+    "PetId": 1134,
+    "ItemId": 534660168,
+    "NpcId": 2600061,
+    "Name": "Abyss Coradon",
+    "Region": "Chaotic Lower Reshanta"
+  },
+  {
+    "PetId": 1098,
+    "ItemId": 534660099,
+    "NpcId": 2600004,
+    "Name": "Abyss Karnif",
+    "Region": "Chaotic Lower Reshanta"
+  },
+  {
+    "PetId": 1098,
+    "ItemId": 534660099,
+    "NpcId": 2600014,
+    "Name": "Abyss Search Party Karnif",
+    "Region": "Chaotic Lower Reshanta"
+  },
+  {
+    "PetId": 1016,
+    "ItemId": 534660015,
+    "NpcId": 2600048,
+    "Name": "Abyss Slink",
+    "Region": "Chaotic Lower Reshanta"
+  },
+  {
+    "PetId": 1083,
+    "ItemId": 534660084,
+    "NpcId": 2600046,
+    "Name": "Abyss Odyle Mutated Insectoid",
+    "Region": "Chaotic Lower Reshanta"
+  },
+  {
+    "PetId": 1117,
+    "ItemId": 534660086,
+    "NpcId": 2600045,
+    "Name": "Abyss Red Mutated Insectoid",
+    "Region": "Chaotic Lower Reshanta"
+  },
+  {
+    "PetId": 1121,
+    "ItemId": 534660155,
+    "NpcId": 2600047,
+    "Name": "Abyss Young Slink",
+    "Region": "Chaotic Lower Reshanta"
+  },
+  {
+    "PetId": 1207,
+    "ItemId": 534660199,
+    "NpcId": 2600027,
+    "Name": "Sulfur Agrint",
+    "Region": "Chaotic Lower Reshanta"
+  },
+  {
+    "PetId": 1207,
+    "ItemId": 534660199,
+    "NpcId": 2600071,
+    "Name": "Root Agrint",
+    "Region": "Chaotic Lower Reshanta"
+  },
+  {
+    "PetId": 1214,
+    "ItemId": 534660115,
+    "NpcId": 2600069,
+    "Name": "Abyss Corrupted Spirit",
+    "Region": "Chaotic Lower Reshanta"
+  },
+  {
+    "PetId": 1073,
+    "ItemId": 534660074,
+    "NpcId": 2600049,
+    "Name": "Abyss Nasty Nepenthes",
+    "Region": "Chaotic Lower Reshanta"
+  },
+  {
+    "PetId": 1178,
+    "ItemId": 534660146,
+    "NpcId": 2600066,
+    "Name": "Old Tree Spirit Warrior",
+    "Region": "Chaotic Lower Reshanta"
+  },
+  {
+    "PetId": 1069,
+    "ItemId": 534660070,
+    "NpcId": 2600056,
+    "Name": "Abyss Rock Spirit",
+    "Region": "Chaotic Lower Reshanta"
+  },
+  {
+    "PetId": 1209,
+    "ItemId": 534660113,
+    "NpcId": 2600028,
+    "Name": "Thin Sulfur Agrint",
+    "Region": "Chaotic Lower Reshanta"
+  },
+  {
+    "PetId": 1027,
+    "ItemId": 534660026,
+    "NpcId": 2600026,
+    "Name": "Withered Sulfur Agrint",
+    "Region": "Chaotic Lower Reshanta"
+  },
+  {
+    "PetId": 1219,
+    "ItemId": 534660117,
+    "NpcId": 2600050,
+    "Name": "Abyss Zelophi",
+    "Region": "Chaotic Lower Reshanta"
+  },
+  {
+    "PetId": 1110,
+    "ItemId": 534660111,
+    "NpcId": 2600051,
+    "Name": "Abyssal Kalgolem",
+    "Region": "Chaotic Lower Reshanta"
+  },
+  {
+    "PetId": 1062,
+    "ItemId": 534660063,
+    "NpcId": 2600023,
+    "Name": "Abyss Sulfur Slime",
+    "Region": "Chaotic Lower Reshanta"
+  },
+  {
+    "PetId": 1084,
+    "ItemId": 534660085,
+    "NpcId": 2600070,
+    "Name": "Root Kalgolem",
+    "Region": "Chaotic Lower Reshanta"
+  },
+  {
+    "PetId": 1192,
+    "ItemId": 534660130,
+    "NpcId": 2600003,
+    "Name": "Abyss Rusty Rotan",
+    "Region": "Chaotic Lower Reshanta"
+  },
+  {
+    "PetId": 1192,
+    "ItemId": 534660130,
+    "NpcId": 2600013,
+    "Name": "Abyss Old Blade Rotan",
+    "Region": "Chaotic Lower Reshanta"
+  },
+  {
+    "PetId": 1013,
+    "ItemId": 534660012,
+    "NpcId": 2600001,
+    "Name": "Abyss Swarm",
+    "Region": "Chaotic Lower Reshanta"
+  },
+  {
+    "PetId": 1013,
+    "ItemId": 534660012,
+    "NpcId": 2600011,
+    "Name": "Abyss Aberrant Swarn",
+    "Region": "Chaotic Lower Reshanta"
+  },
+  {
+    "PetId": 1013,
+    "ItemId": 534660012,
+    "NpcId": 2600021,
+    "Name": "Abyss Swarm Mutant",
+    "Region": "Chaotic Lower Reshanta"
+  }
+]

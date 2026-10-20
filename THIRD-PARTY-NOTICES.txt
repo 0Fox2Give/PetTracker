@@ -1,3 +1,5 @@
+Pet Tracker original code: GPL-3.0-only. See LICENSE and NOTICE.
+
 PET TRACKER — THIRD-PARTY NOTICES
 
 SharpPcap 6.3.1 — MIT license

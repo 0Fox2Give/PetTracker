@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>PetTracker.Core</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PetSources.json" LogicalName="PetTracker.PetSources.json" />
+    <EmbeddedResource Include="../../assets/catalog.json" LogicalName="PetTracker.Catalog.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MarketItems.json" LogicalName="PetTracker.MarketItems.json" />
+    <EmbeddedResource Include="FarmingLinks.json" LogicalName="PetTracker.FarmingLinks.json" />
+    <EmbeddedResource Include="PetAcquisitions.json" LogicalName="PetTracker.PetAcquisitions.json" />
+  </ItemGroup>
+</Project>

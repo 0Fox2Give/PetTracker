@@ -1,0 +1,997 @@
+[
+  {
+    "ItemId": 534760001,
+    "PetId": 1002,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-krall-laborer"
+  },
+  {
+    "ItemId": 534760002,
+    "PetId": 1003,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-forest-specter"
+  },
+  {
+    "ItemId": 534760003,
+    "PetId": 1004,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-fossa"
+  },
+  {
+    "ItemId": 534760004,
+    "PetId": 1005,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-klaw"
+  },
+  {
+    "ItemId": 534760005,
+    "PetId": 1006,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-sparkie"
+  },
+  {
+    "ItemId": 534760006,
+    "PetId": 1007,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-potcrab"
+  },
+  {
+    "ItemId": 534760007,
+    "PetId": 1008,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-baby-odyle-spider"
+  },
+  {
+    "ItemId": 534760008,
+    "PetId": 1009,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-kernon"
+  },
+  {
+    "ItemId": 534760009,
+    "PetId": 1010,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-manduri-fighter"
+  },
+  {
+    "ItemId": 534760010,
+    "PetId": 1011,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-skyray"
+  },
+  {
+    "ItemId": 534760011,
+    "PetId": 1012,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-fungie"
+  },
+  {
+    "ItemId": 534760012,
+    "PetId": 1013,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-swarm"
+  },
+  {
+    "ItemId": 534760013,
+    "PetId": 1014,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-drakan-guard-dog"
+  },
+  {
+    "ItemId": 534760014,
+    "PetId": 1015,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-kailin"
+  },
+  {
+    "ItemId": 534760015,
+    "PetId": 1016,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-slink"
+  },
+  {
+    "ItemId": 534760016,
+    "PetId": 1017,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-krall-warshaman"
+  },
+  {
+    "ItemId": 534760017,
+    "PetId": 1018,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-varg-berserker"
+  },
+  {
+    "ItemId": 534760019,
+    "PetId": 1114,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-ashen-spider"
+  },
+  {
+    "ItemId": 534760020,
+    "PetId": 1025,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-mutated-aberrant-odyle-spider"
+  },
+  {
+    "ItemId": 534760021,
+    "PetId": 1022,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-crasaur"
+  },
+  {
+    "ItemId": 534760023,
+    "PetId": 1116,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-withered-branch-spider"
+  },
+  {
+    "ItemId": 534760024,
+    "PetId": 1021,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-aberrant-odyle-spider"
+  },
+  {
+    "ItemId": 534760025,
+    "PetId": 1026,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-krall-warrior"
+  },
+  {
+    "ItemId": 534760026,
+    "PetId": 1027,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-withered-agrint"
+  },
+  {
+    "ItemId": 534760027,
+    "PetId": 1028,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-krao-mutant"
+  },
+  {
+    "ItemId": 534760028,
+    "PetId": 1029,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-klaw-scout"
+  },
+  {
+    "ItemId": 534760029,
+    "PetId": 1030,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-nagarant-guardian-warrior"
+  },
+  {
+    "ItemId": 534760030,
+    "PetId": 1031,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-konutin-worker"
+  },
+  {
+    "ItemId": 534760031,
+    "PetId": 1032,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-elite-keneire"
+  },
+  {
+    "ItemId": 534760032,
+    "PetId": 1033,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-elite-manduri-fighter"
+  },
+  {
+    "ItemId": 534760033,
+    "PetId": 1034,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-giant-sparkie"
+  },
+  {
+    "ItemId": 534760034,
+    "PetId": 1035,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-skama"
+  },
+  {
+    "ItemId": 534760035,
+    "PetId": 1036,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-lupyllini"
+  },
+  {
+    "ItemId": 534760036,
+    "PetId": 1037,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-male-crestlich"
+  },
+  {
+    "ItemId": 534760037,
+    "PetId": 1038,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-airon"
+  },
+  {
+    "ItemId": 534760038,
+    "PetId": 1039,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-crestlich"
+  },
+  {
+    "ItemId": 534760039,
+    "PetId": 1040,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-aullaeu-shaman"
+  },
+  {
+    "ItemId": 534760040,
+    "PetId": 1041,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-cave-bat"
+  },
+  {
+    "ItemId": 534760041,
+    "PetId": 1042,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-ursus"
+  },
+  {
+    "ItemId": 534760042,
+    "PetId": 1043,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-elite-ursus"
+  },
+  {
+    "ItemId": 534760043,
+    "PetId": 1044,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-aultross-s-doppelganger"
+  },
+  {
+    "ItemId": 534760044,
+    "PetId": 1045,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-sylphen"
+  },
+  {
+    "ItemId": 534760045,
+    "PetId": 1046,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-armadon"
+  },
+  {
+    "ItemId": 534760046,
+    "PetId": 1047,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-aberrant-armadon"
+  },
+  {
+    "ItemId": 534760047,
+    "PetId": 1048,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-forest-spirit"
+  },
+  {
+    "ItemId": 534760048,
+    "PetId": 1049,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-mutated-forest-spirit"
+  },
+  {
+    "ItemId": 534760049,
+    "PetId": 1050,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-gravi"
+  },
+  {
+    "ItemId": 534760050,
+    "PetId": 1051,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-magic-gravi"
+  },
+  {
+    "ItemId": 534760051,
+    "PetId": 1052,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-large-leaf-gravi"
+  },
+  {
+    "ItemId": 534760052,
+    "PetId": 1053,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-aberrant-potcrab"
+  },
+  {
+    "ItemId": 534760053,
+    "PetId": 1054,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-mumu-warrior"
+  },
+  {
+    "ItemId": 534760054,
+    "PetId": 1055,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-grave-rat"
+  },
+  {
+    "ItemId": 534760055,
+    "PetId": 1056,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-drakan-probe"
+  },
+  {
+    "ItemId": 534760056,
+    "PetId": 1057,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-coradon"
+  },
+  {
+    "ItemId": 534760057,
+    "PetId": 1058,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-black-smoke-murute"
+  },
+  {
+    "ItemId": 534760058,
+    "PetId": 1059,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-giant-bee"
+  },
+  {
+    "ItemId": 534760059,
+    "PetId": 1060,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-starturtle"
+  },
+  {
+    "ItemId": 534760060,
+    "PetId": 1061,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-slime"
+  },
+  {
+    "ItemId": 534760061,
+    "PetId": 1062,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-contaminated-slime"
+  },
+  {
+    "ItemId": 534760062,
+    "PetId": 1063,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-vigilant-oculazen"
+  },
+  {
+    "ItemId": 534760063,
+    "PetId": 1064,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-oculazen"
+  },
+  {
+    "ItemId": 534760064,
+    "PetId": 1065,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-biruta"
+  },
+  {
+    "ItemId": 534760065,
+    "PetId": 1066,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-papis"
+  },
+  {
+    "ItemId": 534760066,
+    "PetId": 1067,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-scorpion"
+  },
+  {
+    "ItemId": 534760068,
+    "PetId": 1069,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-stone-spirit"
+  },
+  {
+    "ItemId": 534760070,
+    "PetId": 1071,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-cadaver-insectoid"
+  },
+  {
+    "ItemId": 534760071,
+    "PetId": 1072,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-tog"
+  },
+  {
+    "ItemId": 534760072,
+    "PetId": 1073,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-nepenthes"
+  },
+  {
+    "ItemId": 534760073,
+    "PetId": 1074,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-kuru-worker"
+  },
+  {
+    "ItemId": 534760074,
+    "PetId": 1075,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-kuru-tinkerer"
+  },
+  {
+    "ItemId": 534760075,
+    "PetId": 1115,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-kuru-overseer"
+  },
+  {
+    "ItemId": 534760076,
+    "PetId": 1077,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-harcon"
+  },
+  {
+    "ItemId": 534760077,
+    "PetId": 1078,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-urugugu-brawler"
+  },
+  {
+    "ItemId": 534760078,
+    "PetId": 1079,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-ultimate-wind-spirit"
+  },
+  {
+    "ItemId": 534760079,
+    "PetId": 1080,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-sentinel-k-nash"
+  },
+  {
+    "ItemId": 534760080,
+    "PetId": 1081,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-dionae"
+  },
+  {
+    "ItemId": 534760081,
+    "PetId": 1082,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-ultimate-fire-spirit"
+  },
+  {
+    "ItemId": 534760082,
+    "PetId": 1083,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-spider"
+  },
+  {
+    "ItemId": 534760083,
+    "PetId": 1084,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-kalgolem"
+  },
+  {
+    "ItemId": 534760084,
+    "PetId": 1117,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-unstable-spider"
+  },
+  {
+    "ItemId": 534760085,
+    "PetId": 1086,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-fungen"
+  },
+  {
+    "ItemId": 534760086,
+    "PetId": 1087,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-pino"
+  },
+  {
+    "ItemId": 534760087,
+    "PetId": 1088,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-pino-worker"
+  },
+  {
+    "ItemId": 534760088,
+    "PetId": 1089,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-aberrant-skama"
+  },
+  {
+    "ItemId": 534760089,
+    "PetId": 1090,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-ultimate-water-spirit"
+  },
+  {
+    "ItemId": 534760090,
+    "PetId": 1091,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-red-spark-ignus"
+  },
+  {
+    "ItemId": 534760091,
+    "PetId": 1092,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-lesser-wind-spirit"
+  },
+  {
+    "ItemId": 534760092,
+    "PetId": 1093,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-phantasmal-lakshmi"
+  },
+  {
+    "ItemId": 534760093,
+    "PetId": 1094,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-intermediate-wind-spirit"
+  },
+  {
+    "ItemId": 534760094,
+    "PetId": 1095,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-superior-wind-spirit"
+  },
+  {
+    "ItemId": 534760095,
+    "PetId": 1096,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-superior-fire-spirit"
+  },
+  {
+    "ItemId": 534760096,
+    "PetId": 1097,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-karnif"
+  },
+  {
+    "ItemId": 534760097,
+    "PetId": 1098,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-modified-karnif"
+  },
+  {
+    "ItemId": 534760098,
+    "PetId": 1099,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-elite-karnif"
+  },
+  {
+    "ItemId": 534760099,
+    "PetId": 1100,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-ultimate-earth-spirit"
+  },
+  {
+    "ItemId": 534760100,
+    "PetId": 1101,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-forest-guardian"
+  },
+  {
+    "ItemId": 534760101,
+    "PetId": 1102,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-dried-up-forest-guardian"
+  },
+  {
+    "ItemId": 534760102,
+    "PetId": 1103,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-pretor-veil-administrator"
+  },
+  {
+    "ItemId": 534760103,
+    "PetId": 1104,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-manduri-trebuchet-worker"
+  },
+  {
+    "ItemId": 534760104,
+    "PetId": 1105,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-biruta-herbalist"
+  },
+  {
+    "ItemId": 534760105,
+    "PetId": 1106,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-tayga"
+  },
+  {
+    "ItemId": 534760106,
+    "PetId": 1107,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-krao-seal-guardian"
+  },
+  {
+    "ItemId": 534760107,
+    "PetId": 1108,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-enhanced-krall-combatant"
+  },
+  {
+    "ItemId": 534760108,
+    "PetId": 1109,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-enhanced-krall-sentry"
+  },
+  {
+    "ItemId": 534760109,
+    "PetId": 1110,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-blue-kalgolem"
+  },
+  {
+    "ItemId": 534760110,
+    "PetId": 1159,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-parasite-swarm"
+  },
+  {
+    "ItemId": 534760111,
+    "PetId": 1209,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-thin-agrint"
+  },
+  {
+    "ItemId": 534760112,
+    "PetId": 1140,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-forest-monster"
+  },
+  {
+    "ItemId": 534760113,
+    "PetId": 1214,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-black-spirit"
+  },
+  {
+    "ItemId": 534760114,
+    "PetId": 1153,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-drana-mutant-brute"
+  },
+  {
+    "ItemId": 534760115,
+    "PetId": 1219,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-zelophi"
+  },
+  {
+    "ItemId": 534760116,
+    "PetId": 1215,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-predator-saraswati"
+  },
+  {
+    "ItemId": 534760117,
+    "PetId": 1200,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-naga-elite-priest"
+  },
+  {
+    "ItemId": 534760118,
+    "PetId": 1146,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-gatekeeper-pinopi"
+  },
+  {
+    "ItemId": 534760119,
+    "PetId": 1124,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-zaif"
+  },
+  {
+    "ItemId": 534760120,
+    "PetId": 1168,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-lesser-water-spirit"
+  },
+  {
+    "ItemId": 534760121,
+    "PetId": 1169,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-intermediate-water-spirit"
+  },
+  {
+    "ItemId": 534760122,
+    "PetId": 1155,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-superior-water-spirit"
+  },
+  {
+    "ItemId": 534760123,
+    "PetId": 1164,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-lesser-earth-spirit"
+  },
+  {
+    "ItemId": 534760124,
+    "PetId": 1165,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-intermediate-earth-spirit"
+  },
+  {
+    "ItemId": 534760125,
+    "PetId": 1166,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-superior-earth-spirit"
+  },
+  {
+    "ItemId": 534760126,
+    "PetId": 1213,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-lesser-fire-spirit"
+  },
+  {
+    "ItemId": 534760127,
+    "PetId": 1187,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-intermediate-fire-spirit"
+  },
+  {
+    "ItemId": 534760128,
+    "PetId": 1192,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-silver-blade-rotan"
+  },
+  {
+    "ItemId": 534760129,
+    "PetId": 1199,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-flame-barghest"
+  },
+  {
+    "ItemId": 534760130,
+    "PetId": 1167,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-flame-stone-guardian-statue"
+  },
+  {
+    "ItemId": 534760131,
+    "PetId": 1191,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-furious-feruk"
+  },
+  {
+    "ItemId": 534760132,
+    "PetId": 1188,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-vivel"
+  },
+  {
+    "ItemId": 534760133,
+    "PetId": 1147,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-dratona"
+  },
+  {
+    "ItemId": 534760134,
+    "PetId": 1163,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-basilisk"
+  },
+  {
+    "ItemId": 534760136,
+    "PetId": 1182,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-elite-soulless-corpse-gnat"
+  },
+  {
+    "ItemId": 534760137,
+    "PetId": 1172,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-duduka-worker"
+  },
+  {
+    "ItemId": 534760138,
+    "PetId": 1173,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-duduka-trebuchet-worker"
+  },
+  {
+    "ItemId": 534760139,
+    "PetId": 1194,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-guardite"
+  },
+  {
+    "ItemId": 534760140,
+    "PetId": 1184,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-drakan-watcher"
+  },
+  {
+    "ItemId": 534760141,
+    "PetId": 1195,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-dracuni-herbalist"
+  },
+  {
+    "ItemId": 534760142,
+    "PetId": 1162,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-kerubar"
+  },
+  {
+    "ItemId": 534760143,
+    "PetId": 1170,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-kerubian"
+  },
+  {
+    "ItemId": 534760144,
+    "PetId": 1178,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-spirit-king-s-bodyguard-warrior"
+  },
+  {
+    "ItemId": 534760147,
+    "PetId": 1216,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-dark-spirit"
+  },
+  {
+    "ItemId": 534760149,
+    "PetId": 1118,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-aberrant-bee"
+  },
+  {
+    "ItemId": 534760150,
+    "PetId": 1119,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-aberrant-coradon"
+  },
+  {
+    "ItemId": 534760151,
+    "PetId": 1120,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-young-kailin"
+  },
+  {
+    "ItemId": 534760152,
+    "PetId": 1121,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-young-slink"
+  },
+  {
+    "ItemId": 534760153,
+    "PetId": 1122,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-young-tog"
+  },
+  {
+    "ItemId": 534760154,
+    "PetId": 1123,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-young-ursus"
+  },
+  {
+    "ItemId": 534760156,
+    "PetId": 1125,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-aberrant-zaif"
+  },
+  {
+    "ItemId": 534760157,
+    "PetId": 1126,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-aberrant-tog"
+  },
+  {
+    "ItemId": 534760158,
+    "PetId": 1127,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-odyle-stone-spirit"
+  },
+  {
+    "ItemId": 534760159,
+    "PetId": 1128,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-drana-slime"
+  },
+  {
+    "ItemId": 534760160,
+    "PetId": 1129,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-drana-swarm"
+  },
+  {
+    "ItemId": 534760161,
+    "PetId": 1130,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-mutated-cadaver-insectoid"
+  },
+  {
+    "ItemId": 534760162,
+    "PetId": 1131,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-drana-spore"
+  },
+  {
+    "ItemId": 534760163,
+    "PetId": 1132,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-ashen-lupyllini"
+  },
+  {
+    "ItemId": 534760164,
+    "PetId": 1133,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-forest-dionae"
+  },
+  {
+    "ItemId": 534760165,
+    "PetId": 1134,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-eternal-coradon"
+  },
+  {
+    "ItemId": 534760166,
+    "PetId": 1135,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-ashen-dionae"
+  },
+  {
+    "ItemId": 534760167,
+    "PetId": 1136,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-rafflesia"
+  },
+  {
+    "ItemId": 534760168,
+    "PetId": 1137,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-mumu-worker"
+  },
+  {
+    "ItemId": 534760169,
+    "PetId": 1138,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-mumu-overseer"
+  },
+  {
+    "ItemId": 534760170,
+    "PetId": 1139,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-swamp-monster"
+  },
+  {
+    "ItemId": 534760172,
+    "PetId": 1141,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-marsh-targon"
+  },
+  {
+    "ItemId": 534760173,
+    "PetId": 1142,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-distorted-mutant"
+  },
+  {
+    "ItemId": 534760174,
+    "PetId": 1143,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-mutated-ursus"
+  },
+  {
+    "ItemId": 534760175,
+    "PetId": 1144,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-mutated-forest-guardian"
+  },
+  {
+    "ItemId": 534760176,
+    "PetId": 1145,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-mutated-insectoid-valka"
+  },
+  {
+    "ItemId": 534760179,
+    "PetId": 1148,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-drakana-kalgolem"
+  },
+  {
+    "ItemId": 534760184,
+    "PetId": 1177,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-ancient-spirit"
+  },
+  {
+    "ItemId": 534760185,
+    "PetId": 1186,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-poison-blood"
+  },
+  {
+    "ItemId": 534760186,
+    "PetId": 1160,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-drana-contaminant"
+  },
+  {
+    "ItemId": 534760187,
+    "PetId": 1217,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-congealed-drana"
+  },
+  {
+    "ItemId": 534760188,
+    "PetId": 1157,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-cadaver-cleaner"
+  },
+  {
+    "ItemId": 534760189,
+    "PetId": 1190,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-elite-poisonous-spore-fungen"
+  },
+  {
+    "ItemId": 534760190,
+    "PetId": 1196,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-elite-dratona"
+  },
+  {
+    "ItemId": 534760191,
+    "PetId": 1156,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-elite-klaw"
+  },
+  {
+    "ItemId": 534760192,
+    "PetId": 1158,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-venomous-insect-sram"
+  },
+  {
+    "ItemId": 534760196,
+    "PetId": 1207,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-agrint"
+  },
+  {
+    "ItemId": 534760197,
+    "PetId": 1181,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-brax"
+  },
+  {
+    "ItemId": 534760198,
+    "PetId": 1201,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-modified-lupyllini"
+  },
+  {
+    "ItemId": 534760199,
+    "PetId": 1174,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-drana-predator"
+  },
+  {
+    "ItemId": 534760200,
+    "PetId": 1175,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-faded-predator"
+  },
+  {
+    "ItemId": 534760201,
+    "PetId": 1180,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-faded-mutant"
+  },
+  {
+    "ItemId": 534760202,
+    "PetId": 1154,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-faded-mutant-brute"
+  },
+  {
+    "ItemId": 534760203,
+    "PetId": 1161,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-faded-floater"
+  },
+  {
+    "ItemId": 534760204,
+    "PetId": 1179,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-drana-mutant"
+  },
+  {
+    "ItemId": 534760206,
+    "PetId": 1193,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-addicted-shulak-cart-worker"
+  },
+  {
+    "ItemId": 534760207,
+    "PetId": 1206,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-elite-guardite"
+  },
+  {
+    "ItemId": 534760208,
+    "PetId": 1197,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-watcher-guardite"
+  },
+  {
+    "ItemId": 534760209,
+    "PetId": 1171,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-kerubiel"
+  },
+  {
+    "ItemId": 534760211,
+    "PetId": 1202,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-decomposed-lupyllini"
+  },
+  {
+    "ItemId": 534760212,
+    "PetId": 1218,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-faded-drana"
+  },
+  {
+    "ItemId": 534760213,
+    "PetId": 1176,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-mudthorn"
+  },
+  {
+    "ItemId": 534760214,
+    "PetId": 1208,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-ashen-agrint"
+  },
+  {
+    "ItemId": 534760215,
+    "PetId": 1198,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-ashen-basilisk"
+  },
+  {
+    "ItemId": 534760216,
+    "PetId": 1203,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-tamed-karnif"
+  },
+  {
+    "ItemId": 534760217,
+    "PetId": 1185,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-dratona-tinkerer"
+  },
+  {
+    "ItemId": 534760221,
+    "PetId": 1183,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-soulless-corpse-gnat"
+  },
+  {
+    "ItemId": 534760222,
+    "PetId": 1210,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-dry-leaf-agrint"
+  },
+  {
+    "ItemId": 534760223,
+    "PetId": 1189,
+    "SourceUrl": "https://corpus.gg/games/aion-2/items/pet-tamed-zaif"
+  }
+]

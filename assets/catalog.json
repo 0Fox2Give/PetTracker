@@ -1,0 +1,1832 @@
+[
+  {
+    "Id": 1001,
+    "CatalogName": "BlackDragon_01",
+    "Name": "Black Dragon",
+    "Category": "Special"
+  },
+  {
+    "Id": 1002,
+    "CatalogName": "KrallReg_01",
+    "Name": "Krall Laborer",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1003,
+    "CatalogName": "ForestWisp_01",
+    "Name": "Forest Specter",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1004,
+    "CatalogName": "Fossa_01",
+    "Name": "Fossa",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1005,
+    "CatalogName": "Neuth_01",
+    "Name": "Klaw",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1006,
+    "CatalogName": "SparkyOd_01",
+    "Name": "Sparkie",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1007,
+    "CatalogName": "Crab_01",
+    "Name": "Potcrab",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1008,
+    "CatalogName": "OdSpider_01",
+    "Name": "Baby Odyle Spider",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1009,
+    "CatalogName": "Keneir_01",
+    "Name": "Kernon",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1010,
+    "CatalogName": "ManduriWar_01",
+    "Name": "Manduri Fighter",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1011,
+    "CatalogName": "Skyray_01",
+    "Name": "Skyray",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1012,
+    "CatalogName": "Fungy_01",
+    "Name": "Fungie",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1013,
+    "CatalogName": "AbyssSwarm_01",
+    "Name": "Swarm",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1014,
+    "CatalogName": "BeritraC_03",
+    "Name": "Drakan Watchdog",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1015,
+    "CatalogName": "Kailin_01",
+    "Name": "Kailin",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1016,
+    "CatalogName": "Lepisma_01",
+    "Name": "Slink",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1017,
+    "CatalogName": "KrallPrst_01",
+    "Name": "Krall Warshaman",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1018,
+    "CatalogName": "Varg_03",
+    "Name": "Varg Berserker",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1021,
+    "CatalogName": "OdSpider_04",
+    "Name": "Aberrant Odyle Spider",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1022,
+    "CatalogName": "Phaini_01",
+    "Name": "Crasaur",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1025,
+    "CatalogName": "OdSpider_04_V01",
+    "Name": "Mutated Aberrant Odyle Spider",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1026,
+    "CatalogName": "KrallWar_01",
+    "Name": "Krall Warrior",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1027,
+    "CatalogName": "Agrint_02",
+    "Name": "Withered Agrint",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1028,
+    "CatalogName": "KraoElite_01",
+    "Name": "Krao Mutant",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1029,
+    "CatalogName": "Neuth_02",
+    "Name": "Klaw Scout",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1030,
+    "CatalogName": "NagaElite_04",
+    "Name": "Nagarant Guardian Warrior",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1031,
+    "CatalogName": "Conuti_02",
+    "Name": "Konutin Worker",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1032,
+    "CatalogName": "Keneir_01_V01",
+    "Name": "Elite Keneire",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1033,
+    "CatalogName": "ManduriWar_01_V01",
+    "Name": "Elite Manduri Fighter",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1034,
+    "CatalogName": "SparkyOd_02",
+    "Name": "Giant Sparkie",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1035,
+    "CatalogName": "Fish_01",
+    "Name": "Skama",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1036,
+    "CatalogName": "Lufilini_02",
+    "Name": "Lupyllini",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1037,
+    "CatalogName": "Crestlich_02",
+    "Name": "Male Crestlich",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1038,
+    "CatalogName": "Airon_01",
+    "Name": "Airon",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1039,
+    "CatalogName": "Crestlich_01",
+    "Name": "Crestlich",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1040,
+    "CatalogName": "OwlMag_01",
+    "Name": "Aullaeu Shaman",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1041,
+    "CatalogName": "CaveBat_01",
+    "Name": "Cave Bat",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1042,
+    "CatalogName": "Ursuss_01",
+    "Name": "Ursus",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1043,
+    "CatalogName": "UrsussElite_01",
+    "Name": "Elite Ursus",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1044,
+    "CatalogName": "Owltros_02",
+    "Name": "Aultross's Doppelganger",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1045,
+    "CatalogName": "Muta_01",
+    "Name": "Sylphen",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1046,
+    "CatalogName": "Mole_01",
+    "Name": "Armadon",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1047,
+    "CatalogName": "Mole_01_V01",
+    "Name": "Aberrant Armadon",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1048,
+    "CatalogName": "ForestEle_01",
+    "Name": "Forest Spirit",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1049,
+    "CatalogName": "ForestEle_01_V01",
+    "Name": "Mutated Forest Spirit",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1050,
+    "CatalogName": "Gravi_01",
+    "Name": "Gravi",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1051,
+    "CatalogName": "Gravi_02",
+    "Name": "Magic Gravi",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1052,
+    "CatalogName": "Gravi_03",
+    "Name": "Large Leaf Gravi",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1053,
+    "CatalogName": "Crab_01_V01",
+    "Name": "Aberrant Potcrab",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1054,
+    "CatalogName": "SkurvWar_01",
+    "Name": "Mumu Warrior",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1055,
+    "CatalogName": "GraveRat_01",
+    "Name": "Grave Rat",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1056,
+    "CatalogName": "BeritraC_06",
+    "Name": "Drakan Probe",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1057,
+    "CatalogName": "Coradon_01",
+    "Name": "Coradon",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1058,
+    "CatalogName": "AshGuard_01",
+    "Name": "Black Smoke Murute",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1059,
+    "CatalogName": "Bee_01",
+    "Name": "Giant Bee",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1060,
+    "CatalogName": "Starturtle_01",
+    "Name": "Starturtle",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1061,
+    "CatalogName": "Slime_01",
+    "Name": "Slime",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1062,
+    "CatalogName": "Slime_02",
+    "Name": "Contaminated Slime",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1063,
+    "CatalogName": "Oculazen_01",
+    "Name": "Vigilant Oculazen",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1064,
+    "CatalogName": "Oculazen_02",
+    "Name": "Oculazen",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1065,
+    "CatalogName": "VirotaWar_01",
+    "Name": "Biruta",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1066,
+    "CatalogName": "Papis_01",
+    "Name": "Papis",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1067,
+    "CatalogName": "Scorpion_01",
+    "Name": "Scorpion",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1068,
+    "CatalogName": "KraoWar_01",
+    "Name": "Krao Test Subject",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1069,
+    "CatalogName": "EarthEleOd_01",
+    "Name": "Stone Spirit",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1071,
+    "CatalogName": "AltBug_01",
+    "Name": "Cadaver Insectoid",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1072,
+    "CatalogName": "Tog_01",
+    "Name": "Tog",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1073,
+    "CatalogName": "Rafflesia_01",
+    "Name": "Nepenthes",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1074,
+    "CatalogName": "Kuru_01",
+    "Name": "Kuru Worker",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1075,
+    "CatalogName": "Kuru_02",
+    "Name": "Kuru Tinkerer",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1077,
+    "CatalogName": "KraoElite_03",
+    "Name": "Harcon",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1078,
+    "CatalogName": "OwlSoldier_09",
+    "Name": "Urugugu Brawler",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1079,
+    "CatalogName": "WindEle_04",
+    "Name": "Ultimate Wind Spirit",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1080,
+    "CatalogName": "BeritraD_04",
+    "Name": "Sentinel K'nash",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1081,
+    "CatalogName": "Dionaea_01",
+    "Name": "Dionae",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1082,
+    "CatalogName": "FireEle_04",
+    "Name": "Ultimate Fire Spirit",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1083,
+    "CatalogName": "Spider_01",
+    "Name": "Spider",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1084,
+    "CatalogName": "Kalgolem_01",
+    "Name": "Kalgolem",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1086,
+    "CatalogName": "Fungus_01",
+    "Name": "Fungen",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1087,
+    "CatalogName": "Pino_01",
+    "Name": "Pino",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1088,
+    "CatalogName": "Pino_02",
+    "Name": "Pino Worker",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1089,
+    "CatalogName": "Fish_01_V01",
+    "Name": "Aberrant Skama",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1090,
+    "CatalogName": "WaterEle_04",
+    "Name": "Ultimate Water Spirit",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1091,
+    "CatalogName": "FireGuard_01",
+    "Name": "Red Spark Ignus",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1092,
+    "CatalogName": "WindEle_01",
+    "Name": "Lesser Wind Spirit",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1093,
+    "CatalogName": "NagaElite_01",
+    "Name": "Phantasmal Lakshmi",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1094,
+    "CatalogName": "WindEle_02",
+    "Name": "Intermediate Wind Spirit",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1095,
+    "CatalogName": "WindEle_03",
+    "Name": "Superior Wind Spirit",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1096,
+    "CatalogName": "FireEle_03",
+    "Name": "Superior Fire Spirit",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1097,
+    "CatalogName": "Kalnif_01",
+    "Name": "Karnif",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1098,
+    "CatalogName": "Kalnif_02",
+    "Name": "Modified Karnif",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1099,
+    "CatalogName": "KalnifElite_01",
+    "Name": "Elite Karnif",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1100,
+    "CatalogName": "EarthEle_04",
+    "Name": "Ultimate Earth Spirit",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1101,
+    "CatalogName": "ForestArc_01",
+    "Name": "Forest Guardian",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1102,
+    "CatalogName": "ForestArc_01_V01",
+    "Name": "Dried Up Forest Guardian",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1103,
+    "CatalogName": "PretorBoss_01",
+    "Name": "Pretor Veil Administrator",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1104,
+    "CatalogName": "ManduriRng_01",
+    "Name": "Manduri Trebuchet Worker",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1105,
+    "CatalogName": "VirotaRag_01",
+    "Name": "Biruta Herbalist",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1106,
+    "CatalogName": "Tayga_01",
+    "Name": "Tayga",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1107,
+    "CatalogName": "KraoElite_02",
+    "Name": "Krao Seal Guardian",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1108,
+    "CatalogName": "KrallWar_01_V01",
+    "Name": "Enhanced Krall Combatant",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1109,
+    "CatalogName": "KrallWar_01_V02",
+    "Name": "Enhanced Krall Sentry",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1110,
+    "CatalogName": "Kalgolem_02",
+    "Name": "Blue Kalgolem",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1111,
+    "CatalogName": "ShugoBeast_01",
+    "Name": "Swift Lugi",
+    "Category": "Special"
+  },
+  {
+    "Id": 1112,
+    "CatalogName": "ShugoBeast_02",
+    "Name": "Wandering Merchant Lugi",
+    "Category": "Special"
+  },
+  {
+    "Id": 1113,
+    "CatalogName": "BlackDragon_01_CV01",
+    "Name": "White Dragon",
+    "Category": "Special"
+  },
+  {
+    "Id": 1114,
+    "CatalogName": "OdSpider_03",
+    "Name": "Ashen Spider",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1115,
+    "CatalogName": "Kuru_03",
+    "Name": "Kuru Overseer",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1116,
+    "CatalogName": "OdSpider_03_V01",
+    "Name": "Withered Branch Spider",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1117,
+    "CatalogName": "Spider_01_V01",
+    "Name": "Unstable Spider",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1118,
+    "CatalogName": "Bee_01_V01",
+    "Name": "Aberrant Bee",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1119,
+    "CatalogName": "Coradon_01_V01",
+    "Name": "Aberrant Coradon",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1120,
+    "CatalogName": "Kailin_01_V01",
+    "Name": "Young Kailin",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1121,
+    "CatalogName": "Lepisma_01_V01",
+    "Name": "Young Slink",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1122,
+    "CatalogName": "Tog_01_V01",
+    "Name": "Young Tog",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1123,
+    "CatalogName": "Ursuss_01_V01",
+    "Name": "Young Ursus",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1124,
+    "CatalogName": "Zaif_01",
+    "Name": "Zaif",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1125,
+    "CatalogName": "Zaif_01_CV02",
+    "Name": "Aberrant Zaif",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1126,
+    "CatalogName": "Tog_01_CV01",
+    "Name": "Aberrant Tog",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1127,
+    "CatalogName": "EarthEleOd_01_CV01",
+    "Name": "Odyle Stone Spirit",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1128,
+    "CatalogName": "Slime_02_CV01",
+    "Name": "Drana Slime",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1129,
+    "CatalogName": "AbyssSwarm_01_CV01",
+    "Name": "Drana Swarm",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1130,
+    "CatalogName": "AltBug_01_CV02",
+    "Name": "Mutated Cadaver Insectoid",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1131,
+    "CatalogName": "ForestEle_01_CV01",
+    "Name": "Drana Spore",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1132,
+    "CatalogName": "Lufilini_02_CV01",
+    "Name": "Ashen Lupyllini",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1133,
+    "CatalogName": "Dionaea_01_CV01",
+    "Name": "Forest Dionae",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1134,
+    "CatalogName": "Coradon_01_V04",
+    "Name": "Eternal Coradon",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1135,
+    "CatalogName": "Dionaea_01_V01",
+    "Name": "Ashen Dionae",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1136,
+    "CatalogName": "Rafflesia_01_CV01",
+    "Name": "Rafflesia",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1137,
+    "CatalogName": "SkurvWar_02",
+    "Name": "Mumu Worker",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1138,
+    "CatalogName": "SkurvWar_04",
+    "Name": "Mumu Overseer",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1139,
+    "CatalogName": "BigMan_01",
+    "Name": "Swamp Monster",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1140,
+    "CatalogName": "BigMan_01_V01",
+    "Name": "Forest Monster",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1141,
+    "CatalogName": "BigMan_01_V02",
+    "Name": "Marsh Targon",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1142,
+    "CatalogName": "BigMan_01_CV01",
+    "Name": "Distorted Mutant",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1143,
+    "CatalogName": "Ursuss_01_CV01",
+    "Name": "Mutated Ursus",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1144,
+    "CatalogName": "ForestArc_01_CV01",
+    "Name": "Mutated Forest Guardian",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1145,
+    "CatalogName": "Bug_01",
+    "Name": "Mutated Insectoid Valka",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1146,
+    "CatalogName": "PinoBoss_01",
+    "Name": "Gatekeeper Pinopi",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1147,
+    "CatalogName": "Dratona_01",
+    "Name": "Dratona",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1148,
+    "CatalogName": "Kalgolem_01_V02",
+    "Name": "Drakana Kalgolem",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1149,
+    "CatalogName": "Bike_01",
+    "Name": "Baikron",
+    "Category": "Special"
+  },
+  {
+    "Id": 1150,
+    "CatalogName": "Bike_01_CV01",
+    "Name": "Azure Baikron",
+    "Category": "Special"
+  },
+  {
+    "Id": 1151,
+    "CatalogName": "Bike_01_CV02",
+    "Name": "Silver Baikron",
+    "Category": "Special"
+  },
+  {
+    "Id": 1152,
+    "CatalogName": "Bike_01_CV03",
+    "Name": "Golden Baikron",
+    "Category": "Special"
+  },
+  {
+    "Id": 1153,
+    "CatalogName": "DranaVar_02",
+    "Name": "Drana Mutant Brute",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1154,
+    "CatalogName": "DranaVar_02_CV01",
+    "Name": "Faded Mutant Brute",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1155,
+    "CatalogName": "WaterEle_03",
+    "Name": "Superior Water Spirit",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1156,
+    "CatalogName": "Neuth_03",
+    "Name": "Elite Klaw",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1157,
+    "CatalogName": "Imp_01",
+    "Name": "Cadaver Cleaner",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1158,
+    "CatalogName": "Bug_02",
+    "Name": "Venomous Insect Sram",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1159,
+    "CatalogName": "AbyssSwarm_02",
+    "Name": "Parasite Swarm",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1160,
+    "CatalogName": "DranaVar_04",
+    "Name": "Drana Contaminant",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1161,
+    "CatalogName": "DranaVar_04_CV01",
+    "Name": "Faded Floater",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1162,
+    "CatalogName": "Cherubim_01",
+    "Name": "Kerubar",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1163,
+    "CatalogName": "Basilisk_01",
+    "Name": "Basilisk",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1164,
+    "CatalogName": "EarthEle_01",
+    "Name": "Lesser Earth Spirit",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1165,
+    "CatalogName": "EarthEle_02",
+    "Name": "Intermediate Earth Spirit",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1166,
+    "CatalogName": "EarthEle_03",
+    "Name": "Superior Earth Spirit",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1167,
+    "CatalogName": "Gargoyle_01",
+    "Name": "Flame Stone Guardian Statue",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1168,
+    "CatalogName": "WaterEle_01",
+    "Name": "Lesser Water Spirit",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1169,
+    "CatalogName": "WaterEle_02",
+    "Name": "Intermediate Water Spirit",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1170,
+    "CatalogName": "Cherubim_02",
+    "Name": "Kerubian",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1171,
+    "CatalogName": "Cherubim_03",
+    "Name": "Kerubiel",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1172,
+    "CatalogName": "Duduka_01",
+    "Name": "Duduka Worker",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1173,
+    "CatalogName": "Duduka_02",
+    "Name": "Duduka Trebuchet Worker",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1174,
+    "CatalogName": "DranaVar_03",
+    "Name": "Drana Predator",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1175,
+    "CatalogName": "DranaVar_03_CV01",
+    "Name": "Faded Predator",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1176,
+    "CatalogName": "FafBlood_02_CV01",
+    "Name": "Mudthorn",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1177,
+    "CatalogName": "Gartua_01_V01",
+    "Name": "Ancient Spirit",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1178,
+    "CatalogName": "EleGuard_01",
+    "Name": "Spirit King's Bodyguard Warrior",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1179,
+    "CatalogName": "DranaVar_01",
+    "Name": "Drana Mutant",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1180,
+    "CatalogName": "DranaVar_01_CV01",
+    "Name": "Faded Mutant",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1181,
+    "CatalogName": "Brax_01",
+    "Name": "Brax",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1182,
+    "CatalogName": "CorpeSpider_01",
+    "Name": "Elite Soulless Corpse Gnat",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1183,
+    "CatalogName": "CorpeSpider_01_V01",
+    "Name": "Soulless Corpse Gnat",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1184,
+    "CatalogName": "Drakan_02",
+    "Name": "Drakan Watcher",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1185,
+    "CatalogName": "Dratona_01_V01",
+    "Name": "Dratona Tinkerer",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1186,
+    "CatalogName": "FafBlood_02",
+    "Name": "Poison Blood",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1187,
+    "CatalogName": "FireEle_02",
+    "Name": "Intermediate Fire Spirit",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1188,
+    "CatalogName": "GraveBat_01",
+    "Name": "Vivel",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1189,
+    "CatalogName": "Zaif_01_V01",
+    "Name": "Tamed Zaif",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1190,
+    "CatalogName": "ToxFungus_01",
+    "Name": "Elite Poisonous Spore Fungen",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1191,
+    "CatalogName": "Ferk_01",
+    "Name": "Furious Feruk",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1192,
+    "CatalogName": "Rotan_01",
+    "Name": "Silver Blade Rotan",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1193,
+    "CatalogName": "AddShulack_03",
+    "Name": "Addicted Shulak Cart Worker",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1194,
+    "CatalogName": "Guardit_01",
+    "Name": "Guardite",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1195,
+    "CatalogName": "Dracuni_01",
+    "Name": "Dracuni Herbalist",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1196,
+    "CatalogName": "Dratona_03",
+    "Name": "Elite Dratona",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1197,
+    "CatalogName": "Guardit_02",
+    "Name": "Watcher Guardite",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1198,
+    "CatalogName": "Basilisk_01_CV01",
+    "Name": "Ashen Basilisk",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1199,
+    "CatalogName": "Balgest_01",
+    "Name": "Flame Barghest",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1200,
+    "CatalogName": "NagaElite_03",
+    "Name": "Naga Elite Priest",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1201,
+    "CatalogName": "Lufilini_01",
+    "Name": "Modified Lupyllini",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1202,
+    "CatalogName": "Lufilini_01_V01",
+    "Name": "Decomposed Lupyllini",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1203,
+    "CatalogName": "Kalnif_01_V01",
+    "Name": "Tamed Karnif",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1204,
+    "CatalogName": "Pagati_01",
+    "Name": "Pagati",
+    "Category": "Special"
+  },
+  {
+    "Id": 1205,
+    "CatalogName": "Rudolph_01",
+    "Name": "Reindeer",
+    "Category": "Special"
+  },
+  {
+    "Id": 1206,
+    "CatalogName": "Guardit_03",
+    "Name": "Elite Guardite",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1207,
+    "CatalogName": "Agrint_01",
+    "Name": "Agrint",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1208,
+    "CatalogName": "Agrint_01_CV01",
+    "Name": "Ashen Agrint",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1209,
+    "CatalogName": "Agrint_01_V01",
+    "Name": "Thin Agrint",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1210,
+    "CatalogName": "Agrint_01_V02",
+    "Name": "Dry Leaf Agrint",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1211,
+    "CatalogName": "SkyWhale_01",
+    "Name": "Sky Whale",
+    "Category": "Special"
+  },
+  {
+    "Id": 1212,
+    "CatalogName": "SkyWhale_02",
+    "Name": "Void",
+    "Category": "Special"
+  },
+  {
+    "Id": 1213,
+    "CatalogName": "FireEle_01",
+    "Name": "Lesser Fire Spirit",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1214,
+    "CatalogName": "DarkEle_01",
+    "Name": "Black Spirit",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1215,
+    "CatalogName": "NagaElite_02",
+    "Name": "Predator Saraswati",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1216,
+    "CatalogName": "Specter_01",
+    "Name": "Dark Spirit",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1217,
+    "CatalogName": "DranaVar_06",
+    "Name": "Congealed Drana",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1218,
+    "CatalogName": "DranaVar_06_CV01",
+    "Name": "Faded Drana",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1219,
+    "CatalogName": "Jellofi_01",
+    "Name": "Zelophi",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1220,
+    "CatalogName": "ForKeeper_01",
+    "Name": "Ashpile Forester",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1221,
+    "CatalogName": "ForKeeper_01_CV01",
+    "Name": "Ashen Forester",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1222,
+    "CatalogName": "Varg_04",
+    "Name": "Varg Shaman",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1223,
+    "CatalogName": "Horse_02",
+    "Name": "Infernal Steed",
+    "Category": "Special"
+  },
+  {
+    "Id": 1224,
+    "CatalogName": "Redhorse_01",
+    "Name": "Red Horse Doll",
+    "Category": "Special"
+  },
+  {
+    "Id": 1225,
+    "CatalogName": "Snowman_01",
+    "Name": "Frosty Snowman",
+    "Category": "Special"
+  },
+  {
+    "Id": 1226,
+    "CatalogName": "Snowman_02",
+    "Name": "Pom-Pom Hat Snowman",
+    "Category": "Special"
+  },
+  {
+    "Id": 1230,
+    "CatalogName": "Hoka_01",
+    "Name": "Test Subject Hoka",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1236,
+    "CatalogName": "Horse_01",
+    "Name": "Luminous Golden Unicorn",
+    "Category": "Special"
+  },
+  {
+    "Id": 1238,
+    "CatalogName": "Horse_01_CV02",
+    "Name": "Sweet Unicorn",
+    "Category": "Special"
+  },
+  {
+    "Id": 1240,
+    "CatalogName": "Rabbit_01",
+    "Name": "White Bunny",
+    "Category": "Special"
+  },
+  {
+    "Id": 1241,
+    "CatalogName": "Pajama_02",
+    "Name": "Star",
+    "Category": "Special"
+  },
+  {
+    "Id": 1242,
+    "CatalogName": "Pajama_01",
+    "Name": "Moon",
+    "Category": "Special"
+  },
+  {
+    "Id": 1243,
+    "CatalogName": "Cat_01",
+    "Name": "Babymeow",
+    "Category": "Special"
+  },
+  {
+    "Id": 1244,
+    "CatalogName": "Cat_02",
+    "Name": "Aristomeow",
+    "Category": "Special"
+  },
+  {
+    "Id": 1245,
+    "CatalogName": "Gumiho_01",
+    "Name": "Azure Flame Kumiho",
+    "Category": "Special"
+  },
+  {
+    "Id": 1246,
+    "CatalogName": "SUL_01",
+    "Name": "Pearlescent Butterfly Kite",
+    "Category": "Special"
+  },
+  {
+    "Id": 1247,
+    "CatalogName": "SUL_02",
+    "Name": "Fluffball Haechi",
+    "Category": "Special"
+  },
+  {
+    "Id": 1248,
+    "CatalogName": "Pajama_03",
+    "Name": "Teddy Plushie",
+    "Category": "Special"
+  },
+  {
+    "Id": 1249,
+    "CatalogName": "Horse_03",
+    "Name": "Unicorn Plush",
+    "Category": "Special"
+  },
+  {
+    "Id": 1250,
+    "CatalogName": "Balloon_01",
+    "Name": "Glossy Pink Puppy",
+    "Category": "Special"
+  },
+  {
+    "Id": 1251,
+    "CatalogName": "Chick_01",
+    "Name": "Chickpea",
+    "Category": "Special"
+  },
+  {
+    "Id": 1252,
+    "CatalogName": "Seal_01",
+    "Name": "Harp Seal",
+    "Category": "Special"
+  },
+  {
+    "Id": 1253,
+    "CatalogName": "Horse_01_CV01",
+    "Name": "Umbral Shadow Unicorn",
+    "Category": "Special"
+  },
+  {
+    "Id": 1259,
+    "CatalogName": "KrallPrst_01_CV01",
+    "Name": "Kurpak Krall Supporter",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1260,
+    "CatalogName": "EarthEleOd_01_CV03",
+    "Name": "Lava Stone Spirit",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1261,
+    "CatalogName": "Gravarax_01",
+    "Name": "Gravarax",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1262,
+    "CatalogName": "Sheep_01",
+    "Name": "Poofy Lamb",
+    "Category": "Special"
+  },
+  {
+    "Id": 1263,
+    "CatalogName": "Driznak_01",
+    "Name": "Driznak",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1264,
+    "CatalogName": "Frugon_01",
+    "Name": "Snowfield Frugon",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1265,
+    "CatalogName": "Tuka_01",
+    "Name": "Tuka",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1266,
+    "CatalogName": "Pachyron_01",
+    "Name": "Icecap Pachyron",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1267,
+    "CatalogName": "Debrie_01",
+    "Name": "Snowfield Debry",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1268,
+    "CatalogName": "Ramfu_01",
+    "Name": "Desert Lamphu",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1269,
+    "CatalogName": "Lagur_01",
+    "Name": "Lagur",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1270,
+    "CatalogName": "Flufi_01",
+    "Name": "Floofy",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1271,
+    "CatalogName": "Gula_01",
+    "Name": "Ghula",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1272,
+    "CatalogName": "Pokus_01",
+    "Name": "Pokus",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1273,
+    "CatalogName": "DracoMagic_01",
+    "Name": "Draconute Shaman",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1274,
+    "CatalogName": "SkateBoard_01",
+    "Name": "Rollin' Pink Skateboard",
+    "Category": "Special"
+  },
+  {
+    "Id": 1275,
+    "CatalogName": "Tuka_01_V01",
+    "Name": "Snowfield Tuka",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1276,
+    "CatalogName": "Debrie_01_CV01",
+    "Name": "Debry",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1277,
+    "CatalogName": "EarthEleOd_01_CV02",
+    "Name": "Snowfield Stone Spirit",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1278,
+    "CatalogName": "Hamster_01",
+    "Name": "Chonky Hamster",
+    "Category": "Special"
+  },
+  {
+    "Id": 1279,
+    "CatalogName": "Gravarax_01_CV01",
+    "Name": "Lava Gravarax",
+    "Category": "Nature"
+  },
+  {
+    "Id": 1280,
+    "CatalogName": "Flufi_01_CV01",
+    "Name": "Snowfield Floofy",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1281,
+    "CatalogName": "Pachyron_01_CV01",
+    "Name": "Pachyron",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1282,
+    "CatalogName": "Pokus_01_CV01",
+    "Name": "Lava Pokus",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1283,
+    "CatalogName": "Trogas_01",
+    "Name": "Snowfield Trogas",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1284,
+    "CatalogName": "Torba_01",
+    "Name": "Snowfield Torba",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1285,
+    "CatalogName": "Trogas_01_V01",
+    "Name": "Trogas",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1286,
+    "CatalogName": "Latoha_01",
+    "Name": "Desert Small Latoha",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1287,
+    "CatalogName": "Latoha_02",
+    "Name": "Desert Swift Latoha",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1289,
+    "CatalogName": "BlackDragon_01_CV02",
+    "Name": "Red Dragon",
+    "Category": "Special"
+  },
+  {
+    "Id": 1290,
+    "CatalogName": "Latoha_03",
+    "Name": "Desert Magic Latoha",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1291,
+    "CatalogName": "BlackDragon_01_CV03",
+    "Name": "Orange Dragon",
+    "Category": "Special"
+  },
+  {
+    "Id": 1292,
+    "CatalogName": "BlackDragon_01_CV04",
+    "Name": "Yellow Dragon",
+    "Category": "Special"
+  },
+  {
+    "Id": 1299,
+    "CatalogName": "Showcase_01",
+    "Name": "Two",
+    "Category": "Special"
+  },
+  {
+    "Id": 1300,
+    "CatalogName": "Latoha_01_CV01",
+    "Name": "Iralcig Small Latoha",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1301,
+    "CatalogName": "Latoha_02_CV01",
+    "Name": "Iralcig Swift Latoha",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1302,
+    "CatalogName": "Torba_01_CV01",
+    "Name": "Torba",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1303,
+    "CatalogName": "Frugon_01_V01",
+    "Name": "Frugon",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1304,
+    "CatalogName": "Ursuss_01_CV02",
+    "Name": "Gray Ursus",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1305,
+    "CatalogName": "Ramfu_01_CV01",
+    "Name": "Snowfield Lamphu",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1306,
+    "CatalogName": "Kalgolem_02_CV01",
+    "Name": "Snowfield Kalgolem",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1307,
+    "CatalogName": "Kailin_01_V02",
+    "Name": "Lava-Maned Kailin",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1308,
+    "CatalogName": "Starturtle_01_CV01",
+    "Name": "Lava Starturtle",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1309,
+    "CatalogName": "Gula_01_CV01",
+    "Name": "Ice Ghula",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1310,
+    "CatalogName": "Latoha_03_CV01",
+    "Name": "Iralcig Magic Latoha",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1311,
+    "CatalogName": "KrallReg_01_CV01",
+    "Name": "Kurpak Krall Scout",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1312,
+    "CatalogName": "KrallWar_01_CV01",
+    "Name": "Kurpak Krall Enforcer",
+    "Category": "Intellect"
+  },
+  {
+    "Id": 1313,
+    "CatalogName": "Lagur_01_CV01",
+    "Name": "Snowfield Lagur",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1314,
+    "CatalogName": "Driznak_01_CV01",
+    "Name": "Obsidian Driznak",
+    "Category": "Trans"
+  },
+  {
+    "Id": 1315,
+    "CatalogName": "Kailin_01_CV01",
+    "Name": "Icecap Kailin",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1316,
+    "CatalogName": "Durgal_01",
+    "Name": "Ashpile Durgal",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1317,
+    "CatalogName": "Durgal_01_CV01",
+    "Name": "Durgal",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1318,
+    "CatalogName": "Durgal_01_CV02",
+    "Name": "Red Fur Durgal",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1319,
+    "CatalogName": "Durgal_01_V01",
+    "Name": "Icecap Durgal",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1320,
+    "CatalogName": "Zaif_01_CV04",
+    "Name": "Snowfield Zaif",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1321,
+    "CatalogName": "Zaif_01_CV05",
+    "Name": "Young Snowfield Zaif",
+    "Category": "Feral"
+  },
+  {
+    "Id": 1322,
+    "CatalogName": "Float_01",
+    "Name": "Teddy Tube",
+    "Category": "Special"
+  },
+  {
+    "Id": 1323,
+    "CatalogName": "Octopus_01",
+    "Name": "Squishy Octopus",
+    "Category": "Special"
+  },
+  {
+    "Id": 1325,
+    "CatalogName": "BabyBear_01",
+    "Name": "Goodnight Teddy Bear",
+    "Category": "Special"
+  },
+  {
+    "Id": 1339,
+    "CatalogName": "Titmouse_01",
+    "Name": "Pet #1339",
+    "Category": "Special"
+  },
+  {
+    "Id": 1340,
+    "CatalogName": "SkyWhale_01_CV01",
+    "Name": "Pet #1340",
+    "Category": "Special"
+  },
+  {
+    "Id": 1341,
+    "CatalogName": "SkyWhale_01_CV02",
+    "Name": "Pet #1341",
+    "Category": "Special"
+  },
+  {
+    "Id": 1342,
+    "CatalogName": "SkyWhale_01_CV03",
+    "Name": "Pet #1342",
+    "Category": "Special"
+  },
+  {
+    "Id": 1343,
+    "CatalogName": "",
+    "Name": "Little Ghost",
+    "Category": "Special"
+  },
+  {
+    "Id": 1344,
+    "CatalogName": "Gumiho_01_CV01",
+    "Name": "Pet #1344",
+    "Category": "Special"
+  },
+  {
+    "Id": 1363,
+    "CatalogName": "",
+    "Name": "Pumpkin Carriage",
+    "Category": "Special"
+  },
+  {
+    "Id": 9000,
+    "CatalogName": "CLB01_01",
+    "Name": "Flostick",
+    "Category": "Special"
+  },
+  {
+    "Id": 9002,
+    "CatalogName": "CLB01_03",
+    "Name": "Baby Flomeow",
+    "Category": "Special"
+  },
+  {
+    "Id": 9999,
+    "CatalogName": "TestDummy",
+    "Name": "Pet #9999",
+    "Category": "Special"
+  }
+]

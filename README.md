@@ -6,11 +6,11 @@ A small overlay for **AION 2** that shows your pet ranks and how many souls you 
 
 Public beta · Windows x64 · Version 0.1.51
 
-**The app is currently closed-source.** This repository hosts downloads, documentation and update tooling; it does not contain the full Pet Tracker application source.
+**Open source under GPLv3.** The application, capture worker, updater, tests and build scripts are here. [Build from source](docs/BUILDING.md) · [License](LICENSE)
 
 [Setup and troubleshooting](SUPPORT.md) · [What's new](CHANGELOG.md) · [Report a problem](https://github.com/0Fox2Give/PetTracker/issues/new?template=bug_report.md)
 
-Use the installer linked above. GitHub's **Code → Download ZIP** and **Source code** downloads contain this repository, not the installed app. The other release assets support automatic updates and older versions.
+Use the installer linked above to run the app. **Code → Download ZIP** downloads the current source. The automatic source archives on older release tags may contain only the former delivery repository; use [source-0.1.51](https://github.com/0Fox2Give/PetTracker/tree/source-0.1.51) for the initial full source snapshot. The other release assets support automatic updates and older versions.
 
 ## What it does
 
@@ -45,18 +45,19 @@ If something looks wrong, [report it here](https://github.com/0Fox2Give/PetTrack
 
 Pet Tracker is unofficial and has no approval from NC/NCSOFT. Using third-party tools can put your game account at risk. The Windows installer is unsigned and may trigger a security warning.
 
-Your collection stays on your PC; the app doesn't automatically upload it. Updates come from GitHub. This repository hosts downloads and update tools, rather than the full app source.
+Your collection stays on your PC; the app doesn't automatically upload it. Updates come from GitHub. The source is available for inspection and local builds; source availability is not a security audit.
 
 Read the [legal notice](LEGAL.md) and [third-party notices](THIRD-PARTY-NOTICES.txt) before testing. Game names and artwork belong to their respective owners.
 
 ## About this repository
 
-This is the public download and update repository. The full tracker source is not included.
+This repository contains the full application source and official downloads. Contributions are welcome; maintainers review changes and control official releases.
 
 | Looking for | Where to go |
 | --- | --- |
 | Install Pet Tracker | [Windows installer](https://github.com/0Fox2Give/PetTracker/releases/download/updates/PetTracker.Desktop-win-stable-Setup.exe) |
 | Missing ranks, setup, alts or privacy | [Help](SUPPORT.md) |
 | Changes and known issues | [Release notes](CHANGELOG.md) |
+| Build and test | [Developer instructions](docs/BUILDING.md) |
 | Update tools and repository structure | [Maintainer guide](docs/MAINTAINING.md) |
 | Component licenses | [Third-party notices](THIRD-PARTY-NOTICES.txt) and [licenses](licenses/) |

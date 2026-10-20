@@ -1,0 +1,12 @@
+Pet Tracker
+Copyright (C) 2026 0Fox2Give and contributors
+
+Original application code, tests and build tooling are licensed under GNU GPL
+version 3 only (SPDX: GPL-3.0-only). See LICENSE for the full terms.
+Provided without warranty. You may use, modify and redistribute the code under
+that license. Contributions are accepted under the same license.
+
+This grant covers our code, not third-party dependencies, game artwork, names,
+or third-party game data. See THIRD-PARTY-NOTICES.txt and assets/README.md.
+Forks are independent projects; publishing a fork does not give access to our
+repository, signing keys, official download channel, or installed users.
