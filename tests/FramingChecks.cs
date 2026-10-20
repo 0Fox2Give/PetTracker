@@ -28,9 +28,7 @@ static class FramingChecks
         byte[] removal = { 9, 0x42, 0x36, 43, 0, 1 };
         byte[] sequence = empty.Concat(removal).ToArray();
         bool allSplits = true;
-        for (int split = 0;
-split <= sequence.Length;
-split++)
+        for (int split = 0; split <= sequence.Length; split++)
         {
             var wire = new CollectionWire(Catalog.Entries.Select(p => p.Id));
             var seen = new List<(byte Op, byte Family, int Length)>();

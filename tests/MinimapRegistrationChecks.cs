@@ -37,12 +37,8 @@ static class MinimapRegistrationChecks
         check(MinimapMarker.Compare(glyphs[0].Mask, new bool[961]) == null, "Missing marker cannot show direction");
         check(MinimapMarker.Compare(glyphs[0].Mask, Enumerable.Repeat(true, 961).ToArray()) == null, "Obscured marker cannot show direction");
         var circle = new bool[961];
-        for (int y = 0;
-y < 31;
-y++)
-            for (int x = 0;
-    x < 31;
-    x++)
+        for (int y = 0; y < 31; y++)
+            for (int x = 0; x < 31; x++)
                 circle[y * 31 + x] = (x - 15) * (x - 15) + (y - 15) * (y - 15) <= 49;
         check(MinimapMarker.Compare(glyphs[0].Mask, circle) == null, "Symmetric round marker is not a heading");
         GuidanceChecks(check, samples[3]);
@@ -73,9 +69,7 @@ y++)
         void Prime()
         {
             gate.Clear();
-            for (int i = 0;
-i < 3;
-i++)
+            for (int i = 0; i < 3; i++)
             {
                 var t = at.AddMilliseconds(250 * i);
                 gate.Observe(Scene(t), Image(t), t);

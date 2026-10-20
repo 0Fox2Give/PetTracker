@@ -215,9 +215,7 @@ public static class Program
 
         int[] ids = { 1050, 1060, 1007, 1219, 1141 };
         int[] values = { 72, 5, 3, 58, 75 };
-        for (int i = 0;
-i < ids.Length;
-i++)
+        for (int i = 0; i < ids.Length; i++)
         {
             var p = profile.Pets[ids[i]];
             p.Level = i == 4 ? 3 : 2;

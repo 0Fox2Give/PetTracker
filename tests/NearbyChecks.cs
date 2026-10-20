@@ -104,15 +104,11 @@ static class NearbyChecks
         world.Clear();
         world.Refresh(1, now);
         check(world.View(now, 120).Count == 0, "Combat alone cannot create a pet association");
-        for (int i = 1;
-i <= NearbyWorld.Capacity + 1;
-i++)
+        for (int i = 1; i <= NearbyWorld.Capacity + 1; i++)
             world.Observe(new(i, 2100481), now.AddMilliseconds(i));
         world.Remove(NearbyWorld.Capacity + 1);
         // After removing all newer sightings, the oldest must already have been evicted.
-        for (int i = 2;
-i <= NearbyWorld.Capacity;
-i++)
+        for (int i = 2; i <= NearbyWorld.Capacity; i++)
             world.Remove(i);
         check(world.View(now.AddSeconds(3), 120).Count == 0, "Nearby world memory is bounded and evicts oldest instances");
         var profile = new Profile { Pets = catalog };
@@ -189,9 +185,7 @@ i++)
         foreach (string sort in new[] { "Unfinished first", "Closest to next rank" })
         {
             sortOptions.Sort = sort;
-            for (int refresh = 0;
-refresh < 6;
-refresh++)
+            for (int refresh = 0; refresh < 6; refresh++)
             {
                 var observed = orderedIds.Reverse().Select((id, index) => new NearbyPet(id, "Mob", now.AddSeconds(-((index + refresh) % 6)))).ToArray();
                 tracker.ReadOnlyView(view with

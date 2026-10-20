@@ -12,9 +12,7 @@ public static class GameProtocol
     {
         n = 0;
         int start = p;
-        for (int i = 0;
-i < 5;
-i++)
+        for (int i = 0; i < 5; i++)
         {
             if (p >= b.Length)
                 return false;

@@ -41,9 +41,7 @@ public static class NavigationProtocol
             p += 12;
         }
         // All observed forms end with three canonical varints. Reject shifted layouts.
-        for (int i = 0;
-i < 3;
-i++)
+        for (int i = 0; i < 3; i++)
             if (!GameProtocol.Var(b, ref p, out _))
                 return null;
         if (p != b.Length)

@@ -141,10 +141,7 @@ e.Feed("unrelated", Identity("Other"));
 Check(!e.Tracker.Ready, "Another name must not bind the profile");
 
 var identity = Identity("Zero", 5001);
-for (int i = 0;
-i < identity.Length;
-i++)
-    e.Feed("game", new[] { identity[i] });
+for (int i = 0; i < identity.Length; i++) e.Feed("game", new[] { identity[i] });
 Check(e.Tracker.Ready, "Fragmented independent character identity must bind");
 Check(e.Tracker.LocalEntity == 721, "Character entity must match decoded record");
 Check(e.Tracker.Profile.Pets[1086].CurrentSouls == 45, "Initial collection imports exact Fungen total");
@@ -366,10 +363,7 @@ compressed.Frame += (op, f, b) =>
     if (GameProtocol.Local(op, f, b) != null)
         characters++;
 };
-for (int i = 0;
-i < literal.Count;
-i++)
-    compressed.Feed(new[] { literal[i] });
+for (int i = 0; i < literal.Count; i++) compressed.Feed(new[] { literal[i] });
 Check(snapshots == 1 && characters == 1, "Fragmented compressed frames preserve character and collection event ordering");
 
 using (var order = new Engine(Path.Combine(root, "reverse")))
@@ -555,9 +549,7 @@ Check(rejected, "Installer rejects files that fail manifest hashes");
 using (var backups = new Engine(Path.Combine(root, "backups-case")))
 {
     backups.Execute(new("create", Name: "Zero", Realm: "Siel"));
-    for (int i = 0;
-    i < 9;
-    i++)
+    for (int i = 0; i < 9; i++)
         backups.Backup();
     Check(Directory.GetDirectories(Path.Combine(root, "backups-case", "backups")).Length == 7, "Automatic backup retention stays bounded");
 }
@@ -1107,17 +1099,11 @@ protocol.Observe(4, 0x38, new byte[400], "Unsupported hit header", checkTime.Add
 Check(protocol.View().Samples.Single().Prefix.Length == 384, "Numeric frame samples have a fixed byte bound");
 protocol.Observe(4, 0x38, new byte[] { 3 }, "Late hit", checkTime.AddSeconds(90));
 Check(protocol.View().Samples.Count == 1, "Activity sampling stops after 90 seconds");
-for (int i = 0;
-i < 200;
-i++)
-    protocol.Observe(4, 0x38, new byte[] { 4 }, "Hit", checkTime.AddSeconds(2));
+for (int i = 0; i < 200; i++) protocol.Observe(4, 0x38, new byte[] { 4 }, "Hit", checkTime.AddSeconds(2));
 Check(protocol.View().Samples.Count == 16, "Activity sampling bounds each message type independently");
 protocol.Observe(0x41, 0x36, new byte[] { 9 }, "Spawn", checkTime.AddSeconds(3));
 protocol.Observe(0x0d, 0x90, new byte[] { 8 }, "Reward", checkTime.AddSeconds(3));
-for (int i = 0;
-i < 500;
-i++)
-    protocol.Observe(4, 0x38, new byte[] { 4 }, "Hit", checkTime.AddSeconds(4));
+for (int i = 0; i < 500; i++) protocol.Observe(4, 0x38, new byte[] { 4 }, "Hit", checkTime.AddSeconds(4));
 Check(protocol.View().Samples.Any(s => s.Message == "36:41") && protocol.View().Samples.Any(s => s.Message == "90:0D") && protocol.View().Samples.Count == 18, "Combat floods cannot evict rare appearance or soul evidence");
 protocol.Frame(0xd, 0x90, false);
 protocol.Frame(4, 0x38, true);

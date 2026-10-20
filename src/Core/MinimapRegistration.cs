@@ -28,15 +28,9 @@ public static class MinimapRegistration
     readonly record struct Triangle(int A, int B, int C, int K1, int K2);
     static IEnumerable<Triangle> Triangles(Complex[] points)
     {
-        for (int i = 0;
-i < points.Length - 2;
-i++)
-            for (int j = i + 1;
-    j < points.Length - 1;
-    j++)
-                for (int k = j + 1;
-        k < points.Length;
-        k++)
+        for (int i = 0; i < points.Length - 2; i++)
+            for (int j = i + 1; j < points.Length - 1; j++)
+                for (int k = j + 1; k < points.Length; k++)
                 {
                     int[] ids = { i, j, k };
                     double[] sides = { Complex.Abs(points[j] - points[k]), Complex.Abs(points[i] - points[k]), Complex.Abs(points[i] - points[j]) };
@@ -73,14 +67,10 @@ i++)
     static List<(int World, int Dot)> Match(Complex[] world, Complex[] dots, Complex a, Complex b, bool mirror)
     {
         var candidates = new List<(double Distance, int W, int D)>();
-        for (int w = 0;
-w < world.Length;
-w++)
+        for (int w = 0; w < world.Length; w++)
         {
             var projected = a * (mirror ? Complex.Conjugate(world[w]) : world[w]) + b;
-            for (int d = 0;
-d < dots.Length;
-d++)
+            for (int d = 0; d < dots.Length; d++)
             {
                 double distance = Complex.Abs(projected - dots[d]);
                 if (distance <= Tolerance)
@@ -110,12 +100,8 @@ d++)
         var solutions = new List<MinimapFit>();
         int hypotheses = 0;
         foreach (var screen in Triangles(dots))
-            for (int dx = -1;
-    dx <= 1;
-    dx++)
-                for (int dy = -1;
-        dy <= 1;
-        dy++)
+            for (int dx = -1; dx <= 1; dx++)
+                for (int dy = -1; dy <= 1; dy++)
                 {
                     if (!index.TryGetValue((screen.K1 + dx, screen.K2 + dy), out var options))
                         continue;
@@ -131,9 +117,7 @@ d++)
                             var matches = Match(world, dots, a, b, mirror);
                             if (matches.Count < 6)
                                 continue;
-                            for (int step = 0;
-            step < 2;
-            step++)
+                            for (int step = 0; step < 2; step++)
                             {
                                 fit = Fit(world, dots, matches, mirror);
                                 if (fit == null)

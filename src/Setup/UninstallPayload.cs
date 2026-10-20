@@ -19,9 +19,7 @@ public static class UninstallPayload
                 throw new InvalidDataException("Invalid or duplicate installed file path.");
             // Never follow a junction/symlink out of the installation, including one
             // substituted for an owned subdirectory since installation.
-            for (string? part = path;
-part != null;
-part = Path.GetDirectoryName(part))
+            for (string? part = path; part != null; part = Path.GetDirectoryName(part))
             {
                 if ((File.Exists(part) || Directory.Exists(part)) && (File.GetAttributes(part) & FileAttributes.ReparsePoint) != 0)
                     throw new InvalidDataException("The installation contains a linked path.");
@@ -95,9 +93,7 @@ part = Path.GetDirectoryName(part))
             }
         var folders = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
         foreach (string file in files)
-            for (string? folder = Path.GetDirectoryName(file);
-    folder != null && !folder.Equals(root, StringComparison.OrdinalIgnoreCase);
-    folder = Path.GetDirectoryName(folder))
+            for (string? folder = Path.GetDirectoryName(file); folder != null && !folder.Equals(root, StringComparison.OrdinalIgnoreCase); folder = Path.GetDirectoryName(folder))
                 folders.Add(folder);
         foreach (string folder in folders.OrderByDescending(p => p.Length))
             RemoveEmpty(folder);

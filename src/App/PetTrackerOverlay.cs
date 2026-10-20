@@ -292,14 +292,10 @@ public sealed class PetTrackerOverlay : Window
                     Margin = new Thickness(4, 16, 4, 12)
                 });
             // Keep unchanged controls attached, preserving hover, layout and animations.
-            for (int i = rows.Children.Count - 1;
-i >= 0;
-i--)
+            for (int i = rows.Children.Count - 1; i >= 0; i--)
                 if (!desiredRows.Contains(rows.Children[i]))
                     rows.Children.RemoveAt(i);
-            for (int i = 0;
-i < desiredRows.Count;
-i++)
+            for (int i = 0; i < desiredRows.Count; i++)
             {
                 var child = desiredRows[i];
                 if (i < rows.Children.Count && ReferenceEquals(rows.Children[i], child))
@@ -517,9 +513,7 @@ i++)
     }
     static bool InsideControl(DependencyObject node)
     {
-        for (DependencyObject? p = node;
-p != null;
-p = p is Visual ? VisualTreeHelper.GetParent(p) : LogicalTreeHelper.GetParent(p))
+        for (DependencyObject? p = node; p != null; p = p is Visual ? VisualTreeHelper.GetParent(p) : LogicalTreeHelper.GetParent(p))
             if (p is Button or CheckBox or ComboBox)
                 return true;
         return false;

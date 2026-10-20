@@ -32,9 +32,7 @@ public sealed record PublisherConfiguration(string FeedRoot, string PublicKey)
         string folder = Path.TrimEndingDirectorySeparator(Path.GetFullPath(data)), app = Path.TrimEndingDirectorySeparator(Path.GetFullPath(installation));
         if (folder.Equals(app, StringComparison.OrdinalIgnoreCase) || folder.StartsWith(app + Path.DirectorySeparatorChar, StringComparison.OrdinalIgnoreCase))
             throw new InvalidDataException("Move saved collections outside the installation folder before updating.");
-        for (var current = new DirectoryInfo(folder);
-current != null;
-current = current.Parent)
+        for (var current = new DirectoryInfo(folder); current != null; current = current.Parent)
             if (current.Exists && (current.Attributes & FileAttributes.ReparsePoint) != 0)
                 throw new InvalidDataException("The data folder uses a link. Choose a direct folder outside the installation before updating.");
     }

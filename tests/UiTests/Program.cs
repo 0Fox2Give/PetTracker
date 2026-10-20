@@ -30,9 +30,7 @@ public static class UiChecks
 
     static IEnumerable<DependencyObject> Children(DependencyObject root)
     {
-        for (int i = 0;
-i < VisualTreeHelper.GetChildrenCount(root);
-i++)
+        for (int i = 0; i < VisualTreeHelper.GetChildrenCount(root); i++)
         {
             var child = VisualTreeHelper.GetChild(root, i);
             yield return child;
@@ -86,6 +84,12 @@ i++)
         ShowOffscreen(overlay);
         Pump(50);
         Check(overlay.Left > SystemParameters.VirtualScreenLeft + SystemParameters.VirtualScreenWidth && !overlay.Topmost, "Motion tests keep sample overlays outside the game desktop");
+        // Start the short expiry window after WPF has loaded its theme and assets.
+        // Cold CI startup can take longer than the fixture's remaining 1.3 seconds.
+        now = DateTimeOffset.UtcNow;
+        view = view with { Recent = new() { new(1050, null, "", now.AddSeconds(-18.7)) } };
+        host.Preview(view);
+        Pump(50);
         var row = Children(overlay).OfType<ContentControl>().Single(b => System.Windows.Automation.AutomationProperties.GetAutomationId(b) == "PetRow-1050");
         Check(row.HasAnimatedProperties, "Expiry schedules actual WPF animations");
         double first = row.Opacity;
@@ -579,9 +583,7 @@ i++)
         finder.SelectPet(samples[0]);
         Pump(30);
         Program.Save(finder, Path.Combine(folder, "finder-collection.png"), 860, 640);
-        for (int i = 0;
-i < samples.Length;
-i++)
+        for (int i = 0; i < samples.Length; i++)
             profile.Pets[samples[i]] = sampleOriginals[i];
         host.Preview(view);
         finderSearch.Text = "does not exist 9988";
@@ -826,9 +828,7 @@ i++)
             foreach (var stableRow in initialRows)
                 stableRow.Unloaded += (s, e) => detached++;
             Program.Save(stableOverlay, Path.Combine(folder, "stable-list-before.png"), 340, 315);
-            for (int step = 0;
-step < 6;
-step++)
+            for (int step = 0; step < 6; step++)
             {
                 stableHost.Preview(stableView with
                 {
@@ -974,9 +974,7 @@ step++)
         Pump(30);
         Check(!Children(condensed).OfType<Button>().Any(b => Equals(b.Content, "Restart capture") && b.IsVisible), "Capture recovery is hidden until advanced troubleshooting is expanded");
         Check(!Children(condensed).OfType<Button>().Any(b => Equals(b.Content, "Download Npcap") && b.IsVisible), "Healthy capture does not advertise driver setup");
-        for (int depth = 0;
-depth < 2;
-depth++)
+        for (int depth = 0; depth < 2; depth++)
         {
             foreach (var ex in Children(condensed).OfType<Expander>().ToArray())
                 ex.IsExpanded = true;
@@ -1181,9 +1179,7 @@ depth++)
             var launchOverlay = launchHost.Overlay!;
             ShowOffscreen(launchOverlay);
             Pump(20);
-            for (int i = 0;
-i < 3;
-i++)
+            for (int i = 0; i < 3; i++)
                 launchHost.Preview(launchHost.View!);
             Check(launchOverlay.IsVisible && launchOverlay.DisplayedPetCount == 0, "Repeated empty status updates do not hide the freshly opened tracker");
             Check(launchHost.PetOverlayPreferences.Scale == 1.25 && launchHost.PetOverlayPreferences.PinLimit == 4 && savedCollection == System.Text.Json.JsonSerializer.Serialize(launchHost.Tracker.Profile), "Launch show preserves unrelated preferences and collection progress");

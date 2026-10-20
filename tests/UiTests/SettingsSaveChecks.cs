@@ -16,9 +16,7 @@ static class SettingsSaveChecks
 {
     static IEnumerable<DependencyObject> Children(DependencyObject root)
     {
-        for (int i = 0;
-i < VisualTreeHelper.GetChildrenCount(root);
-i++)
+        for (int i = 0; i < VisualTreeHelper.GetChildrenCount(root); i++)
         {
             var child = VisualTreeHelper.GetChild(root, i);
             yield return child;

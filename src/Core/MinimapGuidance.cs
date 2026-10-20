@@ -63,9 +63,7 @@ public sealed class MinimapGuidance
         // closer mob can be obscured by the player marker; skipping it must not turn
         // a farther visible mob into a supposedly nearest target.
         var nearest = new Dictionary<int, (double Distance, int World)>();
-        for (int i = 0;
-i < mobs.Length;
-i++)
+        for (int i = 0; i < mobs.Length; i++)
         {
             var mob = mobs[i];
             if (mob.PetId is not > 0)

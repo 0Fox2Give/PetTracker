@@ -49,9 +49,7 @@ public static class BlackMarket
         var offers = new List<MarketOffer>();
         var ids = new HashSet<int>();
         int offset = 2;
-        for (int i = 0;
-i < 10;
-i++)
+        for (int i = 0; i < 10; i++)
         {
             if (i is 1 or 5 or 9)
                 offset++;

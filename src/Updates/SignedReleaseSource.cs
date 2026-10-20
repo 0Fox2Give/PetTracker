@@ -158,9 +158,7 @@ public sealed class HttpsReleaseTransport : IReleaseTransport, IDisposable
             throw new InvalidDataException("Invalid release file name.");
         var original = new Uri(root, file);
         var address = original;
-        for (int redirects = 0;
-;
-redirects++)
+        for (int redirects = 0; ; redirects++)
         {
             var response = await client.GetAsync(address, HttpCompletionOption.ResponseHeadersRead, cancellation);
             try

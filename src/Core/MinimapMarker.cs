@@ -12,9 +12,7 @@ public static class MinimapMarker
             return null;
         var visited = new bool[mask.Count];
         var candidates = new List<List<int>>();
-        for (int start = 0;
-start < mask.Count;
-start++)
+        for (int start = 0; start < mask.Count; start++)
         {
             if (!mask[start] || visited[start])
                 continue;
@@ -34,12 +32,8 @@ start++)
                 maxY = Math.Max(maxY, y);
                 sumX += x;
                 sumY += y;
-                for (int dy = -1;
-dy <= 1;
-dy++)
-                    for (int dx = -1;
-    dx <= 1;
-    dx++)
+                for (int dy = -1; dy <= 1; dy++)
+                    for (int dx = -1; dx <= 1; dx++)
                     {
                         int nx = x + dx, ny = y + dy;
                         if (nx < 0 || ny < 0 || nx >= Size || ny >= Size)
@@ -72,38 +66,24 @@ dy++)
         int bCount = b.Count(v => v);
         var scores = new double[180];
         var rotated = new bool[Size * Size];
-        for (int step = 0;
-step < 180;
-step++)
+        for (int step = 0; step < 180; step++)
         {
             double rad = step * 2 * Math.PI / 180, c = Math.Cos(rad), s = Math.Sin(rad);
             Array.Clear(rotated);
             // Inverse nearest-neighbour sampling, matching the retained research images.
-            for (int y = 0;
-y < Size;
-y++)
-                for (int x = 0;
-    x < Size;
-    x++)
+            for (int y = 0; y < Size; y++)
+                for (int x = 0; x < Size; x++)
                 {
                     int rx = (int)Math.Round(c * (x - 15) + s * (y - 15) + 15), ry = (int)Math.Round(-s * (x - 15) + c * (y - 15) + 15);
                     if (rx >= 0 && ry >= 0 && rx < Size && ry < Size)
                         rotated[y * Size + x] = a[ry * Size + rx];
                 }
-            for (int dy = -1;
-dy <= 1;
-dy++)
-                for (int dx = -1;
-    dx <= 1;
-    dx++)
+            for (int dy = -1; dy <= 1; dy++)
+                for (int dx = -1; dx <= 1; dx++)
                 {
                     int count = 0, intersection = 0;
-                    for (int y = 0;
-    y < Size;
-    y++)
-                        for (int x = 0;
-        x < Size;
-        x++)
+                    for (int y = 0; y < Size; y++)
+                        for (int x = 0; x < Size; x++)
                         {
                             int sx = x - dx, sy = y - dy;
                             if (sx < 0 || sy < 0 || sx >= Size || sy >= Size || !rotated[sy * Size + sx])
@@ -117,9 +97,7 @@ dy++)
         }
         int best = Array.IndexOf(scores, scores.Max());
         double rival = 0;
-        for (int i = 0;
-i < 180;
-i++)
+        for (int i = 0; i < 180; i++)
             if (Math.Abs(Math.IEEERemainder((i - best) * 2, 360)) >= 30)
                 rival = Math.Max(rival, scores[i]);
         return scores[best] >= .72 && scores[best] - rival >= .08 ? new(best * 2, scores[best], rival) : null;

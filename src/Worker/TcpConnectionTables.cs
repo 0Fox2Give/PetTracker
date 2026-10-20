@@ -23,9 +23,7 @@ public static class TcpConnectionTables
             int count = BitConverter.ToInt32(table, 0);
             if (count < 0 || count > (table.Length - 4) / stride)
                 throw new InvalidDataException("Invalid TCP table row count.");
-            for (int i = 0;
-i < count;
-i++)
+            for (int i = 0; i < count; i++)
             {
                 int p = 4 + i * stride, pid = BitConverter.ToInt32(table, p + (family == 2 ? 20 : 52));
                 if (!owners.Contains(pid))
@@ -45,9 +43,7 @@ i++)
         uint result = query(IntPtr.Zero, ref size, family);
         if (result != 0 && result != InsufficientBuffer)
             throw new Win32Exception((int)result);
-        for (int attempt = 0;
-attempt < MaxReads;
-attempt++)
+        for (int attempt = 0; attempt < MaxReads; attempt++)
         {
             if (size < 4 || size > MaxTableBytes)
                 throw new InvalidDataException("Invalid TCP table size.");

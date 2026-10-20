@@ -171,9 +171,7 @@ static class SkillNavigationChecks
         check(!NavigationProtocol.NpcStop(0x1a, stop[..^1]) && !NavigationProtocol.NpcStop(0x1a, stop.Concat(new byte[] { 0 }).ToArray()), "Stationary proof rejects truncated and extended stop layouts");
         void KeepStream()
         {
-            for (int i = 1;
-i <= 3;
-i++)
+            for (int i = 1; i <= 3; i++)
                 nav.Frame(6001, 0, 0, Array.Empty<byte>(), now.AddMilliseconds(900 * i));
             nav.Frame(6001, 0x2a, 0x38, origin, now.AddSeconds(3));
             nav.Frame(6001, 2, 0x38, heading, now.AddSeconds(3));

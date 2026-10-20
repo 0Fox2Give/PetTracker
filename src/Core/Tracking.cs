@@ -520,9 +520,7 @@ public sealed class Tracker
         Profile.Creatures[npc].PetId = petId;
         Profile.Creatures[npc].LinkManuallySet = true;
         Profile.Creatures[npc].LinkSource = "Manual";
-        for (int index = 0;
-index < recent.Count;
-index++)
+        for (int index = 0; index < recent.Count; index++)
             if (recent[index].NpcId == npc)
                 recent[index] = recent[index] with
                 {

@@ -177,9 +177,7 @@ public sealed class CollectionWire
             }
             var decoded = new List<CollectionWireEvent>(count);
             var ids = new HashSet<int>();
-            for (int n = 0;
-n < count;
-n++)
+            for (int n = 0; n < count; n++)
             {
                 int id = BinaryPrimitives.ReadInt32LittleEndian(body.Slice(cursor, 4)), value = BinaryPrimitives.ReadInt32LittleEndian(body.Slice(cursor + 4, 4));
                 cursor += 8;
@@ -206,9 +204,7 @@ n++)
             else
                 Fault("Unexpected collection snapshot", 0, 0x90, body);
         }
-        for (int index = first;
-index < events.Count;
-index++)
+        for (int index = first; index < events.Count; index++)
             Decoded?.Invoke(events[index]);
     }
     bool TrySnapshot(ReadOnlySpan<byte> body, out CollectionSnapshot? snapshot)
@@ -223,9 +219,7 @@ index++)
         if (!Varint(body, ref cursor, out int count) || count > catalog.Count || count < 0 || count > (body.Length - cursor) / 12)
             return false;
         var ranks = new Dictionary<int, int>();
-        for (int n = 0;
-n < count;
-n++)
+        for (int n = 0; n < count; n++)
         {
             int id = BinaryPrimitives.ReadInt32LittleEndian(body.Slice(cursor, 4)), duplicate = BinaryPrimitives.ReadInt32LittleEndian(body.Slice(cursor + 4, 4)), rank = BinaryPrimitives.ReadInt32LittleEndian(body.Slice(cursor + 8, 4));
             cursor += 12;
@@ -237,9 +231,7 @@ n++)
         if (!Varint(body, ref cursor, out count) || count > catalog.Count || count < 0 || count > (body.Length - cursor) / 8)
             return false;
         var souls = new Dictionary<int, int>();
-        for (int n = 0;
-n < count;
-n++)
+        for (int n = 0; n < count; n++)
         {
             int id = BinaryPrimitives.ReadInt32LittleEndian(body.Slice(cursor, 4)), value = BinaryPrimitives.ReadInt32LittleEndian(body.Slice(cursor + 4, 4));
             cursor += 8;
@@ -254,9 +246,7 @@ n++)
     {
         int start = cursor;
         value = 0;
-        for (int n = 0;
-n < 3;
-n++)
+        for (int n = 0; n < 3; n++)
         {
             if (cursor >= data.Length)
                 return false;
@@ -336,9 +326,7 @@ n++)
             match += 4;
             if (match > output.Length - target)
                 return DecodeState.Invalid;
-            for (int n = 0;
-n < match;
-n++)
+            for (int n = 0; n < match; n++)
             {
                 output[target] = output[target - offset];
                 target++;
