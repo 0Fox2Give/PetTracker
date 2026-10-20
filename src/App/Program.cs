@@ -5,6 +5,7 @@ using System.Windows.Interop;
 using System.Windows.Media.Imaging;
 
 namespace PetTracker;
+
 public static class Program
 {
     [DllImport("user32.dll")]
@@ -161,7 +162,7 @@ public static class Program
         {
             return new Host(root) { ActivityCheckOnStart = activityCheck };
         }
-        catch (Exception error)when (error is IOException or UnauthorizedAccessException)
+        catch (Exception error) when (error is IOException or UnauthorizedAccessException)
         {
             MessageBox.Show("Pet Tracker couldn’t open its saved data. Close any program using the files, check folder access, then try again.", "Pet Tracker", MessageBoxButton.OK, MessageBoxImage.Warning);
             return null;

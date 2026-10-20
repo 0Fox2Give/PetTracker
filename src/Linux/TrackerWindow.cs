@@ -6,6 +6,7 @@ using Avalonia.Media;
 using Avalonia.Threading;
 
 namespace PetTracker.Linux;
+
 public sealed class TrackerWindow : Window
 {
     readonly ITrackerConnection capture;
@@ -89,7 +90,7 @@ public sealed class TrackerWindow : Window
             }
             catch (Exception ex)
             {
-                status.Text = "Could not stop capture: " + ex.Message;
+                ShowError("Could not stop capture: " + ex.Message);
                 closing = false;
                 timer.Start();
             }
@@ -107,7 +108,7 @@ public sealed class TrackerWindow : Window
         }
         catch (Exception ex)
         {
-            status.Text = ex.Message;
+            ShowError(ex.Message);
         }
         finally
         {
@@ -123,11 +124,23 @@ public sealed class TrackerWindow : Window
         }
         catch (Exception ex)
         {
-            status.Text = ex.Message;
+            ShowError(ex.Message);
         }
     }
 
     Task Patch(string name, object value) => Change(new("patch", Patch: SettingsPatch.Fields((name, value))));
+
+    void ShowError(string message)
+    {
+        status.Text = message;
+        status.IsVisible = true;
+        if (help != null)
+            help.Text = message;
+        // A lost worker connection cannot establish that a shop offer is current.
+        merchant.Select(null, DateTimeOffset.UtcNow);
+        rows.Children.Clear();
+        rendered = "";
+    }
     void Accept(WorkerView current)
     {
         view = current;

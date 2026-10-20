@@ -2,6 +2,7 @@ using System.Buffers.Binary;
 using System.Text.Json;
 
 namespace PetTracker;
+
 public sealed record MarketItem(int ItemId, int PetId, string SourceUrl);
 public sealed record MarketOffer(int OfferId, int ItemId, int PetId, long Price);
 public sealed record MarketStock(int Tab, DateTimeOffset SeenUtc, DateTimeOffset RefreshUtc, IReadOnlyList<MarketOffer> Offers)

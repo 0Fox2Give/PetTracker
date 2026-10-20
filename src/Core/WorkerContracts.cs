@@ -1,6 +1,7 @@
 using System.Text.Json;
 
 namespace PetTracker;
+
 public sealed record DiagnosticEvent(DateTimeOffset Time, string Kind, string Message);
 public sealed record ConnectionDiagnostics(
     long Payloads,

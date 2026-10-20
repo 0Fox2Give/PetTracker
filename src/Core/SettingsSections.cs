@@ -1,6 +1,7 @@
 using System.Text.Json;
 
 namespace PetTracker;
+
 // Explicit preference-only reset lists. Account state, window coordinates,
 // pinned goals and connection overrides are never reset through this action.
 public static class SettingsSections

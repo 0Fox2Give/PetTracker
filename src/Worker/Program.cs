@@ -2,6 +2,7 @@ using System.IO.Pipes;
 using System.Text.Json;
 
 namespace PetTracker;
+
 static class Program
 {
     static async Task Main(string[] args)

@@ -1,4 +1,5 @@
 namespace PetTracker;
+
 public static class PetPins
 {
     // Executed against the worker's latest settings under its command lock.

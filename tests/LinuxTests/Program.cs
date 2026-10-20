@@ -84,8 +84,8 @@ if (args.Length > 1)
     {
         using var pipe = new NamedPipeClientStream(".", Storage.Pipe(data), PipeDirection.InOut, PipeOptions.Asynchronous | PipeOptions.CurrentUserOnly);
         await pipe.ConnectAsync(15000);
-        using var writer = new StreamWriter(pipe) { AutoFlush = true };
         using var reader = new StreamReader(pipe);
+        using var writer = new StreamWriter(pipe) { AutoFlush = true };
         await writer.WriteLineAsync(JsonSerializer.Serialize(new Command(action)));
         return JsonSerializer.Deserialize<WorkerView>((await reader.ReadLineAsync().WaitAsync(TimeSpan.FromSeconds(15)))!)!;
     }

@@ -1,6 +1,7 @@
 using System.Buffers.Binary;
 
 namespace PetTracker;
+
 public sealed record WorldPoint(double X, double Y, double Z);
 public sealed record SkillFacing(int Actor, int Target, uint Skill, double Degrees, WorldPoint? TargetPoint);
 public sealed record EntityPose(int Entity, WorldPoint Point, double Degrees);
@@ -68,7 +69,7 @@ public static class NavigationProtocol
         p++;
         if (flags == 0x13)
             p += 4;
-        if (p + 13 != b.Length || b[p] != (update ? 2 : 0) || Point(b, p + 1)is not { } point)
+        if (p + 13 != b.Length || b[p] != (update ? 2 : 0) || Point(b, p + 1) is not { } point)
             return null;
         return (entity, point);
     }
@@ -184,7 +185,7 @@ public sealed class SkillNavigation
             return;
         }
 
-        if (GameProtocol.Removal(op, family, body)is { } removal)
+        if (GameProtocol.Removal(op, family, body) is { } removal)
         {
             mobs.Remove(removal.Entity);
             if (removal.Entity == self)
@@ -192,7 +193,7 @@ public sealed class SkillNavigation
             return;
         }
 
-        if (GameProtocol.Appearance(op, family, body)is { } spawn)
+        if (GameProtocol.Appearance(op, family, body) is { } spawn)
         {
             mobs.Remove(spawn.Entity);
             var match = mappings.Find(spawn.Npc);
@@ -206,7 +207,7 @@ public sealed class SkillNavigation
             return;
         }
 
-        if (family == 0x37 && op == 0x3c && NavigationProtocol.ActionPose(body)is { } pose)
+        if (family == 0x37 && op == 0x3c && NavigationProtocol.ActionPose(body) is { } pose)
         {
             if (pose.Entity == self)
             {
@@ -220,7 +221,7 @@ public sealed class SkillNavigation
             return;
         }
 
-        if (family == 0x37 && NavigationProtocol.Movement(op, body)is { } move)
+        if (family == 0x37 && NavigationProtocol.Movement(op, body) is { } move)
         {
             // Ordinary movement layouts are observed for other entities, not yet verified
             // for the local player. A compass arrow must not newly admit these as a fix
@@ -258,7 +259,7 @@ public sealed class SkillNavigation
             }
         }
 
-        if (family == 0x38 && op is 0x2a or 0x2b && NavigationProtocol.SelfBuff(body, op == 0x2b)is { } buff && buff.Entity == self)
+        if (family == 0x38 && op is 0x2a or 0x2b && NavigationProtocol.SelfBuff(body, op == 0x2b) is { } buff && buff.Entity == self)
         {
             position = buff.Point;
             positionAt = now;
@@ -271,7 +272,7 @@ public sealed class SkillNavigation
             if (!GameProtocol.Var(body, ref p, out int actor) || actor != self)
                 return;
             facing = null;
-            if (NavigationProtocol.Cast(body)is not { } cast)
+            if (NavigationProtocol.Cast(body) is not { } cast)
             {
                 position = null;
                 return;

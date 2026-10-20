@@ -3,6 +3,7 @@ using System.Windows.Automation;
 using System.Windows.Shapes;
 
 namespace PetTracker;
+
 public sealed class PetDirectionIndicator : StackPanel
 {
     readonly System.Windows.Shapes.Path arrow;

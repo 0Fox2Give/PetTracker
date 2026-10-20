@@ -1,4 +1,5 @@
 namespace PetTracker;
+
 public static class Activity
 {
     static readonly PetNames names = new();

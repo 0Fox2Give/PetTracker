@@ -1,4 +1,5 @@
 namespace PetTracker;
+
 public sealed record ActivityFrameSample(DateTimeOffset Time, string Message, string Result, int Length, string Prefix);
 public sealed record ProtocolActivityView(
     IReadOnlyDictionary<string, long> PetMessages,

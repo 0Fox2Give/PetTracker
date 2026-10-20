@@ -9,6 +9,7 @@ global using System.Windows.Controls;
 global using System.Windows.Media;
 
 namespace PetTracker;
+
 public static class Ui
 {
     public static Brush Ink = new SolidColorBrush(Color.FromRgb(223, 230, 239)), Muted = new SolidColorBrush(Color.FromRgb(145, 155, 171)), Dark = new SolidColorBrush(Color.FromRgb(11, 16, 23));

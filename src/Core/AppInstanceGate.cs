@@ -2,6 +2,7 @@ using System.Security.Cryptography;
 using System.Text;
 
 namespace PetTracker;
+
 // This gate deliberately excludes the data path: test/portable/installed copies
 // must not create independent HUDs for the same Windows user and session.
 public sealed class AppInstanceGate : IDisposable

@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Windows.Markup;
 
 namespace PetTracker;
+
 public sealed class PetFinderWindow : Window
 {
     bool detailRendered;
@@ -47,7 +48,7 @@ public sealed class PetFinderWindow : Window
             string rank = pet?.Level is int level ? (level == 0 ? "Unranked" : "Rank " + level) : "Rank ?";
             string progress = pet?.Max == true ? "\u2713 MAX" : pet?.ProgressText.Replace("/", " / ") ?? "? / ?";
             string hint = Label + " · " + rank + " · " + progress + (pet?.ProgressNeedsSync == true && !pet.Max ? "\nLast known progress; waiting for a fresh collection." : "");
-            if (TrackingGuidance.Remaining(pet)is { Length: > 0 } remaining)
+            if (TrackingGuidance.Remaining(pet) is { Length: > 0 } remaining)
                 hint += "\n" + remaining;
             Brush brush = pet?.Max == true ? Ui.Muted : Ui.Ink;
             ProgressValue = pet?.Max == true ? 100 : pet?.CurrentSouls is int souls && pet.Goal is> 0 ? Math.Clamp(100.0 * souls / pet.Goal.Value, 0, 100) : 0;
@@ -429,7 +430,7 @@ public sealed class PetFinderWindow : Window
             if (!host.PreviewOnly)
                 Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
         }
-        catch (Exception ex)when (ex is InvalidDataException or System.ComponentModel.Win32Exception or InvalidOperationException)
+        catch (Exception ex) when (ex is InvalidDataException or System.ComponentModel.Win32Exception or InvalidOperationException)
         {
             Ui.Error(ex, this);
         }

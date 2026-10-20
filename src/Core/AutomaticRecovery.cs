@@ -2,6 +2,7 @@ using System.Text.Json;
 using System.Text.RegularExpressions;
 
 namespace PetTracker;
+
 // Recovery uses only this data directory's validated bindings and managed backups.
 // Restored points remain last-known until a new game snapshot confirms them.
 public static class AutomaticRecovery
@@ -27,11 +28,11 @@ public static class AutomaticRecovery
             validate(value);
             return value;
         }
-        catch (Exception ex)when (ex is FileNotFoundException or DirectoryNotFoundException or JsonException or InvalidDataException or ArgumentException)
+        catch (Exception ex) when (ex is FileNotFoundException or DirectoryNotFoundException or JsonException or InvalidDataException or ArgumentException)
         {
             return null;
         }
-        catch (Exception ex)when (!current && (ex is IOException or UnauthorizedAccessException))
+        catch (Exception ex) when (!current && (ex is IOException or UnauthorizedAccessException))
         {
             return null;
         }
@@ -84,7 +85,7 @@ public static class AutomaticRecovery
         if (current != null)
             return current;
         foreach (string candidate in new[] { path + ".bak" }.Concat(Backups(root).Select(p => Path.Combine(p, "settings.json"))).Where(SafeFile).OrderByDescending(File.GetLastWriteTimeUtc))
-            if (Read<AppSettings>(candidate, s => s.Normalize())is { } restored)
+            if (Read<AppSettings>(candidate, s => s.Normalize()) is { } restored)
             {
                 Preserve(root, path);
                 Storage.Save(path, restored);
@@ -103,7 +104,7 @@ public static class AutomaticRecovery
         if (current != null)
             return current;
         foreach (string candidate in new[] { path + ".bak" }.Concat(Backups(root).Select(p => Path.Combine(p, "profiles.json"))).Where(SafeFile).OrderByDescending(File.GetLastWriteTimeUtc))
-            if (Read<LocalProfileBook>(candidate, b => b.Validate())is { } restored)
+            if (Read<LocalProfileBook>(candidate, b => b.Validate()) is { } restored)
             {
                 string backupRoot = Path.GetDirectoryName(candidate)!;
                 bool managed = backupRoot != root;
@@ -148,7 +149,7 @@ public static class AutomaticRecovery
         }
 
         foreach (string candidate in candidates.Where(SafeFile).OrderByDescending(File.GetLastWriteTimeUtc))
-            if (Read<Profile>(candidate, p => Validate(p, binding))is { } restored)
+            if (Read<Profile>(candidate, p => Validate(p, binding)) is { } restored)
             {
                 foreach (var pet in restored.Pets.Values)
                     if (!pet.Max)

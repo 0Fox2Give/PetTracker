@@ -1,6 +1,7 @@
 using System.Text.Json;
 
 namespace PetTracker;
+
 public sealed class Engine : IDisposable
 {
     public readonly object Gate = new();
@@ -114,7 +115,7 @@ public sealed class Engine : IDisposable
     {
         frames++;
         activity.Frame(op, family, Active == flow && Tracker.Ready);
-        if (GameProtocol.Local(op, family, body)is { } local)
+        if (GameProtocol.Local(op, family, body) is { } local)
         {
             if (Active == flow)
                 ClearObservations();
@@ -163,7 +164,7 @@ public sealed class Engine : IDisposable
                 // A fresh response replaces the tab atomically. Unsupported stock must not
                 // leave the previous tab looking current. Conservatively clear on adjacent
                 // shop message types; 56:1E/1F are unrelated recurring game traffic.
-                if (BlackMarket.Decode(op, family, body, now)is { } stock)
+                if (BlackMarket.Decode(op, family, body, now) is { } stock)
                     market[stock.Tab] = stock;
                 else
                     market.Clear();
@@ -175,7 +176,7 @@ public sealed class Engine : IDisposable
         nearby.NavigationFrame(Settings.ExperimentalDirections, Tracker.LocalEntity ?? 0, op, family, body, now);
         if (family == 0x90)
             activity.Observe(op, family, body, "Bound pet message", now);
-        if (GameProtocol.Removal(op, family, body)is { } removal)
+        if (GameProtocol.Removal(op, family, body) is { } removal)
         {
             nearby.Remove(removal.Entity);
             bool tracked = Tracker.Remove(removal.Entity, removal.Reason, ms);
@@ -185,7 +186,7 @@ public sealed class Engine : IDisposable
 
         if (family == 0x36 && op is 0x40 or 0x41 or 0x42)
         {
-            if (GameProtocol.Appearance(op, family, body)is { } spawn)
+            if (GameProtocol.Appearance(op, family, body) is { } spawn)
             {
                 nearby.Observe(spawn, now);
                 var match = mappings.Find(spawn.Npc);
@@ -286,7 +287,7 @@ public sealed class Engine : IDisposable
             {
                 Tracker.Save();
             }
-            catch (Exception error)when (error is IOException or UnauthorizedAccessException)
+            catch (Exception error) when (error is IOException or UnauthorizedAccessException)
             {
                 dirty = true;
                 MaintenanceResult(error);

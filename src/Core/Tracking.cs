@@ -4,6 +4,7 @@ using System.Text;
 using System.Text.Json;
 
 namespace PetTracker;
+
 public sealed class Tracker
 {
     readonly List<RecentPetActivity> recent = new();
@@ -425,7 +426,7 @@ public sealed class Tracker
         // client internal names Fungus_01 / ValleyFungy_01 and corresponding pet assets.
         if (creature.LinkManuallySet)
             return;
-        if (mappings?.Find(creature.NpcId)is { } source && Profile.Pets.TryGetValue(source.PetId, out var sourcePet) && sourcePet.CatalogName == source.CatalogName)
+        if (mappings?.Find(creature.NpcId) is { } source && Profile.Pets.TryGetValue(source.PetId, out var sourcePet) && sourcePet.CatalogName == source.CatalogName)
         {
             if (creature.PetId == null || creature.LinkSource is "Client assets" or "Source data" or "Needs verification")
             {
@@ -457,7 +458,7 @@ public sealed class Tracker
             return;
         }
 
-        if (mappings?.Find(creature.NpcId)is { } match && Profile.Pets.TryGetValue(match.PetId, out var matched) && matched.CatalogName == match.CatalogName)
+        if (mappings?.Find(creature.NpcId) is { } match && Profile.Pets.TryGetValue(match.PetId, out var matched) && matched.CatalogName == match.CatalogName)
         {
             creature.PetId = match.PetId;
             creature.LinkSource = match.Source;

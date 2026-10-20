@@ -3,6 +3,7 @@ using System.IO.Pipes;
 using System.Text.Json;
 
 namespace PetTracker.Linux;
+
 /// <summary>The UI has no capture privileges; only the separate worker opens libpcap.</summary>
 public interface ITrackerConnection
 {
@@ -55,7 +56,7 @@ public sealed class CaptureClient : ITrackerConnection
             {
                 await pipe.ConnectAsync(250, cancellation);
             }
-            catch (TimeoutException)when (launch)
+            catch (TimeoutException) when (launch)
             {
                 if (lastLaunch == long.MinValue || Environment.TickCount64 - lastLaunch > 15000)
                 {

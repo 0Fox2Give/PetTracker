@@ -2,6 +2,7 @@ using System.IO;
 using System.Text.Json;
 
 namespace PetTracker;
+
 // Account membership is declared locally; character/server records are not
 // account identifiers. Legacy character profiles stay intact until converted.
 public sealed class LocalProfileBinding

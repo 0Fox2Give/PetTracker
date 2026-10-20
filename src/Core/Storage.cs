@@ -3,6 +3,7 @@ using System.Text;
 using System.Text.Json;
 
 namespace PetTracker;
+
 public static class Storage
 {
     public static string Root(string[] args)

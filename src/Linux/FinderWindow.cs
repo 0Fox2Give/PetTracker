@@ -5,6 +5,7 @@ using Avalonia.Layout;
 using Avalonia.Media;
 
 namespace PetTracker.Linux;
+
 public sealed class FinderWindow : Window
 {
     readonly Func<Command, Task> change;

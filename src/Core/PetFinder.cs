@@ -1,6 +1,7 @@
 using System.Text.Json;
 
 namespace PetTracker;
+
 public sealed record FarmingMap(string Region, string Url)
 {
     public string Edition => Region is "Verteron" or "Altgard" or "Chaotic Lower Reshanta" ? "Global launch data" : "Asian-release data; Global availability unverified";

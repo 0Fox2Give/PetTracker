@@ -1,4 +1,5 @@
 namespace PetTracker;
+
 // Game counter goals. Captured upgrade deductions confirm that points are
 // spent at transitions; rank-2 X/75 is not a cumulative25+50 balance.
 public static class PetStages

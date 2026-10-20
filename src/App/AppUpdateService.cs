@@ -3,6 +3,7 @@ using PetTracker.Updates;
 using Velopack.Locators;
 
 namespace PetTracker;
+
 public sealed class AppUpdateService : IDisposable
 {
     readonly Host host;

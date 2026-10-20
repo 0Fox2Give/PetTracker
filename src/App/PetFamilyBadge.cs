@@ -1,6 +1,7 @@
 using System.Windows.Media.Imaging;
 
 namespace PetTracker;
+
 public sealed class PetFamilyBadge : Border
 {
     public static readonly DependencyProperty PetIdProperty = DependencyProperty.Register(nameof(PetId), typeof(int), typeof(PetFamilyBadge), new PropertyMetadata(0, (d, e) => ((PetFamilyBadge)d).Refresh()));

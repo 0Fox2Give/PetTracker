@@ -4,6 +4,7 @@ using System.Text.Json;
 using System.Windows.Threading;
 
 namespace PetTracker;
+
 public sealed class Host : IDisposable
 {
     public string AssetRoot { get; }
@@ -145,7 +146,7 @@ public sealed class Host : IDisposable
         yield return Storage.LegacyPipe(AssetRoot);
         // Older workers hashed the original path spelling. Read this optional hint
         // only after ordinary endpoints fail; never recover or modify diagnostics.
-        if (RecordedLegacyEndpoint()is { } recorded)
+        if (RecordedLegacyEndpoint() is { } recorded)
             yield return recorded;
     }
 
@@ -166,7 +167,7 @@ public sealed class Host : IDisposable
                 return null;
             return Storage.LegacyPipe(root);
         }
-        catch (Exception ex)when (ex is IOException or UnauthorizedAccessException or JsonException or ArgumentException or NotSupportedException)
+        catch (Exception ex) when (ex is IOException or UnauthorizedAccessException or JsonException or ArgumentException or NotSupportedException)
         {
             return null;
         }

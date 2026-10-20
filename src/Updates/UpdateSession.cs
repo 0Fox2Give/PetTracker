@@ -1,6 +1,7 @@
 using Velopack;
 
 namespace PetTracker.Updates;
+
 public enum UpdatePhase
 {
     Unavailable,

@@ -1,4 +1,5 @@
 namespace PetTracker;
+
 public sealed record NavigationMob(int Entity, int? PetId, MapPoint Position, DateTimeOffset ObservedUtc);
 public sealed record NavigationScene(string Scope, DateTimeOffset RecordedUtc, IReadOnlyList<NavigationMob> Mobs);
 public sealed record MinimapObservation(DateTimeOffset CapturedUtc, MapPoint Center, IReadOnlyList<MapPoint> Dots, double? CharacterClockwiseDegrees);

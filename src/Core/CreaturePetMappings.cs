@@ -1,6 +1,7 @@
 using System.Text.Json;
 
 namespace PetTracker;
+
 public sealed record CreaturePetMatch(int PetId, string CatalogName, string InternalName, string Source = "Source data");
 public sealed class CreaturePetMappings
 {

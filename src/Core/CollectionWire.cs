@@ -1,6 +1,7 @@
 using System.Buffers.Binary;
 
 namespace PetTracker;
+
 public sealed record CollectionSnapshot(int EquippedPet, IReadOnlyDictionary<int, int> Ranks, IReadOnlyDictionary<int, int> Souls);
 public sealed record CollectionWireEvent(CollectionSnapshot? Snapshot, int PetId = 0, int Delta = 0, int? Rank = null, int? Spent = null);
 public sealed record PetWireFrame(byte Opcode, int BodyLength, byte[] BodyPrefix);

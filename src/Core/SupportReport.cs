@@ -1,6 +1,7 @@
 using System.Text.Json;
 
 namespace PetTracker;
+
 // Explicit allowlist: never serialize the worker view, message samples, event
 // text or exceptions into a report intended to be shared with another person.
 public static class SupportReport

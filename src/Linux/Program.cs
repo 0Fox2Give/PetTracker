@@ -4,6 +4,7 @@ using Avalonia.Styling;
 using Avalonia.Themes.Fluent;
 
 namespace PetTracker.Linux;
+
 internal static class Program
 {
     [STAThread]

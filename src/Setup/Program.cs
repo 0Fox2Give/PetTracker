@@ -10,6 +10,7 @@ using System.Windows.Media;
 using Microsoft.Win32;
 
 namespace PetTracker.Setup;
+
 public static class Installer
 {
     public static string DefaultLocation => Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Programs", "PetTracker");

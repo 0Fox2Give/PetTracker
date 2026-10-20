@@ -2,6 +2,7 @@ using System.Buffers.Binary;
 using System.Text;
 
 namespace PetTracker;
+
 public sealed record LocalCharacter(int Entity, string Name, int ServerToken);
 public sealed record NpcSpawn(int Entity, int Npc);
 public sealed record OwnHit(int Actor, int Target, int Damage);

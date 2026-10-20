@@ -1,4 +1,5 @@
 namespace PetTracker;
+
 public sealed record CapturedPayload(int SourcePort, int DestinationPort, byte[] Data, string? DeviceName);
 public interface IPacketCaptureService : IDisposable
 {

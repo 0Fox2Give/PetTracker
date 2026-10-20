@@ -1,4 +1,5 @@
 namespace PetTracker;
+
 public sealed class PetProgress
 {
     public int Id { get; set; }

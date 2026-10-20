@@ -3,6 +3,7 @@ using System.Net;
 using System.Runtime.InteropServices;
 
 namespace PetTracker;
+
 public sealed record GameConnectionPeer(string Source, int SourcePort, string Destination, int DestinationPort);
 public sealed record GameConnectionScan(IReadOnlyCollection<int> ProcessIds, IReadOnlyCollection<GameConnectionPeer> Peers);
 public sealed class GameConnections
@@ -56,7 +57,7 @@ public sealed class GameConnections
             }
             // The packet that triggers an OS read failure must survive too. Explicit
             // maintenance Refresh still reports the error; new peers remain unadmitted.
-            catch (Exception e)when (e is System.ComponentModel.Win32Exception or IOException or UnauthorizedAccessException)
+            catch (Exception e) when (e is System.ComponentModel.Win32Exception or IOException or InvalidDataException or UnauthorizedAccessException)
             {
             }
             finally

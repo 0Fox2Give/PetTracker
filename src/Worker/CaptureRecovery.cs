@@ -1,4 +1,5 @@
 namespace PetTracker;
+
 // Called under the engine gate, also used by manual capture restarts. Time is
 // monotonic so a system clock adjustment cannot stall or accelerate retries.
 public sealed class CaptureRecovery(Func<bool> running, Action invalidate, Action restart, Func<long>? clock = null)

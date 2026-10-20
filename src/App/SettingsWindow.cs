@@ -3,6 +3,7 @@ using System.Windows.Threading;
 using PetTracker.Updates;
 
 namespace PetTracker;
+
 public sealed class SettingsWindow : Window
 {
     readonly Host host;
@@ -516,7 +517,7 @@ public sealed class SettingsWindow : Window
                 File.WriteAllText(dialog.FileName, SupportReport.Create(v, Version()));
                 saved.Text = "Support report saved";
             }
-            catch (Exception ex)when (ex is IOException or UnauthorizedAccessException)
+            catch (Exception ex) when (ex is IOException or UnauthorizedAccessException)
             {
                 Ui.Error(ex, this);
             }

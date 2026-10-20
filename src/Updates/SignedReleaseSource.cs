@@ -7,6 +7,7 @@ using Velopack.Logging;
 using Velopack.Sources;
 
 namespace PetTracker.Updates;
+
 public sealed record SignedRelease(string Payload, string Signature);
 public sealed record ReleasePayload(
     string AppId,

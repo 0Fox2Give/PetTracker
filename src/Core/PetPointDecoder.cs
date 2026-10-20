@@ -1,4 +1,5 @@
 namespace PetTracker;
+
 public sealed record PetPointObservation(int PetId, int Value, DateTimeOffset ObservedUtc);
 public static class PetPointDecoder
 {

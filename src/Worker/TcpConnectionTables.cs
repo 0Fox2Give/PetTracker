@@ -3,6 +3,7 @@ using System.Net;
 using System.Runtime.InteropServices;
 
 namespace PetTracker;
+
 public delegate uint TcpTableQuery(IntPtr buffer, ref int size, int family);
 public static class TcpConnectionTables
 {

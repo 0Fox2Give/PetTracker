@@ -1,6 +1,7 @@
 using System.Numerics;
 
 namespace PetTracker;
+
 public readonly record struct MapPoint(double X, double Y)
 {
     public Complex Complex => new(X, Y);

@@ -5,6 +5,7 @@ using Velopack;
 using Velopack.Locators;
 
 namespace PetTracker.Updates;
+
 public sealed record PublisherConfiguration(string FeedRoot, string PublicKey)
 {
     public static PublisherConfiguration? Embedded(Assembly assembly)

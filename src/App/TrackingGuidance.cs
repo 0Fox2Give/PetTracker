@@ -1,4 +1,5 @@
 namespace PetTracker;
+
 // Presentation only: never infer a rank or fill an unknown collection balance.
 public static class TrackingGuidance
 {

@@ -1,4 +1,5 @@
 namespace PetTracker;
+
 public sealed record TcpAssemblyResult(IReadOnlyList<byte[]> Chunks, long LostBytes = 0, bool Buffered = false, bool Duplicate = false);
 // A gap is provisional until the bounded reorder window expires. Sequence
 // arithmetic is signed modulo 2^32; late and overlapping bytes are trimmed.

@@ -1,4 +1,5 @@
 namespace PetTracker;
+
 public sealed record NearbyPet(int PetId, string CreatureName, DateTimeOffset SeenUtc, PetDirection? Direction = null);
 // Appearance means the client received this NPC, not a measured distance.
 // Never persisted and never used to infer souls, ranks or kill participation.
@@ -26,9 +27,9 @@ public sealed class NearbyWorld
         // hasn't been hit or spawned again. This does not depend on arrow opt-in.
         if (family == 0x37)
         {
-            if (op == 0x3c && NavigationProtocol.ActionPose(body)is { } pose)
+            if (op == 0x3c && NavigationProtocol.ActionPose(body) is { } pose)
                 Refresh(pose.Entity, now);
-            else if (NavigationProtocol.Movement(op, body)is { Point: not null } movement)
+            else if (NavigationProtocol.Movement(op, body) is { Point: not null } movement)
                 Refresh(movement.Entity, now);
         }
 

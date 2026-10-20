@@ -1,6 +1,7 @@
 using System.Text.Json;
 
 namespace PetTracker;
+
 public record CatalogEntry(int Id, string CatalogName, string Name, string Category);
 public static class Catalog
 {

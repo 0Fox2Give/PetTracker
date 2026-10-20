@@ -6,6 +6,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Effects;
 
 namespace PetTracker;
+
 public sealed class PetTrackerOverlay : Window
 {
     readonly Host host;

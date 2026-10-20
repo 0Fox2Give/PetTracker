@@ -1,6 +1,7 @@
 using System.IO;
 
 namespace PetTracker.Setup;
+
 public static class UninstallPayload
 {
     // Move the complete owned payload before deleting anything. A locked file

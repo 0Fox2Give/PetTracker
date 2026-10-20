@@ -1,4 +1,5 @@
 namespace PetTracker;
+
 public sealed class AccountsWindow : Window
 {
     readonly Host host;

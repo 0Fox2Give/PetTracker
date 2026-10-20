@@ -9,6 +9,7 @@ using SharpPcap;
 using SharpPcap.LibPcap;
 
 namespace PetTracker;
+
 public sealed record CaptureStreamGap(int Source, int Destination, string Device, long Bytes, string Reason);
 public interface IScopedCapture
 {
@@ -76,7 +77,7 @@ public sealed class OrderedCapture : IPacketCaptureService, IScopedCapture, IPri
         return active != null && active.Source == key.Source && active.Destination == key.Destination && active.Device == flow.Device;
     }
 
-    public bool IsRunning => Volatile.Read(ref run)is { Started: true, Failed: false };
+    public bool IsRunning => Volatile.Read(ref run) is { Started: true, Failed: false };
 
     public int OpenDeviceCount
     {

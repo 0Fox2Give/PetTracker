@@ -5,6 +5,7 @@ using Avalonia.Media;
 using Avalonia.Media.Imaging;
 
 namespace PetTracker.Linux;
+
 public sealed class PetRow : Border
 {
     static readonly Dictionary<string, Bitmap> images = new();

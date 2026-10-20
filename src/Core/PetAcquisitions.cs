@@ -1,6 +1,7 @@
 using System.Text.Json;
 
 namespace PetTracker;
+
 public sealed record PetAcquisition(
     int PetId,
     string Kind,

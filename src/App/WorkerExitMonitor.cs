@@ -1,6 +1,7 @@
 using System.Diagnostics;
 
 namespace PetTracker;
+
 public sealed class WorkerExitMonitor : IDisposable
 {
     readonly Process worker;

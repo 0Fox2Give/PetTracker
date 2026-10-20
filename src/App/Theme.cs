@@ -3,6 +3,7 @@ using System.Windows.Interop;
 using System.Runtime.InteropServices;
 
 namespace PetTracker;
+
 public static class NativeTheme
 {
     [DllImport("dwmapi.dll")]
@@ -117,7 +118,7 @@ public sealed class PetPortraits(string root)
                 image.Freeze();
                 return cache[id] = image;
             }
-            catch (Exception ex)when (ex is IOException or NotSupportedException or ArgumentException)
+            catch (Exception ex) when (ex is IOException or NotSupportedException or ArgumentException)
             {
             }
 

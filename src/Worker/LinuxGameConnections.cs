@@ -2,6 +2,7 @@ using System.Globalization;
 using System.Net;
 
 namespace PetTracker;
+
 /// <summary>Admits only sockets owned by a configured game process in our network namespace.</summary>
 public static class LinuxGameConnections
 {
@@ -33,7 +34,7 @@ public static class LinuxGameConnections
             catch (FileNotFoundException)
             {
             }
-            catch (UnauthorizedAccessException)when (!owners.Contains(pid))
+            catch (UnauthorizedAccessException) when (!owners.Contains(pid))
             {
             } // Another user's process.
         }

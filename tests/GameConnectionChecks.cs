@@ -9,6 +9,7 @@ static class GameConnectionChecks
         long now = 0;
         int scans = 0;
         bool block = false, fail = false;
+        Exception? discoveryError = null;
         var peers = new List<GameConnectionPeer> { oldPeer };
         var owners = new List<int> { 101 };
         using var entered = new ManualResetEventSlim();
@@ -23,7 +24,7 @@ static class GameConnectionChecks
                     throw new TimeoutException("Test scan did not release");
             }
             if (fail)
-                throw new IOException("Fixture enumeration failed");
+                throw discoveryError ?? new IOException("Fixture enumeration failed");
             return new(owners, peers);
         }, () => Volatile.Read(ref now));
         bool Allows(GameConnectionPeer p) => connections.Allows(p.Source, p.SourcePort, p.Destination, p.DestinationPort);
@@ -82,6 +83,13 @@ static class GameConnectionChecks
         }
         catch (IOException) { }
         check(packetAccepted && connections.Generation == 2, "Established packet triggering a failed scan must still use its last complete connection snapshot");
+        foreach (var error in new Exception[] { new InvalidDataException("Malformed table"), new UnauthorizedAccessException("Cannot read process sockets") })
+        {
+            discoveryError = error;
+            now += 200;
+            check(Allows(oldPeer) && connections.Generation == 2,
+                "Established traffic survives " + error.GetType().Name + " without admitting new peers");
+        }
         fail = false;
         owners.Clear();
         peers.Clear();

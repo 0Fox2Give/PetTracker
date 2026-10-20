@@ -1,4 +1,5 @@
 namespace PetTracker;
+
 // The active game connection must not lose its reassembler because unrelated
 // browser/background traffic fills the bounded capture table.
 public sealed class CaptureFlowPool<TKey, TValue>

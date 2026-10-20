@@ -1,4 +1,5 @@
 namespace PetTracker;
+
 public static class StartupCommand
 {
     public static bool IsLegacyEntry(string command)

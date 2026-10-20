@@ -1,4 +1,5 @@
 namespace PetTracker;
+
 // Reads rotation of the actual character glyph relative to a reference mask.
 // Absolute facing requires a separately calibrated reference angle.
 public sealed record MarkerRotation(double ClockwiseDegrees, double Score, double RivalScore);

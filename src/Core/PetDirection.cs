@@ -1,4 +1,5 @@
 namespace PetTracker;
+
 // Transient presentation input, never collection data. A navigation producer must
 // first validate position and nearest live entity. Metres are optional and need
 // their own calibration. Bearing is
