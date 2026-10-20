@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Remove="UiTests/**/*.cs;UpdateTests/**/*.cs" />
+    <Compile Remove="UiTests/**/*.cs;UpdateTests/**/*.cs;LinuxTests/**/*.cs;LinuxUiTests/**/*.cs" />
     <ProjectReference Include="../src/Worker/Worker.csproj" />
     <ProjectReference Include="../src/Setup/Setup.csproj" />
   </ItemGroup>

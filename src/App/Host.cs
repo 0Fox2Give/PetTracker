@@ -1,64 +1,31 @@
 using System.Diagnostics;
-
 using System.IO.Pipes;
-
 using System.Text.Json;
-
 using System.Windows.Threading;
 
 namespace PetTracker;
-
 public sealed class Host : IDisposable
 {
-
-    public string AssetRoot
-    {
-        get;
-    }
-    public object Gate { get; } = new(); public Tracker Tracker
-    {
-        get;
-    }
-    public bool StartHidden
-    {
-        get; set;
-    }
-
-    public AppSettings PetOverlayPreferences { get; private set; } = new(); public WorkerView? View
-    {
-        get; private set;
-    }
+    public string AssetRoot { get; }
+    public object Gate { get; } = new();
+    public Tracker Tracker { get; }
+    public bool StartHidden { get; set; }
+    public AppSettings PetOverlayPreferences { get; private set; } = new();
+    public WorkerView? View { get; private set; }
     public MerchantDisplay MerchantDisplay { get; } = new();
+    public bool PreviewOnly { get; private set; }
+    public string? ConnectionError { get; private set; }
+    public bool ActivityCheckOnStart { get; set; }
+    public AppUpdateService Updates { get; }
 
-    public bool PreviewOnly
-    {
-        get; private set;
-    }
-    public string? ConnectionError
-    {
-        get; private set;
-    }
-
-    public bool ActivityCheckOnStart
-    {
-        get; set;
-    }
-    public AppUpdateService Updates
-    {
-        get;
-    }
     bool updateStopping;
     WorkerExitMonitor? updateWorker;
-
     public Func<string, bool> IsGameForeground { get; set; } = WindowBehavior.GameForeground;
 
     long nextUiHealth;
-
     PetFinderWindow? finder;
-
     public async Task<bool> PinPet(int id, bool pinned) => await Change(new(pinned ? "pin" : "unpin", PetId: id));
     public async Task<bool> UnlockPetOverlay(bool showError = true) => await Change(new("patch", Patch: SettingsPatch.Fields((nameof(AppSettings.Locked), false), (nameof(AppSettings.ClickThrough), false))), showError);
-
     public void OpenPetFinder(int? id = null)
     {
         if (finder == null)
@@ -75,29 +42,28 @@ public sealed class Host : IDisposable
     readonly SemaphoreSlim rpc = new(1, 1);
     readonly DispatcherTimer timer;
     bool busy, disposed;
-    public PetTrackerOverlay? Overlay
-    {
-        get; private set;
-    }
+    public PetTrackerOverlay? Overlay { get; private set; }
+
     AccountsWindow? accounts;
     SettingsWindow? settings;
-
     bool revealEmpty;
     public string HotkeyError { get; private set; } = "";
+
     public void SetHotkeyError(string error)
     {
         HotkeyError = error;
         settings?.RefreshStatus();
     }
+
     public event Action? TestNotification;
     public void PreviewNotification()
     {
         if (!PreviewOnly)
             TestNotification?.Invoke();
     }
+
     public event Action? Changed;
     public event Action<string>? Notification;
-
     public Host(string root, bool connect = true, PetTracker.Updates.UpdateSession? updatePreview = null)
     {
         PreviewOnly = !connect;
@@ -179,9 +145,10 @@ public sealed class Host : IDisposable
         yield return Storage.LegacyPipe(AssetRoot);
         // Older workers hashed the original path spelling. Read this optional hint
         // only after ordinary endpoints fail; never recover or modify diagnostics.
-        if (RecordedLegacyEndpoint() is { } recorded)
+        if (RecordedLegacyEndpoint()is { } recorded)
             yield return recorded;
     }
+
     string? RecordedLegacyEndpoint()
     {
         try
@@ -199,11 +166,12 @@ public sealed class Host : IDisposable
                 return null;
             return Storage.LegacyPipe(root);
         }
-        catch (Exception ex) when (ex is IOException or UnauthorizedAccessException or JsonException or ArgumentException or NotSupportedException)
+        catch (Exception ex)when (ex is IOException or UnauthorizedAccessException or JsonException or ArgumentException or NotSupportedException)
         {
             return null;
         }
     }
+
     async Task<NamedPipeClientStream> ConnectWorker(Command command)
     {
         string canonical = Storage.Pipe(AssetRoot);
@@ -228,6 +196,7 @@ public sealed class Host : IDisposable
                 throw;
             }
         }
+
         if (updateStopping && command.Action == "exit")
             throw new WorkerNotRunningException();
         if (updateStopping)
@@ -246,12 +215,23 @@ public sealed class Host : IDisposable
             throw;
         }
     }
+
     void LaunchWorker()
     {
         string file = Path.Combine(AppContext.BaseDirectory, "PetTracker.Capture.exe");
         if (!File.Exists(file))
             throw new IOException("The capture component is missing. Reinstall Pet Tracker.");
-        var start = new ProcessStartInfo(file) { UseShellExecute = false, CreateNoWindow = true, WindowStyle = ProcessWindowStyle.Hidden, ArgumentList = { "--data", AssetRoot } };
+        var start = new ProcessStartInfo(file)
+        {
+            UseShellExecute = false,
+            CreateNoWindow = true,
+            WindowStyle = ProcessWindowStyle.Hidden,
+            ArgumentList =
+            {
+                "--data",
+                AssetRoot
+            }
+        };
         if (ActivityCheckOnStart)
             start.ArgumentList.Add("--activity-check");
         Process.Start(start);
@@ -271,6 +251,7 @@ public sealed class Host : IDisposable
             captureSetupShown = true;
             OpenConnectionHelp();
         }
+
         bool hasRows = (Tracker.Ready && Activity.Select(Tracker, PetOverlayPreferences, DateTimeOffset.UtcNow).Any()) || MerchantDisplay.Select(view, DateTimeOffset.UtcNow).Count > 0;
         if (hasRows)
             revealEmpty = false;
@@ -283,6 +264,7 @@ public sealed class Host : IDisposable
                 Overlay = new(this);
                 Overlay.SourceInitialized += (s, e) => ApplyAppearance();
             }
+
             ApplyAppearance();
             if (!PreviewOnly && !Overlay.IsVisible)
                 Overlay.Show();
@@ -310,20 +292,11 @@ public sealed class Host : IDisposable
                 if (View == null)
                     throw new InvalidOperationException("Preview is not initialized");
                 if (command.Action == "patch")
-                    Accept(View with
-                    {
-                        Settings = SettingsPatch.Apply(View.Settings, command.Patch!)
-                    });
+                    Accept(View with { Settings = SettingsPatch.Apply(View.Settings, command.Patch!) });
                 else if (command.Action is "pin" or "unpin")
-                    Accept(View with
-                    {
-                        Settings = PetPins.Change(View.Settings, command.PetId, command.Action == "pin")
-                    });
+                    Accept(View with { Settings = PetPins.Change(View.Settings, command.PetId, command.Action == "pin") });
                 else if (command.Action == "settings")
-                    Accept(View with
-                    {
-                        Settings = command.Settings!
-                    });
+                    Accept(View with { Settings = command.Settings! });
                 else
                     throw new InvalidOperationException("This action needs a connected app");
             }
@@ -380,6 +353,7 @@ public sealed class Host : IDisposable
             accounts = new(this);
             accounts.Closed += (s, e) => accounts = null;
         }
+
         accounts.Show();
         accounts.Activate();
     }
@@ -391,6 +365,7 @@ public sealed class Host : IDisposable
             settings = new(this);
             settings.Closed += (s, e) => settings = null;
         }
+
         settings.Show();
         settings.Activate();
     }
@@ -418,21 +393,14 @@ public sealed class Host : IDisposable
         nextUiHealth = Environment.TickCount64 + 5000;
         try
         {
-            Storage.Save(Path.Combine(AssetRoot, "ui-status.json"), new
-            {
-                Version = typeof(Host).Assembly.GetName().Version?.ToString(),
-                RecordedUtc = DateTimeOffset.UtcNow,
-                ProcessId = Environment.ProcessId,
-                Executable = Environment.ProcessPath,
-                Data = AssetRoot,
-                TrackerWindows = Application.Current.Windows.OfType<PetTrackerOverlay>().Count(),
-                Visible = Overlay?.IsVisible == true,
-                Rows = Overlay?.DisplayedPetCount ?? 0,
-                PetOverlayPreferences.GameOnly
-            });
+            Storage.Save(Path.Combine(AssetRoot, "ui-status.json"), new { Version = typeof(Host).Assembly.GetName().Version?.ToString(), RecordedUtc = DateTimeOffset.UtcNow, ProcessId = Environment.ProcessId, Executable = Environment.ProcessPath, Data = AssetRoot, TrackerWindows = Application.Current.Windows.OfType<PetTrackerOverlay>().Count(), Visible = Overlay?.IsVisible == true, Rows = Overlay?.DisplayedPetCount ?? 0, PetOverlayPreferences.GameOnly });
         }
-        catch (IOException) { }
-        catch (UnauthorizedAccessException) { }
+        catch (IOException)
+        {
+        }
+        catch (UnauthorizedAccessException)
+        {
+        }
     }
 
     public void Preview(WorkerView view)
@@ -454,7 +422,9 @@ public sealed class Host : IDisposable
         {
             await Send(new("exit"));
         }
-        catch (WorkerNotRunningException) { }
+        catch (WorkerNotRunningException)
+        {
+        }
         catch
         {
             ResumeAfterUpdateFailure();
@@ -464,34 +434,26 @@ public sealed class Host : IDisposable
 
     public async Task<bool> StopWorkerForUpdate()
     {
-
         timer.Stop();
         updateStopping = true;
         updateWorker?.Dispose();
         updateWorker = null;
-
         try
         {
-
             if (View?.WorkerProcessId is not > 0)
                 return false;
-
             string expected = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "PetTracker.Capture.exe"));
             updateWorker = WorkerExitMonitor.Open(View.WorkerProcessId, expected);
-
             await Send(new("exit"));
             return true;
-
         }
         catch (Exception)
         {
             return false;
         }
-
     }
 
     public bool UpdateWorkerExited() => updateWorker?.ExitedCleanly == true;
-
     public void ResumeAfterUpdateFailure()
     {
         updateStopping = false;
@@ -510,5 +472,4 @@ public sealed class Host : IDisposable
         settings?.Close();
         finder?.Close();
     }
-
 }

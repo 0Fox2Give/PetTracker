@@ -1,8 +1,8 @@
 namespace PetTracker;
-
 // The active game connection must not lose its reassembler because unrelated
 // browser/background traffic fills the bounded capture table.
-public sealed class CaptureFlowPool<TKey, TValue> where TKey : notnull
+public sealed class CaptureFlowPool<TKey, TValue>
+    where TKey : notnull
 {
     readonly Dictionary<TKey, TValue> entries = new();
     readonly int capacity;
@@ -16,7 +16,9 @@ public sealed class CaptureFlowPool<TKey, TValue> where TKey : notnull
         this.lastSeen = lastSeen;
         this.protect = protect;
     }
+
     public IReadOnlyDictionary<TKey, TValue> Entries => entries;
+
     public bool TryGetValue(TKey key, out TValue value) => entries.TryGetValue(key, out value!);
     public bool Remove(TKey key) => entries.Remove(key);
     public bool TryAdd(TKey key, TValue value, out KeyValuePair<TKey, TValue>? evicted)
@@ -33,6 +35,7 @@ public sealed class CaptureFlowPool<TKey, TValue> where TKey : notnull
             entries.Remove(oldest.Key);
             evicted = oldest;
         }
+
         entries.Add(key, value);
         return true;
     }

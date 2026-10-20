@@ -1,5 +1,4 @@
 namespace PetTracker;
-
 public sealed class AccountsWindow : Window
 {
     readonly Host host;
@@ -17,7 +16,12 @@ public sealed class AccountsWindow : Window
         var w = this;
         box.Children.Add(Ui.Text("Accounts", 22));
         box.Children.Add(new TextBlock { Text = "Pets are shared across an account. Choose the account to track, or link your detected alt to its account.", FontSize = 12, Foreground = Ui.Muted, TextWrapping = TextWrapping.Wrap, Margin = new Thickness(0, 12, 0, 16) });
-        var choices = new ComboBox { ItemsSource = host.View?.Profiles, DisplayMemberPath = "Label", SelectedItem = host.View?.Profiles.FirstOrDefault(p => p.ProfileKey == host.View.Selected) };
+        var choices = new ComboBox
+        {
+            ItemsSource = host.View?.Profiles,
+            DisplayMemberPath = "Label",
+            SelectedItem = host.View?.Profiles.FirstOrDefault(p => p.ProfileKey == host.View.Selected)
+        };
         box.Children.Add(choices);
         var characters = Ui.Text("", 12, Ui.Muted);
         characters.TextWrapping = TextWrapping.Wrap;
@@ -36,6 +40,7 @@ public sealed class AccountsWindow : Window
             link.Content = detected != null && target != null ? "Use " + detected + " with " + target.Label : "Waiting for character detection";
             link.IsEnabled = detected != null && target != null;
         }
+
         choices.SelectionChanged += (s, e) => ShowTarget();
         ShowTarget();
         box.Children.Add(Ui.Button("Use selected account", async () =>
@@ -84,9 +89,18 @@ public sealed class AccountsWindow : Window
             add.ShowDialog();
         }));
     }
+
     Window Dialog(string title, Panel content, double width = 440)
     {
-        var w = new Window { Title = title, Owner = this, Width = width, SizeToContent = SizeToContent.Height, ResizeMode = ResizeMode.NoResize, WindowStartupLocation = WindowStartupLocation.CenterOwner };
+        var w = new Window
+        {
+            Title = title,
+            Owner = this,
+            Width = width,
+            SizeToContent = SizeToContent.Height,
+            ResizeMode = ResizeMode.NoResize,
+            WindowStartupLocation = WindowStartupLocation.CenterOwner
+        };
         NativeTheme.Install(w);
         content.Margin = new Thickness(24);
         w.Content = content;

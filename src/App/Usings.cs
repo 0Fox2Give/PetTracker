@@ -7,8 +7,8 @@ global using System.Threading.Tasks;
 global using System.Windows;
 global using System.Windows.Controls;
 global using System.Windows.Media;
-namespace PetTracker;
 
+namespace PetTracker;
 public static class Ui
 {
     public static Brush Ink = new SolidColorBrush(Color.FromRgb(223, 230, 239)), Muted = new SolidColorBrush(Color.FromRgb(145, 155, 171)), Dark = new SolidColorBrush(Color.FromRgb(11, 16, 23));
@@ -19,6 +19,7 @@ public static class Ui
         b.Click += (s, e) => click();
         return b;
     }
+
     public static void Error(Exception ex, Window? owner = null)
     {
         if (owner != null)

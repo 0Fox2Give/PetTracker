@@ -1,5 +1,4 @@
 namespace PetTracker;
-
 public static class MaintenanceLoop
 {
     public static async Task Run(Action tick, Action<Exception?> report, CancellationToken stop, TimeSpan? interval = null)
@@ -14,7 +13,7 @@ public static class MaintenanceLoop
                     tick();
                     report(null);
                 }
-                catch (OperationCanceledException) when (stop.IsCancellationRequested)
+                catch (OperationCanceledException)when (stop.IsCancellationRequested)
                 {
                     break;
                 }
@@ -24,6 +23,8 @@ public static class MaintenanceLoop
                 }
             }
         }
-        catch (OperationCanceledException) when (stop.IsCancellationRequested) { }
+        catch (OperationCanceledException)when (stop.IsCancellationRequested)
+        {
+        }
     }
 }

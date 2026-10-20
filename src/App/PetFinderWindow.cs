@@ -1,8 +1,8 @@
 using System.Diagnostics;
 using System.ComponentModel;
 using System.Windows.Markup;
-namespace PetTracker;
 
+namespace PetTracker;
 public sealed class PetFinderWindow : Window
 {
     bool detailRendered;
@@ -10,7 +10,17 @@ public sealed class PetFinderWindow : Window
     string renderedPins = "";
     DateOnly renderedDate;
     string renderedMarket = "";
-    readonly ComboBox filter = new() { ItemsSource = new[] { "All pets", "Black Market watchlist", "Seen in Black Market" }, SelectedIndex = 0, MinWidth = 200 };
+    readonly ComboBox filter = new()
+    {
+        ItemsSource = new[]
+        {
+            "All pets",
+            "Black Market watchlist",
+            "Seen in Black Market"
+        },
+        SelectedIndex = 0,
+        MinWidth = 200
+    };
     readonly TextBlock marketHelp = Ui.Text("", 11, Ui.Muted);
     readonly Host host;
     readonly TextBox search = new();
@@ -27,11 +37,9 @@ public sealed class PetFinderWindow : Window
         public string Progress { get; private set; } = "? / ?";
         public string Hint { get; private set; } = "";
         public Brush ProgressBrush { get; private set; } = Ui.Ink;
-        public double ProgressValue
-        {
-            get; private set;
-        }
+        public double ProgressValue { get; private set; }
         public Visibility ProgressVisibility { get; private set; } = Visibility.Collapsed;
+
         public event PropertyChangedEventHandler? PropertyChanged;
         public void Update(Profile profile)
         {
@@ -39,11 +47,11 @@ public sealed class PetFinderWindow : Window
             string rank = pet?.Level is int level ? (level == 0 ? "Unranked" : "Rank " + level) : "Rank ?";
             string progress = pet?.Max == true ? "\u2713 MAX" : pet?.ProgressText.Replace("/", " / ") ?? "? / ?";
             string hint = Label + " · " + rank + " · " + progress + (pet?.ProgressNeedsSync == true && !pet.Max ? "\nLast known progress; waiting for a fresh collection." : "");
-            if (TrackingGuidance.Remaining(pet) is { Length: > 0 } remaining)
+            if (TrackingGuidance.Remaining(pet)is { Length: > 0 } remaining)
                 hint += "\n" + remaining;
             Brush brush = pet?.Max == true ? Ui.Muted : Ui.Ink;
-            ProgressValue = pet?.Max == true ? 100 : pet?.CurrentSouls is int souls && pet.Goal is > 0 ? Math.Clamp(100.0 * souls / pet.Goal.Value, 0, 100) : 0;
-            ProgressVisibility = pet?.Max == true || pet?.CurrentSouls != null && pet.Goal is > 0 ? Visibility.Visible : Visibility.Collapsed;
+            ProgressValue = pet?.Max == true ? 100 : pet?.CurrentSouls is int souls && pet.Goal is> 0 ? Math.Clamp(100.0 * souls / pet.Goal.Value, 0, 100) : 0;
+            ProgressVisibility = pet?.Max == true || pet?.CurrentSouls != null && pet.Goal is> 0 ? Visibility.Visible : Visibility.Collapsed;
             if ((Rank, Progress, Hint, ProgressBrush) == (rank, progress, hint, brush))
                 return;
             Rank = rank;
@@ -53,6 +61,7 @@ public sealed class PetFinderWindow : Window
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(null));
         }
     }
+
     public PetFinderWindow(Host host, int? petId = null)
     {
         this.host = host;
@@ -77,14 +86,8 @@ public sealed class PetFinderWindow : Window
         header.Children.Add(title);
         header.Children.Add(new TextBlock { Text = "Soul sources, locations, and your collection progress.", Foreground = Ui.Muted, FontSize = 12, Margin = new Thickness(0, 5, 0, 18) });
         var toolbar = new Grid { Margin = new Thickness(0, 0, 0, 14), HorizontalAlignment = HorizontalAlignment.Left };
-        toolbar.ColumnDefinitions.Add(new()
-        {
-            Width = new GridLength(320)
-        });
-        toolbar.ColumnDefinitions.Add(new()
-        {
-            Width = new GridLength(212)
-        });
+        toolbar.ColumnDefinitions.Add(new() { Width = new GridLength(320) });
+        toolbar.ColumnDefinitions.Add(new() { Width = new GridLength(212) });
         search.Tag = "Search pets or mobs…";
         search.Height = 32;
         search.VerticalContentAlignment = VerticalAlignment.Center;
@@ -106,16 +109,8 @@ public sealed class PetFinderWindow : Window
         DockPanel.SetDock(footer, Dock.Bottom);
         layout.Children.Add(footer);
         var body = new Grid();
-        body.ColumnDefinitions.Add(new()
-        {
-            Width = new GridLength(1, GridUnitType.Star),
-            MinWidth = 260,
-            MaxWidth = 320
-        });
-        body.ColumnDefinitions.Add(new()
-        {
-            Width = new GridLength(1.55, GridUnitType.Star)
-        });
+        body.ColumnDefinitions.Add(new() { Width = new GridLength(1, GridUnitType.Star), MinWidth = 260, MaxWidth = 320 });
+        body.ColumnDefinitions.Add(new() { Width = new GridLength(1.55, GridUnitType.Star) });
         layout.Children.Add(body);
         ScrollViewer.SetHorizontalScrollBarVisibility(results, ScrollBarVisibility.Disabled);
         results.ItemTemplate = (DataTemplate)XamlReader.Parse("""
@@ -149,9 +144,23 @@ public sealed class PetFinderWindow : Window
         body.Children.Add(new Border { Child = collection, Background = new SolidColorBrush(Color.FromRgb(14, 20, 28)), BorderBrush = new SolidColorBrush(Color.FromRgb(30, 41, 54)), BorderThickness = new Thickness(1), CornerRadius = new CornerRadius(10), Padding = new Thickness(6) });
         results.BorderThickness = new Thickness(0);
         results.Background = Brushes.Transparent;
-        var scroll = new ScrollViewer { Content = detail, VerticalScrollBarVisibility = ScrollBarVisibility.Auto, HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled };
+        var scroll = new ScrollViewer
+        {
+            Content = detail,
+            VerticalScrollBarVisibility = ScrollBarVisibility.Auto,
+            HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled
+        };
         detail.Margin = new Thickness(0, 0, 8, 0);
-        var card = new Border { Child = scroll, Background = new SolidColorBrush(Color.FromRgb(16, 23, 32)), BorderBrush = new SolidColorBrush(Color.FromRgb(30, 41, 54)), BorderThickness = new Thickness(1), CornerRadius = new CornerRadius(10), Padding = new Thickness(20), Margin = new Thickness(16, 0, 0, 0) };
+        var card = new Border
+        {
+            Child = scroll,
+            Background = new SolidColorBrush(Color.FromRgb(16, 23, 32)),
+            BorderBrush = new SolidColorBrush(Color.FromRgb(30, 41, 54)),
+            BorderThickness = new Thickness(1),
+            CornerRadius = new CornerRadius(10),
+            Padding = new Thickness(20),
+            Margin = new Thickness(16, 0, 0, 0)
+        };
         Grid.SetColumn(card, 1);
         body.Children.Add(card);
         search.TextChanged += (s, e) => Search();
@@ -162,12 +171,14 @@ public sealed class PetFinderWindow : Window
         SelectPet(petId);
         Loaded += (s, e) => search.Focus();
     }
+
     IEnumerable<(MarketStock Stock, MarketOffer Offer)> Offers() => host.View?.Ready == true ? (host.View.Market ?? Array.Empty<MarketStock>()).Where(s => s.Fresh(DateTimeOffset.UtcNow)).SelectMany(s => s.Offers.Select(o => (s, o))) : Array.Empty<(MarketStock, MarketOffer)>();
     IEnumerable<PetSearchResult> Matches()
     {
         var matches = filter.SelectedIndex == 0 ? PetFinder.Search(search.Text, host.Tracker.Profile) : BlackMarket.Watchlist(search.Text, host.Tracker.Profile);
         return filter.SelectedIndex == 2 ? matches.Where(p => Offers().Any(o => o.Offer.PetId == p.Pet.Id)) : matches;
     }
+
     void MarketHelp()
     {
         marketHelp.Text = filter.SelectedIndex == 0 ? "" : filter.SelectedIndex == 1 ? "Shopping list · Pets obtained from chests or the merchant. Maxed pets are hidden." : "Recent offers · Open Special and Pets in game to read stock. Offers clear after two minutes or a connection change.";
@@ -175,6 +186,7 @@ public sealed class PetFinderWindow : Window
             marketHelp.Text += " " + TrackingGuidance.Sync;
         marketHelp.Margin = new Thickness(0, 0, 0, filter.SelectedIndex == 0 ? 0 : 12);
     }
+
     void Search()
     {
         int? selected = (results.SelectedItem as SearchRow)?.Result.Pet.Id;
@@ -188,6 +200,7 @@ public sealed class PetFinderWindow : Window
         results.SelectedItem = matches.FirstOrDefault(p => p.Result.Pet.Id == selected) ?? matches.FirstOrDefault();
         RefreshDetail();
     }
+
     public void SelectPet(int? id)
     {
         if (id == null)
@@ -198,6 +211,7 @@ public sealed class PetFinderWindow : Window
         if (results.SelectedItem != null)
             results.ScrollIntoView(results.SelectedItem);
     }
+
     void Refresh()
     {
         MarketHelp();
@@ -206,10 +220,12 @@ public sealed class PetFinderWindow : Window
             Search();
             return;
         }
+
         foreach (var row in results.Items.Cast<SearchRow>())
             row.Update(host.Tracker.Profile);
         RefreshDetail();
     }
+
     void RefreshDetail()
     {
         int? selectedId = (results.SelectedItem as SearchRow)?.Result.Pet.Id;
@@ -229,11 +245,19 @@ public sealed class PetFinderWindow : Window
             detail.Children.Add(Ui.Text(filter.SelectedIndex == 2 ? "No recent matching shop offers. Open the Black Market in game while Pet Tracker is connected." : "No matching pets. Try another pet or mob name.", 13, Ui.Muted));
             return;
         }
+
         var selected = selectedRow.Result;
         int id = selected.Pet.Id;
         var heading = new DockPanel();
         var portrait = new Image { Source = portraits.Get(id), Width = 60, Height = 64, Stretch = Stretch.Uniform };
-        var portraitWell = new Border { Child = portrait, Background = new SolidColorBrush(Color.FromRgb(23, 32, 43)), CornerRadius = new CornerRadius(8), Padding = new Thickness(6), Margin = new Thickness(0, 0, 14, 0) };
+        var portraitWell = new Border
+        {
+            Child = portrait,
+            Background = new SolidColorBrush(Color.FromRgb(23, 32, 43)),
+            CornerRadius = new CornerRadius(8),
+            Padding = new Thickness(6),
+            Margin = new Thickness(0, 0, 14, 0)
+        };
         DockPanel.SetDock(portraitWell, Dock.Left);
         heading.Children.Add(portraitWell);
         var identity = new StackPanel { VerticalAlignment = VerticalAlignment.Center };
@@ -241,7 +265,12 @@ public sealed class PetFinderWindow : Window
         identity.Children.Add(new PetFamilyBadge(id) { Margin = new Thickness(0, 8, 0, 0) });
         heading.Children.Add(identity);
         detail.Children.Add(heading);
-        var progressPanel = new StackPanel { Margin = new Thickness(0, 0, 16, 0), VerticalAlignment = VerticalAlignment.Center, DataContext = selectedRow };
+        var progressPanel = new StackPanel
+        {
+            Margin = new Thickness(0, 0, 16, 0),
+            VerticalAlignment = VerticalAlignment.Center,
+            DataContext = selectedRow
+        };
         progressPanel.SetBinding(ToolTipProperty, new System.Windows.Data.Binding("Hint"));
         var progress = new DockPanel();
         var rank = Ui.Text("", 12, Ui.Muted);
@@ -254,7 +283,13 @@ public sealed class PetFinderWindow : Window
         progress.Children.Add(amount);
         progress.Children.Add(rank);
         progressPanel.Children.Add(progress);
-        var bar = new ProgressBar { Minimum = 0, Maximum = 100, Style = (Style)FindResource("FinderProgress"), Margin = new Thickness(0, 9, 0, 0) };
+        var bar = new ProgressBar
+        {
+            Minimum = 0,
+            Maximum = 100,
+            Style = (Style)FindResource("FinderProgress"),
+            Margin = new Thickness(0, 9, 0, 0)
+        };
         bar.SetBinding(ProgressBar.ValueProperty, new System.Windows.Data.Binding("ProgressValue") { Mode = System.Windows.Data.BindingMode.OneWay });
         bar.SetBinding(ProgressBar.VisibilityProperty, new System.Windows.Data.Binding("ProgressVisibility"));
         System.Windows.Automation.AutomationProperties.SetAutomationId(bar, "FinderSoulProgress");
@@ -270,14 +305,8 @@ public sealed class PetFinderWindow : Window
         pin.ToolTip = PetPins.Hint(prefs, id);
         ToolTipService.SetShowOnDisabled(pin, true);
         var summary = new Grid { Margin = new Thickness(0, 16, 0, 0) };
-        summary.ColumnDefinitions.Add(new()
-        {
-            Width = new GridLength(1, GridUnitType.Star)
-        });
-        summary.ColumnDefinitions.Add(new()
-        {
-            Width = GridLength.Auto
-        });
+        summary.ColumnDefinitions.Add(new() { Width = new GridLength(1, GridUnitType.Star) });
+        summary.ColumnDefinitions.Add(new() { Width = GridLength.Auto });
         summary.Children.Add(progressPanel);
         Grid.SetColumn(pin, 1);
         summary.Children.Add(pin);
@@ -305,6 +334,7 @@ public sealed class PetFinderWindow : Window
                 sourceButton.ToolTip = acquisition.SourceName + " · checked " + acquisition.CheckedOn;
             }
         }
+
         if (selected.AvailableMaps.Count == 0)
             AcquisitionDetails();
         if (selected.Pet.Category == "Special" && selected.Location?.Maps.Count is not > 0 && selected.Creatures.Count == 0)
@@ -314,8 +344,10 @@ public sealed class PetFinderWindow : Window
                 Section("How to obtain");
                 Paragraph("No confirmed acquisition source yet.");
             }
+
             return;
         }
+
         if (selected.AvailableMaps.Count == 0 && selected.Creatures.Count == 0 && selected.Acquisition != null)
             return;
         Section(selected.AvailableMaps.Count > 0 ? "Locations" : "Soul sources");
@@ -338,6 +370,7 @@ public sealed class PetFinderWindow : Window
                     names.LineHeight = 19;
                     location.Children.Add(names);
                 }
+
                 detail.Children.Add(new Border { Child = location, Padding = new Thickness(12), Margin = new Thickness(0, 0, 0, 8), Background = new SolidColorBrush(Color.FromRgb(20, 29, 40)), CornerRadius = new CornerRadius(6) });
             }
         }
@@ -356,6 +389,7 @@ public sealed class PetFinderWindow : Window
             Section("Soul drops");
             Paragraph(string.Join("\n", selected.Creatures));
         }
+
         if (selected.AvailableMaps.Count > 0)
             AcquisitionDetails();
         if (selected.Location?.SourceUrl is { } source && selected.AvailableMaps.Count > 0 && selected.Acquisition?.SourceUrl != source)
@@ -368,12 +402,14 @@ public sealed class PetFinderWindow : Window
             detail.Children.Add(button);
         }
     }
+
     void Section(string title)
     {
         var text = Ui.Text(title, 12);
         text.FontWeight = FontWeights.SemiBold;
         detail.Children.Add(new Border { Child = text, BorderBrush = new SolidColorBrush(Color.FromRgb(35, 46, 59)), BorderThickness = new Thickness(0, 1, 0, 0), Padding = new Thickness(0, 14, 0, 0), Margin = new Thickness(0, 18, 0, 10) });
     }
+
     void Paragraph(string value)
     {
         if (string.IsNullOrWhiteSpace(value))
@@ -383,6 +419,7 @@ public sealed class PetFinderWindow : Window
         text.Margin = new Thickness(0, 0, 0, 10);
         detail.Children.Add(text);
     }
+
     void Open(string url)
     {
         try
@@ -392,7 +429,7 @@ public sealed class PetFinderWindow : Window
             if (!host.PreviewOnly)
                 Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
         }
-        catch (Exception ex) when (ex is InvalidDataException or System.ComponentModel.Win32Exception or InvalidOperationException)
+        catch (Exception ex)when (ex is InvalidDataException or System.ComponentModel.Win32Exception or InvalidOperationException)
         {
             Ui.Error(ex, this);
         }

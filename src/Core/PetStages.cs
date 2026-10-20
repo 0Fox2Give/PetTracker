@@ -1,11 +1,16 @@
 namespace PetTracker;
-
 // Game counter goals. Captured upgrade deductions confirm that points are
 // spent at transitions; rank-2 X/75 is not a cumulative25+50 balance.
 public static class PetStages
 {
     public const int UnlockCost = 5, RankTwoCost = 25, MaxUpgradeCost = 75;
-    public static int? CounterGoal(int ownedRank) => ownedRank switch { 0 => UnlockCost, 1 => RankTwoCost, 2 => MaxUpgradeCost, _ => null };
+    public static int? CounterGoal(int ownedRank) => ownedRank switch
+    {
+        0 => UnlockCost,
+        1 => RankTwoCost,
+        2 => MaxUpgradeCost,
+        _ => null
+    };
     public static string UpgradeHint(int? ownedRank) => ownedRank switch
     {
         0 => "Unlock Rank 1: 5 soul points.",

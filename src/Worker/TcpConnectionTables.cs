@@ -3,20 +3,19 @@ using System.Net;
 using System.Runtime.InteropServices;
 
 namespace PetTracker;
-
 public delegate uint TcpTableQuery(IntPtr buffer, ref int size, int family);
-
 public static class TcpConnectionTables
 {
     const uint InsufficientBuffer = 122;
     const int MaxTableBytes = 4000000, MaxReads = 3;
-
     // Windows can grow the table between sizing and reading it. Never publish
     // an empty/partial connection list when either family could not be read.
     public static IReadOnlyList<GameConnectionPeer> Read(IReadOnlySet<int> owners, TcpTableQuery query)
     {
         var peers = new List<GameConnectionPeer>();
-        foreach (int family in new[] { 2, 23 })
+        foreach (int family in new[] { 2, 23 }
+
+        )
         {
             byte[] table = ReadTable(family, query);
             int stride = family == 2 ? 24 : 56;
@@ -34,6 +33,7 @@ public static class TcpConnectionTables
                 peers.Add(new(remote, (table[rp] << 8) | table[rp + 1], local, (table[lp] << 8) | table[lp + 1]));
             }
         }
+
         return peers;
     }
 
@@ -67,6 +67,7 @@ public static class TcpConnectionTables
                 Marshal.FreeHGlobal(buffer);
             }
         }
+
         throw new Win32Exception((int)InsufficientBuffer, "TCP connection table kept changing during discovery.");
     }
 }

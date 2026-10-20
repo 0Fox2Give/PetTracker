@@ -1,18 +1,16 @@
 using System.Windows.Threading;
 using PetTracker.Updates;
 using Velopack.Locators;
-namespace PetTracker;
 
+namespace PetTracker;
 public sealed class AppUpdateService : IDisposable
 {
     readonly Host host;
     readonly DispatcherTimer timer = new() { Interval = TimeSpan.FromMinutes(1) };
     DateTimeOffset nextCheck = DateTimeOffset.UtcNow.AddSeconds(30);
-    public UpdateSession Session
-    {
-        get;
-    }
+    public UpdateSession Session { get; }
     public bool SameChannel => Session.Channel == host.PetOverlayPreferences.UpdateChannel;
+
     public event Action<string>? Ready;
     public event Action<string>? Available;
     public AppUpdateService(Host host, UpdateSession? preview = null)
@@ -37,6 +35,7 @@ public sealed class AppUpdateService : IDisposable
         {
             unavailable = "Update configuration is invalid. Reinstall an official Pet Tracker release.";
         }
+
         Session = preview ?? new(factory, unavailable);
         Session.Ready += version =>
         {
@@ -56,11 +55,13 @@ public sealed class AppUpdateService : IDisposable
         if (!host.PreviewOnly && factory != null)
             timer.Start();
     }
+
     public Task Check()
     {
         nextCheck = DateTimeOffset.UtcNow.AddHours(6);
         return Session.Check(host.PetOverlayPreferences.UpdateChannel, host.PetOverlayPreferences.DownloadUpdatesAutomatically);
     }
+
     public Task Download() => SameChannel ? Session.Download() : Task.CompletedTask;
     public async Task Install()
     {
@@ -68,6 +69,7 @@ public sealed class AppUpdateService : IDisposable
             return;
         await Session.Install(host.StopWorkerForUpdate, host.UpdateWorkerExited, host.ResumeAfterUpdateFailure, new[] { "--data", host.AssetRoot });
     }
+
     public void Dispose()
     {
         timer.Stop();

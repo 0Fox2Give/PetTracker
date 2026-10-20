@@ -8,11 +8,12 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using Microsoft.Win32;
-namespace PetTracker.Setup;
 
+namespace PetTracker.Setup;
 public static class Installer
 {
     public static string DefaultLocation => Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Programs", "PetTracker");
+
     static string Resolve(string root, string name)
     {
         if (Path.IsPathRooted(name))
@@ -22,6 +23,7 @@ public static class Installer
             throw new InvalidDataException("The package contains an invalid path.");
         return path;
     }
+
     public static void Extract(Stream archive, string target)
     {
         Directory.CreateDirectory(target);
@@ -43,6 +45,7 @@ public static class Installer
             Directory.CreateDirectory(Path.GetDirectoryName(path)!);
             item.ExtractToFile(path, false);
         }
+
         string manifest = Path.Combine(target, "package.json");
         var hashes = JsonSerializer.Deserialize<Dictionary<string, string>>(File.ReadAllText(manifest)) ?? throw new InvalidDataException("The package manifest is empty.");
         if (names.Count != hashes.Count + 1)
@@ -53,9 +56,11 @@ public static class Installer
             if (!Convert.ToHexString(SHA256.HashData(file)).Equals(entry.Value, StringComparison.OrdinalIgnoreCase))
                 throw new InvalidDataException("A package file failed verification.");
         }
+
         if (!File.Exists(Path.Combine(target, "PetTracker.exe")) || !File.Exists(Path.Combine(target, "PetTracker.Capture.exe")))
             throw new InvalidDataException("The app is missing from the package.");
     }
+
     public static string Install(string destination)
     {
         destination = Path.GetFullPath(destination);
@@ -89,6 +94,7 @@ public static class Installer
                     }
                 }
             }
+
             if (Directory.Exists(backup))
                 Directory.Move(backup, backup + "-" + Guid.NewGuid().ToString("N"));
             bool old = Directory.Exists(destination);
@@ -104,6 +110,7 @@ public static class Installer
                     Directory.Move(backup, destination);
                 throw;
             }
+
             return destination;
         }
         finally
@@ -112,6 +119,7 @@ public static class Installer
                 Directory.Delete(stage, true);
         }
     }
+
     public static void Shortcuts(string location, bool desktop)
     {
         Type type = Type.GetTypeFromProgID("WScript.Shell") ?? throw new InvalidOperationException("Windows shortcuts are unavailable.");
@@ -127,6 +135,7 @@ public static class Installer
             link.Save();
             System.Runtime.InteropServices.Marshal.FinalReleaseComObject(link);
         }
+
         Link(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Programs), "Pet Tracker.lnk"));
         if (desktop)
             Link(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory), "Pet Tracker.lnk"));
@@ -141,6 +150,7 @@ public static class Installer
         key.SetValue("NoModify", 1);
         key.SetValue("NoRepair", 1);
     }
+
     public static void Uninstall()
     {
         string location = DefaultLocation;
@@ -148,7 +158,13 @@ public static class Installer
             return;
         var files = JsonSerializer.Deserialize<Dictionary<string, string>>(File.ReadAllText(Path.Combine(location, "package.json")))!;
         string? remaining = UninstallPayload.Remove(location, files.Keys.Concat(new[] { "package.json", "Uninstall.exe" }));
-        foreach (string link in new[] { Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Programs), "Pet Tracker.lnk"), Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory), "Pet Tracker.lnk") })
+        foreach (string link in new[]
+        {
+            Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Programs), "Pet Tracker.lnk"),
+            Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory), "Pet Tracker.lnk")
+        }
+
+        )
             if (File.Exists(link))
                 File.Delete(link);
         using (var run = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run", true))
@@ -157,6 +173,7 @@ public static class Installer
         MessageBox.Show("Pet Tracker has been removed. Saved collections were kept." + (remaining == null ? "" : " Some program files could not be deleted and remain in " + remaining + "."), "Pet Tracker");
     }
 }
+
 public static class Program
 {
     [STAThread]
@@ -169,6 +186,7 @@ public static class Program
             Process.Start(new ProcessStartInfo(temporary) { UseShellExecute = false, CreateNoWindow = true, WindowStyle = ProcessWindowStyle.Hidden, ArgumentList = { "--uninstall-run" } });
             return;
         }
+
         if (args.Contains("--uninstall-run"))
         {
             try
@@ -179,29 +197,61 @@ public static class Program
             {
                 MessageBox.Show(ex.Message, "Pet Tracker");
             }
+
             return;
         }
+
         if (args.Length == 2 && args[0] == "--extract-test")
         {
             Installer.Install(args[1]);
             return;
         }
+
         var app = new Application();
         app.Resources.MergedDictionaries.Add(new ResourceDictionary { Source = new Uri("/PetTrackerSetup;component/NativeTheme.xaml", UriKind.Relative) });
-        var w = new Window { Title = "Pet Tracker Setup", Width = 520, Height = 470, ResizeMode = ResizeMode.NoResize, WindowStartupLocation = WindowStartupLocation.CenterScreen, Background = new SolidColorBrush(Color.FromRgb(11, 16, 23)), Foreground = new SolidColorBrush(Color.FromRgb(223, 230, 239)), FontFamily = new FontFamily("Segoe UI") };
+        var w = new Window
+        {
+            Title = "Pet Tracker Setup",
+            Width = 520,
+            Height = 470,
+            ResizeMode = ResizeMode.NoResize,
+            WindowStartupLocation = WindowStartupLocation.CenterScreen,
+            Background = new SolidColorBrush(Color.FromRgb(11, 16, 23)),
+            Foreground = new SolidColorBrush(Color.FromRgb(223, 230, 239)),
+            FontFamily = new FontFamily("Segoe UI")
+        };
         var panel = new StackPanel { Margin = new Thickness(32) };
         w.Content = panel;
         panel.Children.Add(new TextBlock { Text = "Pet Tracker", FontSize = 30, FontWeight = FontWeights.SemiBold });
         panel.Children.Add(new TextBlock { Text = "Your Aion 2 pet collection, at a glance.", FontSize = 14, Margin = new Thickness(0, 8, 0, 28) });
         panel.Children.Add(new TextBlock { Text = "Install for your Windows account. Your collections stay on this PC.", TextWrapping = TextWrapping.Wrap, Margin = new Thickness(0, 0, 0, 20) });
-        var desktop = new CheckBox { Content = "Create a desktop shortcut", IsChecked = true, Margin = new Thickness(0, 0, 0, 12), Foreground = w.Foreground };
-        var launch = new CheckBox { Content = "Open Pet Tracker after installation", IsChecked = true, Margin = new Thickness(0, 0, 0, 24), Foreground = w.Foreground };
+        var desktop = new CheckBox
+        {
+            Content = "Create a desktop shortcut",
+            IsChecked = true,
+            Margin = new Thickness(0, 0, 0, 12),
+            Foreground = w.Foreground
+        };
+        var launch = new CheckBox
+        {
+            Content = "Open Pet Tracker after installation",
+            IsChecked = true,
+            Margin = new Thickness(0, 0, 0, 24),
+            Foreground = w.Foreground
+        };
         panel.Children.Add(desktop);
         panel.Children.Add(launch);
         var status = new TextBlock { TextWrapping = TextWrapping.Wrap, Margin = new Thickness(0, 0, 0, 10) };
         panel.Children.Add(status);
         bool finished = false;
-        var button = new Button { Content = "Install Pet Tracker", Padding = new Thickness(18, 10, 18, 10), Background = new SolidColorBrush(Color.FromRgb(217, 178, 76)), Foreground = Brushes.Black, FontWeight = FontWeights.SemiBold };
+        var button = new Button
+        {
+            Content = "Install Pet Tracker",
+            Padding = new Thickness(18, 10, 18, 10),
+            Background = new SolidColorBrush(Color.FromRgb(217, 178, 76)),
+            Foreground = Brushes.Black,
+            FontWeight = FontWeights.SemiBold
+        };
         panel.Children.Add(button);
         button.Click += async (s, e) =>
         {
@@ -210,6 +260,7 @@ public static class Program
                 w.Close();
                 return;
             }
+
             button.IsEnabled = false;
             status.Text = "Installing…";
             try

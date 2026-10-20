@@ -40,3 +40,39 @@ jobs:
           name: test-evidence-${{ github.sha }}
           path: test-results/
           retention-days: 7
+  linux:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+      - name: Install native dependencies
+        run: sudo apt-get update && sudo apt-get install -y libpcap-dev libcap2-bin libfontconfig1 libx11-6 libice6 libsm6 xvfb fonts-dejavu-core
+      - name: Run portable and Linux regression checks
+        run: dotnet run --project tests/LinuxTests/LinuxTests.csproj -c Release -- test-results/linux
+      - name: Render and test Linux UI
+        run: dotnet run --project tests/LinuxUiTests/LinuxUiTests.csproj -c Release -- test-results/linux-ui
+      - name: Build Linux preview
+        run: bash tools/Build-Linux.sh build/linux-x64
+      - name: Verify packaged capture and same-user IPC
+        run: |
+          sudo setcap cap_net_raw=ep build/linux-x64/capture/PetTracker.Capture
+          dotnet run --project tests/LinuxTests/LinuxTests.csproj -c Release -- test-results/linux-package "$PWD/build/linux-x64/capture/PetTracker.Capture"
+          sudo setcap -r build/linux-x64/capture/PetTracker.Capture
+      - name: Archive Linux preview
+        run: tar -czf pet-tracker-linux-x64-preview.tar.gz -C build/linux-x64 .
+      - uses: actions/upload-artifact@v4
+        with:
+          name: linux-preview-${{ github.sha }}
+          path: pet-tracker-linux-x64-preview.tar.gz
+          retention-days: 7
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: linux-test-evidence-${{ github.sha }}
+          path: test-results/
+          retention-days: 7

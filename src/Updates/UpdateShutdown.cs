@@ -1,5 +1,4 @@
 namespace PetTracker.Updates;
-
 public static class UpdateShutdown
 {
     // Do not kill the capture worker to force installation. A failed save/exit
@@ -16,6 +15,7 @@ public static class UpdateShutdown
                 return false;
             await Task.Delay(100, cancellation);
         }
+
         cancellation.ThrowIfCancellationRequested();
         apply();
         return true;

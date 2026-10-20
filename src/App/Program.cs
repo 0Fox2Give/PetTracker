@@ -1,29 +1,22 @@
 using System.Diagnostics;
-
 using System.Runtime.InteropServices;
-
 using System.Text.Json;
-
 using System.Windows.Interop;
-
 using System.Windows.Media.Imaging;
 
 namespace PetTracker;
-
 public static class Program
 {
-
-    [DllImport("user32.dll")] static extern bool RegisterHotKey(IntPtr h, int id, uint modifiers, uint key);
-
-    [DllImport("user32.dll")] static extern bool UnregisterHotKey(IntPtr h, int id);
-
+    [DllImport("user32.dll")]
+    static extern bool RegisterHotKey(IntPtr h, int id, uint modifiers, uint key);
+    [DllImport("user32.dll")]
+    static extern bool UnregisterHotKey(IntPtr h, int id);
     [STAThread]
     public static void Main(string[] args)
     {
         Velopack.VelopackApp.Build().SetAutoApplyOnStartup(false).Run();
         var app = new Application { ShutdownMode = ShutdownMode.OnExplicitShutdown };
         app.Resources.MergedDictionaries.Add(NativeTheme.Resources());
-
         if (args.Contains("--render"))
         {
             RenderPreview(args);
@@ -56,11 +49,9 @@ public static class Program
             }
             catch (Exception ex)
             {
-                Storage.Save(output, new
-                {
-                    Error = ex.Message
-                });
+                Storage.Save(output, new { Error = ex.Message });
             }
+
             return;
         }
 
@@ -75,16 +66,19 @@ public static class Program
         using var mutex = new Mutex(true, "Local\\" + Storage.Pipe(root) + "-app", out bool first);
         if (!first)
             return;
-
         using var host = OpenHost(root, args.Contains("--activity-check"));
         if (host == null)
             return;
         StartupRegistration.RemoveLegacyEntry();
         host.StartHidden = args.Contains("--minimized");
-        using var tray = new System.Windows.Forms.NotifyIcon { Text = "Pet Tracker", Visible = true, Icon = new System.Drawing.Icon(Path.Combine(AppContext.BaseDirectory, "PetTracker.ico")) };
+        using var tray = new System.Windows.Forms.NotifyIcon
+        {
+            Text = "Pet Tracker",
+            Visible = true,
+            Icon = new System.Drawing.Icon(Path.Combine(AppContext.BaseDirectory, "PetTracker.ico"))
+        };
         var menu = new System.Windows.Forms.ContextMenuStrip();
         tray.ContextMenuStrip = menu;
-
         menu.Items.Add("Show / hide tracker", null, (s, e) => host.SetPetOverlayVisible(!(host.Overlay?.IsVisible == true)));
         menu.Items.Add("Find a pet…", null, (s, e) => host.OpenPetFinder());
         menu.Items.Add("Settings", null, (s, e) => host.OpenPetOverlaySettings());
@@ -115,7 +109,6 @@ public static class Program
         host.Updates.Available += version => tray.ShowBalloonTip(5000, "Pet Tracker update available", "Version " + version + " is available. Open Settings → Updates to download it.", System.Windows.Forms.ToolTipIcon.Info);
         host.Updates.Ready += version => tray.ShowBalloonTip(5000, "Pet Tracker update ready", "Version " + version + " is ready. Open Settings → Updates when you want to restart.", System.Windows.Forms.ToolTipIcon.Info);
         tray.DoubleClick += (s, e) => host.OpenPetOverlaySettings();
-
         using var messages = new HwndSource(new HwndSourceParameters("Pet Tracker controls") { Width = 0, Height = 0, WindowStyle = 0 });
         messages.AddHook((IntPtr h, int msg, IntPtr w, IntPtr l, ref bool handled) =>
         {
@@ -124,10 +117,10 @@ public static class Program
                 host.SetPetOverlayVisible(!(host.Overlay?.IsVisible == true));
                 handled = true;
             }
+
             return IntPtr.Zero;
         });
         int current = 0;
-
         host.Changed += () =>
         {
             int requested = host.PetOverlayPreferences.Hotkey;
@@ -142,15 +135,12 @@ public static class Program
                 }
             }
         };
-
         host.TestNotification += () => tray.ShowBalloonTip(4000, "Pet Tracker", "Preview: your pet reached Rank 2.", System.Windows.Forms.ToolTipIcon.Info);
-
         host.Notification += text =>
         {
             if (host.PetOverlayPreferences.Toasts)
                 tray.ShowBalloonTip(4000, "Pet Tracker", text, System.Windows.Forms.ToolTipIcon.Info);
         };
-
         app.DispatcherUnhandledException += (s, e) =>
         {
             e.Handled = true;
@@ -163,7 +153,6 @@ public static class Program
         };
         app.Startup += async (s, e) => await host.InitializeLaunch(args.Contains("--minimized"));
         app.Run();
-
     }
 
     static Host? OpenHost(string root, bool activityCheck)
@@ -172,12 +161,13 @@ public static class Program
         {
             return new Host(root) { ActivityCheckOnStart = activityCheck };
         }
-        catch (Exception error) when (error is IOException or UnauthorizedAccessException)
+        catch (Exception error)when (error is IOException or UnauthorizedAccessException)
         {
             MessageBox.Show("Pet Tracker couldn’t open its saved data. Close any program using the files, check folder access, then try again.", "Pet Tracker", MessageBoxButton.OK, MessageBoxImage.Warning);
             return null;
         }
     }
+
     static bool LegacyCopyRunning()
     {
         using var current = Process.GetCurrentProcess();
@@ -192,9 +182,14 @@ public static class Program
                     if (file != null && FileVersionInfo.GetVersionInfo(file).ProductName == "Pet Tracker")
                         return true;
                 }
-                catch (System.ComponentModel.Win32Exception) { }
-                catch (InvalidOperationException) { }
+                catch (System.ComponentModel.Win32Exception)
+                {
+                }
+                catch (InvalidOperationException)
+                {
+                }
         }
+
         return false;
     }
 
@@ -226,21 +221,20 @@ public static class Program
 
         var now = DateTimeOffset.UtcNow;
         var recent = ids.Select((id, i) => new RecentPetActivity(id, null, "", now.AddSeconds(-i))).ToList();
-        var view = new WorkerView(3, profile, true, "Live", "Receiving soul updates from your character.", "Ranger", new() { new() { AccountName = "My account", CharacterName = "Ranger", RealmLabel = "Siel", ProfileKey = "1234567890abcdef12345678" } }, "1234567890abcdef12345678", recent, null, now, 1, 1000, 0, 0, new()
-        {
-            ExpireInactive = false
-        });
+        var view = new WorkerView(3, profile, true, "Live", "Receiving soul updates from your character.", "Ranger", new() { new() { AccountName = "My account", CharacterName = "Ranger", RealmLabel = "Siel", ProfileKey = "1234567890abcdef12345678" } }, "1234567890abcdef12345678", recent, null, now, 1, 1000, 0, 0, new() { ExpireInactive = false });
         host.Preview(view);
         Save(host.Overlay!, Path.Combine(folder, "tracker.png"), 340, 410);
         var settings = new SettingsWindow(host);
         Save(settings, Path.Combine(folder, "settings.png"), 780, 700);
-        foreach (var section in new[] { "Tracking", "Overlay", "Account", "Updates", "Help" })
+        foreach (var section in new[] { "Tracking", "Overlay", "Account", "Updates", "Help" }
+
+        )
         {
             settings.ShowSection(section);
             Save(settings, Path.Combine(folder, "settings-" + section.Replace(" & ", "-").ToLowerInvariant() + ".png"), 780, 700);
         }
-        settings.Close();
 
+        settings.Close();
     }
 
     public static void Save(Window window, string path, double width, double height)
@@ -260,5 +254,4 @@ public static class Program
         using var file = File.Create(path);
         encoder.Save(file);
     }
-
 }

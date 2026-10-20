@@ -3,7 +3,6 @@ using System.Windows.Automation;
 using System.Windows.Shapes;
 
 namespace PetTracker;
-
 public sealed class PetDirectionIndicator : StackPanel
 {
     readonly System.Windows.Shapes.Path arrow;
@@ -35,6 +34,7 @@ public sealed class PetDirectionIndicator : StackPanel
         Children.Add(arrow);
         Children.Add(distance);
     }
+
     public void Update(PetDirection? direction, DateTimeOffset now, Brush accent)
     {
         double? bearing = direction?.Bearing(now);
@@ -49,15 +49,14 @@ public sealed class PetDirectionIndicator : StackPanel
             AutomationProperties.SetName(this, "");
             return;
         }
+
         Visibility = Visibility.Visible;
         arrow.Visibility = bearing.HasValue ? Visibility.Visible : Visibility.Collapsed;
         arrow.Fill = accent;
         ((RotateTransform)arrow.RenderTransform).Angle = bearing ?? 0;
         distance.Visibility = hasDistance || direction.NorthUp ? Visibility.Visible : Visibility.Collapsed;
         distance.Text = hasDistance ? (direction.DistanceMetres < 1 ? "<1 m" : Math.Round(direction.DistanceMetres!.Value, MidpointRounding.AwayFromZero).ToString("0", CultureInfo.InvariantCulture) + " m") : direction.NorthUp ? "N up" : "";
-        string description = (hasDistance ? "Nearest observed mob: " + distance.Text + ". " : direction.SkillBased || direction.NorthUp ? "Nearest observed mob. " : "Nearest matched mob on the minimap. ") + (bearing.HasValue ?
-         direction.NorthUp ? "Map direction from your position: up is north, right is east. Turning does not rotate the arrow. Stale positions hide it." :
-         direction.SkillBased ? "Experimental arrow relative to your last skill facing; up means ahead. Expires after two seconds." : "Arrow relative to your character; up means ahead." : "Direction unavailable.");
+        string description = (hasDistance ? "Nearest observed mob: " + distance.Text + ". " : direction.SkillBased || direction.NorthUp ? "Nearest observed mob. " : "Nearest matched mob on the minimap. ") + (bearing.HasValue ? direction.NorthUp ? "Map direction from your position: up is north, right is east. Turning does not rotate the arrow. Stale positions hide it." : direction.SkillBased ? "Experimental arrow relative to your last skill facing; up means ahead. Expires after two seconds." : "Arrow relative to your character; up means ahead." : "Direction unavailable.");
         ToolTip = description;
         AutomationProperties.SetName(this, description);
     }

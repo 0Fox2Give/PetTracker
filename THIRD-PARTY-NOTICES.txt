@@ -2,6 +2,20 @@ Pet Tracker original code: GPL-3.0-only. See LICENSE and NOTICE.
 
 PET TRACKER — THIRD-PARTY NOTICES
 
+Linux preview desktop dependencies (not part of the historical Windows 0.1.51 installer):
+Avalonia 12.1.4 (including Fluent theme and desktop backends) — MIT.
+Source: https://github.com/AvaloniaUI/Avalonia/tree/2d79ba55fae1b1e71c69f93a668080c9029e6a31
+MicroCom.Runtime 0.11.6 — MIT.
+Source: https://github.com/kekekeks/MicroCom/tree/76785efcafd91b5902fd19dd11145f6dd655b7b4
+Tmds.DBus.Protocol 0.94.1 — MIT.
+Source: https://github.com/tmds/Tmds.DBus/tree/b4a7fed0b878f74cb54f7cca84d2889af4e596ba
+SkiaSharp 3.119.4 and HarfBuzzSharp 8.3.1.3 — MIT wrappers with native component notices.
+Source: https://github.com/mono/SkiaSharp
+Their licenses and native component notices are included under licenses/.
+ANGLE is a transitive dependency for the Avalonia Windows backend used in local
+UI tests; its license is retained in licenses/ANGLE-LICENSE.txt.
+Linux libpcap is provided by the distribution and is not bundled.
+
 SharpPcap 6.3.1 — MIT license
 Copyright Tamir Gal, Chris Morgan and contributors.
 Source: https://github.com/dotpcap/sharppcap

@@ -1,14 +1,13 @@
 using System.Numerics;
 
 namespace PetTracker;
-
 public readonly record struct MapPoint(double X, double Y)
 {
     public Complex Complex => new(X, Y);
     public bool Finite => double.IsFinite(X) && double.IsFinite(Y);
 }
-public sealed record MinimapFit(Complex Multiplier, Complex Offset, bool Reflected,
- IReadOnlyList<(int World, int Dot)> Matches, double Rms)
+
+public sealed record MinimapFit(Complex Multiplier, Complex Offset, bool Reflected, IReadOnlyList<(int World, int Dot)> Matches, double Rms)
 {
     public Complex Project(MapPoint point) => Multiplier * (Reflected ? Complex.Conjugate(point.Complex) : point.Complex) + Offset;
     public MapPoint Unproject(MapPoint screen)
@@ -33,7 +32,12 @@ public static class MinimapRegistration
                 for (int k = j + 1; k < points.Length; k++)
                 {
                     int[] ids = { i, j, k };
-                    double[] sides = { Complex.Abs(points[j] - points[k]), Complex.Abs(points[i] - points[k]), Complex.Abs(points[i] - points[j]) };
+                    double[] sides =
+                    {
+                        Complex.Abs(points[j] - points[k]),
+                        Complex.Abs(points[i] - points[k]),
+                        Complex.Abs(points[i] - points[j])
+                    };
                     Array.Sort(sides, ids);
                     double longest = sides[2];
                     if (longest < 1e-8 || Math.Abs(((points[j] - points[i]) * Complex.Conjugate(points[k] - points[i])).Imaginary) / (longest * longest) < .10 || Math.Min(sides[1] - sides[0], sides[2] - sides[1]) / longest < .03)
@@ -41,6 +45,7 @@ public static class MinimapRegistration
                     yield return new(ids[0], ids[1], ids[2], (int)(sides[0] / longest / .02), (int)(sides[1] / longest / .02));
                 }
     }
+
     static (Complex A, Complex B)? Fit(Complex[] world, Complex[] dots, IReadOnlyList<(int World, int Dot)> pairs, bool mirror)
     {
         Complex w = 0, s = 0;
@@ -49,6 +54,7 @@ public static class MinimapRegistration
             w += mirror ? Complex.Conjugate(world[p.World]) : world[p.World];
             s += dots[p.Dot];
         }
+
         w /= pairs.Count;
         s /= pairs.Count;
         Complex numerator = 0;
@@ -59,11 +65,13 @@ public static class MinimapRegistration
             numerator += Complex.Conjugate(dw) * (dots[p.Dot] - s);
             denominator += dw.Magnitude * dw.Magnitude;
         }
+
         if (denominator < 1e-10)
             return null;
         var a = numerator / denominator;
         return (a, s - a * w);
     }
+
     static List<(int World, int Dot)> Match(Complex[] world, Complex[] dots, Complex a, Complex b, bool mirror)
     {
         var candidates = new List<(double Distance, int W, int D)>();
@@ -77,6 +85,7 @@ public static class MinimapRegistration
                     candidates.Add((distance, w, d));
             }
         }
+
         candidates.Sort((x, y) => x.Distance.CompareTo(y.Distance));
         var usedWorld = new HashSet<int>();
         var usedDots = new HashSet<int>();
@@ -88,8 +97,10 @@ public static class MinimapRegistration
                 usedDots.Add(c.D);
                 result.Add((c.W, c.D));
             }
+
         return result;
     }
+
     public static MinimapFit? Locate(IReadOnlyList<MapPoint> worldPoints, IReadOnlyList<MapPoint> dotPoints)
     {
         if (worldPoints.Count is < 6 or > 45 || dotPoints.Count is < 6 or > 30 || worldPoints.Any(p => !p.Finite) || dotPoints.Any(p => !p.Finite))
@@ -106,14 +117,16 @@ public static class MinimapRegistration
                     if (!index.TryGetValue((screen.K1 + dx, screen.K2 + dy), out var options))
                         continue;
                     foreach (var tri in options)
-                        foreach (bool mirror in new[] { false, true })
+                        foreach (bool mirror in new[] { false, true }
+
+                        )
                         {
                             if (++hypotheses > 60000)
                                 return null;
                             var fit = Fit(world, dots, new[] { (tri.A, screen.A), (tri.B, screen.B), (tri.C, screen.C) }, mirror);
                             if (fit == null || fit.Value.A.Magnitude < 1e-8)
                                 continue;
-                            var (a, b) = fit.Value;
+                            var(a, b) = fit.Value;
                             var matches = Match(world, dots, a, b, mirror);
                             if (matches.Count < 6)
                                 continue;
@@ -127,6 +140,7 @@ public static class MinimapRegistration
                                 if (matches.Count < 6)
                                     break;
                             }
+
                             if (fit == null || matches.Count < 6)
                                 continue;
                             double mx = matches.Average(p => dots[p.Dot].Real), my = matches.Average(p => dots[p.Dot].Imaginary), xx = 0, xy = 0, yy = 0, sum = 0;
@@ -139,6 +153,7 @@ public static class MinimapRegistration
                                 double distance = Complex.Abs(a * (mirror ? Complex.Conjugate(world[p.World]) : world[p.World]) + b - dots[p.Dot]);
                                 sum += distance * distance;
                             }
+
                             double smallEigenvalue = (xx + yy - Math.Sqrt((xx - yy) * (xx - yy) + 4 * xy * xy)) / 2;
                             if (smallEigenvalue < 144)
                                 continue;
@@ -150,6 +165,7 @@ public static class MinimapRegistration
                                 solutions[same] = candidate;
                         }
                 }
+
         var ranked = solutions.OrderByDescending(s => s.Matches.Count).ThenBy(s => s.Rms).ToArray();
         if (ranked.Length == 0 || ranked[0].Rms > 1 || ranked.Length > 1 && ranked[1].Matches.Count >= ranked[0].Matches.Count - 1)
             return null;

@@ -1,5 +1,13 @@
 # Release notes
 
+## Unreleased source changes
+
+- Split catalog, collection models, settings, storage and worker contracts into focused files; normalized source and build-script formatting without changing their logic.
+- Added a Linux preview client and process-scoped libpcap capture, with separate builds and tests. Live AION 2/Wine compatibility is not yet verified. See [Linux preview](docs/LINUX.md).
+- Shared family labels between desktop clients and enabled NuGet vulnerability auditing for direct and transitive dependencies.
+
+The public Windows installer and signed update feed remain at 0.1.51.
+
 ## 0.1.51 — October 19, 2026
 
 - Prevented soul deductions from showing a fresh 0/5 or 0/25 counter while a rank change is still unconfirmed. The completed stage stays pending, and later soul gains are preserved until the rank is confirmed.

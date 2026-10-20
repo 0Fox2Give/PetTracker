@@ -1,5 +1,4 @@
 namespace PetTracker;
-
 // Presentation only: never infer a rank or fill an unknown collection balance.
 public static class TrackingGuidance
 {
@@ -11,6 +10,7 @@ public static class TrackingGuidance
         int remaining = Math.Max(0, pet.Goal!.Value - souls);
         return (pet.EstimatedSouls.HasValue ? "Approximately " : "") + remaining + " soul" + (remaining == 1 ? "" : "s") + " remaining " + (pet.Level == 0 ? "to unlock Rank 1." : "to reach Rank " + (pet.Level + 1) + ".");
     }
+
     public static string Merchant(WorkerView? view, DateTimeOffset now)
     {
         if (view == null || view.Devices == 0)

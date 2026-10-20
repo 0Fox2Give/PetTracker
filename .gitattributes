@@ -6,3 +6,6 @@
 *.json text eol=lf
 *.png binary
 *.ico binary
+
+*.sh text eol=lf
+*.txt text eol=lf

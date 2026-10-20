@@ -6,7 +6,6 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Effects;
 
 namespace PetTracker;
-
 public sealed class PetTrackerOverlay : Window
 {
     readonly Host host;
@@ -16,12 +15,17 @@ public sealed class PetTrackerOverlay : Window
     readonly StackPanel rows = new();
     readonly StackPanel merchantRows = new();
     readonly Border merchantSection;
-    readonly TextBlock merchantHint = new() { Text = "Pets only from Chests or Black Cloud Merchants", Foreground = Ui.Muted, FontSize = 10, TextWrapping = TextWrapping.Wrap, Margin = new Thickness(0, 3, 0, 4) };
-    string merchantKey = "";
-    public int DisplayedMerchantCount
+    readonly TextBlock merchantHint = new()
     {
-        get; private set;
-    }
+        Text = "Pets only from Chests or Black Cloud Merchants",
+        Foreground = Ui.Muted,
+        FontSize = 10,
+        TextWrapping = TextWrapping.Wrap,
+        Margin = new Thickness(0, 3, 0, 4)
+    };
+    string merchantKey = "";
+    public int DisplayedMerchantCount { get; private set; }
+
     readonly CheckBox hideMax;
     readonly Dictionary<string, Button> modes = new();
     readonly Dictionary<int, Row> cards = new();
@@ -31,10 +35,8 @@ public sealed class PetTrackerOverlay : Window
     bool allowClose, dragging, disposed, syncingFilter;
     int[] displayedIds = Array.Empty<int>();
     DateTimeOffset? noticeExpires;
-    public int DisplayedPetCount
-    {
-        get; private set;
-    }
+    public int DisplayedPetCount { get; private set; }
+
     public PetTrackerOverlay(Host host, Func<DateTimeOffset>? clock = null, bool animate = true)
     {
         this.host = host;
@@ -60,6 +62,7 @@ public sealed class PetTrackerOverlay : Window
             Left = SystemParameters.VirtualScreenLeft + SystemParameters.VirtualScreenWidth + 2048;
             Top = SystemParameters.VirtualScreenTop + SystemParameters.VirtualScreenHeight + 2048;
         }
+
         Resources.MergedDictionaries.Add(NativeTheme.Resources());
         FontFamily = SystemFonts.MessageFontFamily;
         FontSize = 11;
@@ -72,7 +75,13 @@ public sealed class PetTrackerOverlay : Window
             CornerRadius = new CornerRadius(8),
             Padding = new Thickness(8),
             Margin = new Thickness(5),
-            Effect = new DropShadowEffect { Color = Colors.Black, BlurRadius = 10, ShadowDepth = 2, Opacity = .24 }
+            Effect = new DropShadowEffect
+            {
+                Color = Colors.Black,
+                BlurRadius = 10,
+                ShadowDepth = 2,
+                Opacity = .24
+            }
         };
         var layout = new StackPanel();
         shell.Child = layout;
@@ -89,7 +98,11 @@ public sealed class PetTrackerOverlay : Window
                 Width = 22,
                 Height = 22,
                 Content = glyph,
-                ToolTip = new ToolTip { Style = (Style)FindResource("ArcanaToolTipStyle"), Content = tip }
+                ToolTip = new ToolTip
+                {
+                    Style = (Style)FindResource("ArcanaToolTipStyle"),
+                    Content = tip
+                }
             };
             button.Click += (s, e) =>
             {
@@ -98,6 +111,7 @@ public sealed class PetTrackerOverlay : Window
             };
             return button;
         }
+
         controls.Children.Add(Action("\u2315", "Find a pet or mob", () => host.OpenPetFinder()));
         controls.Children.Add(Action("\u2699", "Tracker settings", host.OpenPetOverlaySettings));
         controls.Children.Add(Action("\u00D7", "Hide pet tracker", () => host.SetPetOverlayVisible(false)));
@@ -120,6 +134,7 @@ public sealed class PetTrackerOverlay : Window
             host.SetPetOverlayOptions(hideMax.IsChecked == true, settings.ExpireInactive, settings.InactiveSeconds);
             Refresh();
         }
+
         hideMax.Checked += Filter;
         hideMax.Unchecked += Filter;
         header.Children.Add(new TextBlock { Text = "Pet Tracker", Foreground = new SolidColorBrush(Color.FromRgb(222, 229, 239)), FontSize = 13, FontWeight = FontWeights.SemiBold, VerticalAlignment = VerticalAlignment.Center });
@@ -136,7 +151,9 @@ public sealed class PetTrackerOverlay : Window
                     host.SavePetOverlayPosition(Left, Top);
                     e.Handled = true;
                 }
-                catch (InvalidOperationException) { }
+                catch (InvalidOperationException)
+                {
+                }
                 finally
                 {
                     dragging = false;
@@ -144,7 +161,9 @@ public sealed class PetTrackerOverlay : Window
         };
         layout.Children.Add(new Border { BorderBrush = new SolidColorBrush(Color.FromRgb(41, 47, 56)), BorderThickness = new Thickness(0, 0, 0, 1), Child = header });
         var modeBar = new StackPanel { Orientation = Orientation.Horizontal, Margin = new Thickness(0, 6, 0, 2) };
-        foreach (string mode in new[] { "Recent", "Nearby" })
+        foreach (string mode in new[] { "Recent", "Nearby" }
+
+        )
         {
             var button = Ui.Button(mode, async () => await host.Change(new("patch", Patch: SettingsPatch.Fields((nameof(AppSettings.TrackerMode), mode)))));
             button.Height = 24;
@@ -158,11 +177,19 @@ public sealed class PetTrackerOverlay : Window
             modes[mode] = button;
             modeBar.Children.Add(button);
         }
+
         var merchant = new StackPanel();
         merchant.Children.Add(new TextBlock { Text = "Black Cloud Merchant", Foreground = Ui.Ink, FontSize = 12, FontWeight = FontWeights.SemiBold });
         merchant.Children.Add(merchantHint);
         merchant.Children.Add(new ScrollViewer { Content = merchantRows, MaxHeight = 240, VerticalScrollBarVisibility = ScrollBarVisibility.Auto, HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled });
-        merchantSection = new Border { Child = merchant, Visibility = Visibility.Collapsed, Padding = new Thickness(4, 8, 4, 8), BorderBrush = new SolidColorBrush(Color.FromRgb(41, 47, 56)), BorderThickness = new Thickness(0, 0, 0, 1) };
+        merchantSection = new Border
+        {
+            Child = merchant,
+            Visibility = Visibility.Collapsed,
+            Padding = new Thickness(4, 8, 4, 8),
+            BorderBrush = new SolidColorBrush(Color.FromRgb(41, 47, 56)),
+            BorderThickness = new Thickness(0, 0, 0, 1)
+        };
         System.Windows.Automation.AutomationProperties.SetAutomationId(merchantSection, "MerchantRecommendations");
         layout.Children.Add(merchantSection);
         layout.Children.Add(modeBar);
@@ -190,12 +217,14 @@ public sealed class PetTrackerOverlay : Window
         };
         Refresh();
     }
+
     public void SetBackgroundOpacity(double value)
     {
         var brush = ((Brush)FindResource("ArcanaDark")).Clone();
         brush.Opacity = value;
         shell.Background = brush;
     }
+
     public void Refresh()
     {
         if (disposed)
@@ -212,6 +241,7 @@ public sealed class PetTrackerOverlay : Window
                 mode.Value.Background = selected ? NativeTheme.Accent(settings.Accent) : Brushes.Transparent;
                 mode.Value.Foreground = selected ? Brushes.Black : Ui.Muted;
             }
+
             var activities = tracker.Ready ? PetHudActivityPolicy.Select(tracker, settings, time).ToArray() : Array.Empty<RecentPetActivity>();
             var ids = activities.Select(a => a.PetId!.Value).ToHashSet();
             displayedIds = activities.Select(a => a.PetId!.Value).ToArray();
@@ -220,6 +250,7 @@ public sealed class PetTrackerOverlay : Window
                 cards[id].Cancel();
                 cards.Remove(id);
             }
+
             var desiredRows = new List<UIElement>();
             DisplayedPetCount = 0;
             noticeExpires = null;
@@ -232,6 +263,7 @@ public sealed class PetTrackerOverlay : Window
             {
                 syncingFilter = false;
             }
+
             foreach (var activity in activities)
             {
                 var pet = tracker.Profile.Pets[activity.PetId!.Value];
@@ -240,6 +272,7 @@ public sealed class PetTrackerOverlay : Window
                     row = CreateRow(pet.Id);
                     cards.Add(pet.Id, row);
                 }
+
                 row.Activity = activity;
                 row.Picture.Visibility = settings.Portraits ? Visibility.Visible : Visibility.Collapsed;
                 row.Picture.Source = portraits.Get(pet.Id);
@@ -249,7 +282,7 @@ public sealed class PetTrackerOverlay : Window
                 row.Progress.Text = pet.Max ? "\u2713 MAX" : (pet.CurrentSouls?.ToString() ?? "?") + " / " + (pet.Goal?.ToString() ?? "?");
                 row.Badge.Background = pet.Max ? new SolidColorBrush(Color.FromRgb(25, 32, 42)) : Brushes.Transparent;
                 row.Progress.Foreground = new SolidColorBrush(pet.Max ? Color.FromRgb(145, 155, 170) : Color.FromRgb(220, 226, 235));
-                double ratio = pet.Goal is > 0 && pet.CurrentSouls is int points ? Math.Clamp((double)points / pet.Goal.Value, 0, 1) : 0;
+                double ratio = pet.Goal is> 0 && pet.CurrentSouls is int points ? Math.Clamp((double)points / pet.Goal.Value, 0, 1) : 0;
                 row.Bar.Visibility = pet.Max || !settings.ProgressBars ? Visibility.Hidden : Visibility.Visible;
                 ((Border)row.Bar.Children[0]).Background = NativeTheme.Accent(settings.Accent);
                 row.Bar.ColumnDefinitions[0].Width = new GridLength(ratio, GridUnitType.Star);
@@ -260,6 +293,7 @@ public sealed class PetTrackerOverlay : Window
                     notice = "Rank increased";
                     noticeExpires = increase.SeenUtc.AddSeconds(20);
                 }
+
                 string observation = Activity.ObservationNotice(activity, settings, time);
                 if (observation.Length > 0)
                     notice = notice.Length > 0 ? notice + " · " + observation : observation;
@@ -272,8 +306,7 @@ public sealed class PetTrackerOverlay : Window
                     {
                         MaxWidth = 260,
                         TextWrapping = TextWrapping.Wrap,
-                        Text = (activity.CreatureName.Length > 0 ? (activity.IsNearby ? "Observed mobs: " : "Last creature: ") + activity.CreatureName + "\n" : "") + pet.LevelSourceDescription + "\n" + TrackingGuidance.Remaining(pet) + "\n" +
-                  (pet.ProgressNeedsSync && !pet.Max ? "Last known soul total. See Settings → Help." : pet.EstimatedSouls.HasValue ? "Soul progress is estimated." : "")
+                        Text = (activity.CreatureName.Length > 0 ? (activity.IsNearby ? "Observed mobs: " : "Last creature: ") + activity.CreatureName + "\n" : "") + pet.LevelSourceDescription + "\n" + TrackingGuidance.Remaining(pet) + "\n" + (pet.ProgressNeedsSync && !pet.Max ? "Last known soul total. See Settings → Help." : pet.EstimatedSouls.HasValue ? "Soul progress is estimated." : "")
                     }
                 };
                 ApplyLifetime(row, settings, time);
@@ -281,16 +314,10 @@ public sealed class PetTrackerOverlay : Window
                 if (PetHudActivityPolicy.Appearance(activity, settings, time).Opacity > 0)
                     DisplayedPetCount++;
             }
+
             string empty = Activity.EmptyText(tracker, settings, time, host.View);
             if (activities.Length == 0 && DisplayedMerchantCount == 0 && !string.IsNullOrWhiteSpace(empty))
-                desiredRows.Add(new TextBlock
-                {
-                    Text = empty,
-                    ToolTip = !tracker.Ready ? new ToolTip { Style = (Style)FindResource("ArcanaToolTipStyle"), Content = new TextBlock { Text = host.View?.Detail, MaxWidth = 280, TextWrapping = TextWrapping.Wrap } } : null,
-                    Foreground = (Brush)FindResource("ArcanaTextDim"),
-                    TextWrapping = TextWrapping.Wrap,
-                    Margin = new Thickness(4, 16, 4, 12)
-                });
+                desiredRows.Add(new TextBlock { Text = empty, ToolTip = !tracker.Ready ? new ToolTip { Style = (Style)FindResource("ArcanaToolTipStyle"), Content = new TextBlock { Text = host.View?.Detail, MaxWidth = 280, TextWrapping = TextWrapping.Wrap } } : null, Foreground = (Brush)FindResource("ArcanaTextDim"), TextWrapping = TextWrapping.Wrap, Margin = new Thickness(4, 16, 4, 12) });
             // Keep unchanged controls attached, preserving hover, layout and animations.
             for (int i = rows.Children.Count - 1; i >= 0; i--)
                 if (!desiredRows.Contains(rows.Children[i]))
@@ -304,9 +331,11 @@ public sealed class PetTrackerOverlay : Window
                     rows.Children.Remove(child);
                 rows.Children.Insert(i, child);
             }
+
             RefreshDirections(time);
         }
     }
+
     void RefreshMerchant(DateTimeOffset time)
     {
         var offers = host.MerchantDisplay.Select(host.View, time);
@@ -340,7 +369,13 @@ public sealed class PetTrackerOverlay : Window
             progressLine.Children.Add(new PetFamilyBadge(id));
             text.Children.Add(progressLine);
             var meta = new DockPanel { Margin = new Thickness(0, 3, 0, 0) };
-            var price = new TextBlock { Text = $"{offer.Offer.Price:N0} Kina", Foreground = Ui.Ink, FontSize = 11, FontWeight = FontWeights.SemiBold };
+            var price = new TextBlock
+            {
+                Text = $"{offer.Offer.Price:N0} Kina",
+                Foreground = Ui.Ink,
+                FontSize = 11,
+                FontWeight = FontWeights.SemiBold
+            };
             DockPanel.SetDock(price, Dock.Right);
             meta.Children.Add(price);
             meta.Children.Add(new TextBlock { Text = offer.Stock.TabName, Foreground = Ui.Muted, FontSize = 10 });
@@ -351,6 +386,7 @@ public sealed class PetTrackerOverlay : Window
             merchantRows.Children.Add(grid);
         }
     }
+
     void RefreshDirections(DateTimeOffset time)
     {
         bool visible = false;
@@ -360,15 +396,23 @@ public sealed class PetTrackerOverlay : Window
             pair.Value.Direction.Update(direction, time, NativeTheme.Accent(host.PetOverlayPreferences.Accent));
             visible |= pair.Value.Direction.Visibility == Visibility.Visible;
         }
+
         if (visible && IsVisible)
             directionTimer.Start();
         else
             directionTimer.Stop();
     }
+
     Row CreateRow(int id)
     {
         var row = new Row();
-        row.Button = new ContentControl { Style = (Style)FindResource("PetTrackerRow"), Height = PetHudActivityPolicy.RowHeight, ClipToBounds = true, Focusable = false };
+        row.Button = new ContentControl
+        {
+            Style = (Style)FindResource("PetTrackerRow"),
+            Height = PetHudActivityPolicy.RowHeight,
+            ClipToBounds = true,
+            Focusable = false
+        };
         var menu = new ContextMenu();
         var find = new MenuItem { Header = "Find on map…" };
         find.Click += (s, e) => host.OpenPetFinder(id);
@@ -406,22 +450,39 @@ public sealed class PetTrackerOverlay : Window
         row.Badge = new Border { CornerRadius = new CornerRadius(3), Padding = new Thickness(4, 0, 4, 0), Child = row.Progress };
         DockPanel.SetDock(row.Badge, Dock.Right);
         meta.Children.Add(row.Badge);
-        row.Rank = new TextBlock { FontSize = 10, Foreground = new SolidColorBrush(Color.FromRgb(133, 144, 160)), VerticalAlignment = VerticalAlignment.Center };
+        row.Rank = new TextBlock
+        {
+            FontSize = 10,
+            Foreground = new SolidColorBrush(Color.FromRgb(133, 144, 160)),
+            VerticalAlignment = VerticalAlignment.Center
+        };
         var rankAndFamily = new StackPanel { Orientation = Orientation.Horizontal };
         rankAndFamily.Children.Add(row.Rank);
         rankAndFamily.Children.Add(new PetFamilyBadge(id));
         meta.Children.Add(rankAndFamily);
         text.Children.Add(meta);
-        row.Bar = new Grid { Height = 3, Margin = new Thickness(0, 7, 0, 0), Background = new SolidColorBrush(Color.FromRgb(30, 39, 52)) };
+        row.Bar = new Grid
+        {
+            Height = 3,
+            Margin = new Thickness(0, 7, 0, 0),
+            Background = new SolidColorBrush(Color.FromRgb(30, 39, 52))
+        };
         row.Bar.ColumnDefinitions.Add(new ColumnDefinition());
         row.Bar.ColumnDefinitions.Add(new ColumnDefinition());
         row.Bar.Children.Add(new Border { Background = (Brush)FindResource("ArcanaGold") });
         text.Children.Add(row.Bar);
-        row.Notice = new TextBlock { FontSize = 9, Foreground = (Brush)FindResource("ArcanaTextDim"), Margin = new Thickness(0, 3, 0, 0), TextTrimming = TextTrimming.CharacterEllipsis };
+        row.Notice = new TextBlock
+        {
+            FontSize = 9,
+            Foreground = (Brush)FindResource("ArcanaTextDim"),
+            Margin = new Thickness(0, 3, 0, 0),
+            TextTrimming = TextTrimming.CharacterEllipsis
+        };
         text.Children.Add(row.Notice);
         row.Button.Content = grid;
         return row;
     }
+
     void ApplyLifetime(Row row, AppSettings settings, DateTimeOffset time)
     {
         var activity = row.Activity!;
@@ -433,6 +494,7 @@ public sealed class PetTrackerOverlay : Window
             row.Button.Height = PetHudActivityPolicy.RowHeight;
             return;
         }
+
         if (!animate || settings.ReducedMotion)
         {
             row.Cancel();
@@ -440,6 +502,7 @@ public sealed class PetTrackerOverlay : Window
             row.Button.Height = appearance.Height;
             return;
         }
+
         var key = (activity.SeenUtc, settings.ExpireInactive, settings.InactiveSeconds);
         if (row.Lifetime == key)
             return;
@@ -466,7 +529,10 @@ public sealed class PetTrackerOverlay : Window
             To = 0,
             BeginTime = TimeSpan.FromSeconds(Math.Max(0, remaining)),
             Duration = TimeSpan.FromSeconds(PetHudActivityPolicy.CollapseSeconds),
-            EasingFunction = new CubicEase { EasingMode = EasingMode.EaseInOut },
+            EasingFunction = new CubicEase
+            {
+                EasingMode = EasingMode.EaseInOut
+            },
             FillBehavior = FillBehavior.HoldEnd
         };
         collapse.Completed += (s, e) =>
@@ -476,6 +542,7 @@ public sealed class PetTrackerOverlay : Window
         };
         row.Button.BeginAnimation(HeightProperty, collapse);
     }
+
     public void UpdateStatus()
     {
         if (disposed)
@@ -491,6 +558,7 @@ public sealed class PetTrackerOverlay : Window
                 DisplayedPetCount = activities.Count(a => PetHudActivityPolicy.Appearance(a, settings, time).Opacity > 0);
         }
     }
+
     public void DisposeOverlay()
     {
         disposed = true;
@@ -501,6 +569,7 @@ public sealed class PetTrackerOverlay : Window
         allowClose = true;
         Close();
     }
+
     void ConstrainToDesktop()
     {
         if (host.PreviewOnly)
@@ -511,6 +580,7 @@ public sealed class PetTrackerOverlay : Window
         if (Top != point.Y)
             Top = point.Y;
     }
+
     static bool InsideControl(DependencyObject node)
     {
         for (DependencyObject? p = node; p != null; p = p is Visual ? VisualTreeHelper.GetParent(p) : LogicalTreeHelper.GetParent(p))
@@ -518,6 +588,7 @@ public sealed class PetTrackerOverlay : Window
                 return true;
         return false;
     }
+
     sealed class Row
     {
         public ContentControl Button = null!;

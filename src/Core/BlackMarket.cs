@@ -2,12 +2,12 @@ using System.Buffers.Binary;
 using System.Text.Json;
 
 namespace PetTracker;
-
 public sealed record MarketItem(int ItemId, int PetId, string SourceUrl);
 public sealed record MarketOffer(int OfferId, int ItemId, int PetId, long Price);
 public sealed record MarketStock(int Tab, DateTimeOffset SeenUtc, DateTimeOffset RefreshUtc, IReadOnlyList<MarketOffer> Offers)
 {
     public string TabName => Tab == 101 ? "Special" : "Pets";
+
     // Stock is a recent observation, not a background inventory service. A purchase
     // or refresh can change it; never carry it across a connection/account boundary.
     public bool Fresh(DateTimeOffset now) => now >= SeenUtc && now - SeenUtc < TimeSpan.FromMinutes(2) && now < RefreshUtc;
@@ -16,23 +16,20 @@ public sealed record MarketStock(int Tab, DateTimeOffset SeenUtc, DateTimeOffset
 public static class BlackMarket
 {
     public static IReadOnlyList<MarketItem> Items { get; } = Load();
+
     static IReadOnlyList<MarketItem> Load()
     {
         using var s = typeof(BlackMarket).Assembly.GetManifestResourceStream("PetTracker.MarketItems.json")!;
         return JsonSerializer.Deserialize<MarketItem[]>(s)!;
     }
+
     static readonly IReadOnlyDictionary<int, MarketItem> byItem = Items.ToDictionary(i => i.ItemId);
     // Explicitly audited current-release soul-source coverage is required. A null
     // or absent entry means unknown coverage, not proof of a shop-only pet.
-    public static bool WatchPet(PetSearchResult pet) => pet.Location?.SoulSources is { Count: 0 } &&
-     pet.Acquisition?.Aliases.Contains("Black Cloud Merchants") == true && Items.Any(i => i.PetId == pet.Pet.Id);
-    public static IEnumerable<PetSearchResult> Watchlist(string query, Profile profile) => PetFinder.Search(query, profile)
-     .Where(WatchPet).Where(p => !profile.Pets.TryGetValue(p.Pet.Id, out var progress) || !progress.Max);
-    public static bool NeedsPet(Profile profile, int id) => profile.Pets.TryGetValue(id, out var pet) && pet.LevelVerified &&
-     !pet.ProgressNeedsSync && pet.Level is >= 0 and < 3;
-    public static IEnumerable<MarketOffer> Recommendations(MarketStock stock, Profile profile, bool synced, DateTimeOffset now) =>
-     synced && stock.Fresh(now) ? stock.Offers.Where(o => NeedsPet(profile, o.PetId) && PetFinder.Entries.Any(p => p.Pet.Id == o.PetId && WatchPet(p))) : Array.Empty<MarketOffer>();
-
+    public static bool WatchPet(PetSearchResult pet) => pet.Location?.SoulSources is { Count: 0 } && pet.Acquisition?.Aliases.Contains("Black Cloud Merchants") == true && Items.Any(i => i.PetId == pet.Pet.Id);
+    public static IEnumerable<PetSearchResult> Watchlist(string query, Profile profile) => PetFinder.Search(query, profile).Where(WatchPet).Where(p => !profile.Pets.TryGetValue(p.Pet.Id, out var progress) || !progress.Max);
+    public static bool NeedsPet(Profile profile, int id) => profile.Pets.TryGetValue(id, out var pet) && pet.LevelVerified && !pet.ProgressNeedsSync && pet.Level is >= 0 and < 3;
+    public static IEnumerable<MarketOffer> Recommendations(MarketStock stock, Profile profile, bool synced, DateTimeOffset now) => synced && stock.Fresh(now) ? stock.Offers.Where(o => NeedsPet(profile, o.PetId) && PetFinder.Entries.Any(p => p.Pet.Id == o.PetId && WatchPet(p))) : Array.Empty<MarketOffer>();
     // Two captured US responses (Special and Pets, 2026-10-19), all ten prices
     // checked against the game. Accept only this observed layout. The inter-entry
     // marker bytes are opaque: do not extrapolate their meaning or scan for IDs.
@@ -70,13 +67,13 @@ public static class BlackMarket
             if (byItem.TryGetValue(item, out var mapped))
                 offers.Add(new(offer, item, mapped.PetId, price));
         }
+
         return new(body[0], now, DateTimeOffset.FromUnixTimeMilliseconds(expiry), offers);
     }
 }
 
 public sealed record MerchantRecommendation(MarketStock Stock, MarketOffer Offer);
 public sealed record MerchantDisplayRow(MarketStock Stock, MarketOffer Offer, bool Updated);
-
 // Keep fulfilled recommendations briefly as feedback, then suppress them for
 // this stock cycle. A soul reward is evidence of progress, not a purchase receipt.
 public sealed class MerchantDisplay
@@ -84,7 +81,7 @@ public sealed class MerchantDisplay
     sealed record Entry(MerchantRecommendation Recommendation, DateTimeOffset ObservedUtc, DateTimeOffset? UpdatedUtc = null);
     static readonly PetNames names = new();
     readonly Dictionary<int, Entry> entries = new();
-    (string?, string, int?, DateTimeOffset?)? context;
+    (string? , string, int? , DateTimeOffset? )? context;
     public IReadOnlyList<MerchantDisplayRow> Select(WorkerView? view, DateTimeOffset now)
     {
         if (view == null || !view.Ready || !view.CollectionSynced || !view.Settings.BlackMarketAlerts || string.IsNullOrEmpty(view.Selected))
@@ -93,12 +90,14 @@ public sealed class MerchantDisplay
             context = null;
             return Array.Empty<MerchantDisplayRow>();
         }
+
         var next = (view.Selected, view.Character, view.WorkerProcessId, view.LastSync);
         if (context != next)
         {
             entries.Clear();
             context = next;
         }
+
         foreach (int id in entries.Where(p => p.Value.Recommendation.Stock.RefreshUtc <= now).Select(p => p.Key).ToArray())
             entries.Remove(id);
         var current = MarketOverlay.Select(view, now).ToDictionary(r => r.Offer.PetId);
@@ -107,27 +106,21 @@ public sealed class MerchantDisplay
             if (!entries.TryGetValue(pair.Key, out var prior) || prior.Recommendation.Stock.RefreshUtc != pair.Value.Stock.RefreshUtc)
                 entries[pair.Key] = new(pair.Value, pair.Value.Stock.SeenUtc);
             else if (prior.UpdatedUtc == null)
-                entries[pair.Key] = prior with
-                {
-                    Recommendation = pair.Value
-                };
+                entries[pair.Key] = prior with { Recommendation = pair.Value };
         }
+
         foreach (var pair in entries.ToArray())
         {
             var entry = pair.Value;
             var rewarded = view.Recent.FirstOrDefault(r => r.PetId == pair.Key)?.SoulRewardUtc;
             if (entry.UpdatedUtc == null && rewarded is { } at && at <= now && at > entry.ObservedUtc && at - entry.ObservedUtc < TimeSpan.FromMinutes(2) && at < entry.Recommendation.Stock.RefreshUtc)
-                entries[pair.Key] = entry with
-                {
-                    UpdatedUtc = at
-                };
+                entries[pair.Key] = entry with { UpdatedUtc = at };
         }
-        return entries.Where(p => view.Profile.Pets.ContainsKey(p.Key) &&
-          (p.Value.UpdatedUtc is { } at ? now >= at && now - at < TimeSpan.FromSeconds(20) : current.ContainsKey(p.Key)))
-         .Select(p => new MerchantDisplayRow(p.Value.Recommendation.Stock, p.Value.Recommendation.Offer, p.Value.UpdatedUtc.HasValue))
-         .OrderBy(r => names.Resolve(view.Profile.Pets[r.Offer.PetId]), StringComparer.OrdinalIgnoreCase).ToArray();
+
+        return entries.Where(p => view.Profile.Pets.ContainsKey(p.Key) && (p.Value.UpdatedUtc is { } at ? now >= at && now - at < TimeSpan.FromSeconds(20) : current.ContainsKey(p.Key))).Select(p => new MerchantDisplayRow(p.Value.Recommendation.Stock, p.Value.Recommendation.Offer, p.Value.UpdatedUtc.HasValue)).OrderBy(r => names.Resolve(view.Profile.Pets[r.Offer.PetId]), StringComparer.OrdinalIgnoreCase).ToArray();
     }
 }
+
 public static class MarketOverlay
 {
     // Keep the serialized preference name for existing installations. It now
@@ -136,11 +129,6 @@ public static class MarketOverlay
     {
         if (view == null || !view.Settings.BlackMarketAlerts || !view.Ready || !view.CollectionSynced || string.IsNullOrEmpty(view.Selected))
             return Array.Empty<MerchantRecommendation>();
-        return (view.Market ?? Array.Empty<MarketStock>())
-         .SelectMany(stock => BlackMarket.Recommendations(stock, view.Profile, true, now).Select(offer => new MerchantRecommendation(stock, offer)))
-         .GroupBy(row => row.Offer.PetId)
-         .Select(group => group.OrderBy(row => row.Offer.Price).ThenBy(row => row.Stock.Tab).First())
-         .OrderBy(row => Catalog.Entries.Single(p => p.Id == row.Offer.PetId).Name, StringComparer.Ordinal)
-         .ToArray();
+        return (view.Market ?? Array.Empty<MarketStock>()).SelectMany(stock => BlackMarket.Recommendations(stock, view.Profile, true, now).Select(offer => new MerchantRecommendation(stock, offer))).GroupBy(row => row.Offer.PetId).Select(group => group.OrderBy(row => row.Offer.Price).ThenBy(row => row.Stock.Tab).First()).OrderBy(row => Catalog.Entries.Single(p => p.Id == row.Offer.PetId).Name, StringComparer.Ordinal).ToArray();
     }
 }

@@ -1,12 +1,10 @@
 using System.Buffers.Binary;
 
 namespace PetTracker;
-
 public sealed record CollectionSnapshot(int EquippedPet, IReadOnlyDictionary<int, int> Ranks, IReadOnlyDictionary<int, int> Souls);
 public sealed record CollectionWireEvent(CollectionSnapshot? Snapshot, int PetId = 0, int Delta = 0, int? Rank = null, int? Spent = null);
 public sealed record PetWireFrame(byte Opcode, int BodyLength, byte[] BodyPrefix);
 public sealed record DecodeFault(string Reason, byte? Opcode, byte? Family, string Prefix);
-
 // Verified US login shape: framed 0090, equipped pet, varint rank count,
 // repeated-ID/rank triples, then varint soul count and ID/current pairs.
 // Framing includes the physical varint width. Opaque frame bodies are skipped.
@@ -19,25 +17,28 @@ public sealed class CollectionWire
     readonly HashSet<int> catalog;
     readonly Action<PetWireFrame>? observeFrame;
     readonly List<byte> pending = new();
-    public long Faults
-    {
-        get; private set;
-    }
+    public long Faults { get; private set; }
+
     void Fault(string reason, byte? op = null, byte? family = null, ReadOnlySpan<byte> body = default)
     {
         Faults++;
         Faulted?.Invoke(new(reason, op, family, Convert.ToHexString(body[..Math.Min(64, body.Length)])));
     }
+
     public CollectionWire(IEnumerable<int> ids, Action<PetWireFrame>? observeFrame = null)
     {
         catalog = ids.ToHashSet();
         this.observeFrame = observeFrame;
     }
+
     public void Reset() => pending.Clear();
     enum DecodeState
     {
-        Complete, Incomplete, Invalid
+        Complete,
+        Incomplete,
+        Invalid
     }
+
     public IReadOnlyList<CollectionWireEvent> Feed(ReadOnlySpan<byte> bytes)
     {
         var events = new List<CollectionWireEvent>();
@@ -47,6 +48,7 @@ public sealed class CollectionWire
             Fault("Decoder buffer limit exceeded");
             return events;
         }
+
         foreach (byte b in bytes)
             pending.Add(b);
         byte[] data = pending.ToArray();
@@ -67,6 +69,7 @@ public sealed class CollectionWire
                         cursor++;
                         continue;
                     }
+
                     var body = new byte[size];
                     var status = DecodeBlock(data.AsSpan(cursor + 6), body, out int used);
                     if (status == DecodeState.Incomplete)
@@ -77,11 +80,13 @@ public sealed class CollectionWire
                         Fault("Invalid compressed stream");
                         return events;
                     }
+
                     ReadFrames(body, events, 1);
                     cursor += 6 + used;
                     continue;
                 }
             }
+
             int start = cursor;
             if (!Varint(data, ref cursor, out int declared))
             {
@@ -90,9 +95,11 @@ public sealed class CollectionWire
                     cursor = start + 1;
                     continue;
                 }
+
                 cursor = start;
                 break;
             }
+
             int width = cursor - start, actual = declared + width - 4;
             // Empty-body frames (captured 8D:3F) still contain a complete opcode/family.
             // Skipping their length byte misaligns everything that follows.
@@ -101,18 +108,22 @@ public sealed class CollectionWire
                 cursor = start + 1;
                 continue;
             }
+
             if (data.Length - start < actual)
             {
                 cursor = start;
                 break;
             }
+
             ReadFrame(data.AsSpan(start, actual), width, events);
             cursor = start + actual;
         }
+
         if (cursor > 0)
             pending.RemoveRange(0, cursor);
         return events;
     }
+
     void ReadFrames(ReadOnlySpan<byte> body, List<CollectionWireEvent> events, int depth = 0)
     {
         int cursor = 0;
@@ -126,16 +137,19 @@ public sealed class CollectionWire
                 Fault("Invalid frame length inside compressed block");
                 return;
             }
+
             int width = cursor - start, actual = declared + width - 4;
             if (actual < width + 2 || actual > body.Length - start)
             {
                 Fault("Invalid frame boundary inside compressed block");
                 return;
             }
+
             ReadFrame(body.Slice(start, actual), width, events, depth);
             cursor = start + actual;
         }
     }
+
     void ReadFrame(ReadOnlySpan<byte> frame, int header, List<CollectionWireEvent> events, int depth = 0)
     {
         if (frame[header] == 255 && frame[header + 1] == 255)
@@ -146,12 +160,14 @@ public sealed class CollectionWire
                 Fault("Invalid nested compression header");
                 return;
             }
+
             int size = BinaryPrimitives.ReadInt32LittleEndian(compressed);
             if (size is <= 0 or > 1000000)
             {
                 Fault("Invalid nested compression size");
                 return;
             }
+
             var bodyBytes = new byte[size];
             if (DecodeBlock(compressed[4..], bodyBytes, out _) == DecodeState.Complete)
                 ReadFrames(bodyBytes, events, depth + 1);
@@ -159,6 +175,7 @@ public sealed class CollectionWire
                 Fault("Invalid nested compressed block");
             return;
         }
+
         Frame?.Invoke(frame[header], frame[header + 1], frame[(header + 2)..].ToArray());
         if (frame[header + 1] != 0x90)
             return;
@@ -175,6 +192,7 @@ public sealed class CollectionWire
                 Fault("Unexpected soul batch layout", frame[header], 0x90, body);
                 return;
             }
+
             var decoded = new List<CollectionWireEvent>(count);
             var ids = new HashSet<int>();
             for (int n = 0; n < count; n++)
@@ -186,8 +204,10 @@ public sealed class CollectionWire
                     Fault("Unsupported soul batch entry", frame[header], 0x90, body);
                     return;
                 }
+
                 decoded.Add(frame[header] == 0x0d ? new(null, id, value) : new(null, id, Spent: value));
             }
+
             events.AddRange(decoded);
         }
         else if (frame[header] == 0x14 && body.Length == 23 && body[0] == 0 && body[1] == 0)
@@ -204,9 +224,11 @@ public sealed class CollectionWire
             else
                 Fault("Unexpected collection snapshot", 0, 0x90, body);
         }
+
         for (int index = first; index < events.Count; index++)
             Decoded?.Invoke(events[index]);
     }
+
     bool TrySnapshot(ReadOnlySpan<byte> body, out CollectionSnapshot? snapshot)
     {
         snapshot = null;
@@ -226,6 +248,7 @@ public sealed class CollectionWire
             if (!catalog.Contains(id) || duplicate != id || rank is < 1 or > 3 || !ranks.TryAdd(id, rank))
                 return false;
         }
+
         if (equipped != 0 && !ranks.ContainsKey(equipped))
             return false;
         if (!Varint(body, ref cursor, out count) || count > catalog.Count || count < 0 || count > (body.Length - cursor) / 8)
@@ -239,9 +262,11 @@ public sealed class CollectionWire
             if (!catalog.Contains(id) || value < 0 || value > cap || !souls.TryAdd(id, value))
                 return false;
         }
+
         snapshot = new(equipped, ranks, souls);
         return true;
     }
+
     static bool Varint(ReadOnlySpan<byte> data, ref int cursor, out int value)
     {
         int start = cursor;
@@ -259,13 +284,16 @@ public sealed class CollectionWire
                     value = -1;
                     return false;
                 }
+
                 return true;
             }
         }
+
         cursor = start + 1;
         value = -1;
         return false;
     }
+
     // Stop at the declared output length, before consuming the following raw
     // frame as another LZ4 back-reference. The native lenient decoder overruns it.
     static DecodeState DecodeBlock(ReadOnlySpan<byte> input, Span<byte> output, out int consumed)
@@ -289,8 +317,10 @@ public sealed class CollectionWire
                     literal += b;
                     if (literal > MaxBuffer)
                         return DecodeState.Invalid;
-                } while (b == 255);
+                }
+                while (b == 255);
             }
+
             if (literal > output.Length - target)
                 return DecodeState.Invalid;
             if (literal > input.Length - source)
@@ -303,6 +333,7 @@ public sealed class CollectionWire
                 consumed = source;
                 return DecodeState.Complete;
             }
+
             if (input.Length - source < 2)
                 return DecodeState.Incomplete;
             int offset = input[source] | input[source + 1] << 8;
@@ -321,8 +352,10 @@ public sealed class CollectionWire
                     match += b;
                     if (match > MaxBuffer)
                         return DecodeState.Invalid;
-                } while (b == 255);
+                }
+                while (b == 255);
             }
+
             match += 4;
             if (match > output.Length - target)
                 return DecodeState.Invalid;
@@ -332,6 +365,7 @@ public sealed class CollectionWire
                 target++;
             }
         }
+
         consumed = source;
         return DecodeState.Complete;
     }

@@ -1,7 +1,6 @@
 using System.Diagnostics;
 
 namespace PetTracker;
-
 public sealed class WorkerExitMonitor : IDisposable
 {
     readonly Process worker;
@@ -9,6 +8,7 @@ public sealed class WorkerExitMonitor : IDisposable
     {
         this.worker = worker;
     }
+
     public static WorkerExitMonitor Open(int processId, string expectedPath)
     {
         var process = Process.GetProcessById(processId);
@@ -27,6 +27,7 @@ public sealed class WorkerExitMonitor : IDisposable
             throw;
         }
     }
+
     public bool ExitedCleanly
     {
         get
@@ -41,5 +42,6 @@ public sealed class WorkerExitMonitor : IDisposable
             }
         }
     }
+
     public void Dispose() => worker.Dispose();
 }
