@@ -1,5 +1,6 @@
 using System.Text.Json;
 using System.Text.RegularExpressions;
+
 namespace PetTracker;
 
 // Recovery uses only this data directory's validated bindings and managed backups.
@@ -7,7 +8,8 @@ namespace PetTracker;
 public static class AutomaticRecovery
 {
     static bool SafeFile(string path) => File.Exists(path) && (File.GetAttributes(path) & FileAttributes.ReparsePoint) == 0;
-    static T? Read<T>(string path, Action<T> validate, bool current = false) where T : class
+    static T? Read<T>(string path, Action<T> validate, bool current = false)
+        where T : class
     {
         try
         {
@@ -35,6 +37,7 @@ public static class AutomaticRecovery
             return null;
         }
     }
+
     static IEnumerable<string> Backups(string root)
     {
         string parent = Path.Combine(root, "backups");
@@ -46,13 +49,13 @@ public static class AutomaticRecovery
                 throw new InvalidDataException();
         }) != null).OrderByDescending(Directory.GetCreationTimeUtc).ToArray();
     }
+
     sealed class Marker
     {
-        public string Product { get; set; } = ""; public int Format
-        {
-            get; set;
-        }
+        public string Product { get; set; } = "";
+        public int Format { get; set; }
     }
+
     static void Preserve(string root, string path)
     {
         if (!SafeFile(path))
@@ -64,13 +67,17 @@ public static class AutomaticRecovery
             throw new InvalidDataException("Invalid recovery path");
         File.Move(path, target);
     }
+
     static void Note(string root, string text)
     {
         var path = Path.Combine(root, "automatic-recovery.json");
-        var notes = Read<List<DiagnosticEvent>>(path, n => { }) ?? new();
+        var notes = Read<List<DiagnosticEvent>>(path, n =>
+        {
+        }) ?? new();
         notes.Add(new(DateTimeOffset.UtcNow, "Recovery", text));
         Storage.Save(path, notes.TakeLast(20).ToList());
     }
+
     public static AppSettings Settings(string root)
     {
         string path = Path.Combine(root, "settings.json");
@@ -85,9 +92,11 @@ public static class AutomaticRecovery
                 Note(root, "Settings recovered automatically");
                 return restored;
             }
+
         Preserve(root, path);
         return new();
     }
+
     public static LocalProfileBook Book(string root)
     {
         string path = Path.Combine(root, "profiles.json");
@@ -106,15 +115,18 @@ public static class AutomaticRecovery
                 Note(root, "Account selection recovered automatically");
                 return restored;
             }
+
         Preserve(root, path);
         return new();
     }
+
     static void Validate(Profile p, LocalProfileBinding binding)
     {
         Tracker.Validate(p);
         if (!Tracker.OwnedBy(p, binding) || p.Pets.Keys.Any(id => !Catalog.Entries.Any(c => c.Id == id)))
             throw new InvalidDataException("Backup does not match this account");
     }
+
     public static Profile Profile(string root, LocalProfileBinding binding)
     {
         binding.Validate();
@@ -135,6 +147,7 @@ public static class AutomaticRecovery
                 continue;
             candidates.Add(Path.Combine(backup, "profiles", binding.ProfileKey + ".json"));
         }
+
         foreach (string candidate in candidates.Where(SafeFile).OrderByDescending(File.GetLastWriteTimeUtc))
             if (Read<Profile>(candidate, p => Validate(p, binding)) is { } restored)
             {
@@ -146,6 +159,7 @@ public static class AutomaticRecovery
                 Note(root, "Saved collection recovered automatically; waiting for game confirmation");
                 return restored;
             }
+
         Preserve(root, path);
         return new()
         {
@@ -153,6 +167,7 @@ public static class AutomaticRecovery
             AccountKey = binding.IsAccount ? binding.ProfileKey : null
         };
     }
+
     public static void MigrateLegacy(string root, LocalProfileBook book)
     {
         bool changed = false;
@@ -170,6 +185,7 @@ public static class AutomaticRecovery
             Storage.Save(Path.Combine(root, "profiles", binding.ProfileKey + ".json"), profile);
             changed = true;
         }
+
         if (changed)
         {
             book.Save(Path.Combine(root, "profiles.json"));

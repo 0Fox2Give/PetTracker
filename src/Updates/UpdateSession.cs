@@ -4,12 +4,21 @@ namespace PetTracker.Updates;
 
 public enum UpdatePhase
 {
-    Unavailable, Idle, Checking, Available, Downloading, Ready, Installing, Error
+    Unavailable,
+    Idle,
+    Checking,
+    Available,
+    Downloading,
+    Ready,
+    Installing,
+    Error
 }
+
 public sealed record UpdateState(UpdatePhase Phase, string Message, string? Version = null, int Progress = 0)
 {
     public bool Busy => Phase is UpdatePhase.Checking or UpdatePhase.Downloading or UpdatePhase.Installing;
 }
+
 public interface IUpdateClient : IDisposable
 {
     Task<UpdateInfo?> Check();
@@ -27,15 +36,10 @@ public sealed class UpdateSession : IDisposable
     readonly CancellationTokenSource lifetime = new();
     IUpdateClient? client;
     UpdateInfo? pending;
-    public UpdateState State
-    {
-        get; private set;
-    }
-    public string? Channel
-    {
-        get; private set;
-    }
+    public UpdateState State { get; private set; }
+    public string? Channel { get; private set; }
     public string ReleaseNotes => pending?.TargetFullRelease.NotesMarkdown ?? "";
+
     public event Action? Changed;
     public event Action<string>? Ready;
     public event Action<string>? Available;
@@ -46,11 +50,13 @@ public sealed class UpdateSession : IDisposable
         this.create = create;
         State = new(create == null ? UpdatePhase.Unavailable : UpdatePhase.Idle, create == null ? unavailable : "Check for the latest Pet Tracker release.");
     }
+
     void Set(UpdatePhase phase, string message, int progress = 0)
     {
         State = new(phase, message, pending?.TargetFullRelease.Version.ToString(), progress);
         Changed?.Invoke();
     }
+
     public async Task Check(string channel, bool download = false)
     {
         if (disposed || create == null || !await operation.WaitAsync(0))
@@ -71,6 +77,7 @@ public sealed class UpdateSession : IDisposable
                 Set(UpdatePhase.Idle, "You’re up to date on this channel.");
                 return;
             }
+
             Set(UpdatePhase.Available, "Version " + pending.TargetFullRelease.Version + " is available.");
             string identity = channel + ":" + pending.TargetFullRelease.Version;
             if (!download && notifiedAvailable != identity)
@@ -78,6 +85,7 @@ public sealed class UpdateSession : IDisposable
                 notifiedAvailable = identity;
                 Available?.Invoke(pending.TargetFullRelease.Version.ToString());
             }
+
             if (download)
                 await DownloadCore();
         }
@@ -97,6 +105,7 @@ public sealed class UpdateSession : IDisposable
             operation.Release();
         }
     }
+
     async Task DownloadCore()
     {
         if (pending == null || client == null)
@@ -118,6 +127,7 @@ public sealed class UpdateSession : IDisposable
             Ready?.Invoke(pending.TargetFullRelease.Version.ToString());
         }
     }
+
     public async Task Download()
     {
         if (disposed || State.Phase != UpdatePhase.Available || !await operation.WaitAsync(0))
@@ -141,6 +151,7 @@ public sealed class UpdateSession : IDisposable
             operation.Release();
         }
     }
+
     public async Task<bool> Install(Func<Task<bool>> saveAndStop, Func<bool> workerExited, Action resume, string[] arguments)
     {
         if (disposed || State.Phase != UpdatePhase.Ready || pending == null || client == null || !await operation.WaitAsync(0))
@@ -174,10 +185,11 @@ public sealed class UpdateSession : IDisposable
             operation.Release();
         }
     }
+
     public void Dispose()
     {
         disposed = true;
-        lifetime.Cancel();/* An in-flight request owns its transport until it returns. */
+        lifetime.Cancel(); /* An in-flight request owns its transport until it returns. */
         if (!State.Busy)
             client?.Dispose();
     }

@@ -1,5 +1,6 @@
 using System.Security.Cryptography;
 using System.Text;
+
 namespace PetTracker;
 
 // This gate deliberately excludes the data path: test/portable/installed copies
@@ -8,10 +9,8 @@ public sealed class AppInstanceGate : IDisposable
 {
     readonly Mutex mutex;
     bool disposed;
-    public bool IsPrimary
-    {
-        get;
-    }
+    public bool IsPrimary { get; }
+
     public static string Name(string user) => "Local\\PetTracker-Desktop-" + Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(user)))[..24];
     public AppInstanceGate(string? user = null)
     {
@@ -25,6 +24,7 @@ public sealed class AppInstanceGate : IDisposable
             IsPrimary = true;
         }
     }
+
     public void Dispose()
     {
         if (disposed)

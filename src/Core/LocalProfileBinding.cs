@@ -10,14 +10,12 @@ public sealed class LocalProfileBinding
     public string AccountName { get; set; } = "";
     public List<string> LinkedCharacters { get; set; } = new();
     public bool IsAccount => !string.IsNullOrWhiteSpace(AccountName);
-    public int? ServerToken
-    {
-        get; set;
-    }
+    public int? ServerToken { get; set; }
     public string CharacterName { get; set; } = "";
     public string RealmLabel { get; set; } = "";
     public string ProfileKey { get; set; } = "";
     public string Label => IsAccount ? AccountName : CharacterName + " · " + RealmLabel;
+
     public override string ToString() => Label;
     public bool Matches(string name) => string.Equals(name, CharacterName, StringComparison.OrdinalIgnoreCase) || IsAccount && LinkedCharacters.Contains(name, StringComparer.OrdinalIgnoreCase);
     public void Validate()
@@ -29,6 +27,7 @@ public sealed class LocalProfileBinding
         if (string.IsNullOrWhiteSpace(CharacterName) || !IsAccount && string.IsNullOrWhiteSpace(RealmLabel) || ProfileKey.Length != 24 || ProfileKey.Any(c => !char.IsAsciiHexDigit(c)) || AccountName.Length > 80 || LinkedCharacters == null || LinkedCharacters.Count > 100 || LinkedCharacters.Any(string.IsNullOrWhiteSpace) || LinkedCharacters.Distinct(StringComparer.OrdinalIgnoreCase).Count() != LinkedCharacters.Count)
             throw new InvalidDataException("Invalid local pet profile binding.");
     }
+
     public static LocalProfileBinding? Load(string path)
     {
         if (!File.Exists(path))
@@ -42,11 +41,9 @@ public sealed class LocalProfileBinding
 public sealed class LocalProfileBook
 {
     public List<LocalProfileBinding> Profiles { get; set; } = new();
-    public string? SelectedProfileKey
-    {
-        get; set;
-    }
+    public string? SelectedProfileKey { get; set; }
     public LocalProfileBinding? Selected => Profiles.FirstOrDefault(p => p.ProfileKey == SelectedProfileKey);
+
     public void Validate()
     {
         if (Profiles == null || Profiles.Any(p => p == null))
@@ -56,12 +53,14 @@ public sealed class LocalProfileBook
         if (Profiles.Select(p => p.ProfileKey).Distinct(StringComparer.OrdinalIgnoreCase).Count() != Profiles.Count || Profiles.Select(p => p.Label).Distinct(StringComparer.OrdinalIgnoreCase).Count() != Profiles.Count || SelectedProfileKey != null && Selected == null)
             throw new InvalidDataException("Duplicate or unknown pet profile selection.");
     }
+
     public static LocalProfileBook Load(string path)
     {
         var book = File.Exists(path) ? JsonSerializer.Deserialize<LocalProfileBook>(File.ReadAllText(path)) ?? throw new InvalidDataException("Empty pet profile list.") : new LocalProfileBook();
         book.Validate();
         return book;
     }
+
     public void Save(string path)
     {
         Validate();

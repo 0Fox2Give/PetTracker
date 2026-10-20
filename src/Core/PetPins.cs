@@ -21,5 +21,6 @@ public static class PetPins
         next.Normalize();
         return next;
     }
+
     public static string Hint(AppSettings settings, int id) => settings.IsPinned(id) ? "Remove this pet from your pinned list." : settings.CanPin(id) ? $"Keep this pet at the top of the tracker ({settings.Pins().Count}/{settings.PinLimit} pinned)." : "Unpin a pet or raise the limit in Settings > Tracking.";
 }

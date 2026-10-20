@@ -7,6 +7,7 @@ global using System.Threading.Tasks;
 global using System.Windows;
 global using System.Windows.Controls;
 global using System.Windows.Media;
+
 namespace PetTracker;
 
 public static class Ui
@@ -19,6 +20,7 @@ public static class Ui
         b.Click += (s, e) => click();
         return b;
     }
+
     public static void Error(Exception ex, Window? owner = null)
     {
         if (owner != null)

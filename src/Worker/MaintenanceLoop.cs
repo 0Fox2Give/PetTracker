@@ -24,6 +24,8 @@ public static class MaintenanceLoop
                 }
             }
         }
-        catch (OperationCanceledException) when (stop.IsCancellationRequested) { }
+        catch (OperationCanceledException) when (stop.IsCancellationRequested)
+        {
+        }
     }
 }

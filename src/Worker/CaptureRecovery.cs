@@ -17,17 +17,20 @@ public sealed class CaptureRecovery(Func<bool> running, Action invalidate, Actio
             failures = 0;
             return;
         }
+
         if (wasRunning)
         {
             invalidate();
             wasRunning = false;
         }
+
         long time = now();
         if (nextAttempt == null)
         {
             nextAttempt = time + 5000;
             return;
         }
+
         if (time < nextAttempt)
             return;
         // Reserve the next attempt before calling transport code: exceptions must

@@ -45,11 +45,13 @@ public static class MinimapMarker
                         queue.Enqueue(n);
                     }
             }
+
             int width = maxX - minX + 1, height = maxY - minY + 1;
             double cx = sumX / component.Count - 15, cy = sumY / component.Count - 15;
             if (component.Count is >= 60 and <= 220 && width is >= 12 and <= 29 && height is >= 12 and <= 29 && cx * cx + cy * cy < 25)
                 candidates.Add(component);
         }
+
         if (candidates.Count != 1)
             return null;
         var result = new bool[Size * Size];
@@ -57,6 +59,7 @@ public static class MinimapMarker
             result[p] = true;
         return result;
     }
+
     public static MarkerRotation? Compare(IReadOnlyList<bool> reference, IReadOnlyList<bool> sample)
     {
         var a = Isolate(reference);
@@ -78,6 +81,7 @@ public static class MinimapMarker
                     if (rx >= 0 && ry >= 0 && rx < Size && ry < Size)
                         rotated[y * Size + x] = a[ry * Size + rx];
                 }
+
             for (int dy = -1; dy <= 1; dy++)
                 for (int dx = -1; dx <= 1; dx++)
                 {
@@ -92,9 +96,11 @@ public static class MinimapMarker
                             if (b[y * Size + x])
                                 intersection++;
                         }
+
                     scores[step] = Math.Max(scores[step], 2.0 * intersection / (count + bCount));
                 }
         }
+
         int best = Array.IndexOf(scores, scores.Max());
         double rival = 0;
         for (int i = 0; i < 180; i++)

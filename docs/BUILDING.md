@@ -1,5 +1,9 @@
 # Build and test
 
+For the native Linux preview, see [LINUX.md](LINUX.md). The instructions below
+build the Windows application. Both clients share the core and capture worker;
+neither client is a compatibility wrapper around the other.
+
 Requirements: Windows x64, PowerShell 7, .NET SDK 10.0.401 (or a compatible patch),
 and network access to NuGet on first restore. `global.json` pins the SDK family.
 Npcap is required for live capture, but not these offline regression checks.
@@ -52,6 +56,7 @@ update channel remains a separate maintainer action.
 - `src/Core`: collection accounting, protocol decoding, catalog and settings.
 - `src/Worker`: passive capture, connection selection and local worker service.
 - `src/App`: overlay, finder, settings and update UI.
+- `src/Linux`: experimental Avalonia desktop client; no Windows updater dependency.
 - `src/Setup`: offline installer and uninstall handling.
 - `src/Updates`: signed metadata and package validation, update lifecycle.
 - `tests`: core, UI, update and package checks.

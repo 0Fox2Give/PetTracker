@@ -1,36 +1,22 @@
 using System.Text.Json;
+
 namespace PetTracker;
 
 public sealed class Engine : IDisposable
 {
     public readonly object Gate = new();
-    public Tracker Tracker
-    {
-        get;
-    }
-    public LocalProfileBook Book
-    {
-        get;
-    }
+    public Tracker Tracker { get; }
+    public LocalProfileBook Book { get; }
+
     readonly string root;
     readonly Dictionary<string, Node> nodes = new();
     readonly CreaturePetMappings mappings;
-    public AppSettings Settings
-    {
-        get; private set;
-    }
-    public DateTimeOffset? LastSync
-    {
-        get; private set;
-    }
-    public string CaptureError { get; set; } = ""; public string? Active
-    {
-        get; private set;
-    }
-    public bool ExitRequested
-    {
-        get; private set;
-    }
+    public AppSettings Settings { get; private set; }
+    public DateTimeOffset? LastSync { get; private set; }
+    public string CaptureError { get; set; } = "";
+    public string? Active { get; private set; }
+    public bool ExitRequested { get; private set; }
+
     public Action<string>? CaptureAction;
     public Action<string, int, int>? Protect;
     public Action? Release;
@@ -51,12 +37,14 @@ public sealed class Engine : IDisposable
         nearby.Clear();
         market.Clear();
     }
+
     void Trace(string kind, string message)
     {
         events.Add(new(DateTimeOffset.UtcNow, kind, message));
         if (events.Count > 80)
             events.RemoveAt(0);
     }
+
     ConnectionDiagnostics Health() => new(payloads, frames, rewards, decoderFaults, lastPayload, lastIdentity, lastReward, lastInterruption, events.ToArray(), lastFault, activity.View(), activeInterruptions, backgroundInterruptions, retiredFlows);
     sealed class Node
     {
@@ -70,10 +58,14 @@ public sealed class Engine : IDisposable
         public HashSet<int> Stale = new();
         public Dictionary<int, int> SpendRanks = new();
     }
+
     public Engine(string root)
     {
         this.root = root;
-        Directory.CreateDirectory(root);
+        if (OperatingSystem.IsLinux())
+            Directory.CreateDirectory(root, UnixFileMode.UserRead | UnixFileMode.UserWrite | UnixFileMode.UserExecute);
+        else
+            Directory.CreateDirectory(root);
         Settings = AutomaticRecovery.Settings(root);
         Settings.Normalize();
         Book = AutomaticRecovery.Book(root);
@@ -84,6 +76,7 @@ public sealed class Engine : IDisposable
         Tracker = new(Path.Combine(root, "profiles"), cat, mappings, Book.Selected);
         Tracker.Changed += () => dirty = true;
     }
+
     public void Feed(string flow, byte[] bytes, int source = 1, int destination = 2)
     {
         lock (Gate)
@@ -98,10 +91,8 @@ public sealed class Engine : IDisposable
                     if (old != null)
                         nodes.Remove(old);
                 }
-                node = new()
-                {
-                    Wire = new(Catalog.Entries.Select(p => p.Id))
-                };
+
+                node = new() { Wire = new(Catalog.Entries.Select(p => p.Id)) };
                 nodes[flow] = node;
                 var n = node;
                 n.Wire.Frame += (op, f, b) => Frame(flow, n, op, f, b);
@@ -113,11 +104,13 @@ public sealed class Engine : IDisposable
                     Invalidate(flow, false, "Decoder: " + fault.Reason);
                 };
             }
+
             node.Wire.Feed(bytes);
             if (Active == flow)
                 Protect?.Invoke(flow, source, destination);
         }
     }
+
     void Frame(string flow, Node n, byte op, byte family, byte[] body)
     {
         frames++;
@@ -145,18 +138,21 @@ public sealed class Engine : IDisposable
                     n.SpendRanks.Clear();
                     n.Reliable = false;
                 }
+
                 if (Active == flow)
                 {
                     Tracker.Save();
                     Tracker.Pause();
                 }
             }
+
             n.Local = local;
             n.IdentitySequence = ++identitySequence;
             if (Book.Profiles.Count == 0)
                 Execute(new("create", Name: local.Name, AccountName: "My account"));
             Bind(flow, n);
         }
+
         if (Active != flow || !Tracker.Ready)
             return;
         long ms = Environment.TickCount64;
@@ -176,6 +172,7 @@ public sealed class Engine : IDisposable
             else
                 market.Clear();
         }
+
         nearby.NavigationFrame(Settings.ExperimentalDirections, Tracker.LocalEntity ?? 0, op, family, body, now);
         if (family == 0x90)
             activity.Observe(op, family, body, "Bound pet message", now);
@@ -186,6 +183,7 @@ public sealed class Engine : IDisposable
             activity.Observe(op, family, body, tracked ? "Pet kill tracked" : removal.Reason != 3 ? "Non-death removal" : "Death without linked participation", now);
             return;
         }
+
         if (family == 0x36 && op is 0x40 or 0x41 or 0x42)
         {
             if (GameProtocol.Appearance(op, family, body) is { } spawn)
@@ -204,6 +202,7 @@ public sealed class Engine : IDisposable
             else
                 activity.Observe(op, family, body, "Non-pet or unsupported NPC layout", now);
         }
+
         if (family == 0x38 && op == 4)
         {
             var hit = GameProtocol.Hit(op, family, body, out string outcome);
@@ -213,9 +212,11 @@ public sealed class Engine : IDisposable
                 Tracker.Damage(hit.Actor, hit.Target, hit.Damage, false, ms);
                 outcome = hit.Actor != Tracker.LocalEntity ? "Other actor hit" : !Tracker.Lives.ContainsKey(hit.Target) ? "Own hit without pet spawn" : "Own hit on linked NPC";
             }
+
             activity.Observe(op, family, body, outcome, now);
         }
     }
+
     void Bind(string flow, Node n)
     {
         var selected = Book.Selected;
@@ -232,12 +233,17 @@ public sealed class Engine : IDisposable
                 var candidate = JsonSerializer.Deserialize<LocalProfileBinding>(JsonSerializer.Serialize(selected))!;
                 candidate.LinkedCharacters.Add(n.Local.Name);
                 candidate.Validate();
-                var next = new LocalProfileBook { SelectedProfileKey = Book.SelectedProfileKey, Profiles = Book.Profiles.Select(p => p == selected ? candidate : p).ToList() };
+                var next = new LocalProfileBook
+                {
+                    SelectedProfileKey = Book.SelectedProfileKey,
+                    Profiles = Book.Profiles.Select(p => p == selected ? candidate : p).ToList()
+                };
                 next.Save(Path.Combine(root, "profiles.json"));
                 selected.LinkedCharacters = candidate.LinkedCharacters;
                 Trace("Account", n.Local.Name + " joined the shared collection");
             }
         }
+
         if (!selected.Matches(n.Local.Name) || !selected.IsAccount && selected.ServerToken is int token && n.Local.ServerToken != 0 && token != n.Local.ServerToken)
         {
             if (Active == flow)
@@ -247,8 +253,10 @@ public sealed class Engine : IDisposable
                 ClearObservations();
                 Active = null;
             }
+
             return;
         }
+
         if (Active != null && Active != flow)
         {
             if (nodes.TryGetValue(Active, out var old))
@@ -256,11 +264,13 @@ public sealed class Engine : IDisposable
             Tracker.Save();
             Tracker.Pause();
         }
+
         if (!selected.IsAccount && selected.ServerToken == null && n.Local.ServerToken != 0)
         {
             selected.ServerToken = n.Local.ServerToken;
             Book.Save(Path.Combine(root, "profiles.json"));
         }
+
         if (Active != flow)
             ClearObservations();
         Active = flow;
@@ -284,6 +294,7 @@ public sealed class Engine : IDisposable
             }
         }
     }
+
     void Event(string flow, Node n, CollectionWireEvent e)
     {
         bool bound = Active == flow && Tracker.Ready;
@@ -300,6 +311,7 @@ public sealed class Engine : IDisposable
                 Bind(flow, n);
             return;
         }
+
         if (e.Rank is int rank)
         {
             int previous = n.Snapshot?.Ranks.GetValueOrDefault(e.PetId) ?? 0;
@@ -342,6 +354,7 @@ public sealed class Engine : IDisposable
                     ledgerBalanced = true;
                 }
             }
+
             if (bound && n.Reliable)
             {
                 bool applied = Tracker.ObservePointsSpent(e.PetId, spent, DateTimeOffset.UtcNow);
@@ -363,9 +376,11 @@ public sealed class Engine : IDisposable
                     Tracker.ObserveSoulActivity(e.PetId, e.Delta, DateTimeOffset.UtcNow);
             }
         }
+
         if (bound)
             dirty = true;
     }
+
     // Recover only from the same uninterrupted, validated account ledger. An alt
     // can clear the presentation's transient balance while rank/spend messages split.
     void RestoreLedger(Node n)
@@ -373,6 +388,7 @@ public sealed class Engine : IDisposable
         if (n.Reliable && n.Snapshot != null)
             Tracker.ImportCollection(n.Snapshot, n.Sync, n.Deltas, n.Stale, n.SpendRanks);
     }
+
     void Invalidate(string flow, bool restarted, string reason)
     {
         if (nodes.TryGetValue(flow, out var n))
@@ -388,6 +404,7 @@ public sealed class Engine : IDisposable
                 n.SpendRanks.Clear();
             }
         }
+
         if (flow == Active)
         {
             ClearObservations();
@@ -407,6 +424,7 @@ public sealed class Engine : IDisposable
         else
             backgroundInterruptions++;
     }
+
     public void RetireFlow(string flow)
     {
         lock (Gate)
@@ -417,6 +435,7 @@ public sealed class Engine : IDisposable
             retiredFlows++;
         }
     }
+
     public void Gap(string flow, bool restarted = false, string reason = "Game stream continuity lost")
     {
         lock (Gate)
@@ -426,6 +445,7 @@ public sealed class Engine : IDisposable
             Invalidate(flow, restarted, reason);
         }
     }
+
     public void StopCapture(string reason = "Capture restarted")
     {
         lock (Gate)
@@ -437,6 +457,7 @@ public sealed class Engine : IDisposable
                 n.Reliable = false;
                 n.Wire.Reset();
             }
+
             Tracker.InvalidateProgress();
             Tracker.Save();
             Tracker.Pause();
@@ -446,6 +467,7 @@ public sealed class Engine : IDisposable
             Release?.Invoke();
         }
     }
+
     public void GameGeneration(long generation)
     {
         lock (Gate)
@@ -455,6 +477,7 @@ public sealed class Engine : IDisposable
             gameGeneration = generation;
         }
     }
+
     public void Flush()
     {
         lock (Gate)
@@ -464,6 +487,7 @@ public sealed class Engine : IDisposable
                 Tracker.Save();
                 dirty = false;
             }
+
             if (Environment.TickCount64 >= nextBackup)
             {
                 Backup();
@@ -471,6 +495,7 @@ public sealed class Engine : IDisposable
             }
         }
     }
+
     string maintenanceError = "";
     public void MaintenanceResult(Exception? error)
     {
@@ -482,6 +507,7 @@ public sealed class Engine : IDisposable
             maintenanceError = message;
         }
     }
+
     public WorkerView View(bool running, int devices, long rx, long drops, long gaps, bool game)
     {
         lock (Gate)
@@ -504,9 +530,11 @@ public sealed class Engine : IDisposable
                 status = "Background retry needed";
                 detail = maintenanceError;
             }
+
             return new(3, profile, Tracker.Ready, status, detail, Tracker.CharacterName, Book.Profiles, Book.SelectedProfileKey, Tracker.RecentActivities.ToList(), Tracker.LastRankIncrease, LastSync, devices, rx, drops, gaps, Settings, DetectedCharacter: detected?.Name, Health: Health(), WorkerProcessId: Environment.ProcessId, Nearby: Tracker.Ready ? nearby.View(DateTimeOffset.UtcNow, Settings.NearbyStaleSeconds, Settings.ExperimentalDirections) : Array.Empty<NearbyPet>(), Market: running && game && CaptureError.Length == 0 && Tracker.Ready ? market.Values.Where(s => s.Fresh(DateTimeOffset.UtcNow)).ToArray() : Array.Empty<MarketStock>(), CollectionSynced: synced && running && game && CaptureError.Length == 0);
         }
     }
+
     public void WriteHealth(bool running, int devices, long received, long dropped, long gaps, bool game)
     {
         lock (Gate)
@@ -514,32 +542,17 @@ public sealed class Engine : IDisposable
             try
             {
                 var view = View(running, devices, received, dropped, gaps, game);
-                Storage.Save(Path.Combine(root, "connection-status.json"), new
-                {
-                    Version = typeof(Engine).Assembly.GetName().Version?.ToString(),
-                    RecordedUtc = DateTimeOffset.UtcNow,
-                    view.Status,
-                    view.Detail,
-                    view.Ready,
-                    view.Character,
-                    view.DetectedCharacter,
-                    Account = Book.Selected?.Label,
-                    view.Devices,
-                    view.Received,
-                    view.Dropped,
-                    view.Gaps,
-                    view.LastSync,
-                    RecentPets = view.Recent.Count,
-                    NearbyPets = view.Nearby?.Count ?? 0,
-                    view.Settings.TrackerMode,
-                    view.Health,
-                    Navigation = Settings.ExperimentalDirections ? nearby.NavigationHealth(DateTimeOffset.UtcNow) : null
-                });
+                Storage.Save(Path.Combine(root, "connection-status.json"), new { Version = typeof(Engine).Assembly.GetName().Version?.ToString(), RecordedUtc = DateTimeOffset.UtcNow, view.Status, view.Detail, view.Ready, view.Character, view.DetectedCharacter, Account = Book.Selected?.Label, view.Devices, view.Received, view.Dropped, view.Gaps, view.LastSync, RecentPets = view.Recent.Count, NearbyPets = view.Nearby?.Count ?? 0, view.Settings.TrackerMode, view.Health, Navigation = Settings.ExperimentalDirections ? nearby.NavigationHealth(DateTimeOffset.UtcNow) : null });
             }
-            catch (IOException) { }
-            catch (UnauthorizedAccessException) { }
+            catch (IOException)
+            {
+            }
+            catch (UnauthorizedAccessException)
+            {
+            }
         }
     }
+
     Profile Saved()
     {
         var p = Book.Selected;
@@ -547,11 +560,18 @@ public sealed class Engine : IDisposable
         Tracker.Validate(profile);
         if (p != null && !Tracker.OwnedBy(profile, p))
             throw new InvalidDataException("The saved collection belongs to another profile.");
-        var result = new Profile { AccountKey = profile.AccountKey, CharacterName = profile.CharacterName, Creatures = profile.Creatures, Pets = Catalog.Create() };
+        var result = new Profile
+        {
+            AccountKey = profile.AccountKey,
+            CharacterName = profile.CharacterName,
+            Creatures = profile.Creatures,
+            Pets = Catalog.Create()
+        };
         foreach (var pet in profile.Pets)
             result.Pets[pet.Key] = pet.Value;
         return result;
     }
+
     public void Execute(Command cmd)
     {
         lock (Gate)
@@ -576,7 +596,13 @@ public sealed class Engine : IDisposable
                     SaveSettings(PetPins.Change(Settings, cmd.PetId, cmd.Action == "pin"));
                     break;
                 case "create":
-                    var b = new LocalProfileBinding { AccountName = (cmd.AccountName ?? "").Trim(), CharacterName = (cmd.Name ?? "").Trim(), RealmLabel = (cmd.Realm ?? "").Trim(), ProfileKey = Guid.NewGuid().ToString("N")[..24] };
+                    var b = new LocalProfileBinding
+                    {
+                        AccountName = (cmd.AccountName ?? "").Trim(),
+                        CharacterName = (cmd.Name ?? "").Trim(),
+                        RealmLabel = (cmd.Realm ?? "").Trim(),
+                        ProfileKey = Guid.NewGuid().ToString("N")[..24]
+                    };
                     b.Validate();
                     if (Book.Profiles.Any(p => p.Label.Equals(b.Label, StringComparison.OrdinalIgnoreCase)))
                         throw new InvalidDataException("That character profile already exists.");
@@ -612,6 +638,7 @@ public sealed class Engine : IDisposable
                             throw new InvalidDataException("Unknown pet.");
                         Tracker.EditPet(pet.Id, pet.DisplayName, pet.Level, pet.Souls, pet.Goal, pet.Notes);
                     }
+
                     Tracker.Save();
                     break;
                 case "exit":
@@ -623,6 +650,7 @@ public sealed class Engine : IDisposable
             }
         }
     }
+
     void SaveSettings(AppSettings next)
     {
         next.Normalize();
@@ -638,6 +666,7 @@ public sealed class Engine : IDisposable
                 Bind(latest.Key, latest.Value);
         }
     }
+
     void LinkDetected(Command cmd)
     {
         var selected = Book.Selected ?? throw new InvalidOperationException("Choose an account profile first.");
@@ -659,6 +688,7 @@ public sealed class Engine : IDisposable
         Select(candidate);
         Trace("Account", detected.Name + " linked to " + candidate.Label);
     }
+
     void Rename(Command cmd)
     {
         var target = Book.Profiles.SingleOrDefault(p => p.ProfileKey == cmd.Key) ?? throw new InvalidDataException("Choose an account first.");
@@ -670,6 +700,7 @@ public sealed class Engine : IDisposable
         BookWith(candidate, Book.SelectedProfileKey).Save(Path.Combine(root, "profiles.json"));
         target.AccountName = label;
     }
+
     void SaveDetails(Command cmd)
     {
         if (cmd.Profile == null || Book.Selected == null)
@@ -685,6 +716,7 @@ public sealed class Engine : IDisposable
             saved.Notes = pet.Notes.Replace("[favorite]", "").Trim();
             saved.Favorite = pet.Favorite;
         }
+
         if (Tracker.Ready)
             Tracker.Save();
         else
@@ -693,17 +725,15 @@ public sealed class Engine : IDisposable
             Storage.Save(Path.Combine(root, "profiles", Book.SelectedProfileKey + ".json"), target);
         }
     }
+
     LocalProfileBook BookWith(LocalProfileBinding binding, string? selected)
     {
         var profiles = Book.Profiles.Select(p => p.ProfileKey == binding.ProfileKey ? binding : p).ToList();
         if (!profiles.Any(p => p.ProfileKey == binding.ProfileKey))
             profiles.Add(binding);
-        return new()
-        {
-            Profiles = profiles,
-            SelectedProfileKey = selected
-        };
+        return new() { Profiles = profiles, SelectedProfileKey = selected };
     }
+
     void Select(LocalProfileBinding b)
     {
         var candidate = BookWith(b, b.ProfileKey);
@@ -722,6 +752,7 @@ public sealed class Engine : IDisposable
         if (pair.Value != null)
             Bind(pair.Key, pair.Value);
     }
+
     void Import(Command cmd)
     {
         var bindings = cmd.Bindings ?? throw new InvalidDataException("No profiles selected.");
@@ -739,6 +770,7 @@ public sealed class Engine : IDisposable
             if (Book.Profiles.Any(old => old.Label.Equals(b.Label, StringComparison.OrdinalIgnoreCase)))
                 throw new InvalidDataException("A matching profile already exists. Use a separate profile label to avoid overwriting it.");
         }
+
         Backup();
         var candidate = new LocalProfileBook { Profiles = new(Book.Profiles), SelectedProfileKey = Book.SelectedProfileKey };
         foreach (var b in bindings)
@@ -747,17 +779,26 @@ public sealed class Engine : IDisposable
             foreach (var pet in p.Pets.Values)
                 if (!pet.Max)
                     pet.ProgressNeedsSync = true;
-            var target = new LocalProfileBinding { AccountName = b.AccountName, LinkedCharacters = new(b.LinkedCharacters), CharacterName = b.CharacterName, RealmLabel = b.RealmLabel, ProfileKey = Guid.NewGuid().ToString("N")[..24] };
+            var target = new LocalProfileBinding
+            {
+                AccountName = b.AccountName,
+                LinkedCharacters = new(b.LinkedCharacters),
+                CharacterName = b.CharacterName,
+                RealmLabel = b.RealmLabel,
+                ProfileKey = Guid.NewGuid().ToString("N")[..24]
+            };
             if (target.IsAccount)
                 p.AccountKey = target.ProfileKey;
             Storage.Save(Path.Combine(root, "profiles", target.ProfileKey + ".json"), p);
             candidate.Profiles.Add(target);
         }
+
         candidate.Save(Path.Combine(root, "profiles.json"));
         Book.Profiles = candidate.Profiles;
         if (Book.Selected == null)
             Select(Book.Profiles.Last());
     }
+
     public void Backup()
     {
         lock (Gate)
@@ -776,17 +817,15 @@ public sealed class Engine : IDisposable
                 if (File.Exists(file))
                     File.Copy(file, Path.Combine(path, "profiles", b.ProfileKey + ".json"));
             }
-            Storage.Save(Path.Combine(path, "backup.json"), new
-            {
-                Product = "PetTracker",
-                Format = 1
-            });
+
+            Storage.Save(Path.Combine(path, "backup.json"), new { Product = "PetTracker", Format = 1 });
             var managed = Directory.GetDirectories(parent).Where(d => System.Text.RegularExpressions.Regex.IsMatch(Path.GetFileName(d), "^[0-9]{8}-[0-9]{6}-[0-9a-f]{8}$") && File.Exists(Path.Combine(d, "backup.json"))).OrderByDescending(Directory.GetCreationTimeUtc).ToArray();
             foreach (string old in managed.Skip(7))
                 PruneBackup(parent, old);
             Storage.Save(Path.Combine(parent, "index.json"), managed.Take(7).Select(Path.GetFileName).ToArray());
         }
     }
+
     static void PruneBackup(string parent, string folder)
     {
         folder = Path.GetFullPath(folder);
@@ -811,6 +850,7 @@ public sealed class Engine : IDisposable
             Directory.Delete(d);
         Directory.Delete(folder);
     }
+
     public void Dispose()
     {
         lock (Gate)

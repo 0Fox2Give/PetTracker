@@ -1,4 +1,5 @@
 using System.IO;
+
 namespace PetTracker.Setup;
 
 public static class UninstallPayload
@@ -24,9 +25,11 @@ public static class UninstallPayload
                 if ((File.Exists(part) || Directory.Exists(part)) && (File.GetAttributes(part) & FileAttributes.ReparsePoint) != 0)
                     throw new InvalidDataException("The installation contains a linked path.");
             }
+
             if (Directory.Exists(path))
                 throw new InvalidDataException("An installed file was replaced by a folder.");
         }
+
         string stage = Path.GetFullPath(Path.Combine(root, ".uninstall-" + Guid.NewGuid().ToString("N")));
         if (!stage.StartsWith(root + Path.DirectorySeparatorChar, StringComparison.OrdinalIgnoreCase))
             throw new InvalidDataException("Invalid uninstall staging path.");
@@ -55,13 +58,16 @@ public static class UninstallPayload
                 {
                     restored = false;
                 }
+
             if (restored)
             {
                 Directory.Delete(stage);
                 throw new IOException("Pet Tracker could not be removed. Its files were restored. Close Pet Tracker and try again.", failure);
             }
+
             throw new IOException("Pet Tracker could not be removed completely. Original files are preserved in " + stage + ". Reinstall Pet Tracker before trying again.", failure);
         }
+
         // Installation removal has committed. Cleanup failures leave only staged
         // program files; unknown files and local collections are never enumerated.
         bool clean = true;
@@ -78,6 +84,7 @@ public static class UninstallPayload
             {
                 clean = false;
             }
+
         if (clean)
             try
             {
@@ -91,6 +98,7 @@ public static class UninstallPayload
             {
                 clean = false;
             }
+
         var folders = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
         foreach (string file in files)
             for (string? folder = Path.GetDirectoryName(file); folder != null && !folder.Equals(root, StringComparison.OrdinalIgnoreCase); folder = Path.GetDirectoryName(folder))
@@ -100,6 +108,7 @@ public static class UninstallPayload
         RemoveEmpty(root);
         return clean ? null : stage;
     }
+
     static void RemoveEmpty(string folder)
     {
         try
@@ -107,7 +116,11 @@ public static class UninstallPayload
             if (Directory.Exists(folder) && !Directory.EnumerateFileSystemEntries(folder).Any())
                 Directory.Delete(folder);
         }
-        catch (IOException) { }
-        catch (UnauthorizedAccessException) { }
+        catch (IOException)
+        {
+        }
+        catch (UnauthorizedAccessException)
+        {
+        }
     }
 }

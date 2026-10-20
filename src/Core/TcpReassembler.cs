@@ -1,7 +1,6 @@
 namespace PetTracker;
 
 public sealed record TcpAssemblyResult(IReadOnlyList<byte[]> Chunks, long LostBytes = 0, bool Buffered = false, bool Duplicate = false);
-
 // A gap is provisional until the bounded reorder window expires. Sequence
 // arithmetic is signed modulo 2^32; late and overlapping bytes are trimmed.
 public sealed class TcpReassembler
@@ -19,6 +18,7 @@ public sealed class TcpReassembler
         bufferedBytes = 0;
         gapSince = null;
     }
+
     public TcpAssemblyResult Feed(uint sequence, byte[] bytes, TimeSpan now)
     {
         var chunks = new List<byte[]>();
@@ -38,6 +38,7 @@ public sealed class TcpReassembler
             sequence = expected.Value;
             delta = 0;
         }
+
         if (delta == 0)
         {
             chunks.Add(bytes);
@@ -53,6 +54,7 @@ public sealed class TcpReassembler
                     return new(chunks, Duplicate: true);
                 bufferedBytes -= existing.Length;
             }
+
             pending[sequence] = (byte[])bytes.Clone();
             bufferedBytes += bytes.Length;
             buffered = true;
@@ -60,8 +62,10 @@ public sealed class TcpReassembler
             while (bufferedBytes > MaxBufferedBytes || pending.Count > MaxSegments)
                 loss += SkipGap(chunks, now);
         }
+
         return new(chunks, loss, buffered, duplicate);
     }
+
     public TcpAssemblyResult Poll(TimeSpan now, bool inputPending = false)
     {
         var chunks = new List<byte[]>();
@@ -69,6 +73,7 @@ public sealed class TcpReassembler
         // Feed still enforces the memory/segment limits while the input queue is busy.
         return new(chunks, !inputPending && gapSince is { } since && now - since >= ReorderWindow ? SkipGap(chunks, now) : 0);
     }
+
     long SkipGap(List<byte[]> chunks, TimeSpan now)
     {
         if (expected == null || pending.Count == 0)
@@ -80,6 +85,7 @@ public sealed class TcpReassembler
         gapSince = pending.Count == 0 ? null : now;
         return lost;
     }
+
     void Drain(List<byte[]> chunks)
     {
         while (pending.Count > 0 && expected.HasValue)

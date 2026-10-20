@@ -17,6 +17,7 @@ public sealed record PublisherConfiguration(string FeedRoot, string PublicKey)
         config.Validate();
         return config;
     }
+
     public void Validate()
     {
         using var transport = new HttpsReleaseTransport(new Uri(FeedRoot, UriKind.Absolute));
@@ -27,6 +28,7 @@ public sealed record PublisherConfiguration(string FeedRoot, string PublicKey)
         if (key.KeySize != 256)
             throw new InvalidDataException("Publisher key must use P-256.");
     }
+
     public static void ValidateDataLocation(string data, string installation)
     {
         string folder = Path.TrimEndingDirectorySeparator(Path.GetFullPath(data)), app = Path.TrimEndingDirectorySeparator(Path.GetFullPath(installation));
@@ -54,6 +56,7 @@ public sealed class VerifiedUpdateClient : IUpdateClient
         transport = new(new Uri(config.FeedRoot));
         manager = new(new SignedReleaseSource(SignedReleaseSource.PackageId, channel, config.PublicKey, transport), new UpdateOptions { ExplicitChannel = channel, AllowVersionDowngrade = false, MaximumDeltasBeforeFallback = -1 }, locator);
     }
+
     public Task<UpdateInfo?> Check() => manager.CheckForUpdatesAsync();
     public Task Download(UpdateInfo update, Action<int> progress, CancellationToken cancellation) => manager.DownloadUpdatesAsync(update, progress, cancellation);
     public void VerifyReady(UpdateInfo update)
@@ -70,6 +73,7 @@ public sealed class VerifiedUpdateClient : IUpdateClient
             throw;
         }
     }
+
     public static void VerifyPackage(string path, VelopackAsset asset)
     {
         try
@@ -87,10 +91,12 @@ public sealed class VerifiedUpdateClient : IUpdateClient
             throw new InvalidDataException("The downloaded update is missing. Download it again.", error);
         }
     }
+
     public void Apply(UpdateInfo update, string[] arguments)
     {
         VerifyReady(update);
         manager.ApplyUpdatesAndRestart(update.TargetFullRelease, arguments);
     }
+
     public void Dispose() => transport.Dispose();
 }

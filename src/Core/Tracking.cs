@@ -5,169 +5,34 @@ using System.Text.Json;
 
 namespace PetTracker;
 
-public sealed class PetProgress
-{
-    public int Id
-    {
-        get; set;
-    }
-    public string CatalogName { get; set; } = "";
-    public string DisplayName { get; set; } = "";
-    public string Category { get; set; } = "";
-    public int? Level
-    {
-        get; set;
-    }
-    public bool LevelVerified
-    {
-        get; set;
-    }
-    public bool LevelDerivedFromSouls
-    {
-        get; set;
-    }
-    public string LevelSourceDescription => LevelVerified ? "Rank synchronized from game." : LevelDerivedFromSouls ? "Rank 3 / MAX reached from uninterrupted tracked soul progress." : "Rank entered manually.";
-    public int? Souls
-    {
-        get; set;
-    }
-    public int? Goal
-    {
-        get; set;
-    }
-    public int? EstimatedSouls
-    {
-        get; set;
-    }
-    public bool ProgressNeedsSync
-    {
-        get; set;
-    }
-    public DateTimeOffset? SyncedUtc
-    {
-        get; set;
-    }
-    public DateTimeOffset? CollectionImportedUtc
-    {
-        get; set;
-    }
-    public bool CollectionCounterPresent
-    {
-        get; set;
-    }
-    public bool CounterVerified
-    {
-        get; set;
-    }
-    public int? CurrentSouls => EstimatedSouls ?? Souls;
-    public string ProgressText => Max ? "MAX" : (EstimatedSouls.HasValue ? "≈" : "") + (CurrentSouls?.ToString() ?? "?") + "/" + (Goal?.ToString() ?? "?");
-    public bool RankIncreasePending => ProgressNeedsSync && Level is 0 or 1 && Goal == PetStages.CounterGoal(Level.Value) && CurrentSouls is int count && count >= Goal;
-    public string Notes { get; set; } = "";
-    public bool Favorite
-    {
-        get; set;
-    }
-    public bool Max => Level >= 3;
-    public string Name => string.IsNullOrWhiteSpace(DisplayName) ? CatalogName : DisplayName;
-}
-public sealed class CreatureKills
-{
-    public int NpcId
-    {
-        get; set;
-    }
-    public string Name { get; set; } = "";
-    public long Total
-    {
-        get; set;
-    }
-    public int? PetId
-    {
-        get; set;
-    }
-    public bool LinkManuallySet
-    {
-        get; set;
-    }
-    public string LinkSource { get; set; } = "";
-}
-public sealed class Profile
-{
-    public int Version { get; set; } = 1;
-    public string? AccountKey
-    {
-        get; set;
-    }
-    public string CharacterName { get; set; } = "";
-    public Dictionary<int, PetProgress> Pets { get; set; } = new();
-    public Dictionary<int, CreatureKills> Creatures { get; set; } = new();
-}
-public sealed class EntityLife
-{
-    public int NpcId;
-    public string Name = "";
-    public bool Eligible, Participated, Ended;
-    public long SpawnMs;
-}
-public sealed record KillObservation(int NpcId, string Name);
-public sealed record RecentPetActivity(int? PetId, int? NpcId, string CreatureName, DateTimeOffset SeenUtc, bool IsNearby = false, DateTimeOffset? SoulRewardUtc = null);
-public sealed record PetRankIncrease(int PetId, int Rank, DateTimeOffset SeenUtc);
 public sealed class Tracker
 {
     readonly List<RecentPetActivity> recent = new();
     public IReadOnlyList<RecentPetActivity> RecentActivities => recent;
     public IReadOnlyList<NearbyPet> NearbyPets { get; private set; } = Array.Empty<NearbyPet>();
-    public PetRankIncrease? LastRankIncrease
-    {
-        get; private set;
-    }
+    public PetRankIncrease? LastRankIncrease { get; private set; }
+
     bool sessionCollectionReceived;
     readonly Dictionary<int, int> liveBalances = new();
     readonly Dictionary<int, int> pendingSpends = new();
     public Profile Profile { get; private set; } = new();
-    public string? ProfileKey
-    {
-        get; private set;
-    }
+    public string? ProfileKey { get; private set; }
     public string CharacterName { get; private set; } = "";
     public string? LocalProfileLabel => binding?.Matches(CharacterName) == true && ProfileKey == binding.ProfileKey ? CharacterName + " · " + binding.RealmLabel : null;
-    public int? LocalEntity
-    {
-        get; private set;
-    }
+    public int? LocalEntity { get; private set; }
     public Dictionary<int, EntityLife> Lives { get; } = new();
     public Dictionary<int, int> Summons { get; } = new();
     public Dictionary<int, long> Session { get; } = new();
-    public Dictionary<int, PetProgress> Catalog
-    {
-        get;
-    }
-    public KillObservation? LastKill
-    {
-        get; private set;
-    }
-    public PetPointObservation? LastPointObservation
-    {
-        get; private set;
-    }
+    public Dictionary<int, PetProgress> Catalog { get; }
+    public KillObservation? LastKill { get; private set; }
+    public PetPointObservation? LastPointObservation { get; private set; }
     public Dictionary<int, long> SessionPointObservations { get; } = new();
-    public long ObservationEpoch
-    {
-        get; private set;
-    }
-    public long ObservedDeaths
-    {
-        get; private set;
-    }
-    public long CountedKills
-    {
-        get; private set;
-    }
-    public long RosterUpdates
-    {
-        get; private set;
-    }
+    public long ObservationEpoch { get; private set; }
+    public long ObservedDeaths { get; private set; }
+    public long CountedKills { get; private set; }
+    public long RosterUpdates { get; private set; }
     public string Error { get; set; } = "";
+
     public event Action? Changed;
     readonly string directory;
     readonly CreaturePetMappings? mappings;
@@ -177,7 +42,6 @@ public sealed class Tracker
     bool identityPending = true;
     readonly Dictionary<int, int> preIdentityRoster = new();
     static readonly JsonSerializerOptions Json = new() { WriteIndented = true };
-
     public Tracker(string directory, Dictionary<int, PetProgress>? catalog = null, CreaturePetMappings? mappings = null, LocalProfileBinding? binding = null)
     {
         this.directory = directory;
@@ -186,6 +50,7 @@ public sealed class Tracker
         this.binding = binding;
         Catalog = catalog ?? new();
     }
+
     static string Key(uint character, uint account) => Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(account + ":" + character))).Substring(0, 24).ToLowerInvariant();
     public void LocalPlayer(int entity, string name)
     {
@@ -225,8 +90,10 @@ public sealed class Tracker
             if (Ready)
                 ApplyPreIdentityRoster();
         }
+
         Changed?.Invoke();
     }
+
     public void Identity(uint character, uint account)
     {
         if (character == 0)
@@ -241,6 +108,7 @@ public sealed class Tracker
             return;
         LoadProfile(key, changed);
     }
+
     void LoadProfile(string key, bool changed)
     {
         identityPending = true;
@@ -250,6 +118,7 @@ public sealed class Tracker
             LocalEntity = null;
             preIdentityRoster.Clear();
         }
+
         var loaded = new Profile();
         string path = Path.Combine(directory, key + ".json");
         if (binding != null && key == binding.ProfileKey)
@@ -258,6 +127,7 @@ public sealed class Tracker
         {
             loaded = JsonSerializer.Deserialize<Profile>(File.ReadAllText(path), Json) ?? throw new InvalidDataException("Empty pet profile");
         }
+
         Validate(loaded);
         foreach (var pet in loaded.Pets.Values)
             if (pet.Notes.Contains("[favorite]"))
@@ -265,6 +135,7 @@ public sealed class Tracker
                 pet.Favorite = true;
                 pet.Notes = pet.Notes.Replace("[favorite]", "").Trim();
             }
+
         if (binding != null && key == binding.ProfileKey && !OwnedBy(loaded, binding))
             throw new InvalidDataException("The saved collection belongs to a different profile.");
         // If a different account/character arrives before its local name, require
@@ -298,14 +169,17 @@ public sealed class Tracker
             ApplyPreIdentityRoster();
         Changed?.Invoke();
     }
+
     void ApplyPreIdentityRoster()
     {
         foreach (var item in preIdentityRoster)
             SetLevel(item.Key, item.Value);
         preIdentityRoster.Clear();
     }
+
     public bool IdentityAvailable => !identityPending && LocalEntity.HasValue && (nativeIdentityKey != null || binding?.Matches(CharacterName) == true && ProfileKey == binding.ProfileKey);
     public bool Ready => IdentityAvailable && ProfileKey != null && (binding == null || binding.Matches(CharacterName) && ProfileKey == binding.ProfileKey);
+
     public void SelectLocalProfile(LocalProfileBinding selected, bool copyCurrent = false)
     {
         selected.Validate();
@@ -320,6 +194,7 @@ public sealed class Tracker
             Directory.CreateDirectory(directory);
             File.WriteAllText(destination, JsonSerializer.Serialize(Profile, Json));
         }
+
         binding = selected;
         if (LocalEntity.HasValue && selected.Matches(CharacterName))
             LoadProfile(selected.ProfileKey, false);
@@ -333,6 +208,7 @@ public sealed class Tracker
             Changed?.Invoke();
         }
     }
+
     public void Pause()
     {
         NearbyPets = Array.Empty<NearbyPet>();
@@ -351,6 +227,7 @@ public sealed class Tracker
         pendingSpends.Clear();
         ObservationEpoch++;
     }
+
     public void ClearWorld()
     {
         NearbyPets = Array.Empty<NearbyPet>();
@@ -360,6 +237,7 @@ public sealed class Tracker
         LastPointObservation = null;
         ObservationEpoch++;
     }
+
     public void Spawn(int entity, int npc, string name, long ms, bool eligible)
     {
         if (entity <= 0 || npc <= 0)
@@ -371,18 +249,22 @@ public sealed class Tracker
             life.Eligible |= eligible;
             return; // Duplicate appearance does not erase participation.
         }
+
         Lives[entity] = new EntityLife { NpcId = npc, Name = name, SpawnMs = ms, Eligible = eligible };
     }
+
     public void Name(int entity, string name)
     {
         if (Lives.TryGetValue(entity, out var life))
             life.Name = name;
     }
+
     public void Summon(int summon, int owner)
     {
         Summons[summon] = owner;
         Lives.Remove(summon);
     }
+
     public void Damage(int actor, int target, int damage, bool heal, long timestamp)
     {
         if (!Ready || damage <= 0 || heal || !Lives.TryGetValue(target, out var life) || life.Ended || !life.Eligible || timestamp < life.SpawnMs)
@@ -393,6 +275,7 @@ public sealed class Tracker
         if (own)
             life.Participated = true;
     }
+
     public bool Remove(int entity, int reason, long ms)
     {
         Summons.Remove(entity);
@@ -409,6 +292,7 @@ public sealed class Tracker
             row = new CreatureKills { NpcId = life.NpcId, Name = life.Name };
             Profile.Creatures.Add(life.NpcId, row);
         }
+
         if (!string.IsNullOrWhiteSpace(life.Name))
             row.Name = life.Name;
         DefaultPetLink(row);
@@ -417,12 +301,14 @@ public sealed class Tracker
             row.Total++;
             Session[life.NpcId] = Session.GetValueOrDefault(life.NpcId) + 1;
         }
+
         LastKill = new KillObservation(life.NpcId, row.Name);
         RememberRecent(row.PetId, row.NpcId, row.Name, DateTimeOffset.UtcNow);
         CountedKills++;
         Changed?.Invoke();
         return true;
     }
+
     PetProgress EnsurePet(int id)
     {
         if (Profile.Pets.TryGetValue(id, out var pet))
@@ -432,6 +318,7 @@ public sealed class Tracker
         Profile.Pets[id] = pet;
         return pet;
     }
+
     public void Roster(IReadOnlyList<(int PetId, int Level)> roster)
     {
         RosterUpdates++;
@@ -441,12 +328,14 @@ public sealed class Tracker
                 preIdentityRoster[p.PetId] = p.Level;
             return;
         }
+
         if (!Ready)
             return; // Cannot attribute a roster during a character switch.
         foreach (var p in roster)
             SetLevel(p.PetId, p.Level);
         Changed?.Invoke();
     }
+
     void SetLevel(int id, int level)
     {
         if (id <= 0 || level < 0 || level > 3)
@@ -470,6 +359,7 @@ public sealed class Tracker
             if (!liveBalances.ContainsKey(id))
                 pet.SyncedUtc = null;
         }
+
         pet.Level = level;
         pet.LevelVerified = true;
         pet.LevelDerivedFromSouls = false;
@@ -488,6 +378,7 @@ public sealed class Tracker
             pet.CounterVerified = false;
         }
     }
+
     public void EditPet(int id, string name, int? level, int? souls, int? goal, string notes)
     {
         if (!Ready)
@@ -513,6 +404,7 @@ public sealed class Tracker
             liveBalances.Remove(id);
         Changed?.Invoke();
     }
+
     public void Link(int npc, int? petId)
     {
         if (petId.HasValue && !Profile.Pets.ContainsKey(petId.Value))
@@ -522,14 +414,12 @@ public sealed class Tracker
         Profile.Creatures[npc].LinkSource = "Manual";
         for (int index = 0; index < recent.Count; index++)
             if (recent[index].NpcId == npc)
-                recent[index] = recent[index] with
-                {
-                    PetId = petId
-                };
+                recent[index] = recent[index] with { PetId = petId };
         var unique = new HashSet<int>();
         recent.RemoveAll(r => r.PetId is not int id || !unique.Add(id));
         Changed?.Invoke();
     }
+
     void DefaultPetLink(CreatureKills creature)
     {
         // Exact known variants: Papis from gameplay evidence, red caps from bundled
@@ -543,13 +433,16 @@ public sealed class Tracker
                 creature.PetId = source.PetId;
                 creature.LinkSource = source.Source;
             }
+
             return;
         }
+
         if (creature.LinkSource is "Client assets" or "Source data")
         {
             creature.PetId = null;
             creature.LinkSource = "Needs verification";
         }
+
         if (creature.PetId != null)
             return;
         var mapping = creature.NpcId switch
@@ -557,20 +450,21 @@ public sealed class Tracker
             2100009 when creature.Name == "Gentle Papis" => (1066, "Papis_01"),
             2100456 when creature.Name == "Red Cap Fungen" => (1086, "Fungus_01"),
             2100041 when creature.Name == "Red Cap Fungie" => (1012, "Fungy_01"),
-            _ => (0, "")
-        };
+            _ => (0, "")};
         if (Profile.Pets.TryGetValue(mapping.Item1, out var pet) && pet.CatalogName == mapping.Item2)
         {
             creature.PetId = mapping.Item1;
             creature.LinkSource = "Gameplay";
             return;
         }
+
         if (mappings?.Find(creature.NpcId) is { } match && Profile.Pets.TryGetValue(match.PetId, out var matched) && matched.CatalogName == match.CatalogName)
         {
             creature.PetId = match.PetId;
             creature.LinkSource = match.Source;
         }
     }
+
     public bool ObserveSoulActivity(int id, int amount, DateTimeOffset observed)
     {
         if (!Ready || amount is <= 0 or > 75 || !Profile.Pets.ContainsKey(id))
@@ -580,6 +474,7 @@ public sealed class Tracker
         Changed?.Invoke();
         return true;
     }
+
     public bool ObservePointUpdate(int petId, int value, DateTimeOffset observed)
     {
         if (!Ready || value is <= 0 or > 75 || !Profile.Pets.TryGetValue(petId, out var pet))
@@ -597,10 +492,12 @@ public sealed class Tracker
             if (!PromoteMax(pet) && pet.EstimatedSouls >= goal)
                 pet.ProgressNeedsSync = true;
         }
+
         LastPointObservation = new PetPointObservation(petId, value, observed);
         Changed?.Invoke();
         return true;
     }
+
     public bool ObservePointsSpent(int id, int spent, DateTimeOffset observed)
     {
         if (!Ready || spent is <= 0 or > 75 || !Profile.Pets.TryGetValue(id, out var pet))
@@ -616,6 +513,7 @@ public sealed class Tracker
                 Changed?.Invoke();
                 return false;
             }
+
             int remaining = before - spent;
             liveBalances[id] = remaining;
             if (pet.Level is 0 or 1 && spent == PetStages.CounterGoal(pet.Level.Value))
@@ -637,6 +535,7 @@ public sealed class Tracker
                     Changed?.Invoke();
                     return false;
                 }
+
                 pet.Souls = remaining;
                 pet.EstimatedSouls = remaining;
                 pet.ProgressNeedsSync = false;
@@ -645,10 +544,12 @@ public sealed class Tracker
                     pet.ProgressNeedsSync = true;
             }
         }
+
         RememberRecent(id, null, "", observed);
         Changed?.Invoke();
         return true;
     }
+
     bool PromoteMax(PetProgress pet, bool notify = true)
     {
         // User verified that the final reward automatically maxes the in-game pet.
@@ -665,6 +566,7 @@ public sealed class Tracker
         pet.ProgressNeedsSync = false;
         return true;
     }
+
     void RecordRankIncrease(int id, int? previous, int rank, bool eligible)
     {
         if (!eligible || previous is not int old || rank <= old || !recent.Any(r => r.PetId == id))
@@ -673,6 +575,7 @@ public sealed class Tracker
         LastRankIncrease = new(id, rank, now);
         RememberRecent(id, null, "", now);
     }
+
     void RememberRecent(int? pet, int? npc, string creature, DateTimeOffset time, bool reward = false)
     {
         // Keep non-pet kills in creature history, never in the limited farming HUD.
@@ -686,10 +589,12 @@ public sealed class Tracker
             if (creature.Length == 0)
                 creature = existing.CreatureName;
         }
+
         recent.Insert(0, new(pet, npc, creature, time, SoulRewardUtc: reward ? time : existing?.SoulRewardUtc));
         if (recent.Count > 50)
             recent.RemoveRange(50, recent.Count - 50);
     }
+
     public void InvalidateProgress()
     {
         liveBalances.Clear();
@@ -701,9 +606,11 @@ public sealed class Tracker
                 pet.ProgressNeedsSync = true;
                 changed = true;
             }
+
         if (changed)
             Changed?.Invoke();
     }
+
     public int ImportCollection(CollectionSnapshot snapshot, DateTimeOffset captured, IReadOnlyDictionary<int, int> deltas, IReadOnlySet<int> stale, IReadOnlyDictionary<int, int>? spends = null)
     {
         if (!Ready)
@@ -764,20 +671,24 @@ public sealed class Tracker
                 p.ProgressNeedsSync = true;
                 p.CounterVerified = false;
             }
+
             if (!PromoteMax(p, sessionCollectionReceived) && p.CurrentSouls is int total && p.Goal is int cap && total >= cap)
                 p.ProgressNeedsSync = true;
             imported++;
         }
+
         sessionCollectionReceived = true;
         Changed?.Invoke();
         return imported;
     }
+
     public void ClearPointAlert()
     {
         LastPointObservation = null;
         ObservationEpoch++;
         Changed?.Invoke();
     }
+
     public long TotalFor(int pet) => Profile.Creatures.Values.Where(c => c.PetId == pet).Sum(c => c.Total);
     public long SessionFor(int pet) => Profile.Creatures.Values.Where(c => c.PetId == pet).Sum(c => Session.GetValueOrDefault(c.NpcId));
     public void NewSession()
@@ -791,6 +702,7 @@ public sealed class Tracker
         ObservationEpoch++;
         Changed?.Invoke();
     }
+
     public void ReadOnlyView(WorkerView view)
     {
         Profile = view.Profile;
@@ -804,6 +716,7 @@ public sealed class Tracker
         NearbyPets = view.Nearby ?? Array.Empty<NearbyPet>();
         LastRankIncrease = view.Increase;
     }
+
     public static bool OwnedBy(Profile profile, LocalProfileBinding selected) => selected.IsAccount ? profile.AccountKey == selected.ProfileKey || profile.AccountKey == null && profile.CharacterName == selected.CharacterName : profile.AccountKey == null && profile.CharacterName == selected.CharacterName;
     public void Save()
     {
@@ -820,17 +733,17 @@ public sealed class Tracker
         else
             File.Move(temp, path);
     }
+
     public static void Validate(Profile p)
     {
         if (p.Version != 1 || p.Pets == null || p.Creatures == null)
             throw new InvalidDataException("Unsupported pet profile.");
         foreach (var x in p.Pets)
         {
-            if (x.Value == null || x.Key != x.Value.Id || x.Key <= 0 || x.Value.Level is < 0 or > 3 || x.Value.Souls is < 0 || x.Value.Goal is <= 0 || (x.Value.LevelDerivedFromSouls && (x.Value.Level != 3 || x.Value.LevelVerified)) ||
-              (x.Value.Souls.HasValue && ((!x.Value.Goal.HasValue && !(x.Value.Level == 0 && x.Value.CollectionImportedUtc.HasValue)) || x.Value.Goal.HasValue && x.Value.Souls > x.Value.Goal)) || x.Value.EstimatedSouls is < 0 ||
-              (x.Value.EstimatedSouls.HasValue && (!x.Value.Souls.HasValue || !x.Value.Goal.HasValue || x.Value.EstimatedSouls < x.Value.Souls || x.Value.EstimatedSouls > x.Value.Goal)))
+            if (x.Value == null || x.Key != x.Value.Id || x.Key <= 0 || x.Value.Level is < 0 or > 3 || x.Value.Souls is < 0 || x.Value.Goal is <= 0 || (x.Value.LevelDerivedFromSouls && (x.Value.Level != 3 || x.Value.LevelVerified)) || (x.Value.Souls.HasValue && ((!x.Value.Goal.HasValue && !(x.Value.Level == 0 && x.Value.CollectionImportedUtc.HasValue)) || x.Value.Goal.HasValue && x.Value.Souls > x.Value.Goal)) || x.Value.EstimatedSouls is < 0 || (x.Value.EstimatedSouls.HasValue && (!x.Value.Souls.HasValue || !x.Value.Goal.HasValue || x.Value.EstimatedSouls < x.Value.Souls || x.Value.EstimatedSouls > x.Value.Goal)))
                 throw new InvalidDataException("Invalid pet progress.");
         }
+
         foreach (var x in p.Creatures)
         {
             if (x.Value == null || x.Key != x.Value.NpcId || x.Key <= 0 || x.Value.Total < 0 || (x.Value.PetId.HasValue && !p.Pets.ContainsKey(x.Value.PetId.Value)))

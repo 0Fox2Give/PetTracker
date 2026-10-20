@@ -1,5 +1,6 @@
 using System.Buffers.Binary;
 using System.Text;
+
 namespace PetTracker;
 
 public sealed record LocalCharacter(int Entity, string Name, int ServerToken);
@@ -23,9 +24,11 @@ public static class GameProtocol
             if (v < 128)
                 return n >= 0 && (i == 0 || n >= (1 << (7 * i)));
         }
+
         p = start;
         return false;
     }
+
     public static LocalCharacter? Local(byte opcode, byte family, ReadOnlySpan<byte> body)
     {
         if (opcode != 0x33 || family != 0x36)
@@ -48,16 +51,19 @@ public static class GameProtocol
         {
             return null;
         }
+
         if (!name.Any(char.IsLetter) || name.Any(c => !(char.IsLetterOrDigit(c) || c is '\'' or '-' or '_')))
             return null;
         p += length;
         return new(entity, name, BinaryPrimitives.ReadUInt16LittleEndian(body[p..]));
     }
+
     public static NpcSpawn? Spawn(byte opcode, byte family, ReadOnlySpan<byte> b, IReadOnlySet<int> allowed)
     {
         var spawn = Appearance(opcode, family, b);
         return spawn != null && allowed.Contains(spawn.Npc) ? spawn : null;
     }
+
     public static NpcSpawn? Appearance(byte opcode, byte family, ReadOnlySpan<byte> b)
     {
         if (family != 0x36 || opcode is not (0x40 or 0x41 or 0x42))
@@ -77,8 +83,10 @@ public static class GameProtocol
                 if (npc is >= 1000000 and <= 10000000 && b[offset + 5] == 2)
                     return new(entity, npc);
             }
+
         return null;
     }
+
     public static (int Entity, int Reason)? Removal(byte opcode, byte family, ReadOnlySpan<byte> b)
     {
         int p = 0;
@@ -86,6 +94,7 @@ public static class GameProtocol
             return null;
         return (entity, b[p + 1]);
     }
+
     public static OwnHit? Hit(byte opcode, byte family, ReadOnlySpan<byte> b) => Hit(opcode, family, b, out _);
     public static OwnHit? Hit(byte opcode, byte family, ReadOnlySpan<byte> b, out string result)
     {
@@ -121,6 +130,7 @@ public static class GameProtocol
                 return null;
             flags = 10 + q - (p + 1);
         }
+
         if (p + flags > b.Length)
             return null;
         p += flags;

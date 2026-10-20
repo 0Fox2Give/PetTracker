@@ -5,10 +5,17 @@ using System.Text.RegularExpressions;
 using Velopack;
 using Velopack.Logging;
 using Velopack.Sources;
+
 namespace PetTracker.Updates;
 
 public sealed record SignedRelease(string Payload, string Signature);
-public sealed record ReleasePayload(string AppId, string Channel, DateTimeOffset PublishedUtc, DateTimeOffset ExpiresUtc, string Feed, string? InstallerSHA256 = null);
+public sealed record ReleasePayload(
+    string AppId,
+    string Channel,
+    DateTimeOffset PublishedUtc,
+    DateTimeOffset ExpiresUtc,
+    string Feed,
+    string? InstallerSHA256 = null);
 public interface IReleaseTransport
 {
     Task<Stream> Open(string file, CancellationToken cancellation);
@@ -37,11 +44,13 @@ public sealed class SignedReleaseSource : IUpdateSource
         if (this.downloadTimeout <= TimeSpan.Zero || this.downloadTimeout > TimeSpan.FromMinutes(10))
             throw new ArgumentOutOfRangeException(nameof(downloadTimeout));
     }
+
     public static string Sign(ReleasePayload payload, ECDsa privateKey)
     {
         var bytes = JsonSerializer.SerializeToUtf8Bytes(payload);
         return JsonSerializer.Serialize(new SignedRelease(Convert.ToBase64String(bytes), Convert.ToBase64String(privateKey.SignData(bytes, HashAlgorithmName.SHA256))));
     }
+
     public VelopackAssetFeed Verify(ReadOnlySpan<byte> envelope)
     {
         approved.Clear();
@@ -65,15 +74,15 @@ public sealed class SignedReleaseSource : IUpdateSource
         var candidate = new Dictionary<string, VelopackAsset>(StringComparer.Ordinal);
         foreach (var asset in feed.Assets)
         {
-            if (asset.PackageId != appId || asset.Version == null || !Regex.IsMatch(asset.FileName ?? "", "^[A-Za-z0-9][A-Za-z0-9._-]{0,180}\\.nupkg$") || !Regex.IsMatch(asset.SHA256 ?? "", "^[0-9A-Fa-f]{64}$") || asset.Size is <= 0 or > 536870912 || asset.Type is not (VelopackAssetType.Full or VelopackAssetType.Delta) || !candidate.TryAdd(asset.FileName!, asset with
-            {
-            }))
+            if (asset.PackageId != appId || asset.Version == null || !Regex.IsMatch(asset.FileName ?? "", "^[A-Za-z0-9][A-Za-z0-9._-]{0,180}\\.nupkg$") || !Regex.IsMatch(asset.SHA256 ?? "", "^[0-9A-Fa-f]{64}$") || asset.Size is <= 0 or > 536870912 || asset.Type is not (VelopackAssetType.Full or VelopackAssetType.Delta) || !candidate.TryAdd(asset.FileName!, asset with { }))
                 throw new InvalidDataException("Invalid release package metadata.");
         }
+
         foreach (var pair in candidate)
             approved.Add(pair.Key, pair.Value);
         return feed;
     }
+
     public async Task<VelopackAssetFeed> GetReleaseFeed(IVelopackLogger logger, string? requestedApp, string requestedChannel, Guid? stagingId, VelopackAsset? latestLocalRelease)
     {
         approved.Clear();
@@ -90,8 +99,10 @@ public sealed class SignedReleaseSource : IUpdateSource
                 throw new InvalidDataException("Release feed is too large.");
             bytes.Write(buffer, 0, count);
         }
+
         return Verify(bytes.ToArray());
     }
+
     public async Task DownloadReleaseEntry(IVelopackLogger logger, VelopackAsset release, string localFile, Action<int> progress, CancellationToken cancellation)
     {
         if (!approved.TryGetValue(release.FileName, out var trusted) || release != trusted)
@@ -120,9 +131,11 @@ public sealed class SignedReleaseSource : IUpdateSource
                     await target.WriteAsync(bytes.AsMemory(0, count), cancellation);
                     progress?.Invoke((int)(total * 100 / trusted.Size));
                 }
+
                 if (total != trusted.Size || !CryptographicOperations.FixedTimeEquals(digest.GetHashAndReset(), Convert.FromHexString(trusted.SHA256)))
                     throw new InvalidDataException("Update package failed verification.");
             }
+
             cancellation.ThrowIfCancellationRequested();
             File.Move(stage, localFile, true);
         }
@@ -139,26 +152,27 @@ public sealed class HttpsReleaseTransport : IReleaseTransport, IDisposable
     readonly Uri root;
     readonly HttpClient client;
     readonly bool github;
-    public HttpsReleaseTransport(Uri root) : this(root, new HttpClientHandler { AllowAutoRedirect = false }) { }
+    public HttpsReleaseTransport(Uri root) : this(root, new HttpClientHandler { AllowAutoRedirect = false })
+    {
+    }
+
     public HttpsReleaseTransport(Uri root, HttpMessageHandler handler)
     {
         if (!root.IsAbsoluteUri || root.Scheme != "https" || !root.IsDefaultPort || root.UserInfo.Length > 0 || root.Query.Length > 0 || root.Fragment.Length > 0 || !root.AbsolutePath.EndsWith('/'))
             throw new ArgumentException("Updates require a fixed HTTPS folder.");
         this.root = root;
         github = root.Host == "github.com" && Regex.IsMatch(root.AbsolutePath, "^/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+/releases/download/[A-Za-z0-9_.-]+/$");
-        client = new(handler)
-        {
-            Timeout = TimeSpan.FromMinutes(10)
-        };
+        client = new(handler) { Timeout = TimeSpan.FromMinutes(10) };
         client.DefaultRequestHeaders.UserAgent.ParseAdd("PetTracker-Updater/1.0");
     }
+
     public async Task<Stream> Open(string file, CancellationToken cancellation)
     {
         if (!Regex.IsMatch(file, "^[A-Za-z0-9][A-Za-z0-9._-]{0,200}$"))
             throw new InvalidDataException("Invalid release file name.");
         var original = new Uri(root, file);
         var address = original;
-        for (int redirects = 0; ; redirects++)
+        for (int redirects = 0;; redirects++)
         {
             var response = await client.GetAsync(address, HttpCompletionOption.ResponseHeadersRead, cancellation);
             try
@@ -171,13 +185,13 @@ public sealed class HttpsReleaseTransport : IReleaseTransport, IDisposable
                     var next = new Uri(address, location);
                     // GitHub serves public release assets through this CDN. Never send account
                     // credentials, follow a downgrade, or accept redirects from arbitrary feeds.
-                    if (!github || next.Scheme != "https" || !next.IsDefaultPort || next.UserInfo.Length != 0 || next.Fragment.Length != 0 ||
-                       !(next.Host == "release-assets.githubusercontent.com" || next == original))
+                    if (!github || next.Scheme != "https" || !next.IsDefaultPort || next.UserInfo.Length != 0 || next.Fragment.Length != 0 || !(next.Host == "release-assets.githubusercontent.com" || next == original))
                         throw new InvalidDataException("Update download redirected outside GitHub release storage.");
                     address = next;
                     response.Dispose();
                     continue;
                 }
+
                 response.EnsureSuccessStatusCode();
                 return new ResponseStream(await response.Content.ReadAsStreamAsync(cancellation), response);
             }
@@ -188,14 +202,21 @@ public sealed class HttpsReleaseTransport : IReleaseTransport, IDisposable
             }
         }
     }
+
     sealed class ResponseStream(Stream inner, HttpResponseMessage response) : Stream
     {
-        public override bool CanRead => true; public override bool CanSeek => false; public override bool CanWrite => false; public override long Length => throw new NotSupportedException(); public override long Position
-        {
-            get => throw new NotSupportedException(); set => throw new NotSupportedException();
-        }
-        public override int Read(byte[] buffer, int offset, int count) => inner.Read(buffer, offset, count); public override ValueTask<int> ReadAsync(Memory<byte> buffer, CancellationToken token = default) => inner.ReadAsync(buffer, token);
-        public override void Flush() => throw new NotSupportedException(); public override long Seek(long o, SeekOrigin origin) => throw new NotSupportedException(); public override void SetLength(long v) => throw new NotSupportedException(); public override void Write(byte[] b, int o, int n) => throw new NotSupportedException();
+        public override bool CanRead => true;
+        public override bool CanSeek => false;
+        public override bool CanWrite => false;
+        public override long Length => throw new NotSupportedException();
+        public override long Position { get => throw new NotSupportedException(); set => throw new NotSupportedException(); }
+
+        public override int Read(byte[] buffer, int offset, int count) => inner.Read(buffer, offset, count);
+        public override ValueTask<int> ReadAsync(Memory<byte> buffer, CancellationToken token = default) => inner.ReadAsync(buffer, token);
+        public override void Flush() => throw new NotSupportedException();
+        public override long Seek(long o, SeekOrigin origin) => throw new NotSupportedException();
+        public override void SetLength(long v) => throw new NotSupportedException();
+        public override void Write(byte[] b, int o, int n) => throw new NotSupportedException();
         protected override void Dispose(bool disposing)
         {
             if (disposing)
@@ -203,8 +224,10 @@ public sealed class HttpsReleaseTransport : IReleaseTransport, IDisposable
                 inner.Dispose();
                 response.Dispose();
             }
+
             base.Dispose(disposing);
         }
     }
+
     public void Dispose() => client.Dispose();
 }

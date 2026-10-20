@@ -1,5 +1,6 @@
 using System.IO.Pipes;
 using System.Text.Json;
+
 namespace PetTracker;
 
 static class Program
@@ -7,7 +8,8 @@ static class Program
     static async Task Main(string[] args)
     {
         string root = Storage.Root(args);
-        using var mutex = new Mutex(true, "Local\\" + Storage.Pipe(root) + "-worker", out bool first);
+        string mutexName = (OperatingSystem.IsWindows() ? "Local\\" : "") + Storage.Pipe(root) + "-worker";
+        using var mutex = new Mutex(true, mutexName, out bool first);
         if (!first)
             return;
         try
@@ -30,13 +32,14 @@ static class Program
                 try
                 {
                     capture.Start();
-                    engine.CaptureError = capture.OpenDeviceCount == 0 ? "No capture adapter could be opened. Install Npcap or check capture permissions." : "";
+                    engine.CaptureError = capture.OpenDeviceCount == 0 ? CaptureRequirements.Help : "";
                 }
                 catch (Exception)
                 {
-                    engine.CaptureError = "Packet capture could not start. Check that Npcap is installed and capture access is available.";
+                    engine.CaptureError = CaptureRequirements.Help;
                 }
             }
+
             void Restart()
             {
                 capture.Stop();
@@ -44,6 +47,7 @@ static class Program
                 capture.Adapter = engine.Settings.Adapter;
                 Start();
             }
+
             engine.CaptureAction = action =>
             {
                 engine.StopCapture();
@@ -67,6 +71,7 @@ static class Program
                     if (!engine.ExitRequested)
                         recovery.Tick();
                 }
+
                 engine.Flush();
                 if (Environment.TickCount64 >= nextHealth)
                 {
@@ -102,26 +107,24 @@ static class Program
                         }
                         catch
                         {
-                            response = response with
-                            {
-                                Adapters = Array.Empty<CaptureAdapterOption>()
-                            };
+                            response = response with { Adapters = Array.Empty<CaptureAdapterOption>() };
                         }
                     }
+
                     await writer.WriteLineAsync(JsonSerializer.Serialize(response));
                 }
                 catch (Exception ex)
                 {
                     try
                     {
-                        await writer.WriteLineAsync(JsonSerializer.Serialize(new
-                        {
-                            Error = ex is InvalidDataException or InvalidOperationException ? ex.Message : "The request could not be completed."
-                        }));
+                        await writer.WriteLineAsync(JsonSerializer.Serialize(new { Error = ex is InvalidDataException or InvalidOperationException ? ex.Message : "The request could not be completed." }));
                     }
-                    catch (IOException) { }
+                    catch (IOException)
+                    {
+                    }
                 }
             }
+
             lifetime.Cancel();
             await health;
             capture.Stop();
@@ -130,10 +133,7 @@ static class Program
         {
             Environment.ExitCode = 1;
             Directory.CreateDirectory(root);
-            Storage.Save(Path.Combine(root, "startup-error.json"), new
-            {
-                Error = ex.Message
-            });
+            Storage.Save(Path.Combine(root, "startup-error.json"), new { Error = ex.Message });
         }
     }
 }

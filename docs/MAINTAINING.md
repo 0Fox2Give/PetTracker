@@ -22,6 +22,16 @@ Players should start with the [README](../README.md). This repository contains t
 
 The publisher and feed-status files stay at the root because scripts and workflows use those paths.
 
+Core responsibilities are separated into collection models/accounting, catalog
+and creature mappings, settings, local storage, and worker contracts. UI clients
+consume the same `Activity`, `MerchantDisplay`, `PetFinder` and `PetFamily` rules.
+OS-specific socket discovery lives in the worker; Linux must never broaden
+capture to all Wine processes when game socket ownership is unavailable.
+
+Linux preview artifacts are separate from the Windows release channel. They
+require native Linux CI and live game/compositor testing before being described
+as supported. See [LINUX.md](LINUX.md) for the current limits.
+
 ## Release assets
 
 The `updates` tag is a permanent delivery address used by installed clients. Do not rename it or move its assets to another release as a cosmetic cleanup.

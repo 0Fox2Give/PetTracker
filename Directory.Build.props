@@ -8,6 +8,7 @@
     <Authors>Pet Tracker</Authors>
     <Version>0.1.51</Version>
     <RuntimeFrameworkVersion>10.0.12</RuntimeFrameworkVersion>
-    <NuGetAudit>false</NuGetAudit>
+    <NuGetAudit>true</NuGetAudit>
+    <NuGetAuditMode>all</NuGetAuditMode>
   </PropertyGroup>
 </Project>

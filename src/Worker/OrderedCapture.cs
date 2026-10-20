@@ -13,24 +13,21 @@ namespace PetTracker;
 public sealed record CaptureStreamGap(int Source, int Destination, string Device, long Bytes, string Reason);
 public interface IScopedCapture
 {
-    int OpenDeviceCount
-    {
-        get;
-    }
+    int OpenDeviceCount { get; }
+
     event EventHandler<CaptureStreamGap>? StreamGap;
 }
+
 public interface IPrioritizedCapture
 {
     void ProtectConnection(int source, int destination, string device);
     void ReleaseConnection();
 }
+
 public interface IScopedPayloadCapture
 {
     event EventHandler<CapturedPayload>? ScopedPayloadCaptured;
-    CapturedPayload? CurrentScopedPayload
-    {
-        get;
-    }
+    CapturedPayload? CurrentScopedPayload { get; }
 }
 
 // One serialized reader merges TCP ranges by full endpoint identity. It
@@ -44,21 +41,25 @@ public sealed class OrderedCapture : IPacketCaptureService, IScopedCapture, IPri
     {
         public volatile bool Started, Failed;
     }
+
     RunState? run;
-    public OrderedCapture() : this(() => LibPcapLiveDeviceList.Instance.Cast<ICaptureDevice>()) { }
+    public OrderedCapture() : this(() => LibPcapLiveDeviceList.Instance.Cast<ICaptureDevice>())
+    {
+    }
+
     public OrderedCapture(Func<IEnumerable<ICaptureDevice>> discover)
     {
         this.discover = discover;
     }
+
     CancellationTokenSource? cancel;
     long received, retransmissions, gaps, gapBytes, reordered;
     int generation;
-    public GameConnections Connections { get; } = new(); public string? Adapter
-    {
-        get; set;
-    }
+    public GameConnections Connections { get; } = new();
+    public string? Adapter { get; set; }
     public string LogRoot { get; set; } = "";
     public CapturedPayload? CurrentScopedPayload => null;
+
     public event EventHandler<CapturedPayload>? ScopedPayloadCaptured;
     sealed record ProtectedConnection(int Source, int Destination, string Device);
     ProtectedConnection? protectedConnection;
@@ -68,13 +69,16 @@ public sealed class OrderedCapture : IPacketCaptureService, IScopedCapture, IPri
             throw new ArgumentException("Invalid capture connection.");
         Volatile.Write(ref protectedConnection, new(source, destination, device));
     }
+
     public void ReleaseConnection() => Volatile.Write(ref protectedConnection, null);
     bool IsProtected(Endpoint key, Flow flow)
     {
         var active = Volatile.Read(ref protectedConnection);
         return active != null && active.Source == key.Source && active.Destination == key.Destination && active.Device == flow.Device;
     }
+
     public bool IsRunning => Volatile.Read(ref run) is { Started: true, Failed: false };
+
     public int OpenDeviceCount
     {
         get
@@ -83,10 +87,12 @@ public sealed class OrderedCapture : IPacketCaptureService, IScopedCapture, IPri
                 return devices.Count;
         }
     }
+
     public long TcpRetransmissions => Interlocked.Read(ref retransmissions);
     public long TcpGaps => Interlocked.Read(ref gaps);
     public long TcpGapBytes => Interlocked.Read(ref gapBytes);
     public long ReorderedSegments => Interlocked.Read(ref reordered);
+
     public event EventHandler<CapturedPayload>? PayloadCaptured;
     public event EventHandler<CaptureStreamGap>? StreamGap;
     public event Action<string>? FlowRetired;
@@ -100,16 +106,19 @@ public sealed class OrderedCapture : IPacketCaptureService, IScopedCapture, IPri
         public uint? Syn;
         public bool HasPayload;
     }
+
     sealed class QueueBudget
     {
         public long Bytes;
     }
+
     static string Label(Endpoint key, string device)
     {
         string a = "[" + key.SourceIp + "]:" + key.Source, b = "[" + key.DestinationIp + "]:" + key.Destination;
         string identity = StringComparer.Ordinal.Compare(a, b) < 0 ? a + "|" + b : b + "|" + a;
         return "Ordered TCP / " + Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(identity)))[..12];
     }
+
     public void Start()
     {
         lock (gate)
@@ -191,25 +200,34 @@ public sealed class OrderedCapture : IPacketCaptureService, IScopedCapture, IPri
                         if (stopped != null)
                             device.OnCaptureStopped -= stopped;
                     }
-                    catch { }
+                    catch
+                    {
+                    }
+
                     try
                     {
                         device.Close();
                     }
-                    catch { }
+                    catch
+                    {
+                    }
+
                     Trace("Capture device unavailable: " + e.Message);
                 }
             }
+
             if (devices.Count == 0)
             {
                 cancel.Cancel();
-                throw new InvalidOperationException("No Npcap capture device opened.");
+                throw new InvalidOperationException(CaptureRequirements.Help);
             }
+
             state.Started = true;
             _ = Task.Run(() => Consume(queue.Reader, dropped, budget, current, state, token), token);
             Trace("Ordered TCP capture active on " + devices.Count + " devices; bounded 1-second reorder window.");
         }
     }
+
     readonly Dictionary<ICaptureDevice, (PacketArrivalEventHandler Packet, CaptureStoppedEventHandler Stopped)> handlers = new();
     async Task Consume(ChannelReader<Fragment> reader, ConcurrentDictionary<Endpoint, string> dropped, QueueBudget budget, int current, RunState state, CancellationToken token)
     {
@@ -231,6 +249,7 @@ public sealed class OrderedCapture : IPacketCaptureService, IScopedCapture, IPri
                 Trace("Gap subscriber failed: " + e.GetType().Name);
             }
         }
+
         void Emit(Endpoint key, Flow flow, TcpAssemblyResult result)
         {
             if (result.LostBytes > 0)
@@ -259,11 +278,13 @@ public sealed class OrderedCapture : IPacketCaptureService, IScopedCapture, IPri
                             Loss(key, flow.Device, 1, "Capture payload subscriber failure");
                         }
                 }
+
                 var payload = new CapturedPayload(key.Source, key.Destination, data, flow.Device);
                 Dispatch(ScopedPayloadCaptured, payload);
                 Dispatch(PayloadCaptured, payload);
             }
         }
+
         try
         {
             while (!token.IsCancellationRequested && current == generation)
@@ -274,6 +295,7 @@ public sealed class OrderedCapture : IPacketCaptureService, IScopedCapture, IPri
                         Loss(pair.Key, pair.Value.Device, 1, "Capture adapter stopped");
                     return;
                 }
+
                 foreach (var lost in dropped.ToArray())
                     if (dropped.TryRemove(lost.Key, out var label))
                     {
@@ -281,6 +303,7 @@ public sealed class OrderedCapture : IPacketCaptureService, IScopedCapture, IPri
                         if (known != null)
                             known.Assembly.Reset();
                     }
+
                 int batch = 0;
                 while (batch++ < 1024 && reader.TryRead(out var fragment))
                 {
@@ -296,11 +319,13 @@ public sealed class OrderedCapture : IPacketCaptureService, IScopedCapture, IPri
                         outgoing[key] = now;
                         continue;
                     }
+
                     if (outgoing.ContainsKey(key))
                     {
                         outgoing[key] = now;
                         continue;
                     }
+
                     if (!flows.TryGetValue(key, out var flow))
                     {
                         flow = new(Label(key, fragment.Device));
@@ -309,9 +334,11 @@ public sealed class OrderedCapture : IPacketCaptureService, IScopedCapture, IPri
                             Loss(key, flow.Device, 1, "Capture flow limit reached; protected connections retained");
                             continue;
                         }
+
                         if (evicted is { } oldest)
                             Loss(oldest.Key, oldest.Value.Device, 1, "Capture flow limit reached; unprotected connection evicted");
                     }
+
                     flow.LastSeen = now;
                     if (fragment.Syn)
                     {
@@ -325,10 +352,12 @@ public sealed class OrderedCapture : IPacketCaptureService, IScopedCapture, IPri
                         if (fragment.Bytes.Length == 0)
                             continue;
                     }
+
                     Emit(key, flow, flow.Assembly.Feed(unchecked(fragment.Sequence + (fragment.Syn ? 1u : 0u)), fragment.Bytes, now));
                     if (fragment.Bytes.Length > 0)
                         flow.HasPayload = true;
                 }
+
                 bool inputPending = reader.TryPeek(out _);
                 foreach (var pair in flows.Entries.ToArray())
                 {
@@ -339,6 +368,7 @@ public sealed class OrderedCapture : IPacketCaptureService, IScopedCapture, IPri
                         flows.Remove(pair.Key);
                     }
                 }
+
                 foreach (var pair in outgoing.Where(p => clock.Elapsed - p.Value > TimeSpan.FromMinutes(5)).ToArray())
                     outgoing.Remove(pair.Key);
                 if (inputPending)
@@ -347,7 +377,9 @@ public sealed class OrderedCapture : IPacketCaptureService, IScopedCapture, IPri
                     await Task.Delay(10, token);
             }
         }
-        catch (OperationCanceledException) { }
+        catch (OperationCanceledException)
+        {
+        }
         catch (Exception e)
         {
             Trace("Ordered capture consumer failed: " + e);
@@ -356,10 +388,14 @@ public sealed class OrderedCapture : IPacketCaptureService, IScopedCapture, IPri
                 {
                     Loss(pair.Key, pair.Value.Device, 1, "Capture consumer failure");
                 }
-                catch { }
+                catch
+                {
+                }
+
             state.Failed = true;
         }
     }
+
     public void Stop()
     {
         lock (gate)
@@ -375,6 +411,7 @@ public sealed class OrderedCapture : IPacketCaptureService, IScopedCapture, IPri
                     device.OnPacketArrival -= handler.Packet;
                     device.OnCaptureStopped -= handler.Stopped;
                 }
+
                 try
                 {
                     device.StopCapture();
@@ -383,6 +420,7 @@ public sealed class OrderedCapture : IPacketCaptureService, IScopedCapture, IPri
                 {
                     Trace("Capture stop failed: " + e.Message);
                 }
+
                 // A failed stop must not skip unsubscription and closing the old handle.
                 try
                 {
@@ -393,11 +431,13 @@ public sealed class OrderedCapture : IPacketCaptureService, IScopedCapture, IPri
                     Trace("Capture close failed: " + e.Message);
                 }
             }
+
             devices.Clear();
             cancel?.Dispose();
             cancel = null;
         }
     }
+
     public (long Received, long Dropped) GetCaptureStatistics()
     {
         lock (gate)
@@ -412,10 +452,14 @@ public sealed class OrderedCapture : IPacketCaptureService, IScopedCapture, IPri
                     rx += stats.ReceivedPackets;
                     drop += stats.DroppedPackets;
                 }
-                catch { }
+                catch
+                {
+                }
+
             return (rx, drop);
         }
     }
+
     void Trace(string text)
     {
         try
@@ -426,7 +470,10 @@ public sealed class OrderedCapture : IPacketCaptureService, IScopedCapture, IPri
                 File.Move(Path.Combine(path, "capture-health.log"), Path.Combine(path, "capture-health.old.log"), true);
             File.AppendAllText(Path.Combine(path, "capture-health.log"), DateTime.UtcNow.ToString("O") + " " + text + Environment.NewLine);
         }
-        catch { }
+        catch
+        {
+        }
     }
+
     public void Dispose() => Stop();
 }

@@ -1,11 +1,11 @@
 using System.Buffers.Binary;
+
 namespace PetTracker;
 
 public sealed record WorldPoint(double X, double Y, double Z);
 public sealed record SkillFacing(int Actor, int Target, uint Skill, double Degrees, WorldPoint? TargetPoint);
 public sealed record EntityPose(int Entity, WorldPoint Point, double Degrees);
 public sealed record NavigationHealth(double? PositionAgeMs, double? FacingAgeMs, int Mobs, int FreshMobs, int Arrows);
-
 // Narrow Global forms corroborated against private captures. Cast coordinates
 // belong to the target; dodge forms can contain a displacement vector instead.
 // Never use them as the player's location. No coordinate-to-metre conversion.
@@ -18,6 +18,7 @@ public static class NavigationProtocol
         double x = BinaryPrimitives.ReadSingleLittleEndian(b[p..]), y = BinaryPrimitives.ReadSingleLittleEndian(b[(p + 4)..]), z = BinaryPrimitives.ReadSingleLittleEndian(b[(p + 8)..]);
         return double.IsFinite(x) && double.IsFinite(y) && double.IsFinite(z) && Math.Abs(x) < 1e7 && Math.Abs(y) < 1e7 && Math.Abs(z) < 1e7 ? new(x, y, z) : null;
     }
+
     public static SkillFacing? Cast(ReadOnlySpan<byte> b)
     {
         int p = 0;
@@ -40,6 +41,7 @@ public static class NavigationProtocol
                 return null;
             p += 12;
         }
+
         // All observed forms end with three canonical varints. Reject shifted layouts.
         for (int i = 0; i < 3; i++)
             if (!GameProtocol.Var(b, ref p, out _))
@@ -48,6 +50,7 @@ public static class NavigationProtocol
             return null;
         return new(actor, target, skill, yaw, point);
     }
+
     public static (int Entity, WorldPoint Point)? SelfBuff(ReadOnlySpan<byte> b, bool update = false)
     {
         int p = 0;
@@ -70,6 +73,7 @@ public static class NavigationProtocol
             return null;
         return (entity, point);
     }
+
     public static WorldPoint? Spawn(ReadOnlySpan<byte> b, NpcSpawn spawn)
     {
         int p = 0;
@@ -80,6 +84,7 @@ public static class NavigationProtocol
             return null;
         return Point(b, p + 6);
     }
+
     public static EntityPose? ActionPose(ReadOnlySpan<byte> b)
     {
         int p = 0;
@@ -104,6 +109,7 @@ public static class NavigationProtocol
             return null;
         return new(entity, point, yaw);
     }
+
     public static (int Entity, WorldPoint? Point)? Movement(byte op, ReadOnlySpan<byte> b)
     {
         if (op is not (0x1a or 0x1b or 0x1c or 0x1d or 0x1e or 0x3c))
@@ -113,11 +119,13 @@ public static class NavigationProtocol
             return null;
         return (entity, op is 0x1d or 0x1e or 0x3c ? null : Point(b, op == 0x1a ? p + 2 : p + 1 + ((b[p] & 1) != 0 ? 1 : 0)));
     }
+
     public static bool NpcWalk(byte op, ReadOnlySpan<byte> b)
     {
         int p = 0;
         return op is 0x1b or 0x1c && GameProtocol.Var(b, ref p, out _) && b.Length == p + 18 && b[p] == 4 && b[^1] == 1 && Point(b, p + 1) != null;
     }
+
     public static bool NpcStop(byte op, ReadOnlySpan<byte> b)
     {
         int p = 0;
@@ -141,6 +149,7 @@ public sealed class SkillNavigation
     {
         this.mappings = mappings;
     }
+
     public void Clear()
     {
         mobs.Clear();
@@ -149,6 +158,7 @@ public sealed class SkillNavigation
         facing = null;
         positionAt = facingAt = lastFrame = default;
     }
+
     public void Frame(int local, byte op, byte family, ReadOnlySpan<byte> body, DateTimeOffset now)
     {
         if (local <= 0)
@@ -156,26 +166,25 @@ public sealed class SkillNavigation
             Clear();
             return;
         }
+
         if (local != self)
         {
             Clear();
             self = local;
         }
+
         // A stationary state requires an uninterrupted active stream. Reappearance
         // of traffic cannot revive a state whose observation continuity was lost.
         if (!Fresh(lastFrame, now))
             foreach (var id in mobs.Keys.ToArray())
-                mobs[id] = mobs[id] with
-                {
-                    Walking = false,
-                    Stopped = false
-                };
+                mobs[id] = mobs[id] with { Walking = false, Stopped = false };
         lastFrame = now;
         if (family == 0x36 && op == 0x23)
         {
             Clear();
             return;
         }
+
         if (GameProtocol.Removal(op, family, body) is { } removal)
         {
             mobs.Remove(removal.Entity);
@@ -183,6 +192,7 @@ public sealed class SkillNavigation
                 Clear();
             return;
         }
+
         if (GameProtocol.Appearance(op, family, body) is { } spawn)
         {
             mobs.Remove(spawn.Entity);
@@ -193,8 +203,10 @@ public sealed class SkillNavigation
                     mobs.Remove(mobs.MinBy(p => p.Value.At).Key);
                 mobs[spawn.Entity] = new(match.PetId, op == 0x41 ? NavigationProtocol.Spawn(body, spawn) : null, now);
             }
+
             return;
         }
+
         if (family == 0x37 && op == 0x3c && NavigationProtocol.ActionPose(body) is { } pose)
         {
             if (pose.Entity == self)
@@ -208,6 +220,7 @@ public sealed class SkillNavigation
                 mobs[pose.Entity] = new(mob.Pet, pose.Point, now);
             return;
         }
+
         if (family == 0x37 && NavigationProtocol.Movement(op, body) is { } move)
         {
             // Ordinary movement layouts are observed for other entities, not yet verified
@@ -225,8 +238,10 @@ public sealed class SkillNavigation
                 bool stop = mob.Walking && NavigationProtocol.NpcStop(op, body);
                 mobs[move.Entity] = new(mob.Pet, move.Point, now, walk || op == 0x1d && mob.Walking, stop);
             }
+
             return;
         }
+
         // Combat can displace a stopped NPC through messages outside ordinary walk
         // updates (recorded 38:14/15 and 37:2E/2F). Never hold its old stop position.
         if (family is 0x37 or 0x38)
@@ -235,12 +250,7 @@ public sealed class SkillNavigation
             if (GameProtocol.Var(body, ref p, out int actor))
             {
                 if (mobs.TryGetValue(actor, out var mob))
-                    mobs[actor] = mob with
-                    {
-                        Walking = false,
-                        Stopped = false,
-                        Point = null
-                    };
+                    mobs[actor] = mob with { Walking = false, Stopped = false, Point = null };
                 if (actor == self && (family == 0x37 || op is 0x14 or 0x15))
                 {
                     position = null;
@@ -248,12 +258,14 @@ public sealed class SkillNavigation
                 }
             }
         }
+
         if (family == 0x38 && op is 0x2a or 0x2b && NavigationProtocol.SelfBuff(body, op == 0x2b) is { } buff && buff.Entity == self)
         {
             position = buff.Point;
             positionAt = now;
             return;
         }
+
         if (family == 0x38 && op == 2)
         {
             int p = 0;
@@ -265,6 +277,7 @@ public sealed class SkillNavigation
                 position = null;
                 return;
             }
+
             facing = cast.Degrees;
             facingAt = now;
             // Dodge XYZ is a displacement, but yaw is still the action's facing.
@@ -274,10 +287,12 @@ public sealed class SkillNavigation
                 position = null;
                 return;
             }
+
             if (cast.Target != self && cast.TargetPoint is { } target && mobs.TryGetValue(cast.Target, out var mob))
                 mobs[cast.Target] = new(mob.Pet, target, now);
         }
     }
+
     static bool Fresh(DateTimeOffset at, DateTimeOffset now) => at <= now && now - at < PetDirection.Lifetime;
     bool Usable(Mob mob, DateTimeOffset now) => mob.Point != null && mob.At <= now && (Fresh(mob.At, now) || mob.Stopped && Fresh(lastFrame, now));
     public NavigationHealth Health(DateTimeOffset now) => new(position == null ? null : (now - positionAt).TotalMilliseconds, facing == null ? null : (now - facingAt).TotalMilliseconds, mobs.Count, mobs.Values.Count(m => Usable(m, now)), View(now).Count);
@@ -303,6 +318,7 @@ public sealed class SkillNavigation
             // starts pointing up, hence +90 degrees. No character/camera yaw is needed.
             result[group.Key] = new(null, at, Math.Atan2(dy, dx) * 180 / Math.PI + 90, NorthUp: true);
         }
+
         return result;
     }
 }

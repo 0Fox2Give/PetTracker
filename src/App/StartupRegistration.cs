@@ -15,7 +15,7 @@ internal static class StartupRegistration
         }
         catch (Exception error) when (error is UnauthorizedAccessException or IOException or System.Security.SecurityException)
         {
-            // Best effort retirement. Tracking must still open if registry access is denied.
+        // Best effort retirement. Tracking must still open if registry access is denied.
         }
     }
 }

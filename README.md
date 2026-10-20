@@ -51,6 +51,10 @@ Read the [legal notice](LEGAL.md) and [third-party notices](THIRD-PARTY-NOTICES.
 
 ## About this repository
 
+An experimental [Linux source build](docs/LINUX.md) is available for development
+and compatibility testing. Live AION 2/Wine support has not been verified; the
+download above remains the Windows release.
+
 This repository contains the full application source and official downloads. Contributions are welcome; maintainers review changes and control official releases.
 
 | Looking for | Where to go |

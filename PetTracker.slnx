@@ -2,12 +2,15 @@
   <Folder Name="/src/">
     <Project Path="src/App/App.csproj" />
     <Project Path="src/Core/Core.csproj" />
+    <Project Path="src/Linux/Linux.csproj" />
     <Project Path="src/Setup/Setup.csproj" />
     <Project Path="src/Updates/Updates.csproj" />
     <Project Path="src/Worker/Worker.csproj" />
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/Tests.csproj" />
+    <Project Path="tests/LinuxTests/LinuxTests.csproj" />
+    <Project Path="tests/LinuxUiTests/LinuxUiTests.csproj" />
     <Project Path="tests/UiTests/UiTests.csproj" />
     <Project Path="tests/UpdateTests/UpdateTests.csproj" />
   </Folder>

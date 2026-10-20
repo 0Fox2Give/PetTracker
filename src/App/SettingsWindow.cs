@@ -1,6 +1,7 @@
 using System.Text.Json;
 using System.Windows.Threading;
 using PetTracker.Updates;
+
 namespace PetTracker;
 
 public sealed class SettingsWindow : Window
@@ -43,19 +44,10 @@ public sealed class SettingsWindow : Window
         WindowStartupLocation = WindowStartupLocation.CenterScreen;
         var root = new Grid { Margin = new Thickness(24) };
         Content = root;
-        root.RowDefinitions.Add(new()
-        {
-            Height = GridLength.Auto
-        });
+        root.RowDefinitions.Add(new() { Height = GridLength.Auto });
         root.RowDefinitions.Add(new());
-        root.RowDefinitions.Add(new()
-        {
-            Height = GridLength.Auto
-        });
-        root.ColumnDefinitions.Add(new()
-        {
-            Width = new GridLength(150)
-        });
+        root.RowDefinitions.Add(new() { Height = GridLength.Auto });
+        root.ColumnDefinitions.Add(new() { Width = new GridLength(150) });
         root.ColumnDefinitions.Add(new());
         var header = new StackPanel { Margin = new Thickness(0, 0, 0, 22) };
         header.Children.Add(Ui.Text("Settings", 25));
@@ -75,6 +67,7 @@ public sealed class SettingsWindow : Window
                 host.OpenAccounts();
                 return;
             }
+
             linkCharacter!.IsEnabled = false;
             try
             {
@@ -160,7 +153,13 @@ public sealed class SettingsWindow : Window
             heading.FontWeight = FontWeights.SemiBold;
             heading.Margin = new Thickness(0, 0, 0, 16);
             panel.Children.Add(heading);
-            var scroll = new ScrollViewer { Content = panel, VerticalScrollBarVisibility = ScrollBarVisibility.Auto, HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled, Visibility = Visibility.Collapsed };
+            var scroll = new ScrollViewer
+            {
+                Content = panel,
+                VerticalScrollBarVisibility = ScrollBarVisibility.Auto,
+                HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled,
+                Visibility = Visibility.Collapsed
+            };
             pages[name] = scroll;
             pageHost.Children.Add(scroll);
             var button = Ui.Button(name, () => Select(name));
@@ -171,6 +170,7 @@ public sealed class SettingsWindow : Window
             nav.Children.Add(button);
             return panel;
         }
+
         var tracker = Page("Tracking");
         var pets = Group(tracker, "Pet list");
         Choice(pets, "Tracker mode", new[] { "Recent", "Nearby" }, host.PetOverlayPreferences.TrackerMode, v => Queue(nameof(AppSettings.TrackerMode), v));
@@ -198,7 +198,6 @@ public sealed class SettingsWindow : Window
         Choice(nearbyOptions, "Hide unrefreshed mobs after (seconds)", new[] { 15, 30, 60, 120, 300 }, host.PetOverlayPreferences.NearbyStaleSeconds, v => Queue(nameof(AppSettings.NearbyStaleSeconds), v)).ToolTip = "Shorter times clear old sightings sooner but can hide stationary mobs. Pinned pets remain visible.";
         timing.Children.Add(nearbyOptions);
         Expand(tracker, "Sorting and timing", timing);
-
         var overlay = Page("Overlay");
         var display = Group(overlay, "Size and visibility");
         Slider(display, "Scale", nameof(AppSettings.Scale), .75, 1.5);
@@ -222,7 +221,13 @@ public sealed class SettingsWindow : Window
         var moreOverlay = new StackPanel();
         Check(moreOverlay, "Hide when empty", nameof(AppSettings.HideWhenEmpty));
         Check(moreOverlay, "Reduce motion", nameof(AppSettings.ReducedMotion));
-        Choice(moreOverlay, "Tracker shortcut", new[] { "Disabled", "Ctrl + Alt + P", "Ctrl + Alt + T", "Ctrl + Alt + O" }, Hotkey(host.PetOverlayPreferences.Hotkey), v => Queue(nameof(AppSettings.Hotkey), v switch { "Ctrl + Alt + P" => 0x50, "Ctrl + Alt + T" => 0x54, "Ctrl + Alt + O" => 0x4f, _ => 0 }));
+        Choice(moreOverlay, "Tracker shortcut", new[] { "Disabled", "Ctrl + Alt + P", "Ctrl + Alt + T", "Ctrl + Alt + O" }, Hotkey(host.PetOverlayPreferences.Hotkey), v => Queue(nameof(AppSettings.Hotkey), v switch
+        {
+            "Ctrl + Alt + P" => 0x50,
+            "Ctrl + Alt + T" => 0x54,
+            "Ctrl + Alt + O" => 0x4f,
+            _ => 0
+        }));
         moreOverlay.Children.Add(hotkeyStatus);
         Help(moreOverlay, "The Windows tray paw icon can always show or unlock the overlay.");
         Expand(overlay, "More overlay options", moreOverlay);
@@ -230,7 +235,6 @@ public sealed class SettingsWindow : Window
         Check(notifications, "Desktop notification", nameof(AppSettings.Toasts));
         Check(notifications, "Play a sound", nameof(AppSettings.Sounds));
         Expand(overlay, "Rank notifications", notifications);
-
         var account = Page("Account");
         var collection = Group(account, "Collection");
         Check(collection, "Share progress across all characters", nameof(AppSettings.ShareAllCharacters));
@@ -245,7 +249,17 @@ public sealed class SettingsWindow : Window
         updates.Children.Add(updateStatus);
         updates.Children.Add(updateProgress);
         releaseNotes.TextWrapping = TextWrapping.Wrap;
-        notesPanel = new Expander { Header = "What's new", Content = new ScrollViewer { Content = releaseNotes, MaxHeight = 150, VerticalScrollBarVisibility = ScrollBarVisibility.Auto }, Margin = new Thickness(0, 8, 0, 8) };
+        notesPanel = new Expander
+        {
+            Header = "What's new",
+            Content = new ScrollViewer
+            {
+                Content = releaseNotes,
+                MaxHeight = 150,
+                VerticalScrollBarVisibility = ScrollBarVisibility.Auto
+            },
+            Margin = new Thickness(0, 8, 0, 8)
+        };
         updates.Children.Add(notesPanel);
         updatePreferences = new StackPanel();
         updates.Children.Add(updatePreferences);
@@ -330,6 +344,7 @@ public sealed class SettingsWindow : Window
             adapter.ItemsSource = choices;
             adapter.SelectedItem = choices.First(a => a.Id == id);
         }
+
         FillAdapters(Array.Empty<CaptureAdapterOption>());
         Actions(network, Ui.Button("Refresh adapters", async () =>
         {
@@ -387,6 +402,7 @@ public sealed class SettingsWindow : Window
         SyncControls();
         RefreshStatus();
     }
+
     async Task<bool> FinishPending()
     {
         while (saving)
@@ -395,6 +411,7 @@ public sealed class SettingsWindow : Window
         await Flush();
         return lastSaveSucceeded;
     }
+
     void RefreshUpdates()
     {
         var update = host.Updates.Session.State;
@@ -415,13 +432,21 @@ public sealed class SettingsWindow : Window
         if (installUpdate != null)
             installUpdate.Visibility = same && update.Phase == UpdatePhase.Ready ? Visibility.Visible : Visibility.Collapsed;
     }
+
     static string Version() => typeof(SettingsWindow).Assembly.GetName().Version?.ToString(3) ?? "Unknown";
-    static string Hotkey(int key) => key switch { 0x50 => "Ctrl + Alt + P", 0x54 => "Ctrl + Alt + T", 0x4f => "Ctrl + Alt + O", _ => "Disabled" };
+    static string Hotkey(int key) => key switch
+    {
+        0x50 => "Ctrl + Alt + P",
+        0x54 => "Ctrl + Alt + T",
+        0x4f => "Ctrl + Alt + O",
+        _ => "Disabled"
+    };
     static string Interaction(AppSettings s) => s.ClickThrough ? "Pass clicks to game" : s.Locked ? "Fixed position" : "Move & interact";
     static void Help(Panel p, string text)
     {
         p.Children.Add(new TextBlock { Text = text, Foreground = Ui.Muted, FontSize = 12, TextWrapping = TextWrapping.Wrap, Margin = new Thickness(0, 6, 0, 8) });
     }
+
     static string Expiry(AppSettings s) => s.ExpireInactive ? s.InactiveSeconds + " seconds" : "Never";
     static StackPanel Group(Panel parent, string title)
     {
@@ -433,6 +458,7 @@ public sealed class SettingsWindow : Window
         parent.Children.Add(new Border { Child = content, Background = new SolidColorBrush(Color.FromRgb(16, 23, 32)), BorderBrush = new SolidColorBrush(Color.FromRgb(39, 51, 66)), BorderThickness = new Thickness(1), CornerRadius = new CornerRadius(8), Padding = new Thickness(16), Margin = new Thickness(0, 0, 0, 12) });
         return content;
     }
+
     static void Section(Panel p, string text)
     {
         var label = Ui.Text(text, 13);
@@ -440,6 +466,7 @@ public sealed class SettingsWindow : Window
         label.Margin = new Thickness(0, 14, 0, 6);
         p.Children.Add(label);
     }
+
     static void Actions(Panel p, params Button[] buttons)
     {
         var row = new WrapPanel { Margin = new Thickness(0, 10, 0, 4) };
@@ -448,24 +475,21 @@ public sealed class SettingsWindow : Window
             b.Margin = new Thickness(0, 0, 8, 6);
             row.Children.Add(b);
         }
+
         p.Children.Add(row);
     }
+
     static void Expand(Panel p, string title, Panel content)
     {
         content.Margin = new Thickness(0, 8, 0, 8);
         p.Children.Add(new Expander { Header = title, Content = content, Margin = new Thickness(0, 12, 0, 4) });
     }
+
     static void SettingRow(Panel p, string label, FrameworkElement control)
     {
         var grid = new Grid { Margin = new Thickness(0, 7, 0, 7) };
-        grid.ColumnDefinitions.Add(new()
-        {
-            Width = new GridLength(1, GridUnitType.Star)
-        });
-        grid.ColumnDefinitions.Add(new()
-        {
-            Width = new GridLength(190)
-        });
+        grid.ColumnDefinitions.Add(new() { Width = new GridLength(1, GridUnitType.Star) });
+        grid.ColumnDefinitions.Add(new() { Width = new GridLength(190) });
         var text = Ui.Text(label, 12, Ui.Muted);
         text.VerticalAlignment = VerticalAlignment.Center;
         text.Margin = new Thickness(0, 0, 12, 0);
@@ -475,11 +499,18 @@ public sealed class SettingsWindow : Window
         grid.Children.Add(control);
         p.Children.Add(grid);
     }
+
     void SaveReport()
     {
         if (host.View is not { } v)
             return;
-        var dialog = new Microsoft.Win32.SaveFileDialog { Title = "Save support report", FileName = "PetTracker-support.json", Filter = "Support report (*.json)|*.json", DefaultExt = ".json" };
+        var dialog = new Microsoft.Win32.SaveFileDialog
+        {
+            Title = "Save support report",
+            FileName = "PetTracker-support.json",
+            Filter = "Support report (*.json)|*.json",
+            DefaultExt = ".json"
+        };
         if (dialog.ShowDialog(this) == true)
             try
             {
@@ -491,6 +522,7 @@ public sealed class SettingsWindow : Window
                 Ui.Error(ex, this);
             }
     }
+
     public static string ConnectionAssessment(WorkerView? v, string? error)
     {
         if (v == null)
@@ -505,6 +537,7 @@ public sealed class SettingsWindow : Window
             return "Character connected. Traffic timing is not available yet.";
         return "Connected · game traffic is arriving.\n" + (v.Status == "Live" ? "Pet tracking is ready." : v.Detail);
     }
+
     void SyncControls()
     {
         loading = true;
@@ -524,6 +557,7 @@ public sealed class SettingsWindow : Window
             loading = false;
         }
     }
+
     void Queue(string name, object? value)
     {
         if (loading)
@@ -534,15 +568,22 @@ public sealed class SettingsWindow : Window
         delay.Stop();
         delay.Start();
     }
+
     void Check(Panel p, string label, string field)
     {
         var property = typeof(AppSettings).GetProperty(field)!;
-        var checkbox = new CheckBox { Content = label, IsChecked = (bool)property.GetValue(host.PetOverlayPreferences)!, Margin = new Thickness(0, 10, 0, 4) };
+        var checkbox = new CheckBox
+        {
+            Content = label,
+            IsChecked = (bool)property.GetValue(host.PetOverlayPreferences)!,
+            Margin = new Thickness(0, 10, 0, 4)
+        };
         p.Children.Add(checkbox);
         checkbox.Checked += (s, e) => Queue(field, true);
         checkbox.Unchecked += (s, e) => Queue(field, false);
         bindings.Add(options => checkbox.IsChecked = (bool)property.GetValue(options)!);
     }
+
     ComboBox Choice<T>(Panel p, string label, T[] choices, T selected, Action<T> change)
     {
         var combo = new ComboBox { ItemsSource = choices, SelectedItem = selected };
@@ -553,9 +594,22 @@ public sealed class SettingsWindow : Window
             if (!loading && combo.SelectedItem is T value)
                 change(value);
         };
-        bindings.Add(options => combo.SelectedItem = label switch { "Tracker mode" => options.TrackerMode, "Hide unrefreshed mobs after (seconds)" => options.NearbyStaleSeconds, "Maximum shown pets" => options.RowLimit, "Maximum pinned pets" => options.PinLimit, "Sort" => options.Sort, "Hide inactive pets after" => Expiry(options), "Tracker shortcut" => Hotkey(options.Hotkey), "Release channel" => options.UpdateChannel == "win-beta" ? "Beta" : "Stable", "Interaction" => Interaction(options), _ => selected });
+        bindings.Add(options => combo.SelectedItem = label switch
+        {
+            "Tracker mode" => options.TrackerMode,
+            "Hide unrefreshed mobs after (seconds)" => options.NearbyStaleSeconds,
+            "Maximum shown pets" => options.RowLimit,
+            "Maximum pinned pets" => options.PinLimit,
+            "Sort" => options.Sort,
+            "Hide inactive pets after" => Expiry(options),
+            "Tracker shortcut" => Hotkey(options.Hotkey),
+            "Release channel" => options.UpdateChannel == "win-beta" ? "Beta" : "Stable",
+            "Interaction" => Interaction(options),
+            _ => selected
+        });
         return combo;
     }
+
     void Slider(Panel p, string label, string field, double min, double max)
     {
         var property = typeof(AppSettings).GetProperty(field)!;
@@ -565,7 +619,14 @@ public sealed class SettingsWindow : Window
         var group = new DockPanel();
         DockPanel.SetDock(caption, Dock.Right);
         group.Children.Add(caption);
-        var slider = new Slider { Minimum = min, Maximum = max, Value = (double)property.GetValue(host.PetOverlayPreferences)!, TickFrequency = .05, IsSnapToTickEnabled = true };
+        var slider = new Slider
+        {
+            Minimum = min,
+            Maximum = max,
+            Value = (double)property.GetValue(host.PetOverlayPreferences)!,
+            TickFrequency = .05,
+            IsSnapToTickEnabled = true
+        };
         group.Children.Add(slider);
         SettingRow(p, label, group);
         caption.Text = (slider.Value * 100).ToString("0") + "%";
@@ -576,6 +637,7 @@ public sealed class SettingsWindow : Window
         };
         bindings.Add(options => slider.Value = (double)property.GetValue(options)!);
     }
+
     async Task Flush()
     {
         if (saving)
@@ -603,6 +665,7 @@ public sealed class SettingsWindow : Window
                     discard.Visibility = Visibility.Visible;
                     break;
                 }
+
                 saved.Text = "Saved";
                 discard.Visibility = Visibility.Collapsed;
             }
@@ -613,12 +676,14 @@ public sealed class SettingsWindow : Window
             discard.IsEnabled = true;
             SyncControls();
         }
+
         if (closeRequested && lastSaveSucceeded && pending.Count == 0)
         {
             allowClose = true;
             Close();
         }
     }
+
     void Select(string name)
     {
         selectedPage = name;
@@ -632,6 +697,7 @@ public sealed class SettingsWindow : Window
             button.Value.Foreground = button.Key == name ? Ui.Ink : Ui.Muted;
         reset!.Visibility = name is "Tracking" or "Overlay" ? Visibility.Visible : Visibility.Collapsed;
     }
+
     public void ShowSection(string name)
     {
         name = name switch
@@ -645,6 +711,7 @@ public sealed class SettingsWindow : Window
         if (pages.ContainsKey(name))
             Select(name);
     }
+
     public void ShowConnection() => Select("Help");
     public void RefreshStatus()
     {
