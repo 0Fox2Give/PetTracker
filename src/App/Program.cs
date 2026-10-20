@@ -227,9 +227,7 @@ public static class Program
         Save(host.Overlay!, Path.Combine(folder, "tracker.png"), 340, 410);
         var settings = new SettingsWindow(host);
         Save(settings, Path.Combine(folder, "settings.png"), 780, 700);
-        foreach (var section in new[] { "Tracking", "Overlay", "Account", "Updates", "Help" }
-
-        )
+        foreach (var section in new[] { "Tracking", "Overlay", "Account", "Updates", "Help" })
         {
             settings.ShowSection(section);
             Save(settings, Path.Combine(folder, "settings-" + section.Replace(" & ", "-").ToLowerInvariant() + ".png"), 780, 700);

@@ -808,9 +808,7 @@ public sealed class Engine : IDisposable
             Directory.CreateDirectory(parent);
             string path = Path.Combine(parent, DateTimeOffset.UtcNow.ToString("yyyyMMdd-HHmmss") + "-" + Guid.NewGuid().ToString("N")[..8]);
             Directory.CreateDirectory(Path.Combine(path, "profiles"));
-            foreach (string name in new[] { "profiles.json", "settings.json" }
-
-            )
+            foreach (string name in new[] { "profiles.json", "settings.json" })
                 if (File.Exists(Path.Combine(root, name)))
                     File.Copy(Path.Combine(root, name), Path.Combine(path, name));
             foreach (var b in Book.Profiles)

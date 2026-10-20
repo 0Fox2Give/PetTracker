@@ -163,9 +163,7 @@ public static class Installer
         {
             Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Programs), "Pet Tracker.lnk"),
             Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory), "Pet Tracker.lnk")
-        }
-
-        )
+        })
             if (File.Exists(link))
                 File.Delete(link);
         using (var run = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run", true))

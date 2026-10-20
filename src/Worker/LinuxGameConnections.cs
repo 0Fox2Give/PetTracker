@@ -42,9 +42,7 @@ public static class LinuxGameConnections
         if (inodes.Count == 0)
             return new(owners, Array.Empty<GameConnectionPeer>());
         var peers = new List<GameConnectionPeer>();
-        foreach (string table in new[] { "tcp", "tcp6" }
-
-        )
+        foreach (string table in new[] { "tcp", "tcp6" })
         {
             string path = Path.Combine(procRoot, "net", table);
             // IPv6 can be disabled on the host. IPv4 is required.
@@ -80,7 +78,7 @@ public static class LinuxGameConnections
         var peers = new List<GameConnectionPeer>();
         foreach (string line in lines.Skip(1))
         {
-            string[] fields = line.Split((char[]? )null, StringSplitOptions.RemoveEmptyEntries);
+            string[] fields = line.Split((char[]?)null, StringSplitOptions.RemoveEmptyEntries);
             if (fields.Length < 10 || !ulong.TryParse(fields[9], out ulong inode) || !inodes.Contains(inode))
                 continue;
             // ESTABLISHED or SYN_SENT: include a connecting game socket before

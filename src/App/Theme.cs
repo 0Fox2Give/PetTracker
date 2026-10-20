@@ -128,9 +128,7 @@ public sealed class PetPortraits(string root)
             dc.DrawRoundedRectangle(new SolidColorBrush(Color.FromRgb(27, 40, 56)), null, new Rect(0, 0, 48, 48), 8, 8);
             var fill = new SolidColorBrush(Color.FromRgb(146, 170, 193));
             dc.DrawEllipse(fill, null, new Point(24, 30), 11, 8);
-            foreach (var p in new[] { new Point(12, 19), new Point(20, 13), new Point(29, 13), new Point(37, 20) }
-
-            )
+            foreach (var p in new[] { new Point(12, 19), new Point(20, 13), new Point(29, 13), new Point(37, 20) })
                 dc.DrawEllipse(fill, null, p, 4, 5);
         }
 

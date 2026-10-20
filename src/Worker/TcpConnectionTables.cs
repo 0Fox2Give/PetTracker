@@ -14,9 +14,7 @@ public static class TcpConnectionTables
     public static IReadOnlyList<GameConnectionPeer> Read(IReadOnlySet<int> owners, TcpTableQuery query)
     {
         var peers = new List<GameConnectionPeer>();
-        foreach (int family in new[] { 2, 23 }
-
-        )
+        foreach (int family in new[] { 2, 23 })
         {
             byte[] table = ReadTable(family, query);
             int stride = family == 2 ? 24 : 56;

@@ -76,9 +76,7 @@ public static class GameProtocol
         if ((b[p] & 0x1f) == 0x1f)
             return null;
         p += 3;
-        foreach (int offset in new[] { p + 2, p }
-
-        )
+        foreach (int offset in new[] { p + 2, p })
             if (offset + 6 <= b.Length)
             {
                 int npc = BinaryPrimitives.ReadInt32LittleEndian(b[offset..]);

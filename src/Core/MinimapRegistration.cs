@@ -118,9 +118,7 @@ public static class MinimapRegistration
                     if (!index.TryGetValue((screen.K1 + dx, screen.K2 + dy), out var options))
                         continue;
                     foreach (var tri in options)
-                        foreach (bool mirror in new[] { false, true }
-
-                        )
+                        foreach (bool mirror in new[] { false, true })
                         {
                             if (++hypotheses > 60000)
                                 return null;

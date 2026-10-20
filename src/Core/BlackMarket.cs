@@ -82,7 +82,7 @@ public sealed class MerchantDisplay
     sealed record Entry(MerchantRecommendation Recommendation, DateTimeOffset ObservedUtc, DateTimeOffset? UpdatedUtc = null);
     static readonly PetNames names = new();
     readonly Dictionary<int, Entry> entries = new();
-    (string? , string, int? , DateTimeOffset? )? context;
+    (string?, string, int?, DateTimeOffset?)? context;
     public IReadOnlyList<MerchantDisplayRow> Select(WorkerView? view, DateTimeOffset now)
     {
         if (view == null || !view.Ready || !view.CollectionSynced || !view.Settings.BlackMarketAlerts || string.IsNullOrEmpty(view.Selected))

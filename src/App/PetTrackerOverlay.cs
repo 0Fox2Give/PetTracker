@@ -162,9 +162,7 @@ public sealed class PetTrackerOverlay : Window
         };
         layout.Children.Add(new Border { BorderBrush = new SolidColorBrush(Color.FromRgb(41, 47, 56)), BorderThickness = new Thickness(0, 0, 0, 1), Child = header });
         var modeBar = new StackPanel { Orientation = Orientation.Horizontal, Margin = new Thickness(0, 6, 0, 2) };
-        foreach (string mode in new[] { "Recent", "Nearby" }
-
-        )
+        foreach (string mode in new[] { "Recent", "Nearby" })
         {
             var button = Ui.Button(mode, async () => await host.Change(new("patch", Patch: SettingsPatch.Fields((nameof(AppSettings.TrackerMode), mode)))));
             button.Height = 24;

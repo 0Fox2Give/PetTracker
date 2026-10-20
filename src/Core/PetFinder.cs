@@ -63,7 +63,7 @@ public static class PetFinder
 
     public static IEnumerable<PetSearchResult> Search(string query, Profile? profile = null)
     {
-        var words = query.Split((char[]? )null, StringSplitOptions.RemoveEmptyEntries);
+        var words = query.Split((char[]?)null, StringSplitOptions.RemoveEmptyEntries);
         return Entries.Where(p => p.VisibleFor(profile) && words.All(w => p.Pet.Name.Contains(w, StringComparison.OrdinalIgnoreCase) || p.Creatures.Any(n => n.Contains(w, StringComparison.OrdinalIgnoreCase)) || (p.Location?.SoulSources?.Any(s => s.Region.Contains(w, StringComparison.OrdinalIgnoreCase)) ?? false) || (p.Acquisition?.Aliases.Any(n => n.Contains(w, StringComparison.OrdinalIgnoreCase)) ?? false)));
     }
 
