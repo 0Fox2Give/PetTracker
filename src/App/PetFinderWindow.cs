@@ -182,7 +182,7 @@ public sealed class PetFinderWindow : Window
 
     void MarketHelp()
     {
-        marketHelp.Text = filter.SelectedIndex == 0 ? "" : filter.SelectedIndex == 1 ? "Shopping list · Pets obtained from chests or the merchant. Maxed pets are hidden." : "Recent offers · Open Special and Pets in game to read stock. Offers clear after two minutes or a connection change.";
+        marketHelp.Text = filter.SelectedIndex == 0 ? "" : filter.SelectedIndex == 1 ? "Shopping list · Chest, merchant and dungeon pets. Maxed pets are hidden." : "Recent offers · Open Special and Pets in game to read stock. Offers clear after two minutes or a connection change.";
         if (filter.SelectedIndex != 0 && host.View?.CollectionSynced != true)
             marketHelp.Text += " " + TrackingGuidance.Sync;
         marketHelp.Margin = new Thickness(0, 0, 0, filter.SelectedIndex == 0 ? 0 : 12);

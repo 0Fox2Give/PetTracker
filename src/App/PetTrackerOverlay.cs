@@ -18,7 +18,7 @@ public sealed class PetTrackerOverlay : Window
     readonly Border merchantSection;
     readonly TextBlock merchantHint = new()
     {
-        Text = "Pets only from Chests or Black Cloud Merchants",
+        Text = "Chest, merchant and dungeon pets",
         Foreground = Ui.Muted,
         FontSize = 10,
         TextWrapping = TextWrapping.Wrap,
@@ -380,7 +380,7 @@ public sealed class PetTrackerOverlay : Window
             meta.Children.Add(new TextBlock { Text = offer.Stock.TabName, Foreground = Ui.Muted, FontSize = 10 });
             if (!offer.Updated)
                 text.Children.Add(meta);
-            grid.ToolTip = TrackingGuidance.Remaining(pet) + "\n" + (offer.Updated ? "Soul progress received after this offer was shown. This entry will leave the shopping list shortly." : "Chest and merchant pet. Confirm price and availability in game before purchasing.");
+            grid.ToolTip = TrackingGuidance.Remaining(pet) + "\n" + (offer.Updated ? "Soul progress received after this offer was shown. This entry will leave the shopping list shortly." : "Confirm price and availability in game before purchasing.");
             System.Windows.Automation.AutomationProperties.SetAutomationId(grid, "MerchantPet-" + id);
             merchantRows.Children.Add(grid);
         }

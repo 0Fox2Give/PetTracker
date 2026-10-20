@@ -51,7 +51,16 @@ static class BlackMarketChecks
             p.ProgressNeedsSync = false;
         }
         string before = JsonSerializer.Serialize(profile);
-        check(BlackMarket.Watchlist("", profile).Count() == 37 && BlackMarket.Watchlist("Elite Dratona", profile).Any() && !BlackMarket.Watchlist("Lesser Wind Spirit", profile).Any(), "Watchlist includes random-chest alternatives but excludes pets with confirmed mob sources");
+        check(BlackMarket.Watchlist("", profile).Count() == 42 && BlackMarket.Watchlist("Elite Dratona", profile).Any() && !BlackMarket.Watchlist("Lesser Wind Spirit", profile).Any(), "Watchlist includes chest and dungeon pets but excludes ordinary world drops");
+        foreach (int id in new[] { 1058, 1077, 1091, 1093, 1215 })
+        {
+            var item = BlackMarket.Items.Single(i => i.PetId == id);
+            var dungeonStock = first with { Offers = new[] { new MarketOffer(1, item.ItemId, id, 80000) } };
+            check(BlackMarket.Recommendations(dungeonStock, profile, true, when).Single().PetId == id, "Dungeon pet offered by merchant is recommended: " + id);
+            profile.Pets[id].Level = 3;
+            check(!BlackMarket.Recommendations(dungeonStock, profile, true, when).Any(), "Maxed dungeon pet is excluded: " + id);
+            profile.Pets[id].Level = 1;
+        }
         var noCoverage = PetFinder.Entries.Single(p => p.Pet.Id == 1196) with
         {
             Location = null
@@ -94,6 +103,17 @@ static class BlackMarketChecks
         {
             Market = Array.Empty<MarketStock>()
         }, rewardTime).Count == 0, "Stock disappearing alone does not manufacture purchase confirmation");
+        var threeStock = first with { Offers = new[] { 1196, 1058, 1093 }.Select((id, index) => new MarketOffer(index + 1, BlackMarket.Items.Single(i => i.PetId == id).ItemId, id, 80000)).ToArray() };
+        foreach (string mode in new[] { "Recent", "Nearby" })
+        {
+            var threeView = view with { Market = new[] { threeStock }, Settings = new() { TrackerMode = mode } };
+            var threeDisplay = new MerchantDisplay();
+            check(threeDisplay.Select(threeView, when).Count == 3, mode + " shows three merchant recommendations");
+            threeView = threeView with { Recent = rewarded.Recent };
+            var afterPurchase = threeDisplay.Select(threeView, rewardTime);
+            check(afterPurchase.Count == 3 && afterPurchase.Count(r => r.Updated) == 1, mode + " retains unbought pets alongside purchase feedback");
+            check(threeDisplay.Select(threeView, rewardTime.AddSeconds(20)).Select(r => r.Offer.PetId).ToHashSet().SetEquals(new[] { 1058, 1093 }), mode + " removes only the rewarded pet after twenty seconds");
+        }
         var maxDisplay = new MerchantDisplay();
         maxDisplay.Select(view, when);
         var priorLevel = profile.Pets[1196].Level;
@@ -171,6 +191,8 @@ static class BlackMarketChecks
         check(JsonSerializer.Serialize(engine.Tracker.Profile) == initial, "End-to-end stock ingestion never modifies progress");
         engine.Feed("game", frame(0x1e, 0x56, new byte[] { 1, 2, 3 }));
         check(State().Market!.Count == 1, "Unrelated recurring 56:1E traffic cannot erase a just-observed shop");
+        engine.Feed("game", frame(0x92, 0x56, new byte[] { 1, 2, 3 }));
+        check(State().Market!.Count == 1, "An unrecognized adjacent shop message is not evidence that all offers disappeared");
         engine.Feed("game", frame(0x93, 0x56, new byte[] { 0, 0, 104 }));
         check(State().Market!.Count == 0, "Observed tab-open message invalidates preceding offers");
         engine.Feed("game", frame(0x91, 0x56, current));

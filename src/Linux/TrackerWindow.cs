@@ -168,7 +168,7 @@ public sealed class TrackerWindow : Window
         if (offers.Count > 0)
         {
             rows.Children.Add(new TextBlock { Text = "Black Cloud Merchant", FontWeight = FontWeight.SemiBold, Margin = new Thickness(0, 12, 0, 0) });
-            rows.Children.Add(new TextBlock { Text = "Pets only from Chests or Black Cloud Merchants", FontSize = 11, TextWrapping = TextWrapping.Wrap, Foreground = Brushes.LightSlateGray });
+            rows.Children.Add(new TextBlock { Text = "Chest, merchant and dungeon pets", FontSize = 11, TextWrapping = TextWrapping.Wrap, Foreground = Brushes.LightSlateGray });
             foreach (var offer in offers)
                 rows.Children.Add(new PetRow(current.Profile.Pets[offer.Offer.PetId], offer.Updated ? null : offer.Offer.Price));
         }

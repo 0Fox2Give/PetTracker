@@ -26,6 +26,6 @@ public static class TrackingGuidance
         if (!stocks.Any(s => s.Fresh(now)))
             return "No fresh merchant stock received. Open the merchant’s Special and Pets tabs while tracking. Offers expire after two minutes, at refresh, or when the connection changes.";
         int count = MarketOverlay.Select(view, now).Count;
-        return count > 0 ? $"Fresh merchant stock received · {count} eligible pet{(count == 1 ? "" : "s")}. Recently updated pets leave the overlay after 20 seconds." : "Fresh merchant stock received, but no current recommendations. Maxed pets, farmable pets and pets without verified progress are excluded. If an expected pet is missing, save a support report in Settings → Help and include its name and your region.";
+        return count > 0 ? $"Fresh merchant stock received · {count} eligible pet{(count == 1 ? "" : "s")}. Recently updated pets leave the overlay after 20 seconds." : "Fresh merchant stock received, but no current recommendations. Maxed pets, ordinary world drops and pets without verified progress are excluded. If an expected pet is missing, save a support report in Settings → Help and include its name and your region.";
     }
 }

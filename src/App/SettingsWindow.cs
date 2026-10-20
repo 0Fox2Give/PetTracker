@@ -180,7 +180,7 @@ public sealed class SettingsWindow : Window
         Check(pets, "Hide maxed pets", nameof(AppSettings.HideMaxed));
         var merchant = Group(tracker, "Black Cloud Merchant");
         Check(merchant, "Show merchant shopping list in overlay", nameof(AppSettings.BlackMarketAlerts));
-        Help(merchant, "Pets only from Chests or Black Cloud Merchants.");
+        Help(merchant, "Includes chest, merchant and dungeon pets you haven't maxed.");
         merchantStatus.TextWrapping = TextWrapping.Wrap;
         merchant.Children.Add(merchantStatus);
         var timing = new StackPanel();
@@ -535,7 +535,7 @@ public sealed class SettingsWindow : Window
             return "Connected, but no recent game traffic. Check that Aion 2 is running and connected.";
         if (v.Health?.LastPayload == null)
             return "Character connected. Traffic timing is not available yet.";
-        return "Connected · game traffic is arriving.\n" + (v.Status == "Live" ? "Pet tracking is ready." : v.Detail);
+        return "Connected · game traffic is arriving.\n" + (v.CollectionSynced ? "Collection synced. Pet tracking is ready." : "Collection not synced. Leave the tracker open, return to character selection and log back in.");
     }
 
     void SyncControls()

@@ -162,14 +162,14 @@ public sealed class Engine : IDisposable
             if (op == 0x91)
             {
                 // A fresh response replaces the tab atomically. Unsupported stock must not
-                // leave the previous tab looking current. Conservatively clear on adjacent
-                // shop message types; 56:1E/1F are unrelated recurring game traffic.
+                // leave the previous tab looking current. Adjacent message numbers alone
+                // are not evidence that every offer disappeared after a purchase.
                 if (BlackMarket.Decode(op, family, body, now) is { } stock)
                     market[stock.Tab] = stock;
                 else
                     market.Clear();
             }
-            else
+            else if (op == 0x93)
                 market.Clear();
         }
 

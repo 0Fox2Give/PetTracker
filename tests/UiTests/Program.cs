@@ -595,7 +595,11 @@ public static class UiChecks
         finderSearch.Text = "";
         marketFilter.SelectedIndex = 1;
         Pump(30);
-        Check(finderList.Items.Count == 37 && Children(finder).OfType<TextBlock>().Any(t => t.Text.StartsWith("Shopping list") && t.Text.Contains("chests or the merchant")), "Market watchlist labels chest alternatives and does not claim live availability");
+        Check(finderList.Items.Count == 42 && Children(finder).OfType<TextBlock>().Any(t => t.Text.StartsWith("Shopping list") && t.Text.Contains("dungeon pets")), "Market watchlist includes dungeon pets without claiming live availability");
+        finderSearch.Text = "Phantasmal Lakshmi";
+        Pump(30);
+        Check(finderList.Items.Count == 1, "Merchant search includes Phantasmal Lakshmi");
+        Program.Save(finder, Path.Combine(folder, "merchant-dungeon-search.png"), 860, 640);
         finderSearch.Text = "Elite Dratona";
         Pump(30);
         Check(finderList.Items.Count == 1, "Market watchlist search finds a non-farmable pet");
@@ -991,6 +995,9 @@ public static class UiChecks
             Health = null
         }, null).Contains("timing is not available"), "Connection check distinguishes failed capture from missing evidence");
         var oldTraffic = new ConnectionDiagnostics(10, 20, 1, 0, DateTimeOffset.UtcNow.AddMinutes(-1), null, null, "", Array.Empty<DiagnosticEvent>(), null);
+        var liveTraffic = view with { Ready = true, Status = "Live", Devices = 1, Health = oldTraffic with { LastPayload = DateTimeOffset.UtcNow } };
+        Check(SettingsWindow.ConnectionAssessment(liveTraffic with { CollectionSynced = false }, null).Contains("Collection not synced"), "Receiving traffic cannot claim that the collection is synced");
+        Check(SettingsWindow.ConnectionAssessment(liveTraffic with { CollectionSynced = true }, null).Contains("Collection synced"), "Help explicitly confirms collection sync");
         var interruptedView = view with
         {
             Ready = true,

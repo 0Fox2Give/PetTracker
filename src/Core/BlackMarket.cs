@@ -25,9 +25,13 @@ public static class BlackMarket
     }
 
     static readonly IReadOnlyDictionary<int, MarketItem> byItem = Items.ToDictionary(i => i.ItemId);
-    // Explicitly audited current-release soul-source coverage is required. A null
-    // or absent entry means unknown coverage, not proof of a shop-only pet.
-    public static bool WatchPet(PetSearchResult pet) => pet.Location?.SoulSources is { Count: 0 } && pet.Acquisition?.Aliases.Contains("Black Cloud Merchants") == true && Items.Any(i => i.PetId == pet.Pet.Id);
+    // Include documented dungeon rewards as well as chest/merchant-only pets.
+    // Missing source coverage must never be treated as a shop-only pet.
+    public static bool WatchPet(PetSearchResult pet) =>
+        pet.Location?.SoulSources is { } sources &&
+        (sources.Count == 0 || pet.Acquisition?.Kind == "Dungeon reward") &&
+        pet.Acquisition?.Aliases.Contains("Black Cloud Merchants") == true &&
+        Items.Any(i => i.PetId == pet.Pet.Id);
     public static IEnumerable<PetSearchResult> Watchlist(string query, Profile profile) => PetFinder.Search(query, profile).Where(WatchPet).Where(p => !profile.Pets.TryGetValue(p.Pet.Id, out var progress) || !progress.Max);
     public static bool NeedsPet(Profile profile, int id) => profile.Pets.TryGetValue(id, out var pet) && pet.LevelVerified && !pet.ProgressNeedsSync && pet.Level is >= 0 and < 3;
     public static IEnumerable<MarketOffer> Recommendations(MarketStock stock, Profile profile, bool synced, DateTimeOffset now) => synced && stock.Fresh(now) ? stock.Offers.Where(o => NeedsPet(profile, o.PetId) && PetFinder.Entries.Any(p => p.Pet.Id == o.PetId && WatchPet(p))) : Array.Empty<MarketOffer>();

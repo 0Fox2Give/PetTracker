@@ -2,6 +2,9 @@
 
 ## Unreleased source changes
 
+- Added the five catalogued dungeon pets to merchant recommendations and the shopping-list search, including Phantasmal Lakshmi and Black Smoke Murute. Ordinary world drops and maxed pets remain excluded.
+- Stopped clearing all merchant offers merely because an adjacent, unrecognized shop message arrived. Stock still expires after two minutes and clears on tab-open, invalid replacement, capture loss or character changes. Live confirmation of the reported purchase case is still needed.
+- Help now distinguishes receiving game traffic from having a synchronized collection.
 - Split catalog, collection models, settings, storage and worker contracts into focused files; normalized source and build-script formatting without changing their logic.
 - Added a Linux preview client and process-scoped libpcap capture, with separate builds and tests. Live AION 2/Wine compatibility is not yet verified. See [Linux preview](docs/LINUX.md).
 - Shared family labels between desktop clients and enabled NuGet vulnerability auditing for direct and transitive dependencies.
