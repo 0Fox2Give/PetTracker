@@ -20,8 +20,8 @@ administrator approval. Follow its restart instructions, then restart Pet Tracke
 
 BLACK CLOUD MERCHANT
 Open the merchant with Pet Tracker running and your collection synchronized.
-The overlay lists recently seen chest/merchant pets that you have not maxed,
-with their rank, soul progress, shop tab and Kina price. Pets with known mob sources are excluded.
+The overlay lists recently seen chest, merchant and dungeon pets that you have not maxed,
+with their rank, soul progress, shop tab and Kina price. Ordinary world drops are excluded.
 No purchase is made for you. Confirm the stock in game before buying.
 Offers hide after two minutes, at shop refresh, or when tracking loses continuity.
 Settings > Tracking > Black Cloud Merchant controls the shopping list. It replaces the
@@ -74,8 +74,8 @@ unpin some before adding more. Your old single pin is kept when upgrading.
 Pins save automatically and never change soul totals.
 
 BLACK MARKET
-Find a pet includes a Black Market watchlist for pets without a confirmed
-farmable mob source. Random-chest alternatives are included; maxed pets are hidden.
+Find a pet includes a Black Market watchlist for chest, merchant and documented
+dungeon pets. Ordinary world drops and maxed pets are hidden.
 Start tracking before login, then open the shop's Special or Pets tab to read
 offers. Seen in Black Market shows supported offers recently received from the
 game, with their observed price. Opening another tab replaces the observation.

@@ -33,7 +33,7 @@ $assets = @($package, $setup, $signed)
 $plan = [ordered]@{Repository = $repository; Tag = 'updates'; Version = $proof.Version; Channel = $channel; Assets = @($assets | ForEach-Object { [ordered]@{Name = [IO.Path]::GetFileName($_); SHA256 = (Get-FileHash -LiteralPath $_).Hash; Bytes = (Get-Item -LiteralPath $_).Length } }) }
 $plan | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath (Join-Path $candidateRoot 'publish-plan.json') -Encoding utf8
 if (-not $Publish) { $plan | ConvertTo-Json -Depth 5; return }
-$repo = & $Gh repo view $repository --json nameWithOwner, visibility | ConvertFrom-Json
+$repo = & $Gh repo view $repository --json 'nameWithOwner,visibility' | ConvertFrom-Json
 if ($LASTEXITCODE -ne 0 -or $repo.nameWithOwner -ine $repository -or $repo.visibility -ne 'PUBLIC') { throw 'Updates require the configured public release repository' }
 $release = & $Gh api "repos/$repository/releases/tags/updates" | ConvertFrom-Json
 if ($LASTEXITCODE -ne 0 -or $release.draft) { throw 'Create the public updates release first' }

@@ -20,6 +20,8 @@ Start the tracker before logging into your character. If it was opened after you
 
 There is no sync button. Synchronization happens automatically when the tracker receives that collection data. If capture is unavailable, fix that connection first; logging in again cannot fix a missing capture driver.
 
+In 0.1.52, Settings → Help reports collection sync separately from incoming game traffic. A connected capture session does not by itself mean your collection has loaded.
+
 The first unlock can still leave a pet showing **Rank increase pending**. Version 0.1.51 prevents a soul deduction from falsely restarting the counter at 0/5 while rank confirmation is missing, but first-unlock recognition is still an open issue. Logging back in with the tracker running reloads the collection as a workaround. Please report the exact pet, version and region if it happens.
 
 If that doesn't help, open **Settings → Help** and save a support report. [Open a bug report](https://github.com/0Fox2Give/PetTracker/issues/new?template=bug_report.md) with your tracker version, region, exact pet or mob name, and what went wrong. If a soul gain is missing, say whether the game displayed a soul reward message.
@@ -28,7 +30,9 @@ GitHub issues are public. Review your report before posting, and remove characte
 
 ## Black Cloud Merchant
 
-Keep Pet Tracker running, log in to synchronize your collection, then open the merchant. Recently seen chest/merchant pets that you have not maxed appear in the overlay with your rank, current soul total, shop tab and Kina price. Pets with known farmable mob sources are excluded. **Settings → Tracking → Black Cloud Merchant** controls this list.
+Keep Pet Tracker running, log in to synchronize your collection, then open the merchant. Recently seen chest, merchant and dungeon pets that you have not maxed appear in the overlay with your rank, current soul total, shop tab and Kina price. Ordinary world drops are excluded. **Settings → Tracking → Black Cloud Merchant** controls this list.
+
+Version 0.1.52 adds Phantasmal Lakshmi, Black Smoke Murute, Harcon, Red Spark Ignus and Predator Saraswati. It also changes how incoming shop messages affect the list. If buying one pet still makes the other recommendations disappear, please report it; that case and the blank-list report still need in-game confirmation.
 
 An empty list may mean none of the observed offers qualify. Recommendations also stay hidden until the collection is synchronized. Stock expires after two minutes or at shop refresh, and clears when the connection changes. Confirm the offer in game before purchasing; the tracker does not buy or refresh anything.
 
@@ -54,7 +58,7 @@ Settings are grouped into Tracking, Overlay, Account, Updates and Help. Windows 
 
 Open **Settings → Updates**, check for an update, and download it. Restart the tracker when you're ready. Collections and preferences are saved separately from the program files.
 
-The public installer is currently **0.1.51**. Downloads and updates are hosted here; the old PetTracker-Testing repository has been retired.
+The public installer is currently **0.1.52**. Downloads and updates are hosted here; the old PetTracker-Testing repository has been retired.
 
 If Restart to update says **Could not safely close capture**, an older version may have missed the successful shutdown. Version 0.1.48 fixes that check. To get past it on an older copy, choose **Quit Pet Tracker** from its Windows tray icon, then download and run the current installer. Do not delete your collection folder. If Quit itself reports a save error, leave the tracker running and save a support report instead.
 
