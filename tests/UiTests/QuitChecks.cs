@@ -10,6 +10,19 @@ namespace PetTracker;
 
 static class QuitChecks
 {
+    public static bool RunChild(string[] args)
+    {
+        if (args.Length != 3 || args[0] != "--exit-fixture")
+            return false;
+        string gate = args[1];
+        File.WriteAllText(gate + ".ready", "");
+        var deadline = Stopwatch.StartNew();
+        while (!File.Exists(gate) && deadline.Elapsed < TimeSpan.FromSeconds(30))
+            Thread.Sleep(20);
+        Environment.ExitCode = File.Exists(gate) ? int.Parse(args[2]) : 99;
+        return true;
+    }
+
     static async Task Serve(string root, Func<string, Task<string>> response, CancellationToken stop)
     {
         using var pipe = new NamedPipeServerStream(Storage.Pipe(root), PipeDirection.InOut, NamedPipeServerStream.MaxAllowedServerInstances, PipeTransmissionMode.Byte, PipeOptions.Asynchronous | PipeOptions.CurrentUserOnly);
@@ -91,12 +104,15 @@ static class QuitChecks
     static async Task CheckWorkerExit(Action<bool, string> check, string folder, int exitCode)
     {
         string gate = Path.Combine(folder, "worker-exit-" + Guid.NewGuid().ToString("N"));
-        string exe = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.System), "WindowsPowerShell", "v1.0", "powershell.exe");
+        // Reuse the compiled test executable rather than paying for a separate
+        // PowerShell startup, which can exceed five seconds on cold CI runners.
+        string exe = Environment.ProcessPath ?? throw new InvalidOperationException("Test executable unavailable");
         var start = new ProcessStartInfo(exe) { UseShellExecute = false, CreateNoWindow = true };
-        start.ArgumentList.Add("-NoProfile");
-        start.ArgumentList.Add("-NonInteractive");
-        start.ArgumentList.Add("-Command");
-        start.ArgumentList.Add("[IO.File]::WriteAllText('" + gate.Replace("'", "''") + ".ready',''); $end=(Get-Date).AddSeconds(10); while(!(Test-Path -LiteralPath '" + gate.Replace("'", "''") + "') -and (Get-Date) -lt $end){Start-Sleep -Milliseconds 20}; exit " + exitCode);
+        if (string.Equals(Path.GetFileNameWithoutExtension(exe), "dotnet", StringComparison.OrdinalIgnoreCase))
+            start.ArgumentList.Add(typeof(UiChecks).Assembly.Location);
+        start.ArgumentList.Add("--exit-fixture");
+        start.ArgumentList.Add(gate);
+        start.ArgumentList.Add(exitCode.ToString());
         int pid;
         using (var child = Process.Start(start)!)
         {
@@ -105,7 +121,7 @@ static class QuitChecks
         // Dispose the launch handle: only the production monitor may retain the exit code.
         try
         {
-            var startupDeadline = DateTime.UtcNow.AddSeconds(5);
+            var startupDeadline = DateTime.UtcNow.AddSeconds(30);
             while (!File.Exists(gate + ".ready"))
             {
                 if (DateTime.UtcNow >= startupDeadline)
@@ -125,7 +141,24 @@ static class QuitChecks
             using var monitor = WorkerExitMonitor.Open(pid, exe);
             check(!monitor.ExitedCleanly, "A running worker is not accepted as safely stopped");
             File.WriteAllText(gate, "");
-            await Task.Delay(1500);
+            // Wait for actual exit for both success and failure codes. A false
+            // ExitedCleanly while the child is still running cannot prove code 7.
+            var exitDeadline = DateTime.UtcNow.AddSeconds(10);
+            while (true)
+            {
+                bool exited;
+                try
+                {
+                    using var probe = Process.GetProcessById(pid);
+                    exited = probe.HasExited;
+                }
+                catch (ArgumentException) { exited = true; }
+                if (exited)
+                    break;
+                if (DateTime.UtcNow >= exitDeadline)
+                    throw new TimeoutException("Child exit fixture did not stop");
+                await Task.Delay(20);
+            }
             check(monitor.ExitedCleanly == (exitCode == 0), "Update shutdown retains and checks real child exit code " + exitCode);
         }
         finally

@@ -66,6 +66,8 @@ public static class UiChecks
     [STAThread]
     public static void Main(string[] args)
     {
+        if (QuitChecks.RunChild(args))
+            return;
         string folder = Path.GetFullPath(args[0]);
         Directory.CreateDirectory(folder);
         var app = new Application { ShutdownMode = ShutdownMode.OnExplicitShutdown };

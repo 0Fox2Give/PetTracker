@@ -45,6 +45,16 @@ Check(Text(window).Contains("10/25"), "Merchant progress updates while Nearby is
 Check(!Text(window).Contains("80,000 Kina"), "Updated merchant row no longer invites another purchase");
 Save(window, "merchant-updated.png");
 
+connection.Fail = true;
+window.Poll().GetAwaiter().GetResult();
+Dispatcher.UIThread.RunJobs();
+Check(window.GetVisualDescendants().OfType<TextBlock>().Any(t => t.IsVisible && t.Text == "Worker connection lost"), "Connection loss remains visible after a live snapshot");
+Check(!Text(window).Contains("Black Cloud Merchant"), "Connection loss clears stale merchant advice");
+connection.Fail = false;
+window.Poll().GetAwaiter().GetResult();
+Dispatcher.UIThread.RunJobs();
+Check(Text(window).Contains("10/25"), "Recovery renders the next verified worker snapshot");
+
 var finder = new FinderWindow(_ => Task.CompletedTask);
 finder.Accept(connection.View);
 finder.Show();
@@ -65,6 +75,7 @@ sealed class FakeConnection : ITrackerConnection
 {
     public WorkerView View { get; private set; }
     public bool Stopped { get; private set; }
+    public bool Fail { get; set; }
     readonly int petId;
     public FakeConnection()
     {
@@ -83,6 +94,8 @@ sealed class FakeConnection : ITrackerConnection
     }
     public Task<WorkerView> Send(Command command)
     {
+        if (Fail)
+            throw new IOException("Worker connection lost");
         if (command.Patch != null)
             View = View with { Settings = SettingsPatch.Apply(View.Settings, command.Patch) };
         return Task.FromResult(View);
