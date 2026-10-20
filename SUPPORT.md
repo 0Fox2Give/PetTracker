@@ -4,6 +4,8 @@
 
 Version 0.1.50 shows the overlay on a normal launch, even if it was hidden in the previous session. If the app is already running, right-click its Windows tray paw icon and choose **Show / hide tracker**. If **Only show over Aion 2** is enabled, bring the game to the foreground.
 
+Version 0.1.51 also corrects saved positions that land in the gap between monitors. If the window is still missing, open **Settings → Overlay**, temporarily turn off **Only show over Aion 2**, and click **Reposition tracker**. If that works, tell us whether turning the game-only option back on hides it again; this helps distinguish placement from focus detection.
+
 If the window opens but contains no pets, check Settings → Help for capture status.
 
 ## Capture unavailable / empty overlay
@@ -18,7 +20,7 @@ Start the tracker before logging into your character. If it was opened after you
 
 There is no sync button. Synchronization happens automatically when the tracker receives that collection data. If capture is unavailable, fix that connection first; logging in again cannot fix a missing capture driver.
 
-The first unlock can still leave a pet showing **Rank increase pending**. This is an open issue, not a confirmed fix in 0.1.50. Logging back in with the tracker running reloads the collection as a workaround. Please report the exact pet, version and region if it happens.
+The first unlock can still leave a pet showing **Rank increase pending**. Version 0.1.51 prevents a soul deduction from falsely restarting the counter at 0/5 while rank confirmation is missing, but first-unlock recognition is still an open issue. Logging back in with the tracker running reloads the collection as a workaround. Please report the exact pet, version and region if it happens.
 
 If that doesn't help, open **Settings → Help** and save a support report. [Open a bug report](https://github.com/0Fox2Give/PetTracker/issues/new?template=bug_report.md) with your tracker version, region, exact pet or mob name, and what went wrong. If a soul gain is missing, say whether the game displayed a soul reward message.
 
@@ -52,7 +54,7 @@ Settings are grouped into Tracking, Overlay, Account, Updates and Help. Windows 
 
 Open **Settings → Updates**, check for an update, and download it. Restart the tracker when you're ready. Collections and preferences are saved separately from the program files.
 
-The public installer is currently **0.1.50**. Downloads and updates are hosted here; the old PetTracker-Testing repository has been retired.
+The public installer is currently **0.1.51**. Downloads and updates are hosted here; the old PetTracker-Testing repository has been retired.
 
 If Restart to update says **Could not safely close capture**, an older version may have missed the successful shutdown. Version 0.1.48 fixes that check. To get past it on an older copy, choose **Quit Pet Tracker** from its Windows tray icon, then download and run the current installer. Do not delete your collection folder. If Quit itself reports a save error, leave the tracker running and save a support report instead.
 

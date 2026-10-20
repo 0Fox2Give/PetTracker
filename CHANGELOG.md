@@ -1,5 +1,14 @@
 # Release notes
 
+## 0.1.51 — October 19, 2026
+
+- Prevented soul deductions from showing a fresh 0/5 or 0/25 counter while a rank change is still unconfirmed. The completed stage stays pending, and later soul gains are preserved until the rank is confirmed.
+- Fixed overlay placement in gaps between monitors and improved recovery from disconnected screens and window resizing.
+
+The first-unlock recognition issue is still being investigated. If the tracker remains on Rank increase pending, return to character selection and log back in with Pet Tracker running to reload your collection. This release does not claim to resolve every hidden-overlay report.
+
+Your saved collection and settings are preserved.
+
 ## 0.1.50 — October 19, 2026
 
 - Pin several pets at once. The default is three; choose a limit from one to five in Settings → Tracking. Pins keep their order in Recent and Nearby, and existing pins are preserved.
