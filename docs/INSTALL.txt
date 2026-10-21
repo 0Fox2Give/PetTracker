@@ -64,6 +64,14 @@ You can also right-click a recent pet and choose Find on map. Maps show known
 spawn locations, not whether a mob is currently alive. Region access can vary.
 Pets without a verified map link say so.
 
+In the Windows client, the family cards show collected totals and filter the list.
+Combine a family with a rank, farming region or merchant filter. Closest to next
+rank sorts by the number of souls still needed to unlock or upgrade a pet.
+Only synced, verified balances receive a remaining-souls label and priority;
+unknown, estimated or stale totals stay below them. Unknown rank is separate
+from Not collected. Clear filters restores the full list. These browsing
+controls never change your saved collection.
+
 Pin this pet keeps a target at the top in Recent and Nearby until you unpin it.
 Pin up to three pets by default. Settings > Tracking > Maximum pinned pets lets
 you choose a limit from one to five. Pins stay in the order you added them.

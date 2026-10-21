@@ -1237,6 +1237,7 @@ Console.WriteLine($"PASS: {checks} standalone checks");
 
 
 PetFinderChecks.Run(Check);
+PetCollectionChecks.Run(Check);
 BlackMarketChecks.Run(Check, root, Identity, Snapshot, Frame);
 NearbyChecks.Run(Check, root, Identity, Frame);
 using (var abyssReward = new Engine(Path.Combine(root, "abyss-reward-independent")))

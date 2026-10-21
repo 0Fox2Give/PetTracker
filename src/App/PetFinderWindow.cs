@@ -11,11 +11,18 @@ public sealed class PetFinderWindow : Window
     string renderedPins = "";
     DateOnly renderedDate;
     string renderedMarket = "";
+    bool changingFilters;
+    readonly CollectionOverview overview = new();
+    readonly TextBlock collectionStatus = Ui.Text("", 11, Ui.Muted);
+    readonly ComboBox rankFilter = new() { ItemsSource = new[] { "All ranks", "Not collected", "Rank 1", "Rank 2", "Maxed", "Unknown rank" }, SelectedIndex = 0 };
+    readonly ComboBox regionFilter = new() { ItemsSource = new[] { "All regions" }.Concat(PetFinder.Entries.SelectMany(e => e.AvailableMaps).Select(m => m.Region).Distinct().Order()).ToArray(), SelectedIndex = 0 };
+    readonly ComboBox sort = new() { ItemsSource = new[] { "Name A–Z", "Closest to next rank" }, SelectedIndex = 0 };
+    readonly Button clearFilters = Ui.Button("Clear filters", () => { });
     readonly ComboBox filter = new()
     {
         ItemsSource = new[]
         {
-            "All pets",
+            "All sources",
             "Black Market watchlist",
             "Seen in Black Market"
         },
@@ -40,9 +47,10 @@ public sealed class PetFinderWindow : Window
         public Brush ProgressBrush { get; private set; } = Ui.Ink;
         public double ProgressValue { get; private set; }
         public Visibility ProgressVisibility { get; private set; } = Visibility.Collapsed;
+        public string Remaining { get; private set; } = "";
 
         public event PropertyChangedEventHandler? PropertyChanged;
-        public void Update(Profile profile)
+        public void Update(Profile profile, bool collectionSynced)
         {
             profile.Pets.TryGetValue(Result.Pet.Id, out var pet);
             string rank = pet?.Level is int level ? (level == 0 ? "Unranked" : "Rank " + level) : "Rank ?";
@@ -51,14 +59,16 @@ public sealed class PetFinderWindow : Window
             if (TrackingGuidance.Remaining(pet) is { Length: > 0 } remaining)
                 hint += "\n" + remaining;
             Brush brush = pet?.Max == true ? Ui.Muted : Ui.Ink;
+            string left = collectionSynced && PetCollection.SoulsRemaining(pet) is int needed ? $"{needed} soul{(needed == 1 ? "" : "s")} to {(pet!.Level == 0 ? "unlock" : "Rank " + (pet.Level + 1))}" : "";
             ProgressValue = pet?.Max == true ? 100 : pet?.CurrentSouls is int souls && pet.Goal is> 0 ? Math.Clamp(100.0 * souls / pet.Goal.Value, 0, 100) : 0;
             ProgressVisibility = pet?.Max == true || pet?.CurrentSouls != null && pet.Goal is> 0 ? Visibility.Visible : Visibility.Collapsed;
-            if ((Rank, Progress, Hint, ProgressBrush) == (rank, progress, hint, brush))
+            if ((Rank, Progress, Hint, ProgressBrush, Remaining) == (rank, progress, hint, brush, left))
                 return;
             Rank = rank;
             Progress = progress;
             Hint = hint;
             ProgressBrush = brush;
+            Remaining = left;
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(null));
         }
     }
@@ -68,8 +78,8 @@ public sealed class PetFinderWindow : Window
         this.host = host;
         portraits = new(host.AssetRoot);
         Title = "Pet Tracker — Find a pet";
-        Width = 900;
-        Height = 680;
+        Width = 1000;
+        Height = 740;
         MinWidth = 720;
         MinHeight = 500;
         WindowStartupLocation = WindowStartupLocation.CenterScreen;
@@ -85,9 +95,13 @@ public sealed class PetFinderWindow : Window
         var title = Ui.Text("Find a pet", 24);
         title.FontWeight = FontWeights.SemiBold;
         header.Children.Add(title);
-        header.Children.Add(new TextBlock { Text = "Soul sources, locations, and your collection progress.", Foreground = Ui.Muted, FontSize = 12, Margin = new Thickness(0, 5, 0, 18) });
-        var toolbar = new Grid { Margin = new Thickness(0, 0, 0, 14), HorizontalAlignment = HorizontalAlignment.Left };
-        toolbar.ColumnDefinitions.Add(new() { Width = new GridLength(320) });
+        collectionStatus.Margin = new Thickness(0, 5, 0, 14);
+        collectionStatus.ToolTip = "Counts cover supported pets in this account. Unknown ranks are not counted as missing pets.";
+        System.Windows.Automation.AutomationProperties.SetAutomationId(collectionStatus, "CollectionStatus");
+        header.Children.Add(collectionStatus);
+        header.Children.Add(overview);
+        var toolbar = new Grid { Margin = new Thickness(0, 0, 0, 10) };
+        toolbar.ColumnDefinitions.Add(new() { Width = new GridLength(1, GridUnitType.Star), MaxWidth = 400 });
         toolbar.ColumnDefinitions.Add(new() { Width = new GridLength(212) });
         search.Tag = "Search pets or mobs…";
         search.Height = 32;
@@ -101,6 +115,26 @@ public sealed class PetFinderWindow : Window
         Grid.SetColumn(filter, 1);
         toolbar.Children.Add(filter);
         header.Children.Add(toolbar);
+        var refinements = new WrapPanel { Margin = new Thickness(0, 0, 0, 8) };
+        void AddFilter(ComboBox control, string id, string label, double width)
+        {
+            control.Width = width;
+            control.Height = 32;
+            control.Margin = new Thickness(0, 0, 8, 4);
+            control.ToolTip = label;
+            System.Windows.Automation.AutomationProperties.SetAutomationId(control, id);
+            System.Windows.Automation.AutomationProperties.SetName(control, label);
+            refinements.Children.Add(control);
+        }
+        AddFilter(rankFilter, "CollectionRank", "Filter by collection rank", 128);
+        AddFilter(regionFilter, "CollectionRegion", "Filter by farming region", 178);
+        AddFilter(sort, "CollectionSort", "Sort by name or souls remaining to the next rank. Unknown, estimated and stale balances stay below verified totals.", 182);
+        clearFilters.Height = 32;
+        clearFilters.Margin = new Thickness(0, 0, 0, 4);
+        clearFilters.Padding = new Thickness(10, 2, 10, 2);
+        clearFilters.Click += (_, _) => ResetFilters();
+        refinements.Children.Add(clearFilters);
+        header.Children.Add(refinements);
         header.Children.Add(marketHelp);
         marketHelp.TextWrapping = TextWrapping.Wrap;
         System.Windows.Automation.AutomationProperties.SetAutomationId(filter, "PetFinderFilter");
@@ -125,6 +159,9 @@ public sealed class PetFinderWindow : Window
       <TextBlock DockPanel.Dock="Right" Text="{Binding Progress}" Foreground="{Binding ProgressBrush}" FontSize="10" FontWeight="SemiBold" VerticalAlignment="Center" Margin="6,0,0,0"/>
       <StackPanel Orientation="Horizontal"><TextBlock Text="{Binding Rank}" FontSize="10" Foreground="#99A3B1" VerticalAlignment="Center"/><local:PetFamilyBadge PetId="{Binding Result.Pet.Id}"/></StackPanel>
      </DockPanel>
+     <TextBlock Text="{Binding Remaining}" FontSize="10" Foreground="#91A4B5" Margin="0,5,0,0">
+      <TextBlock.Style><Style TargetType="TextBlock"><Style.Triggers><Trigger Property="Text" Value=""><Setter Property="Visibility" Value="Collapsed"/></Trigger></Style.Triggers></Style></TextBlock.Style>
+     </TextBlock>
      </StackPanel>
     </Grid>
    </DataTemplate>
@@ -166,10 +203,21 @@ public sealed class PetFinderWindow : Window
         body.Children.Add(card);
         search.TextChanged += (s, e) => Search();
         filter.SelectionChanged += (s, e) => Search();
+        rankFilter.SelectionChanged += (s, e) => Search();
+        regionFilter.SelectionChanged += (s, e) => Search();
+        sort.SelectionChanged += (s, e) => Search();
+        overview.Changed += Search;
         host.Changed += Refresh;
         Closed += (s, e) => host.Changed -= Refresh;
         Search();
         SelectPet(petId);
+        SizeChanged += (_, _) =>
+        {
+            bool compact = ActualHeight < 600;
+            overview.SetCompact(compact);
+            overview.Margin = new Thickness(0, 0, -6, compact ? 10 : 14);
+            collectionStatus.Margin = new Thickness(0, 5, 0, compact ? 10 : 14);
+        };
         Loaded += (s, e) => search.Focus();
     }
 
@@ -177,7 +225,34 @@ public sealed class PetFinderWindow : Window
     IEnumerable<PetSearchResult> Matches()
     {
         var matches = filter.SelectedIndex == 0 ? PetFinder.Search(search.Text, host.Tracker.Profile) : BlackMarket.Watchlist(search.Text, host.Tracker.Profile);
-        return filter.SelectedIndex == 2 ? matches.Where(p => Offers().Any(o => o.Offer.PetId == p.Pet.Id)) : matches;
+        if (filter.SelectedIndex == 2)
+            matches = matches.Where(p => Offers().Any(o => o.Offer.PetId == p.Pet.Id));
+        return PetCollection.Select(matches, host.Tracker.Profile,
+            new(overview.Family, (CollectionRankFilter)rankFilter.SelectedIndex, regionFilter.SelectedIndex == 0 ? "" : (string)regionFilter.SelectedItem, (CollectionSort)sort.SelectedIndex),
+            host.View?.CollectionSynced == true);
+    }
+
+    void RefreshOverview()
+    {
+        var profile = host.Tracker.Profile;
+        overview.Refresh(profile);
+        var totals = PetCollection.Summarize(PetFinder.Search("", profile), profile);
+        string state = host.View?.CollectionSynced == true ? "Collection synced" : "Saved collection · log in with the tracker running to sync";
+        collectionStatus.Text = $"{state} · {totals.Maxed} maxed · {totals.Unknown} unknown rank";
+        clearFilters.IsEnabled = search.Text.Length > 0 || filter.SelectedIndex != 0 || rankFilter.SelectedIndex != 0 || regionFilter.SelectedIndex != 0 || sort.SelectedIndex != 0 || overview.Family.Length > 0;
+    }
+
+    void ResetFilters()
+    {
+        changingFilters = true;
+        try
+        {
+            search.Text = "";
+            filter.SelectedIndex = rankFilter.SelectedIndex = regionFilter.SelectedIndex = sort.SelectedIndex = 0;
+            overview.Select("");
+        }
+        finally { changingFilters = false; }
+        Search();
     }
 
     void MarketHelp()
@@ -190,10 +265,13 @@ public sealed class PetFinderWindow : Window
 
     void Search()
     {
+        if (changingFilters)
+            return;
+        RefreshOverview();
         int? selected = (results.SelectedItem as SearchRow)?.Result.Pet.Id;
         var matches = Matches().Select(p => new SearchRow(p, portraits.Get(p.Pet.Id))).ToArray();
         foreach (var row in matches)
-            row.Update(host.Tracker.Profile);
+            row.Update(host.Tracker.Profile, host.View?.CollectionSynced == true);
         detailRendered = false;
         results.ItemsSource = matches;
         count.Text = matches.Length == 1 ? "1 pet" : $"{matches.Length} pets";
@@ -206,8 +284,7 @@ public sealed class PetFinderWindow : Window
     {
         if (id == null)
             return;
-        filter.SelectedIndex = 0;
-        search.Text = "";
+        ResetFilters();
         results.SelectedItem = results.Items.Cast<SearchRow>().FirstOrDefault(p => p.Result.Pet.Id == id);
         if (results.SelectedItem != null)
             results.ScrollIntoView(results.SelectedItem);
@@ -215,6 +292,7 @@ public sealed class PetFinderWindow : Window
 
     void Refresh()
     {
+        RefreshOverview();
         MarketHelp();
         if (!results.Items.Cast<SearchRow>().Select(r => r.Result.Pet.Id).SequenceEqual(Matches().Select(r => r.Pet.Id)))
         {
@@ -223,7 +301,7 @@ public sealed class PetFinderWindow : Window
         }
 
         foreach (var row in results.Items.Cast<SearchRow>())
-            row.Update(host.Tracker.Profile);
+            row.Update(host.Tracker.Profile, host.View?.CollectionSynced == true);
         RefreshDetail();
     }
 
@@ -243,7 +321,7 @@ public sealed class PetFinderWindow : Window
         detail.Children.Clear();
         if (results.SelectedItem is not SearchRow selectedRow)
         {
-            detail.Children.Add(Ui.Text(filter.SelectedIndex == 2 ? "No recent matching shop offers. Open the Black Market in game while Pet Tracker is connected." : "No matching pets. Try another pet or mob name.", 13, Ui.Muted));
+            detail.Children.Add(Ui.Text(filter.SelectedIndex == 2 ? "No recent matching shop offers. Open the Black Market in game while Pet Tracker is connected." : "No matching pets. Try another search or clear the filters.", 13, Ui.Muted));
             return;
         }
 
@@ -355,7 +433,7 @@ public sealed class PetFinderWindow : Window
         var shownRegions = new HashSet<string>();
         if (selected.AvailableMaps.Count > 0)
         {
-            foreach (var map in selected.AvailableMaps)
+            foreach (var map in selected.AvailableMaps.OrderBy(m => m.Region == (string?)regionFilter.SelectedItem ? 0 : 1))
             {
                 var location = new StackPanel();
                 var button = Ui.Button(map.Region + " ↗", () => Open(map.Url));

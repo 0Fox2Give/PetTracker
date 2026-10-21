@@ -1348,6 +1348,7 @@ public static class UiChecks
         });
         Check(Activity.EmptyText(quietTracker, new AppSettings { TrackerMode = "Recent", ExpireInactive = true, InactiveSeconds = 20 }, DateTimeOffset.UtcNow, view) == "", "Expired Recent activity has no timeout chatter");
         PlacementChecks.Run(Check);
+        CollectionFinderChecks.Run(Check, folder, view, Pump, ShowOffscreen);
         var quitChecks = QuitChecks.Run(Check, folder, view).WaitAsync(TimeSpan.FromSeconds(15));
         while (!quitChecks.IsCompleted)
             Pump(10);
