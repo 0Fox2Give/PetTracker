@@ -49,6 +49,13 @@ public sealed class Host : IDisposable
     SettingsWindow? settings;
     bool revealEmpty;
     public string HotkeyError { get; private set; } = "";
+    public bool RecordingShortcut { get; private set; }
+
+    public void SetRecordingShortcut(bool recording)
+    {
+        RecordingShortcut = recording;
+        Changed?.Invoke();
+    }
 
     public void SetHotkeyError(string error)
     {

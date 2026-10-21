@@ -122,6 +122,10 @@ Tracking: mode, row limit, pin limit, Hide maxed and the merchant shopping list.
 Expand Sorting and timing for sort order and Recent/Nearby expiry controls.
 Overlay: size, background opacity, game-only visibility and click behavior.
 More overlay options contains the shortcut, Hide when empty and reduced motion.
+Click the tracker shortcut and press your preferred key combination. You can use
+a key by itself or combine it with Ctrl, Alt and Shift. Esc cancels recording;
+Clear disables the shortcut. Windows-reserved or already-used shortcuts may be
+unavailable; choose another combination if Settings reports a conflict.
 Rank notifications contains desktop notification and sound preferences.
 Account: shared-character progress, account management and collection sync help.
 Windows startup and start-hidden preferences have been retired. The installed

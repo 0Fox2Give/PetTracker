@@ -52,6 +52,8 @@ public class AppSettings
     public bool Toasts { get; set; }
     public bool Sounds { get; set; }
     public int Hotkey { get; set; }
+    // Older settings stored only P/T/O and always used Ctrl+Alt.
+    public int HotkeyModifiers { get; set; } = 3;
     public bool CheckUpdatesAutomatically { get; set; } = true;
     public bool DownloadUpdatesAutomatically { get; set; }
     public string UpdateChannel { get; set; } = "win-stable";
@@ -77,8 +79,11 @@ public class AppSettings
             Accent = "Gold";
         if (!new[] { "Unfinished first", "Recent only", "Closest to next rank" }.Contains(Sort))
             Sort = "Unfinished first";
-        if (!new[] { 0, 0x50, 0x54, 0x4f }.Contains(Hotkey))
+        if (!new TrackerShortcut(Hotkey, HotkeyModifiers).IsValid)
+        {
             Hotkey = 0;
+            HotkeyModifiers = 3;
+        }
         RowLimit = new[] { 3, 5, 8, 10 }.Contains(RowLimit) ? RowLimit : 5;
         InactiveSeconds = new[] { 15, 20, 30, 60, 120 }.Contains(InactiveSeconds) ? InactiveSeconds : 20;
         Scale = double.IsFinite(Scale) ? Math.Clamp(Scale, .75, 1.5) : 1;

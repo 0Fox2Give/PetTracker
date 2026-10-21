@@ -1,5 +1,9 @@
 # Release notes
 
+## Unreleased
+
+- Replaced the three Windows tracker-shortcut presets with a key recorder. Choose a key alone or combine Ctrl, Alt and Shift, clear the binding, or cancel without changing it. Existing Ctrl+Alt shortcuts are preserved. Conflicting shortcuts show an error in Settings.
+
 ## 0.1.52 — October 20, 2026
 
 - Added the five catalogued dungeon pets to merchant recommendations and the shopping-list search, including Phantasmal Lakshmi and Black Smoke Murute. Ordinary world drops and maxed pets remain excluded.

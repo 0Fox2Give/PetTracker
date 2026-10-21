@@ -1,5 +1,4 @@
 using System.Diagnostics;
-using System.Runtime.InteropServices;
 using System.Text.Json;
 using System.Windows.Interop;
 using System.Windows.Media.Imaging;
@@ -8,10 +7,6 @@ namespace PetTracker;
 
 public static class Program
 {
-    [DllImport("user32.dll")]
-    static extern bool RegisterHotKey(IntPtr h, int id, uint modifiers, uint key);
-    [DllImport("user32.dll")]
-    static extern bool UnregisterHotKey(IntPtr h, int id);
     [STAThread]
     public static void Main(string[] args)
     {
@@ -111,30 +106,11 @@ public static class Program
         host.Updates.Ready += version => tray.ShowBalloonTip(5000, "Pet Tracker update ready", "Version " + version + " is ready. Open Settings → Updates when you want to restart.", System.Windows.Forms.ToolTipIcon.Info);
         tray.DoubleClick += (s, e) => host.OpenPetOverlaySettings();
         using var messages = new HwndSource(new HwndSourceParameters("Pet Tracker controls") { Width = 0, Height = 0, WindowStyle = 0 });
-        messages.AddHook((IntPtr h, int msg, IntPtr w, IntPtr l, ref bool handled) =>
-        {
-            if (msg == 0x312)
-            {
-                host.SetPetOverlayVisible(!(host.Overlay?.IsVisible == true));
-                handled = true;
-            }
-
-            return IntPtr.Zero;
-        });
-        int current = 0;
+        using var shortcut = new GlobalShortcut(messages, () => host.SetPetOverlayVisible(!(host.Overlay?.IsVisible == true)), host.SetHotkeyError);
         host.Changed += () =>
         {
-            int requested = host.PetOverlayPreferences.Hotkey;
-            if (current != requested)
-            {
-                UnregisterHotKey(messages.Handle, 1);
-                current = requested;
-                host.SetHotkeyError("");
-                if (current != 0 && !RegisterHotKey(messages.Handle, 1, 0x4003, (uint)current))
-                {
-                    host.SetHotkeyError("Shortcut unavailable. Choose another combination.");
-                }
-            }
+            var preferences = host.PetOverlayPreferences;
+            shortcut.Update(new(preferences.Hotkey, preferences.HotkeyModifiers), host.RecordingShortcut);
         };
         host.TestNotification += () => tray.ShowBalloonTip(4000, "Pet Tracker", "Preview: your pet reached Rank 2.", System.Windows.Forms.ToolTipIcon.Info);
         host.Notification += text =>
@@ -149,7 +125,7 @@ public static class Program
         };
         app.Exit += (s, e) =>
         {
-            UnregisterHotKey(messages.Handle, 1);
+            shortcut.Dispose();
             tray.Visible = false;
         };
         app.Startup += async (s, e) => await host.InitializeLaunch(args.Contains("--minimized"));

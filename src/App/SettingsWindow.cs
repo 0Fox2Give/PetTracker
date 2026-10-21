@@ -25,6 +25,7 @@ public sealed class SettingsWindow : Window
     readonly Button linkCharacter;
     Button? reset, npcap, connectionHelp;
     readonly StackPanel recentOptions = new(), nearbyOptions = new();
+    readonly ShortcutRecorder shortcutRecorder;
     readonly TextBlock nearbyHint = Ui.Text("Nearby lists recent mob observations, not a measured radius. Older sightings show when they were last seen.", 12, Ui.Muted), hotkeyStatus = Ui.Text("", 12, Ui.Muted);
     readonly Button discard;
     Dictionary<string, JsonElement>? inFlight;
@@ -221,13 +222,18 @@ public sealed class SettingsWindow : Window
         var moreOverlay = new StackPanel();
         Check(moreOverlay, "Hide when empty", nameof(AppSettings.HideWhenEmpty));
         Check(moreOverlay, "Reduce motion", nameof(AppSettings.ReducedMotion));
-        Choice(moreOverlay, "Tracker shortcut", new[] { "Disabled", "Ctrl + Alt + P", "Ctrl + Alt + T", "Ctrl + Alt + O" }, Hotkey(host.PetOverlayPreferences.Hotkey), v => Queue(nameof(AppSettings.Hotkey), v switch
+        shortcutRecorder = new ShortcutRecorder(shortcut =>
         {
-            "Ctrl + Alt + P" => 0x50,
-            "Ctrl + Alt + T" => 0x54,
-            "Ctrl + Alt + O" => 0x4f,
-            _ => 0
-        }));
+            Queue(nameof(AppSettings.Hotkey), shortcut.Key);
+            Queue(nameof(AppSettings.HotkeyModifiers), shortcut.Modifiers);
+        }, host.SetRecordingShortcut);
+        var shortcutLabel = Ui.Text("Tracker shortcut", 12, Ui.Muted);
+        shortcutLabel.Margin = new Thickness(0, 16, 0, 8);
+        moreOverlay.Children.Add(shortcutLabel);
+        moreOverlay.Children.Add(shortcutRecorder);
+        bindings.Add(options => shortcutRecorder.Update(new(options.Hotkey, options.HotkeyModifiers)));
+        Deactivated += (s, e) => shortcutRecorder.CancelCapture();
+        Closed += (s, e) => shortcutRecorder.CancelCapture();
         moreOverlay.Children.Add(hotkeyStatus);
         Help(moreOverlay, "The Windows tray paw icon can always show or unlock the overlay.");
         Expand(overlay, "More overlay options", moreOverlay);
@@ -434,13 +440,6 @@ public sealed class SettingsWindow : Window
     }
 
     static string Version() => typeof(SettingsWindow).Assembly.GetName().Version?.ToString(3) ?? "Unknown";
-    static string Hotkey(int key) => key switch
-    {
-        0x50 => "Ctrl + Alt + P",
-        0x54 => "Ctrl + Alt + T",
-        0x4f => "Ctrl + Alt + O",
-        _ => "Disabled"
-    };
     static string Interaction(AppSettings s) => s.ClickThrough ? "Pass clicks to game" : s.Locked ? "Fixed position" : "Move & interact";
     static void Help(Panel p, string text)
     {
@@ -602,7 +601,6 @@ public sealed class SettingsWindow : Window
             "Maximum pinned pets" => options.PinLimit,
             "Sort" => options.Sort,
             "Hide inactive pets after" => Expiry(options),
-            "Tracker shortcut" => Hotkey(options.Hotkey),
             "Release channel" => options.UpdateChannel == "win-beta" ? "Beta" : "Stable",
             "Interaction" => Interaction(options),
             _ => selected

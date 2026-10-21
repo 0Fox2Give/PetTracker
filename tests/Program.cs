@@ -14,6 +14,34 @@ void Check(bool yes, string message)
         throw new Exception(message);
 }
 
+foreach (int oldKey in new[] { 0x50, 0x54, 0x4f })
+{
+    var oldShortcut = JsonSerializer.Deserialize<AppSettings>("{\"Hotkey\":" + oldKey + "}")!;
+    oldShortcut.Normalize();
+    Check(oldShortcut.Hotkey == oldKey && oldShortcut.HotkeyModifiers == 3, "Legacy shortcuts retain Ctrl+Alt after loading old settings");
+}
+foreach (int modifiers in Enumerable.Range(0, 8))
+{
+    var customShortcut = SettingsPatch.Apply(new(), SettingsPatch.Fields((nameof(AppSettings.Hotkey), 0x4b), (nameof(AppSettings.HotkeyModifiers), modifiers)));
+    var reloaded = JsonSerializer.Deserialize<AppSettings>(JsonSerializer.Serialize(customShortcut))!;
+    reloaded.Normalize();
+    Check(reloaded.Hotkey == 0x4b && reloaded.HotkeyModifiers == modifiers, "Custom letter shortcuts preserve every Ctrl/Alt/Shift combination on reload");
+}
+foreach (int key in new[] { 0x08, 0x09, 0x2d, 0x30, 0x60, 0x6b, 0x70, 0x87, 0xba, 0xe2 })
+{
+    var shortcut = new AppSettings { Hotkey = key, HotkeyModifiers = 4 };
+    shortcut.Normalize();
+    Check(shortcut.Hotkey == key, "Editing, navigation, number, numpad, function and punctuation keys survive normalization");
+}
+foreach (var shortcut in new[] { new TrackerShortcut(0x10, 2), new TrackerShortcut(0xa3, 1), new TrackerShortcut(0x7b, 0), new TrackerShortcut(0x50, 16), new TrackerShortcut(500, 3) })
+{
+    var options = new AppSettings { Hotkey = shortcut.Key, HotkeyModifiers = shortcut.Modifiers };
+    options.Normalize();
+    Check(options.Hotkey == 0, "Invalid, modifier-only and reserved F12 shortcuts are disabled");
+}
+var resetShortcut = SettingsPatch.Apply(new() { Hotkey = 0x4b, HotkeyModifiers = 6 }, SettingsSections.Defaults("Overlay"));
+Check(resetShortcut.Hotkey == 0 && resetShortcut.HotkeyModifiers == 3, "Overlay reset clears the complete custom shortcut");
+
 byte[] V(int n)
 {
     var b = new List<byte>();
