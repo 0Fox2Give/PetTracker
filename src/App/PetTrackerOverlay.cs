@@ -16,6 +16,7 @@ public sealed class PetTrackerOverlay : Window
     readonly StackPanel rows = new();
     readonly StackPanel merchantRows = new();
     readonly Border merchantSection;
+    readonly Button syncNotice;
     readonly TextBlock merchantHint = new()
     {
         Text = "Chest, merchant and dungeon pets",
@@ -192,6 +193,31 @@ public sealed class PetTrackerOverlay : Window
         System.Windows.Automation.AutomationProperties.SetAutomationId(merchantSection, "MerchantRecommendations");
         layout.Children.Add(merchantSection);
         layout.Children.Add(modeBar);
+        var syncText = new StackPanel();
+        syncText.Children.Add(new TextBlock { Text = "Totals paused", FontSize = 11, FontWeight = FontWeights.SemiBold });
+        syncText.Children.Add(new TextBlock
+        {
+            Text = "Return to character selection, then log back in.",
+            FontSize = 10,
+            TextWrapping = TextWrapping.Wrap,
+            Margin = new Thickness(0, 2, 0, 0)
+        });
+        syncNotice = new Button
+        {
+            Content = syncText,
+            HorizontalContentAlignment = HorizontalAlignment.Stretch,
+            Padding = new Thickness(8, 6, 8, 6),
+            Margin = new Thickness(0, 5, 0, 2),
+            Background = new SolidColorBrush(Color.FromRgb(45, 38, 24)),
+            Foreground = new SolidColorBrush(Color.FromRgb(230, 199, 124)),
+            BorderBrush = new SolidColorBrush(Color.FromRgb(93, 76, 39)),
+            Visibility = Visibility.Collapsed,
+            ToolTip = "Shown totals are last known. Open connection help for details."
+        };
+        System.Windows.Automation.AutomationProperties.SetAutomationId(syncNotice, "CollectionSyncNotice");
+        System.Windows.Automation.AutomationProperties.SetName(syncNotice, "Totals paused. Open connection help.");
+        syncNotice.Click += (_, _) => host.OpenConnectionHelp();
+        layout.Children.Add(syncNotice);
         layout.Children.Add(rows);
         Closing += (s, e) =>
         {
@@ -233,6 +259,8 @@ public sealed class PetTrackerOverlay : Window
             var tracker = host.Tracker;
             var settings = host.PetOverlayPreferences;
             var time = now();
+            bool totalsPaused = host.View is { Ready: true, CollectionSynced: false };
+            syncNotice.Visibility = totalsPaused && host.View?.Status == "Collection sync needed" ? Visibility.Visible : Visibility.Collapsed;
             RefreshMerchant(time);
             foreach (var mode in modes)
             {
@@ -283,7 +311,8 @@ public sealed class PetTrackerOverlay : Window
                 row.Progress.Foreground = new SolidColorBrush(pet.Max ? Color.FromRgb(145, 155, 170) : Color.FromRgb(220, 226, 235));
                 double ratio = pet.Goal is> 0 && pet.CurrentSouls is int points ? Math.Clamp((double)points / pet.Goal.Value, 0, 1) : 0;
                 row.Bar.Visibility = pet.Max || !settings.ProgressBars ? Visibility.Hidden : Visibility.Visible;
-                ((Border)row.Bar.Children[0]).Background = NativeTheme.Accent(settings.Accent);
+                ((Border)row.Bar.Children[0]).Background = totalsPaused || pet.ProgressNeedsSync
+                    ? new SolidColorBrush(Color.FromRgb(116, 125, 138)) : NativeTheme.Accent(settings.Accent);
                 row.Bar.ColumnDefinitions[0].Width = new GridLength(ratio, GridUnitType.Star);
                 row.Bar.ColumnDefinitions[1].Width = new GridLength(1 - ratio, GridUnitType.Star);
                 string notice = pet.RankIncreasePending ? "Rank increase pending" : settings.IsPinned(pet.Id) ? "Pinned" : "";

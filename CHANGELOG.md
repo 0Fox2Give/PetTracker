@@ -1,5 +1,10 @@
 # Release notes
 
+## 0.1.54 — Local testing
+
+- Skip empty TCP acknowledgements before game-connection discovery and reserve a larger native capture buffer for traffic bursts. These changes address capture pressure seen alongside lost collection sync; live confirmation is still needed.
+- Show a visible Totals paused notice with login steps when collection sync is lost, including when pets are already displayed. Last-known progress bars turn gray; fresh collection data clears the notice. Saved totals are never increased from incomplete rewards.
+
 ## 0.1.53 — Local testing
 
 - Windows Find a pet now has collection totals by family, combined family/rank/region filters, and sorting by souls remaining to the next rank. Unknown ranks stay separate from uncollected pets; stale, estimated and unverified balances do not receive next-rank recommendations. The selected farming region appears first in the source details.

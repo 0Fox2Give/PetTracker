@@ -47,15 +47,16 @@ public sealed class OrderedCapture : IPacketCaptureService, IScopedCapture, IPri
     {
     }
 
-    public OrderedCapture(Func<IEnumerable<ICaptureDevice>> discover)
+    public OrderedCapture(Func<IEnumerable<ICaptureDevice>> discover, GameConnections? connections = null)
     {
         this.discover = discover;
+        Connections = connections ?? new();
     }
 
     CancellationTokenSource? cancel;
     long received, retransmissions, gaps, gapBytes, reordered;
     int generation;
-    public GameConnections Connections { get; } = new();
+    public GameConnections Connections { get; }
     public string? Adapter { get; set; }
     public string LogRoot { get; set; } = "";
     public CapturedPayload? CurrentScopedPayload => null;
@@ -143,7 +144,14 @@ public sealed class OrderedCapture : IPacketCaptureService, IScopedCapture, IPri
                 CaptureStoppedEventHandler? stopped = null;
                 try
                 {
-                    device.Open(DeviceModes.MaxResponsiveness, 10);
+                    // Leave room for bursts while Windows schedules the reader or
+                    // refreshes game socket ownership. A lost byte invalidates totals.
+                    device.Open(new DeviceConfiguration
+                    {
+                        Mode = DeviceModes.MaxResponsiveness,
+                        ReadTimeout = 10,
+                        BufferSize = 16 * 1024 * 1024
+                    });
                     device.Filter = "tcp";
                     PacketArrivalEventHandler handler = (sender, capture) =>
                     {
@@ -155,10 +163,14 @@ public sealed class OrderedCapture : IPacketCaptureService, IScopedCapture, IPri
                             var packet = Packet.ParsePacket(raw.LinkLayerType, raw.Data);
                             var tcp = packet.Extract<TcpPacket>();
                             var ip = packet.Extract<IPPacket>();
-                            if (tcp == null || ip == null || !Connections.Allows(ip.SourceAddress.ToString(), tcp.SourcePort, ip.DestinationAddress.ToString(), tcp.DestinationPort))
+                            if (tcp == null || ip == null)
                                 return;
                             var payload = tcp.PayloadData ?? Array.Empty<byte>();
                             if (payload.Length == 0 && !tcp.Synchronize)
+                                return;
+                            // Pure ACKs carry no stream bytes. Reject them before the
+                            // ownership lookup, which can wait on an OS socket scan.
+                            if (!Connections.Allows(ip.SourceAddress.ToString(), tcp.SourcePort, ip.DestinationAddress.ToString(), tcp.DestinationPort))
                                 return;
                             var key = new Endpoint(ip.SourceAddress.ToString(), tcp.SourcePort, ip.DestinationAddress.ToString(), tcp.DestinationPort);
                             string label = device.Description ?? device.Name;

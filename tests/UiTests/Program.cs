@@ -80,7 +80,8 @@ public static class UiChecks
         profile.Pets[1050].Goal = 75;
         var settings = new AppSettings { Visible = true, ExpireInactive = true, InactiveSeconds = 20 };
         var now = DateTimeOffset.UtcNow;
-        var view = new WorkerView(1, profile, true, "Live", "Sample data", "Ranger", new(), "0123456789abcdef01234567", new() { new(1050, null, "", now.AddSeconds(-18.7)) }, null, now, 1, 0, 0, 0, settings);
+        var view = new WorkerView(1, profile, true, "Live", "Sample data", "Ranger", new(), "0123456789abcdef01234567", new() { new(1050, null, "", now.AddSeconds(-18.7)) }, null, now, 1, 0, 0, 0, settings, CollectionSynced: true);
+        SyncNoticeChecks.Run(Check, folder, view, Pump, ShowOffscreen);
         host.Preview(view);
         var overlay = host.Overlay!;
         Check(!overlay.IsVisible, "Render preview never opens a sample tracker window");
@@ -204,6 +205,7 @@ public static class UiChecks
             },
             Market = new[] { new MarketStock(104, now, now.AddHours(1), Array.Empty<MarketOffer>()) }
         }, now).Contains("Fresh merchant stock received, but no current recommendations"), "Observed stock without recommendations is explained without asserting no stock");
+        host.Preview(view with { CollectionSynced = false });
         var guidanceWindow = new SettingsWindow(host);
         ShowOffscreen(guidanceWindow);
         guidanceWindow.ShowSection("General");
@@ -215,6 +217,7 @@ public static class UiChecks
         Pump(30);
         Program.Save(guidanceWindow, Path.Combine(folder, "merchant-help-detail.png"), 780, 700);
         guidanceWindow.Close();
+        host.Preview(view);
         var window = new SettingsWindow(host);
         ShowOffscreen(window);
         Pump(30);
