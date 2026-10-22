@@ -62,13 +62,21 @@ Settings are grouped into Tracking, Overlay, Account, Updates and Help. Windows 
 
 Find a pet shows collection totals by family. Combine family, rank, region and source filters to narrow the list, or sort by souls remaining to the next rank. Unknown ranks stay separate from uncollected pets. Stale or estimated totals are excluded from next-rank recommendations until the tracker has confirmed progress.
 
+**Details** and **Map** share the selected pet and all filters. Choose **Hide maxed** in the rank filter to exclude confirmed maxed pets, or save a combination under **Saved filters**. Short windows put family, rank, region and sorting options under **Filters**.
+
+The Map tab includes offline maps for Verteron and Altgard. Dots show approximate static spawn locations, not live sightings or player position. If a pet or region has no built-in map, check Details or use the available external source link. See the [farming tools guide](docs/FARMING.md) for controls and map limitations.
+
+**This session** counts observed soul rewards; login balances and kills do not add souls. Capture interruptions mark it incomplete, and reconnecting or restarting begins a new session. **Reset session** leaves collection progress alone.
+
+Choose a **Farming goal** in pet details to track a target rank. Unknown or stale totals wait for sync, and estimates stay labelled. Completion alerts use the notification settings under **Settings → Overlay**. **Compact pet rows** is also on that page.
+
 Open **Settings → Overlay → More overlay options** and select **Tracker shortcut** to record the key or combination you want. You can combine Ctrl, Alt and Shift with a key, clear the shortcut, or cancel without changing it. If that combination cannot be registered, Settings shows an error so you can choose another.
 
 ## Updating
 
 Open **Settings → Updates**, check for an update, and download it. Restart the tracker when you're ready. Collections and preferences are saved separately from the program files.
 
-The public installer is currently **0.1.54**. After updating, return to character selection and log back in with the tracker running to load your collection. Downloads and updates are hosted here; the old PetTracker-Testing repository has been retired.
+The public installer is currently **0.1.56**. After updating, return to character selection and log back in with the tracker running to load your collection. Downloads and updates are hosted here; the old PetTracker-Testing repository has been retired.
 
 If Restart to update says **Could not safely close capture**, an older version may have missed the successful shutdown. Version 0.1.48 fixes that check. To get past it on an older copy, choose **Quit Pet Tracker** from its Windows tray icon, then download and run the current installer. Do not delete your collection folder. If Quit itself reports a save error, leave the tracker running and save a support report instead.
 
@@ -78,7 +86,7 @@ The tracker processes captured game traffic locally. It saves collection progres
 
 Local diagnostics can contain character information. The shareable support report excludes account names, character names, and packet samples. The app doesn't automatically upload collections or support reports.
 
-Update checks and downloads contact GitHub. Opening a map or support link connects to that website under its own privacy policy. Pet Tracker doesn't require a website account or your game password.
+Update checks and downloads contact GitHub. Built-in maps work offline; opening an external map or support link connects to that website under its own privacy policy. Pet Tracker doesn't require a website account or your game password.
 
 ## Download warnings
 

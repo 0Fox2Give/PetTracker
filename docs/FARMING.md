@@ -1,7 +1,7 @@
-# Farming tools (development)
+# Farming tools
 
-These features are available in development source builds of the Windows client.
-The public 0.1.54 installer does not include them yet.
+These features are included in the Windows client from version 0.1.56.
+The experimental Linux client does not yet include these windows.
 
 ## Farming map
 

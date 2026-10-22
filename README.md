@@ -4,18 +4,21 @@ A small overlay for **AION 2** that shows your pet ranks and how many souls you 
 
 **[Download Pet Tracker for Windows](https://github.com/0Fox2Give/PetTracker/releases/download/updates/PetTracker.Desktop-win-stable-Setup.exe)**
 
-Public beta · Windows x64 · Version 0.1.54
+Public beta · Windows x64 · Version 0.1.56
 
 **Open source under GPLv3.** The application, capture worker, updater, tests and build scripts are here. [Build from source](docs/BUILDING.md) · [License](LICENSE)
 
 [Setup and troubleshooting](SUPPORT.md) · [What's new](CHANGELOG.md) · [Report a problem](https://github.com/0Fox2Give/PetTracker/issues/new?template=bug_report.md)
 
-## New in 0.1.54
+## New in 0.1.56
 
-- **More reliable soul tracking.** Reduced capture overhead and increased buffering to help prevent missed game traffic from interrupting collection updates. This applies across pets.
-- **Clearer sync status.** If the tracker loses collection sync, it shows **Totals paused** and keeps the last known counts. Return to character selection and log back in with the tracker open to reload them.
-- **Easier collection browsing.** Find a pet now shows totals by family, combines family, rank, region and source filters, and can sort pets by souls needed for their next rank.
-- **Custom tracker shortcut.** Choose a key or a combination with Ctrl, Alt and Shift in Settings → Overlay → More overlay options.
+- **Pet details and maps in one window.** Open Find a pet, select a pet, then switch between **Details** and **Map**. Both use the same search and filters. Verteron and Altgard maps work offline, with pan, zoom and spawn markers.
+- **Session totals.** **This session** shows observed soul gains and pets ranked up. Reset it without changing your collection.
+- **Farming goals.** Choose a target rank in a pet's details to see souls remaining and receive a completion alert through your notification settings.
+- **Saved filters.** Save up to ten searches and filter combinations. **Hide maxed** is now available in the shared rank filter.
+- **Compact rows.** **Settings → Overlay → Compact pet rows** makes the tracker take up less space.
+
+[Farming tools guide](docs/FARMING.md). Map dots are approximate spawn locations, not live mobs or your current position. Map alignment still needs in-game testing.
 
 Already installed? Open **Settings → Updates**. After updating, return to character selection and log back in with Pet Tracker running. Your saved collection, settings and pins are preserved.
 
@@ -27,7 +30,7 @@ Already installed? Open **Settings → Updates**. After updating, return to char
 - Lets you pin several pets in a stable order. Choose a limit from one to five in Settings → Tracking (three by default).
 - Shows a Black Cloud Merchant shopping list for chest, merchant and dungeon pets you have not maxed, with rank, soul progress and price from recently observed offers. Open the shop after your collection synchronizes.
 
-Nearby lists mobs detected in game traffic; it doesn't have a fixed detection radius. Maps open through external links and show spawn locations. There is no built-in player-position map, walking arrow or distance display.
+Nearby lists mobs detected in game traffic; it doesn't have a fixed detection radius. The Map tab includes Verteron and Altgard; other regions use external source links. There is no player-position dot, walking arrow or distance display.
 
 ## Install
 
@@ -50,6 +53,7 @@ If something looks wrong, [report it here](https://github.com/0Fox2Give/PetTrack
 
 ## Known issues
 
+- Built-in map locations use approximate calibration and still need in-game alignment checks. They do not distinguish separate floors.
 - Some first unlocks can remain on **Rank increase pending**. Relogging with the tracker running reloads the collection.
 - Merchant recommendations disappearing after a purchase, and some empty merchant lists, still need confirmation after the recent fixes.
 - The Linux client is experimental. Game capture under Wine/Proton and overlay placement on KDE/Wayland still need live testing.

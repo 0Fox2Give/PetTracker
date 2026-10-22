@@ -30,8 +30,8 @@ desktop merchant notification; rank notification settings are separate.
 PET TRACKER
 Drag the header to move the tracker. Its gear opens Settings. Use the Windows
 tray paw icon if the tracker is hidden, fixed or passing clicks to the game.
-Double-click the tray icon to open Settings. Use Aion 2's Pets menu for the full
-collection; this addon focuses on recent activity and your pinned farming targets.
+Double-click the tray icon to open Settings. Find a pet opens your tracked
+collection, farming maps and goals. The overlay shows activity and pinned targets.
 
 Five recent pet types appear by default. Inactive rows fade after 20 seconds.
 New soul rewards or supported participated kills renew that pet's row. Expiry
@@ -59,10 +59,13 @@ first; Closest to next rank follows progress with name order for ties. Pins stay
 
 FIND A PET
 Use the search icon in the tracker header or Find a pet in its tray menu. Search
-by pet or mob name, then choose a region to open its farming map in your browser.
-You can also right-click a recent pet and choose Find on map. Maps show known
-spawn locations, not whether a mob is currently alive. Region access can vary.
-Pets without a verified map link say so.
+by pet or mob name, then switch between Details and Map in the same window.
+Right-clicking a pet and choosing Find on map reuses that window.
+Verteron and Altgard maps work offline. Drag to pan, scroll to zoom, or use
+Fit spawns to frame the selected pet. Hover a dot for the mob name.
+Dots are approximate static spawn locations, not live mobs or player position.
+Map alignment still needs in-game testing; separate floors are not represented.
+Other regions keep external source links. Pets without mapped spawns say so.
 
 In the Windows client, the family cards show collected totals and filter the list.
 Combine a family with a rank, farming region or merchant filter. Closest to next
@@ -71,6 +74,20 @@ Only synced, verified balances receive a remaining-souls label and priority;
 unknown, estimated or stale totals stay below them. Unknown rank is separate
 from Not collected. Clear filters restores the full list. These browsing
 controls never change your saved collection.
+
+Hide maxed is in the rank filter. Save up to ten search/filter combinations under
+Saved filters. Short windows put family, rank, region and sorting choices under
+Filters so the map has more room.
+
+Choose a Farming goal in pet details to track a target rank and souls remaining.
+Unknown or stale balances wait for sync; estimates stay labelled. Completion
+alerts use Settings > Overlay notification preferences.
+
+This session shows observed soul gains and pets ranked up after a reward.
+Login balances and kills do not add souls. Interruptions mark the summary
+incomplete. Reconnecting or restarting starts a new session. Reset session
+clears the summary without changing collection progress or goals.
+Settings > Overlay > Compact pet rows reduces the overlay's row size.
 
 Pin this pet keeps a target at the top in Recent and Nearby until you unpin it.
 Pin up to three pets by default. Settings > Tracking > Maximum pinned pets lets
@@ -176,23 +193,3 @@ Shop and campaign pets show verified acquisition instructions and an official
 source link where available. Unknown acquisition routes are labeled unverified.
 Only currently supported regions appear. Map markers show known spawn locations,
 not live proximity or guaranteed current availability.
-
-NEARBY PET MOBS
-Use Recent / Nearby below the tracker header, or Settings > Tracking > Tracker mode.
-Recent keeps your existing reward list. Nearby lists supported pet mobs reported
-by the game client before you attack. Several mobs sharing a pet use one row.
-Hide maxed, row limit, sort, portraits, progress bars and your pinned targets work
-in both modes. A pinned target remains visible even when it is not nearby.
-
-Nearby does not measure distance, scan the map or reveal undiscovered mobs. Only
-verified mob-to-pet links are shown. Soul totals and ranks still come from the
-collection/reward tracker; seeing a mob never adds souls or kills.
-
-Mobs leave the list when a removal/death is received. Capture interruptions,
-character/connection changes and fresh local-player records clear sightings.
-Help > Advanced troubleshooting > Nearby observation timeout supports 60, 120 or
-300 seconds (default 120). A stationary mob can time out until the client reports
-it again. The Recent expiry timer does not apply to Nearby. Start tracking before
-entering an area so its appearance messages can be observed.
-
-Walking direction arrows and distance readouts are not included in this release.

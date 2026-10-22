@@ -1,35 +1,30 @@
 # Release notes
 
-## 0.1.56 — Local testing, October 22, 2026
+## 0.1.56 — October 22, 2026
 
-- Moved the farming map into Find a pet. Details and Map share one pet list,
-  search and filters; overlay shortcuts and supported location links reuse it.
+- Added offline farming maps for Verteron and Altgard inside Find a pet. Details
+  and Map share one pet list, search and filters. Overlay shortcuts and supported
+  location links reuse the window. Pan, zoom, frame spawns and hover for mob names.
 - Kept map position and zoom when switching views or receiving collection updates.
-- Added Hide maxed to the shared rank filter and saved filters. Compact windows
-  keep filters in a popup so the map has room to display.
-- Clear map markers for empty searches and pets without mapped spawns; keep the
-  selected pet visible after changing filters and reset details when changing pets.
-
-Local test build only. Public release remains 0.1.54. Map accuracy and the
-outstanding first-unlock and merchant reports still need live verification.
-
-## 0.1.55 — Local testing, October 22, 2026
-
-- Windows farming map for Verteron and Altgard, with pet search, family filters,
-  hide maxed, pan, zoom and fit-to-spawns. Bundled map data works offline. Dots
-  show approximate static spawn locations; they do not show your position or
-  currently alive mobs.
-- Session summary of observed soul rewards and pets ranked up. Capture gaps
-  mark the summary incomplete. Resetting it leaves collection progress alone.
-- Account-specific farming goals, remaining souls and a completion notification.
+  Empty searches, unsupported regions and unmapped pets clear previous markers.
+- Added a session summary of observed soul rewards and pets ranked up. Capture
+  gaps mark it incomplete. Resetting the summary leaves collection progress alone.
+- Added account-specific farming goals with remaining souls and completion alerts.
   Unknown or stale balances wait for sync; estimates stay labelled.
-- Up to ten saved combinations of collection filters.
-- Compact pet rows in Settings → Overlay.
+- Added up to ten saved filter combinations and Hide maxed in the shared rank
+  filter. Short windows keep filters in a popup to give the map more room.
+- Added Compact pet rows in Settings → Overlay. Kept selected pets visible after
+  filtering/resizing and reset detail scrolling when switching pets.
 
-These changes are being tested locally and are not in the public 0.1.54 installer.
-They do not resolve the unconfirmed first-unlock or merchant reports. The new
-windows are Windows-only; shared collection data remains Linux-compatible.
-See [farming tools](docs/FARMING.md) for behavior and map-source limitations.
+Includes the farming tools tested locally in 0.1.55. After updating, return to
+character selection and log back in with Pet Tracker running. Collections,
+settings and pins are preserved.
+
+Map dots are approximate static spawn locations; they do not show player
+position, live mobs or separate floors. In-game alignment still needs testing.
+First-unlock and merchant reports remain open. These windows are Windows-only;
+the experimental Linux client retains its existing interface.
+See the [farming tools guide](docs/FARMING.md) for controls and source limitations.
 
 ## 0.1.54 — October 21, 2026
 
