@@ -1,6 +1,6 @@
 # Release notes
 
-## Unreleased
+## 0.1.53 — Local testing
 
 - Windows Find a pet now has collection totals by family, combined family/rank/region filters, and sorting by souls remaining to the next rank. Unknown ranks stay separate from uncollected pets; stale, estimated and unverified balances do not receive next-rank recommendations. The selected farming region appears first in the source details.
 - Replaced the three Windows tracker-shortcut presets with a key recorder. Choose a key alone or combine Ctrl, Alt and Shift, clear the binding, or cancel without changing it. Existing Ctrl+Alt shortcuts are preserved. Conflicting shortcuts show an error in Settings.
