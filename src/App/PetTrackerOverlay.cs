@@ -302,6 +302,8 @@ public sealed class PetTrackerOverlay : Window
 
                 row.Activity = activity;
                 row.Picture.Visibility = settings.Portraits ? Visibility.Visible : Visibility.Collapsed;
+                row.Picture.Width = row.Picture.Height = settings.Compact ? 36 : 48;
+                ((Grid)row.Button.Content).ColumnDefinitions[0].Width = new GridLength(settings.Portraits ? settings.Compact ? 36 : 48 : 0);
                 row.Picture.Source = portraits.Get(pet.Id);
                 row.Name.Text = names.Resolve(pet);
                 row.Name.Foreground = (Brush)FindResource(pet.Max ? "ArcanaTextDim" : "ArcanaTextNeutral");
@@ -443,7 +445,11 @@ public sealed class PetTrackerOverlay : Window
         };
         var menu = new ContextMenu();
         var find = new MenuItem { Header = "Find on map…" };
-        find.Click += (s, e) => host.OpenPetFinder(id);
+        find.Click += (s, e) =>
+        {
+            if (FarmingAtlas.Regions.Any(r => r.Points.Any(p => p.PetId == id))) host.OpenFarmingMap(id);
+            else host.OpenPetFinder(id);
+        };
         menu.Items.Add(find);
         var pin = new MenuItem();
         pin.Click += async (s, e) => await host.PinPet(id, !host.PetOverlayPreferences.IsPinned(id));
@@ -519,7 +525,7 @@ public sealed class PetTrackerOverlay : Window
         {
             row.Cancel();
             row.Button.Opacity = 1;
-            row.Button.Height = PetHudActivityPolicy.RowHeight;
+            row.Button.Height = PetHudActivityPolicy.Height(settings);
             return;
         }
 
@@ -531,7 +537,7 @@ public sealed class PetTrackerOverlay : Window
             return;
         }
 
-        var key = (activity.SeenUtc, settings.ExpireInactive, settings.InactiveSeconds);
+        var key = (activity.SeenUtc, settings.ExpireInactive, settings.InactiveSeconds, settings.Compact);
         if (row.Lifetime == key)
             return;
         row.Cancel();
@@ -626,7 +632,7 @@ public sealed class PetTrackerOverlay : Window
         public Grid Bar = null!;
         public PetDirectionIndicator Direction = null!;
         public RecentPetActivity? Activity;
-        public (DateTimeOffset, bool, int)? Lifetime;
+        public (DateTimeOffset, bool, int, bool)? Lifetime;
         public int Generation;
         public void Cancel()
         {

@@ -4,6 +4,7 @@ namespace PetTracker;
 
 public class AppSettings
 {
+    public List<FinderPreset> FinderPresets { get; set; } = new();
     public bool ShareAllCharacters { get; set; }
     // Retained for settings-file compatibility. Walking guidance is not ready for
     // distribution; neither old preferences nor IPC patches may enable it.
@@ -62,6 +63,8 @@ public class AppSettings
 
     public void Normalize()
     {
+        FinderPresets = (FinderPresets ?? new()).Where(p => p != null && p.Valid)
+            .Select(p => p with { Name = p.Name.Trim() }).DistinctBy(p => p.Name, StringComparer.OrdinalIgnoreCase).Take(10).ToList();
         StartWithWindows = false;
         StartMinimized = false;
         ExperimentalDirections = false;

@@ -2,6 +2,7 @@ namespace PetTracker;
 
 public sealed class PetProgress
 {
+    public int? TargetRank { get; set; }
     public int Id { get; set; }
     public string CatalogName { get; set; } = "";
     public string DisplayName { get; set; } = "";

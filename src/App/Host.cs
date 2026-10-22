@@ -25,6 +25,32 @@ public sealed class Host : IDisposable
 
     long nextUiHealth;
     PetFinderWindow? finder;
+    FarmingMapWindow? farmingMap;
+    FarmingSessionWindow? farmingSession;
+    readonly Dictionary<int, (int Target, bool Complete)> goalStates = new();
+    string? goalAccount;
+    public void OpenFarmingMap(int? id = null)
+    {
+        if (farmingMap == null)
+        {
+            farmingMap = new(this, id);
+            farmingMap.Closed += (_, _) => farmingMap = null;
+        }
+        else
+            farmingMap.SelectPet(id);
+        farmingMap.Show();
+        farmingMap.Activate();
+    }
+    public void OpenFarmingSession()
+    {
+        if (farmingSession == null)
+        {
+            farmingSession = new(this);
+            farmingSession.Closed += (_, _) => farmingSession = null;
+        }
+        farmingSession.Show();
+        farmingSession.Activate();
+    }
     public async Task<bool> PinPet(int id, bool pinned) => await Change(new(pinned ? "pin" : "unpin", PetId: id));
     public async Task<bool> UnlockPetOverlay(bool showError = true) => await Change(new("patch", Patch: SettingsPatch.Fields((nameof(AppSettings.Locked), false), (nameof(AppSettings.ClickThrough), false))), showError);
     public void OpenPetFinder(int? id = null)
@@ -248,6 +274,24 @@ public sealed class Host : IDisposable
     bool captureSetupShown;
     public void Accept(WorkerView view)
     {
+        var completedGoals = new HashSet<int>();
+        if (goalAccount != view.Selected || !view.CollectionSynced)
+        {
+            goalStates.Clear();
+            goalAccount = view.Selected;
+        }
+        if (view.CollectionSynced)
+        {
+            foreach (var pet in view.Profile.Pets.Values)
+            {
+                if (pet.TargetRank is not int target)
+                { goalStates.Remove(pet.Id); continue; }
+                bool complete = FarmingGoals.Complete(pet, true);
+                if (complete && goalStates.TryGetValue(pet.Id, out var before) && before == (target, false))
+                    completedGoals.Add(pet.Id);
+                goalStates[pet.Id] = (target, complete);
+            }
+        }
         var oldIncrease = View?.Increase;
         View = view;
         ConnectionError = null;
@@ -282,7 +326,14 @@ public sealed class Host : IDisposable
             Overlay?.Hide();
         Changed?.Invoke();
         WriteUiHealth();
-        if (view.Increase != null && view.Increase != oldIncrease && view.LastSync is { } synced && view.Increase.SeenUtc >= synced)
+        foreach (int id in completedGoals)
+        {
+            var pet = view.Profile.Pets[id];
+            Notification?.Invoke($"{new PetNames().Resolve(pet)}: Rank {pet.TargetRank} farming goal reached");
+        }
+        if (completedGoals.Count > 0 && PetOverlayPreferences.Sounds)
+            System.Media.SystemSounds.Asterisk.Play();
+        if (view.Increase != null && !completedGoals.Contains(view.Increase.PetId) && view.Increase != oldIncrease && view.LastSync is { } synced && view.Increase.SeenUtc >= synced)
         {
             string name = new PetNames().Resolve(view.Profile.Pets[view.Increase.PetId]);
             Notification?.Invoke(name + (view.Increase.Rank == 3 ? " reached MAX" : " reached Rank " + view.Increase.Rank));
@@ -305,6 +356,14 @@ public sealed class Host : IDisposable
                     Accept(View with { Settings = PetPins.Change(View.Settings, command.PetId, command.Action == "pin") });
                 else if (command.Action == "settings")
                     Accept(View with { Settings = command.Settings! });
+                else if (command.Action == "reset-farming")
+                    Accept(View with { Farming = new(null, false, Array.Empty<FarmingSessionRow>()) });
+                else if (command.Action == "farming-goal")
+                {
+                    var profile = JsonSerializer.Deserialize<Profile>(JsonSerializer.Serialize(View.Profile))!;
+                    profile.Pets[command.PetId!.Value].TargetRank = command.TargetRank;
+                    Accept(View with { Profile = profile });
+                }
                 else
                     throw new InvalidOperationException("This action needs a connected app");
             }
@@ -479,5 +538,7 @@ public sealed class Host : IDisposable
         accounts?.Close();
         settings?.Close();
         finder?.Close();
+        farmingMap?.Close();
+        farmingSession?.Close();
     }
 }

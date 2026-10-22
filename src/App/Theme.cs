@@ -40,14 +40,15 @@ public static class NativeTheme
 public static class PetHudActivityPolicy
 {
     public const double FadeSeconds = 2, CollapseSeconds = .18, RowHeight = 78;
+    public static double Height(AppSettings settings) => settings.Compact ? 64 : RowHeight;
     public static double Age(RecentPetActivity a, DateTimeOffset now) => Math.Max(0, (now - a.SeenUtc).TotalSeconds);
     public static IEnumerable<RecentPetActivity> Select(Tracker t, AppSettings s, DateTimeOffset now) => Activity.Select(t, s, now);
     public static (double Opacity, double Height) Appearance(RecentPetActivity a, AppSettings s, DateTimeOffset now)
     {
         if (a.IsNearby || s.IsPinned(a.PetId) || !s.ExpireInactive)
-            return (1, RowHeight);
+            return (1, Height(s));
         double rem = s.InactiveSeconds - Age(a, now), c = Math.Clamp(1 + rem / .18, 0, 1);
-        return (Math.Clamp(rem / 2, 0, 1), RowHeight * c * c * (3 - 2 * c));
+        return (Math.Clamp(rem / 2, 0, 1), Height(s) * c * c * (3 - 2 * c));
     }
 }
 

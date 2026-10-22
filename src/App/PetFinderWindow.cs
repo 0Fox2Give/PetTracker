@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using System.ComponentModel;
 using System.Windows.Markup;
+using System.Windows.Controls.Primitives;
 
 namespace PetTracker;
 
@@ -11,6 +12,10 @@ public sealed class PetFinderWindow : Window
     string renderedPins = "";
     DateOnly renderedDate;
     string renderedMarket = "";
+    string renderedGoal = "";
+    readonly ComboBox presets = new() { Width = 200, Height = 32, ToolTip = "Choose a saved filter." };
+    readonly TextBox presetName = new() { Width = 200, Height = 32, MaxLength = 40, Padding = new Thickness(8, 2, 8, 2), VerticalContentAlignment = VerticalAlignment.Center, Tag = "Filter name…" };
+    bool updatingPresets;
     bool changingFilters;
     readonly CollectionOverview overview = new();
     readonly TextBlock collectionStatus = Ui.Text("", 11, Ui.Muted);
@@ -48,6 +53,7 @@ public sealed class PetFinderWindow : Window
         public double ProgressValue { get; private set; }
         public Visibility ProgressVisibility { get; private set; } = Visibility.Collapsed;
         public string Remaining { get; private set; } = "";
+        public string FarmingGoal { get; private set; } = "No farming goal";
 
         public event PropertyChangedEventHandler? PropertyChanged;
         public void Update(Profile profile, bool collectionSynced)
@@ -60,15 +66,17 @@ public sealed class PetFinderWindow : Window
                 hint += "\n" + remaining;
             Brush brush = pet?.Max == true ? Ui.Muted : Ui.Ink;
             string left = collectionSynced && PetCollection.SoulsRemaining(pet) is int needed ? $"{needed} soul{(needed == 1 ? "" : "s")} to {(pet!.Level == 0 ? "unlock" : "Rank " + (pet.Level + 1))}" : "";
-            ProgressValue = pet?.Max == true ? 100 : pet?.CurrentSouls is int souls && pet.Goal is> 0 ? Math.Clamp(100.0 * souls / pet.Goal.Value, 0, 100) : 0;
-            ProgressVisibility = pet?.Max == true || pet?.CurrentSouls != null && pet.Goal is> 0 ? Visibility.Visible : Visibility.Collapsed;
-            if ((Rank, Progress, Hint, ProgressBrush, Remaining) == (rank, progress, hint, brush, left))
+            string farmingGoal = pet == null ? "No farming goal" : FarmingGoals.Describe(pet, collectionSynced);
+            ProgressValue = pet?.Max == true ? 100 : pet?.CurrentSouls is int souls && pet.Goal is > 0 ? Math.Clamp(100.0 * souls / pet.Goal.Value, 0, 100) : 0;
+            ProgressVisibility = pet?.Max == true || pet?.CurrentSouls != null && pet.Goal is > 0 ? Visibility.Visible : Visibility.Collapsed;
+            if ((Rank, Progress, Hint, ProgressBrush, Remaining, FarmingGoal) == (rank, progress, hint, brush, left, farmingGoal))
                 return;
             Rank = rank;
             Progress = progress;
             Hint = hint;
             ProgressBrush = brush;
             Remaining = left;
+            FarmingGoal = farmingGoal;
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(null));
         }
     }
@@ -94,7 +102,19 @@ public sealed class PetFinderWindow : Window
         layout.Children.Add(header);
         var title = Ui.Text("Find a pet", 24);
         title.FontWeight = FontWeights.SemiBold;
-        header.Children.Add(title);
+        var titleRow = new DockPanel();
+        var windows = new StackPanel { Orientation = Orientation.Horizontal };
+        var savedPopup = new Popup { StaysOpen = false, Placement = PlacementMode.Bottom, AllowsTransparency = true };
+        System.Windows.Automation.AutomationProperties.SetAutomationId(savedPopup, "SavedFiltersPopup");
+        var savedButton = Ui.Button("Saved filters", () => savedPopup.IsOpen = true);
+        savedPopup.PlacementTarget = savedButton;
+        windows.Children.Add(savedButton);
+        windows.Children.Add(Ui.Button("Farming map", () => host.OpenFarmingMap((results.SelectedItem as SearchRow)?.Result.Pet.Id)));
+        windows.Children.Add(Ui.Button("This session", host.OpenFarmingSession));
+        DockPanel.SetDock(windows, Dock.Right);
+        titleRow.Children.Add(windows);
+        titleRow.Children.Add(title);
+        header.Children.Add(titleRow);
         collectionStatus.Margin = new Thickness(0, 5, 0, 14);
         collectionStatus.ToolTip = "Counts cover supported pets in this account. Unknown ranks are not counted as missing pets.";
         System.Windows.Automation.AutomationProperties.SetAutomationId(collectionStatus, "CollectionStatus");
@@ -135,6 +155,40 @@ public sealed class PetFinderWindow : Window
         clearFilters.Click += (_, _) => ResetFilters();
         refinements.Children.Add(clearFilters);
         header.Children.Add(refinements);
+        var savedFilters = new StackPanel();
+        savedFilters.Children.Add(Ui.Text("Saved filters", 12));
+        var choosePreset = new StackPanel { Orientation = Orientation.Horizontal };
+        presets.Margin = new Thickness(0, 6, 8, 10);
+        choosePreset.Children.Add(presets);
+        savedFilters.Children.Add(choosePreset);
+        System.Windows.Automation.AutomationProperties.SetAutomationId(presets, "FinderPresets");
+        var savePreset = Ui.Button("Save filter", async () => await SavePreset());
+        savePreset.Height = 32;
+        savePreset.Padding = new Thickness(10, 2, 10, 2);
+        System.Windows.Automation.AutomationProperties.SetAutomationId(savePreset, "SaveFinderPreset");
+        var deletePreset = Ui.Button("Delete", async () =>
+        {
+            if (presets.SelectedItem is not string name)
+                return;
+            var remaining = host.PetOverlayPreferences.FinderPresets.Where(p => !p.Name.Equals(name, StringComparison.OrdinalIgnoreCase)).ToList();
+            if (await host.Change(new("patch", Patch: SettingsPatch.Fields((nameof(AppSettings.FinderPresets), remaining)))))
+            { presetName.Clear(); RefreshPresets(); }
+        });
+        deletePreset.Height = 32;
+        deletePreset.Padding = new Thickness(10, 2, 10, 2);
+        deletePreset.Margin = new Thickness(0, 6, 0, 10);
+        choosePreset.Children.Add(deletePreset);
+        savedFilters.Children.Add(Ui.Text("Save the current filters as", 11, Ui.Muted));
+        var namePreset = new StackPanel { Orientation = Orientation.Horizontal, Margin = new Thickness(0, 6, 0, 0) };
+        namePreset.Children.Add(presetName);
+        namePreset.Children.Add(savePreset);
+        savedFilters.Children.Add(namePreset);
+        System.Windows.Automation.AutomationProperties.SetAutomationId(presetName, "FinderPresetName");
+        savedPopup.Child = new Border { Child = savedFilters, Padding = new Thickness(14), Background = Ui.Dark, BorderBrush = Ui.Muted, BorderThickness = new Thickness(1), CornerRadius = new CornerRadius(6) };
+        header.Children.Add(savedPopup);
+        Closed += (_, _) => savedPopup.IsOpen = false;
+        presets.SelectionChanged += (_, _) => ApplyPreset();
+        RefreshPresets();
         header.Children.Add(marketHelp);
         marketHelp.TextWrapping = TextWrapping.Wrap;
         System.Windows.Automation.AutomationProperties.SetAutomationId(filter, "PetFinderFilter");
@@ -217,6 +271,10 @@ public sealed class PetFinderWindow : Window
             overview.SetCompact(compact);
             overview.Margin = new Thickness(0, 0, -6, compact ? 10 : 14);
             collectionStatus.Margin = new Thickness(0, 5, 0, compact ? 10 : 14);
+            Dispatcher.BeginInvoke(() =>
+            {
+                if (results.SelectedItem != null) results.ScrollIntoView(results.SelectedItem);
+            });
         };
         Loaded += (s, e) => search.Focus();
     }
@@ -241,6 +299,56 @@ public sealed class PetFinderWindow : Window
         collectionStatus.Text = $"{state} · {totals.Maxed} maxed · {totals.Unknown} unknown rank";
         clearFilters.IsEnabled = search.Text.Length > 0 || filter.SelectedIndex != 0 || rankFilter.SelectedIndex != 0 || regionFilter.SelectedIndex != 0 || sort.SelectedIndex != 0 || overview.Family.Length > 0;
     }
+
+    void RefreshPresets()
+    {
+        var names = host.PetOverlayPreferences.FinderPresets.Select(p => p.Name).ToArray();
+        if (presets.Items.Cast<string>().SequenceEqual(names))
+            return;
+        updatingPresets = true;
+        var selected = presets.SelectedItem;
+        presets.ItemsSource = names;
+        presets.SelectedItem = selected;
+        updatingPresets = false;
+    }
+
+    void ApplyPreset()
+    {
+        if (updatingPresets || presets.SelectedItem is not string name)
+            return;
+        var preset = host.PetOverlayPreferences.FinderPresets.FirstOrDefault(p => p.Name == name);
+        if (preset == null)
+            return;
+        presetName.Text = preset.Name;
+        changingFilters = true;
+        search.Text = preset.Query;
+        filter.SelectedIndex = preset.Source;
+        rankFilter.SelectedIndex = preset.Rank;
+        sort.SelectedIndex = preset.Sort;
+        regionFilter.SelectedItem = preset.Region.Length == 0 ? "All regions" : preset.Region;
+        overview.Select(preset.Family);
+        changingFilters = false;
+        Search();
+    }
+
+    async Task SavePreset()
+    {
+        var preset = CurrentPreset(presetName.Text.Trim());
+        if (!preset.Valid)
+        { Ui.Error(new InvalidOperationException("Enter a filter name of 1–40 characters. Search text can have up to 120 characters."), this); return; }
+        var saved = host.PetOverlayPreferences.FinderPresets.Where(p => !p.Name.Equals(preset.Name, StringComparison.OrdinalIgnoreCase)).ToList();
+        if (saved.Count >= 10)
+        { Ui.Error(new InvalidOperationException("You can save up to 10 filters. Delete one or reuse its name."), this); return; }
+        saved.Add(preset);
+        if (await host.Change(new("patch", Patch: SettingsPatch.Fields((nameof(AppSettings.FinderPresets), saved)))))
+        {
+            RefreshPresets();
+            presets.SelectedItem = preset.Name;
+        }
+    }
+
+    FinderPreset CurrentPreset(string name) => new(name, search.Text, overview.Family, rankFilter.SelectedIndex,
+        regionFilter.SelectedIndex == 0 ? "" : (string)regionFilter.SelectedItem, sort.SelectedIndex, filter.SelectedIndex);
 
     void ResetFilters()
     {
@@ -267,6 +375,12 @@ public sealed class PetFinderWindow : Window
     {
         if (changingFilters)
             return;
+        if (presets.SelectedItem is string name && host.PetOverlayPreferences.FinderPresets.FirstOrDefault(p => p.Name == name) != CurrentPreset(name))
+        {
+            updatingPresets = true;
+            presets.SelectedItem = null;
+            updatingPresets = false;
+        }
         RefreshOverview();
         int? selected = (results.SelectedItem as SearchRow)?.Result.Pet.Id;
         var matches = Matches().Select(p => new SearchRow(p, portraits.Get(p.Pet.Id))).ToArray();
@@ -292,6 +406,7 @@ public sealed class PetFinderWindow : Window
 
     void Refresh()
     {
+        RefreshPresets();
         RefreshOverview();
         MarketHelp();
         if (!results.Items.Cast<SearchRow>().Select(r => r.Result.Pet.Id).SequenceEqual(Matches().Select(r => r.Pet.Id)))
@@ -311,13 +426,15 @@ public sealed class PetFinderWindow : Window
         string pinKey = host.PetOverlayPreferences.PinLimit + ":" + string.Join(",", host.PetOverlayPreferences.Pins());
         var today = DateOnly.FromDateTime(DateTime.Now);
         string marketKey = string.Join(";", Offers().Where(o => o.Offer.PetId == selectedId).Select(o => $"{o.Stock.Tab}:{o.Stock.SeenUtc:O}:{o.Offer.Price}"));
-        if (detailRendered && renderedPet == selectedId && renderedPins == pinKey && renderedDate == today && renderedMarket == marketKey)
+        string goalKey = (selectedId is int goalId ? host.Tracker.Profile.Pets.GetValueOrDefault(goalId)?.TargetRank?.ToString() : "") + ":" + host.Tracker.Ready;
+        if (detailRendered && renderedPet == selectedId && renderedPins == pinKey && renderedDate == today && renderedMarket == marketKey && renderedGoal == goalKey)
             return;
         detailRendered = true;
         renderedPet = selectedId;
         renderedPins = pinKey;
         renderedDate = today;
         renderedMarket = marketKey;
+        renderedGoal = goalKey;
         detail.Children.Clear();
         if (results.SelectedItem is not SearchRow selectedRow)
         {
@@ -390,6 +507,21 @@ public sealed class PetFinderWindow : Window
         Grid.SetColumn(pin, 1);
         summary.Children.Add(pin);
         detail.Children.Add(summary);
+        var goalRow = new StackPanel { Margin = new Thickness(0, 16, 0, 0) };
+        goalRow.Children.Add(Ui.Text("Farming goal", 11, Ui.Muted));
+        var goalChoice = new ComboBox { ItemsSource = new[] { "None", "Rank 1", "Rank 2", "Rank 3 / MAX" }, SelectedIndex = host.Tracker.Profile.Pets.GetValueOrDefault(id)?.TargetRank ?? 0, Width = 160, Height = 32, HorizontalAlignment = HorizontalAlignment.Left, IsEnabled = host.Tracker.Ready };
+        System.Windows.Automation.AutomationProperties.SetAutomationId(goalChoice, "FarmingGoal");
+        goalChoice.ToolTip = host.Tracker.Ready ? "Saved for this account. Goal alerts use your notification settings under Settings > Overlay." : "Connect your character to set a goal.";
+        goalChoice.SelectionChanged += async (_, _) => await host.Change(new("farming-goal", PetId: id, TargetRank: goalChoice.SelectedIndex == 0 ? null : goalChoice.SelectedIndex));
+        goalRow.Children.Add(goalChoice);
+        var goalStatus = Ui.Text("", 11, Ui.Muted);
+        goalStatus.Margin = new Thickness(0, 6, 0, 0);
+        goalStatus.DataContext = selectedRow;
+        goalStatus.SetBinding(TextBlock.TextProperty, new System.Windows.Data.Binding("FarmingGoal"));
+        goalRow.Children.Add(goalStatus);
+        detail.Children.Add(goalRow);
+        if (FarmingAtlas.Regions.Any(r => r.Points.Any(p => p.PetId == id)))
+            detail.Children.Add(Ui.Button("Open farming map", () => host.OpenFarmingMap(id)));
         var observed = Offers().Where(o => o.Offer.PetId == id).ToArray();
         if (observed.Length > 0)
         {

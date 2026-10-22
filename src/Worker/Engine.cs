@@ -531,7 +531,7 @@ public sealed class Engine : IDisposable
                 detail = maintenanceError;
             }
 
-            return new(3, profile, Tracker.Ready, status, detail, Tracker.CharacterName, Book.Profiles, Book.SelectedProfileKey, Tracker.RecentActivities.ToList(), Tracker.LastRankIncrease, LastSync, devices, rx, drops, gaps, Settings, DetectedCharacter: detected?.Name, Health: Health(), WorkerProcessId: Environment.ProcessId, Nearby: Tracker.Ready ? nearby.View(DateTimeOffset.UtcNow, Settings.NearbyStaleSeconds, Settings.ExperimentalDirections) : Array.Empty<NearbyPet>(), Market: running && game && CaptureError.Length == 0 && Tracker.Ready ? market.Values.Where(s => s.Fresh(DateTimeOffset.UtcNow)).ToArray() : Array.Empty<MarketStock>(), CollectionSynced: synced && running && game && CaptureError.Length == 0);
+            return new(3, profile, Tracker.Ready, status, detail, Tracker.CharacterName, Book.Profiles, Book.SelectedProfileKey, Tracker.RecentActivities.ToList(), Tracker.LastRankIncrease, LastSync, devices, rx, drops, gaps, Settings, DetectedCharacter: detected?.Name, Health: Health(), WorkerProcessId: Environment.ProcessId, Nearby: Tracker.Ready ? nearby.View(DateTimeOffset.UtcNow, Settings.NearbyStaleSeconds, Settings.ExperimentalDirections) : Array.Empty<NearbyPet>(), Market: running && game && CaptureError.Length == 0 && Tracker.Ready ? market.Values.Where(s => s.Fresh(DateTimeOffset.UtcNow)).ToArray() : Array.Empty<MarketStock>(), CollectionSynced: synced && running && game && CaptureError.Length == 0, Farming: Tracker.Ready ? Tracker.Farming.View() : null);
         }
     }
 
@@ -584,6 +584,12 @@ public sealed class Engine : IDisposable
                 case "activity-check":
                     activity.Start(DateTimeOffset.UtcNow);
                     Trace("Activity check", "Recording supported combat and pet message samples for 90 seconds; no chat or login messages");
+                    break;
+                case "reset-farming":
+                    Tracker.Farming.Reset();
+                    break;
+                case "farming-goal":
+                    Tracker.SetFarmingGoal(cmd.PetId ?? 0, cmd.TargetRank);
                     break;
                 case "settings":
                     SaveSettings(cmd.Settings ?? throw new InvalidDataException("Missing settings."));

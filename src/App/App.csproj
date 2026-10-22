@@ -18,6 +18,7 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="../Core/Core.csproj" />
+    <Content Include="../../assets/maps/**/*" Link="maps/%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
     <ProjectReference Include="../Updates/Updates.csproj" />
     <Content Include="../../assets/PetTracker.ico" Link="PetTracker.ico" CopyToOutputDirectory="PreserveNewest" />
     <Content Include="../../assets/portraits/*.png" Link="portraits/%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />

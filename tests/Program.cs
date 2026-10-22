@@ -135,6 +135,16 @@ using (var feedback = new Engine(Path.Combine(root, "nearby-progress")))
     feedback.Feed("progress", Points(0x0d, (1007, 5)));
     var activity = feedback.Tracker.RecentActivities.Single(a => a.PetId == 1007);
     Check(activity.SoulRewardUtc.HasValue && feedback.Tracker.Profile.Pets[1007].CurrentSouls == 10, "Decoded soul reward supplies Nearby feedback and the updated total");
+    Check(feedback.View(true, 1, 0, 0, 0, true).Farming?.Souls == 5, "Worker exports observed rewards, not the login balance");
+    feedback.Execute(new("farming-goal", PetId: 1007, TargetRank: 2));
+    feedback.Execute(new("reset-farming"));
+    Check(feedback.Tracker.Farming.View().Souls == 0 && feedback.Tracker.Profile.Pets[1007].CurrentSouls == 10 && feedback.Tracker.Profile.Pets[1007].TargetRank == 2 && feedback.Tracker.RecentActivities.Count > 0, "Session reset preserves collection, goals and Recent rows");
+    feedback.Feed("progress", Points(0x0d, (1007, 2)));
+    feedback.Gap("progress");
+    feedback.Feed("progress", Points(0x0d, (1007, 1)));
+    Check(feedback.Tracker.Farming.View().Souls == 3 && feedback.Tracker.Farming.View().Incomplete, "Worker marks session incomplete after a continuity loss");
+    feedback.StopCapture();
+    Check(feedback.View(false, 0, 0, 0, 0, true).Farming == null && feedback.Tracker.Farming.View().Souls == 0, "Capture reconnect clears transient session ownership");
 
 }
 using (var firstRun = new Engine(firstRunRoot))
@@ -355,6 +365,7 @@ using (var k = new Engine(Path.Combine(root, "kills")))
     Check(k.Tracker.CountedKills == 1, "Removal counts the life once");
     k.Feed("game", Frame(0x42, 0x36, new byte[] { 43, 0, 3 }));
     Check(k.Tracker.CountedKills == 1, "Duplicate removal never counts twice");
+    Check(k.Tracker.Farming.View().Souls == 0, "Kills and repeated removals never inflate farming souls");
 
     k.GameGeneration(1);
     k.GameGeneration(2);
@@ -1238,6 +1249,7 @@ Console.WriteLine($"PASS: {checks} standalone checks");
 
 PetFinderChecks.Run(Check);
 PetCollectionChecks.Run(Check);
+FarmingChecks.Run(Check);
 BlackMarketChecks.Run(Check, root, Identity, Snapshot, Frame);
 NearbyChecks.Run(Check, root, Identity, Frame);
 using (var abyssReward = new Engine(Path.Combine(root, "abyss-reward-independent")))

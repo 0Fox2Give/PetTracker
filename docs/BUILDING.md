@@ -51,6 +51,18 @@ an unsigned portable/installer artifact for that exact commit. These CI artifact
 are developer builds, not automatic updates. Publishing to the official signed
 update channel remains a separate maintainer action.
 
+## Offline farming map data
+
+`python tools/import-farming-maps.py` regenerates the map bundle from the pinned
+upstream commit in the script. It downloads only the two supported regions,
+filters spawn points through `FarmingLinks.json`, and records source SHA-256
+hashes in `assets/maps/provenance.json`. Review coordinate, source and rights
+changes before updating that pin. It is an explicit maintenance step, not part
+of builds or app startup. See [map limitations](FARMING.md).
+
+For a focused UI iteration, run the WPF test project with an output directory
+followed by `--farming-only`. The normal `tools/Test.ps1` still runs all suites.
+
 ## Layout
 
 - `src/Core`: collection accounting, protocol decoding, catalog and settings.

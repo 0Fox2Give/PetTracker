@@ -203,6 +203,7 @@ public sealed class SettingsWindow : Window
         var display = Group(overlay, "Size and visibility");
         Slider(display, "Scale", nameof(AppSettings.Scale), .75, 1.5);
         Slider(display, "Background opacity", nameof(AppSettings.Opacity), .4, 1);
+        Check(display, "Compact pet rows", nameof(AppSettings.Compact));
         Check(display, "Only show over Aion 2", nameof(AppSettings.GameOnly));
         var interaction = Group(overlay, "Position and interaction");
         Choice(interaction, "Interaction", new[] { "Move & interact", "Fixed position", "Pass clicks to game" }, Interaction(host.PetOverlayPreferences), v =>

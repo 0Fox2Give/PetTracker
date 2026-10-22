@@ -7,6 +7,16 @@ namespace PetTracker;
 
 public sealed class Tracker
 {
+    public FarmingSession Farming { get; } = new();
+
+    public void SetFarmingGoal(int id, int? rank)
+    {
+        if (!Ready || rank is < 1 or > 3 || !Profile.Pets.TryGetValue(id, out var pet))
+            throw new InvalidOperationException("Connect your character before setting a farming goal.");
+        pet.TargetRank = rank;
+        Save();
+        Changed?.Invoke();
+    }
     readonly List<RecentPetActivity> recent = new();
     public IReadOnlyList<RecentPetActivity> RecentActivities => recent;
     public IReadOnlyList<NearbyPet> NearbyPets { get; private set; } = Array.Empty<NearbyPet>();
@@ -62,6 +72,7 @@ public sealed class Tracker
             identityPending = true;
             ProfileKey = null;
             Profile = new();
+            Farming.Reset();
             Session.Clear();
             SessionPointObservations.Clear();
             preIdentityRoster.Clear();
@@ -141,6 +152,7 @@ public sealed class Tracker
         // If a different account/character arrives before its local name, require
         // a fresh local-player event rather than applying the old name/scope.
         Profile = loaded;
+        Farming.Reset();
         if (binding?.IsAccount == true)
             Profile.AccountKey = key;
         ProfileKey = key;
@@ -211,6 +223,7 @@ public sealed class Tracker
 
     public void Pause()
     {
+        Farming.Reset();
         NearbyPets = Array.Empty<NearbyPet>();
         ClearWorld();
         identityPending = true;
@@ -469,6 +482,7 @@ public sealed class Tracker
     {
         if (!Ready || amount is <= 0 or > 75 || !Profile.Pets.ContainsKey(id))
             return false;
+        Farming.Reward(id, amount, observed, false);
         RememberRecent(id, null, "", observed, true);
         LastPointObservation = new(id, amount, observed);
         Changed?.Invoke();
@@ -483,6 +497,7 @@ public sealed class Tracker
         if (!pet.CollectionImportedUtc.HasValue && (catalog == null || pet.CatalogName != catalog))
             return false;
         SessionPointObservations[petId] = checked(SessionPointObservations.GetValueOrDefault(petId) + value);
+        Farming.Reward(petId, value, observed, true);
         RememberRecent(petId, null, "", observed, true);
         if (!pet.Max && liveBalances.TryGetValue(petId, out int balance))
             liveBalances[petId] = checked(balance + value);
@@ -573,6 +588,7 @@ public sealed class Tracker
             return;
         var now = DateTimeOffset.UtcNow;
         LastRankIncrease = new(id, rank, now);
+        Farming.Rank(id, rank);
         RememberRecent(id, null, "", now);
     }
 
@@ -597,6 +613,7 @@ public sealed class Tracker
 
     public void InvalidateProgress()
     {
+        Farming.Interrupt();
         liveBalances.Clear();
         pendingSpends.Clear();
         bool changed = false;
@@ -693,6 +710,7 @@ public sealed class Tracker
     public long SessionFor(int pet) => Profile.Creatures.Values.Where(c => c.PetId == pet).Sum(c => Session.GetValueOrDefault(c.NpcId));
     public void NewSession()
     {
+        Farming.Reset();
         Session.Clear();
         SessionPointObservations.Clear();
         LastKill = null;
@@ -740,6 +758,8 @@ public sealed class Tracker
             throw new InvalidDataException("Unsupported pet profile.");
         foreach (var x in p.Pets)
         {
+            if (x.Value?.TargetRank is < 1 or > 3)
+                throw new InvalidDataException("Invalid farming goal.");
             if (x.Value == null || x.Key != x.Value.Id || x.Key <= 0 || x.Value.Level is < 0 or > 3 || x.Value.Souls is < 0 || x.Value.Goal is <= 0 || (x.Value.LevelDerivedFromSouls && (x.Value.Level != 3 || x.Value.LevelVerified)) || (x.Value.Souls.HasValue && ((!x.Value.Goal.HasValue && !(x.Value.Level == 0 && x.Value.CollectionImportedUtc.HasValue)) || x.Value.Goal.HasValue && x.Value.Souls > x.Value.Goal)) || x.Value.EstimatedSouls is < 0 || (x.Value.EstimatedSouls.HasValue && (!x.Value.Souls.HasValue || !x.Value.Goal.HasValue || x.Value.EstimatedSouls < x.Value.Souls || x.Value.EstimatedSouls > x.Value.Goal)))
                 throw new InvalidDataException("Invalid pet progress.");
         }

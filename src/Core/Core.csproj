@@ -6,6 +6,7 @@
     <AssemblyName>PetTracker.Core</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FarmingSpawns.json" LogicalName="PetTracker.FarmingSpawns.json" />
     <EmbeddedResource Include="PetSources.json" LogicalName="PetTracker.PetSources.json" />
     <EmbeddedResource Include="../../assets/catalog.json" LogicalName="PetTracker.Catalog.json" />
   </ItemGroup>

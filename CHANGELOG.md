@@ -1,5 +1,23 @@
 # Release notes
 
+## Unreleased
+
+- Windows farming map for Verteron and Altgard, with pet search, family filters,
+  hide maxed, pan, zoom and fit-to-spawns. Bundled map data works offline. Dots
+  show approximate static spawn locations; they do not show your position or
+  currently alive mobs.
+- Session summary of observed soul rewards and pets ranked up. Capture gaps
+  mark the summary incomplete. Resetting it leaves collection progress alone.
+- Account-specific farming goals, remaining souls and a completion notification.
+  Unknown or stale balances wait for sync; estimates stay labelled.
+- Up to ten saved combinations of collection filters.
+- Compact pet rows in Settings → Overlay.
+
+These changes are in development and are not in the public 0.1.54 installer.
+They do not resolve the unconfirmed first-unlock or merchant reports. The new
+windows are Windows-only; shared collection data remains Linux-compatible.
+See [farming tools](docs/FARMING.md) for behavior and map-source limitations.
+
 ## 0.1.54 — October 21, 2026
 
 - Improved soul collection reliability across pets by reducing capture overhead and increasing the buffer for traffic bursts. This addresses capture pressure that could interrupt collection sync and leave totals stuck.

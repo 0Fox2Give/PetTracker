@@ -2,6 +2,15 @@ Pet Tracker original code: GPL-3.0-only. See LICENSE and NOTICE.
 
 PET TRACKER — THIRD-PARTY NOTICES
 
+Offline farming map data and tiles are sourced from SkeeveAN/Aion-DPS-Meter,
+revision e16d35d4f19e19b03b0cb05ab4a1658bb51102a6.
+Source: https://github.com/SkeeveAN/Aion-DPS-Meter
+Upstream code/data tooling: MIT, Copyright (c) 2026 SkeeveTV.
+The full license is included in licenses/Aion-DPS-Meter-MIT.txt.
+Map artwork remains the property of NCSOFT; it is not licensed as Pet Tracker code.
+assets/maps/provenance.json records source hashes and calibration limitations.
+Spawn placement uses upstream's approximate manual calibration.
+
 Linux preview desktop dependencies (not part of the historical Windows 0.1.51 installer):
 Avalonia 12.1.4 (including Fluent theme and desktop backends) — MIT.
 Source: https://github.com/AvaloniaUI/Avalonia/tree/2d79ba55fae1b1e71c69f93a668080c9029e6a31

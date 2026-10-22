@@ -81,6 +81,14 @@ public static class UiChecks
         var settings = new AppSettings { Visible = true, ExpireInactive = true, InactiveSeconds = 20 };
         var now = DateTimeOffset.UtcNow;
         var view = new WorkerView(1, profile, true, "Live", "Sample data", "Ranger", new(), "0123456789abcdef01234567", new() { new(1050, null, "", now.AddSeconds(-18.7)) }, null, now, 1, 0, 0, 0, settings, CollectionSynced: true);
+        if (args.Contains("--farming-only"))
+        {
+            FarmingUiChecks.Run(Check, folder, view, Pump, ShowOffscreen);
+            Console.WriteLine($"PASS: {passed} farming UI checks");
+            host.Dispose();
+            app.Shutdown();
+            return;
+        }
         SyncNoticeChecks.Run(Check, folder, view, Pump, ShowOffscreen);
         host.Preview(view);
         var overlay = host.Overlay!;
@@ -1352,6 +1360,7 @@ public static class UiChecks
         Check(Activity.EmptyText(quietTracker, new AppSettings { TrackerMode = "Recent", ExpireInactive = true, InactiveSeconds = 20 }, DateTimeOffset.UtcNow, view) == "", "Expired Recent activity has no timeout chatter");
         PlacementChecks.Run(Check);
         CollectionFinderChecks.Run(Check, folder, view, Pump, ShowOffscreen);
+        FarmingUiChecks.Run(Check, folder, view, Pump, ShowOffscreen);
         var quitChecks = QuitChecks.Run(Check, folder, view).WaitAsync(TimeSpan.FromSeconds(15));
         while (!quitChecks.IsCompleted)
             Pump(10);

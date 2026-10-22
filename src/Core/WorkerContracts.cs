@@ -43,7 +43,8 @@ public record WorkerView(
     IReadOnlyList<NearbyPet>? Nearby = null,
     IReadOnlyList<CaptureAdapterOption>? Adapters = null,
     IReadOnlyList<MarketStock>? Market = null,
-    bool CollectionSynced = false);
+    bool CollectionSynced = false,
+    FarmingSessionView? Farming = null);
 public record Command(
     string Action,
     string? Key = null,
@@ -55,4 +56,5 @@ public record Command(
     Dictionary<string, Profile>? Imports = null,
     string? AccountName = null,
     Dictionary<string, JsonElement>? Patch = null,
-    int? PetId = null);
+    int? PetId = null,
+    int? TargetRank = null);
