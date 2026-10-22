@@ -17,12 +17,4 @@ public static class FarmingAtlas
         using var source = typeof(FarmingAtlas).Assembly.GetManifestResourceStream("PetTracker.FarmingSpawns.json")!;
         return JsonSerializer.Deserialize<SpawnRegion[]>(source)!;
     }
-
-    public static IEnumerable<PetSearchResult> Pets(SpawnRegion region, Profile profile, string query, string family, bool hideMaxed)
-    {
-        var ids = region.Points.Select(p => p.PetId).ToHashSet();
-        return PetFinder.Search(query, profile).Where(p => ids.Contains(p.Pet.Id) &&
-            (family.Length == 0 || PetFamily.Label(p.Pet.Id) == family) &&
-            (!hideMaxed || !profile.Pets.TryGetValue(p.Pet.Id, out var pet) || PetCollection.KnownRank(pet) != 3));
-    }
 }

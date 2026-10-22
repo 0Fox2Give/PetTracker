@@ -1,6 +1,6 @@
 namespace PetTracker;
 
-public enum CollectionRankFilter { All, Uncollected, RankOne, RankTwo, Maxed, Unknown }
+public enum CollectionRankFilter { All, Uncollected, RankOne, RankTwo, Maxed, Unknown, HideMaxed }
 public enum CollectionSort { Name, ClosestToNextRank }
 public sealed record CollectionFilters(string Family = "", CollectionRankFilter Rank = CollectionRankFilter.All, string Region = "", CollectionSort Sort = CollectionSort.Name);
 public sealed record CollectionSummary(int Total, int Collected, int Maxed, int Unknown);
@@ -47,6 +47,7 @@ public static class PetCollection
         CollectionRankFilter.RankTwo => rank == 2,
         CollectionRankFilter.Maxed => rank == 3,
         CollectionRankFilter.Unknown => rank == null,
+        CollectionRankFilter.HideMaxed => rank != 3,
         _ => true
     };
 }

@@ -82,10 +82,12 @@ static class FarmingChecks
         check(anchor.X == .476903 && anchor.Y == .5141284, "Known calibrated point retains axis order and normalization");
         profile = new Profile { Pets = Catalog.Create() };
         profile.Pets[1002].Level = 3;
-        check(FarmingAtlas.Pets(verteron, profile, "", "", true).Any(p => p.Pet.Id == 1002), "Map keeps unverified manual MAX visible");
+        var filters = new CollectionFilters(Rank: CollectionRankFilter.HideMaxed, Region: "Verteron");
+        check(PetCollection.Select(PetFinder.Search("", profile), profile, filters, true).Any(p => p.Pet.Id == 1002), "Shared map filters keep unverified manual MAX visible");
         profile.Pets[1002].LevelVerified = true;
-        check(!FarmingAtlas.Pets(verteron, profile, "", "", true).Any(p => p.Pet.Id == 1002), "Map hides confirmed maxed pets");
-        var spirits = FarmingAtlas.Pets(verteron, profile, "spirit", "Natura", false).ToArray();
+        check(!PetCollection.Select(PetFinder.Search("", profile), profile, filters, true).Any(p => p.Pet.Id == 1002), "Shared map filters hide confirmed maxed pets");
+        check(new FinderPreset("Unfinished", Rank: (int)CollectionRankFilter.HideMaxed).Valid, "Hide-maxed filter can be saved without changing older preset indexes");
+        var spirits = PetCollection.Select(PetFinder.Search("spirit", profile), profile, new("Natura", Region: "Verteron"), true).ToArray();
         check(spirits.Length > 0 && spirits.All(p => PetFamily.Label(p.Pet.Id) == "Natura"), "Map combines search and family filters");
     }
 }

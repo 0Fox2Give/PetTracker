@@ -5,13 +5,15 @@ The public 0.1.54 installer does not include them yet.
 
 ## Farming map
 
-Open **Find a pet → Farming map**, or use **Open farming map** in a pet's details.
-The overlay's **Find on map** menu opens this map for supported pets and keeps
-the source finder for other regions.
+Open **Find a pet**, select a pet, then choose **Map** beside **Details**.
+Both views share the collection list, search and filters. The overlay's
+**Find on map** menu reuses this window. Supported location links also open
+the Map tab; other regions retain their external source links.
 
-Choose Verteron or Altgard, then select a pet. Search accepts pet and mob names;
-family and **Hide maxed** filters can be combined. Only confirmed maxed pets are
-hidden. Selecting a pet frames its spawn points. Drag or use the arrow keys to
+Search accepts pet and mob names. Choose a region or family and use **Hide maxed**
+in the rank filter to exclude confirmed maxed pets. Saved filters apply to both
+views. In short windows, the **Filters** button contains family, rank, region
+and sorting controls. Selecting a pet frames its spawn points. Drag or use the arrow keys to
 pan, scroll or use the buttons to zoom, and hover a dot for the mob name.
 **Fit spawns** frames the selected pet again; **Reset** shows the region.
 

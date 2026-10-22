@@ -25,21 +25,13 @@ public sealed class Host : IDisposable
 
     long nextUiHealth;
     PetFinderWindow? finder;
-    FarmingMapWindow? farmingMap;
     FarmingSessionWindow? farmingSession;
     readonly Dictionary<int, (int Target, bool Complete)> goalStates = new();
     string? goalAccount;
     public void OpenFarmingMap(int? id = null)
     {
-        if (farmingMap == null)
-        {
-            farmingMap = new(this, id);
-            farmingMap.Closed += (_, _) => farmingMap = null;
-        }
-        else
-            farmingMap.SelectPet(id);
-        farmingMap.Show();
-        farmingMap.Activate();
+        OpenPetFinder(id);
+        finder!.ShowMap();
     }
     public void OpenFarmingSession()
     {
@@ -63,6 +55,8 @@ public sealed class Host : IDisposable
         else
             finder.SelectPet(id);
         finder.Show();
+        if (finder.WindowState == WindowState.Minimized)
+            finder.WindowState = WindowState.Normal;
         finder.Activate();
     }
 
@@ -538,7 +532,6 @@ public sealed class Host : IDisposable
         accounts?.Close();
         settings?.Close();
         finder?.Close();
-        farmingMap?.Close();
         farmingSession?.Close();
     }
 }

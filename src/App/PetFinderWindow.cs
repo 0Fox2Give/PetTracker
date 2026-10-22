@@ -19,10 +19,11 @@ public sealed class PetFinderWindow : Window
     bool changingFilters;
     readonly CollectionOverview overview = new();
     readonly TextBlock collectionStatus = Ui.Text("", 11, Ui.Muted);
-    readonly ComboBox rankFilter = new() { ItemsSource = new[] { "All ranks", "Not collected", "Rank 1", "Rank 2", "Maxed", "Unknown rank" }, SelectedIndex = 0 };
+    readonly ComboBox rankFilter = new() { ItemsSource = new[] { "All ranks", "Not collected", "Rank 1", "Rank 2", "Maxed", "Unknown rank", "Hide maxed" }, SelectedIndex = 0 };
     readonly ComboBox regionFilter = new() { ItemsSource = new[] { "All regions" }.Concat(PetFinder.Entries.SelectMany(e => e.AvailableMaps).Select(m => m.Region).Distinct().Order()).ToArray(), SelectedIndex = 0 };
     readonly ComboBox sort = new() { ItemsSource = new[] { "Name A–Z", "Closest to next rank" }, SelectedIndex = 0 };
     readonly Button clearFilters = Ui.Button("Clear filters", () => { });
+    readonly Button compactFilters = Ui.Button("Filters", () => { });
     readonly ComboBox filter = new()
     {
         ItemsSource = new[]
@@ -39,6 +40,10 @@ public sealed class PetFinderWindow : Window
     readonly TextBox search = new();
     readonly ListBox results = new();
     readonly StackPanel detail = new();
+    readonly TabControl views = new();
+    readonly TabItem mapTab = new() { Header = "Map" };
+    readonly FarmingMapView mapView;
+    readonly ScrollViewer detailScroll;
     readonly TextBlock count = Ui.Text("", 11, Ui.Muted);
     readonly PetPortraits portraits;
     sealed class SearchRow(PetSearchResult result, ImageSource? portrait) : INotifyPropertyChanged
@@ -84,10 +89,11 @@ public sealed class PetFinderWindow : Window
     public PetFinderWindow(Host host, int? petId = null)
     {
         this.host = host;
+        mapView = new(Open);
         portraits = new(host.AssetRoot);
         Title = "Pet Tracker — Find a pet";
-        Width = 1000;
-        Height = 740;
+        Width = 1100;
+        Height = 780;
         MinWidth = 720;
         MinHeight = 500;
         WindowStartupLocation = WindowStartupLocation.CenterScreen;
@@ -109,7 +115,6 @@ public sealed class PetFinderWindow : Window
         var savedButton = Ui.Button("Saved filters", () => savedPopup.IsOpen = true);
         savedPopup.PlacementTarget = savedButton;
         windows.Children.Add(savedButton);
-        windows.Children.Add(Ui.Button("Farming map", () => host.OpenFarmingMap((results.SelectedItem as SearchRow)?.Result.Pet.Id)));
         windows.Children.Add(Ui.Button("This session", host.OpenFarmingSession));
         DockPanel.SetDock(windows, Dock.Right);
         titleRow.Children.Add(windows);
@@ -119,10 +124,22 @@ public sealed class PetFinderWindow : Window
         collectionStatus.ToolTip = "Counts cover supported pets in this account. Unknown ranks are not counted as missing pets.";
         System.Windows.Automation.AutomationProperties.SetAutomationId(collectionStatus, "CollectionStatus");
         header.Children.Add(collectionStatus);
-        header.Children.Add(overview);
+        var filterPanel = new StackPanel();
+        var filtersPopup = new Popup { StaysOpen = false, Placement = PlacementMode.Bottom, AllowsTransparency = true };
+        var filtersButton = compactFilters;
+        filtersButton.Click += (_, _) => filtersPopup.IsOpen = true;
+        filtersButton.Height = 32;
+        filtersButton.Padding = new Thickness(10, 2, 10, 2);
+        filtersButton.Margin = new Thickness(8, 0, 0, 0);
+        filtersButton.Visibility = Visibility.Collapsed;
+        filtersPopup.PlacementTarget = filtersButton;
+        var popupFilters = new Border { Width = 440, Padding = new Thickness(14), Background = Ui.Dark, BorderBrush = Ui.Muted, BorderThickness = new Thickness(1), CornerRadius = new CornerRadius(6) };
+        System.Windows.Automation.AutomationProperties.SetAutomationId(filtersPopup, "CompactFiltersPopup");
+        System.Windows.Automation.AutomationProperties.SetAutomationId(filtersButton, "CompactFilters");
         var toolbar = new Grid { Margin = new Thickness(0, 0, 0, 10) };
         toolbar.ColumnDefinitions.Add(new() { Width = new GridLength(1, GridUnitType.Star), MaxWidth = 400 });
         toolbar.ColumnDefinitions.Add(new() { Width = new GridLength(212) });
+        toolbar.ColumnDefinitions.Add(new() { Width = GridLength.Auto });
         search.Tag = "Search pets or mobs…";
         search.Height = 32;
         search.VerticalContentAlignment = VerticalAlignment.Center;
@@ -134,7 +151,10 @@ public sealed class PetFinderWindow : Window
         filter.Height = 32;
         Grid.SetColumn(filter, 1);
         toolbar.Children.Add(filter);
+        Grid.SetColumn(filtersButton, 2);
+        toolbar.Children.Add(filtersButton);
         header.Children.Add(toolbar);
+        filterPanel.Children.Add(overview);
         var refinements = new WrapPanel { Margin = new Thickness(0, 0, 0, 8) };
         void AddFilter(ComboBox control, string id, string label, double width)
         {
@@ -154,7 +174,9 @@ public sealed class PetFinderWindow : Window
         clearFilters.Padding = new Thickness(10, 2, 10, 2);
         clearFilters.Click += (_, _) => ResetFilters();
         refinements.Children.Add(clearFilters);
-        header.Children.Add(refinements);
+        filterPanel.Children.Add(refinements);
+        header.Children.Add(filterPanel);
+        header.Children.Add(filtersPopup);
         var savedFilters = new StackPanel();
         savedFilters.Children.Add(Ui.Text("Saved filters", 12));
         var choosePreset = new StackPanel { Orientation = Orientation.Horizontal };
@@ -186,7 +208,7 @@ public sealed class PetFinderWindow : Window
         System.Windows.Automation.AutomationProperties.SetAutomationId(presetName, "FinderPresetName");
         savedPopup.Child = new Border { Child = savedFilters, Padding = new Thickness(14), Background = Ui.Dark, BorderBrush = Ui.Muted, BorderThickness = new Thickness(1), CornerRadius = new CornerRadius(6) };
         header.Children.Add(savedPopup);
-        Closed += (_, _) => savedPopup.IsOpen = false;
+        Closed += (_, _) => { savedPopup.IsOpen = false; filtersPopup.IsOpen = false; };
         presets.SelectionChanged += (_, _) => ApplyPreset();
         RefreshPresets();
         header.Children.Add(marketHelp);
@@ -236,21 +258,31 @@ public sealed class PetFinderWindow : Window
         body.Children.Add(new Border { Child = collection, Background = new SolidColorBrush(Color.FromRgb(14, 20, 28)), BorderBrush = new SolidColorBrush(Color.FromRgb(30, 41, 54)), BorderThickness = new Thickness(1), CornerRadius = new CornerRadius(10), Padding = new Thickness(6) });
         results.BorderThickness = new Thickness(0);
         results.Background = Brushes.Transparent;
-        var scroll = new ScrollViewer
+        detailScroll = new ScrollViewer
         {
             Content = detail,
             VerticalScrollBarVisibility = ScrollBarVisibility.Auto,
             HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled
         };
         detail.Margin = new Thickness(0, 0, 8, 0);
+        views.Style = (Style)FindResource("FinderViews");
+        views.ItemContainerStyle = (Style)FindResource("FinderViewTab");
+        views.Items.Add(new TabItem { Header = "Details", Content = detailScroll });
+        mapTab.Content = mapView;
+        views.Items.Add(mapTab);
+        System.Windows.Automation.AutomationProperties.SetAutomationId(views, "FinderViews");
+        views.SelectionChanged += (_, e) =>
+        {
+            if (ReferenceEquals(e.Source, views)) RefreshMap();
+        };
         var card = new Border
         {
-            Child = scroll,
+            Child = views,
             Background = new SolidColorBrush(Color.FromRgb(16, 23, 32)),
             BorderBrush = new SolidColorBrush(Color.FromRgb(30, 41, 54)),
             BorderThickness = new Thickness(1),
             CornerRadius = new CornerRadius(10),
-            Padding = new Thickness(20),
+            Padding = new Thickness(16),
             Margin = new Thickness(16, 0, 0, 0)
         };
         Grid.SetColumn(card, 1);
@@ -271,6 +303,20 @@ public sealed class PetFinderWindow : Window
             overview.SetCompact(compact);
             overview.Margin = new Thickness(0, 0, -6, compact ? 10 : 14);
             collectionStatus.Margin = new Thickness(0, 5, 0, compact ? 10 : 14);
+            filtersButton.Visibility = compact ? Visibility.Visible : Visibility.Collapsed;
+            if (compact && header.Children.Contains(filterPanel))
+            {
+                header.Children.Remove(filterPanel);
+                popupFilters.Child = filterPanel;
+                filtersPopup.Child = popupFilters;
+            }
+            else if (!compact && popupFilters.Child != null)
+            {
+                filtersPopup.IsOpen = false;
+                popupFilters.Child = null;
+                filtersPopup.Child = null;
+                header.Children.Insert(header.Children.IndexOf(toolbar) + 1, filterPanel);
+            }
             Dispatcher.BeginInvoke(() =>
             {
                 if (results.SelectedItem != null) results.ScrollIntoView(results.SelectedItem);
@@ -298,6 +344,8 @@ public sealed class PetFinderWindow : Window
         string state = host.View?.CollectionSynced == true ? "Collection synced" : "Saved collection · log in with the tracker running to sync";
         collectionStatus.Text = $"{state} · {totals.Maxed} maxed · {totals.Unknown} unknown rank";
         clearFilters.IsEnabled = search.Text.Length > 0 || filter.SelectedIndex != 0 || rankFilter.SelectedIndex != 0 || regionFilter.SelectedIndex != 0 || sort.SelectedIndex != 0 || overview.Family.Length > 0;
+        int hiddenFilters = (rankFilter.SelectedIndex > 0 ? 1 : 0) + (regionFilter.SelectedIndex > 0 ? 1 : 0) + (sort.SelectedIndex > 0 ? 1 : 0) + (overview.Family.Length > 0 ? 1 : 0);
+        compactFilters.Content = hiddenFilters == 0 ? "Filters" : $"Filters · {hiddenFilters}";
     }
 
     void RefreshPresets()
@@ -391,6 +439,10 @@ public sealed class PetFinderWindow : Window
         count.Text = matches.Length == 1 ? "1 pet" : $"{matches.Length} pets";
         MarketHelp();
         results.SelectedItem = matches.FirstOrDefault(p => p.Result.Pet.Id == selected) ?? matches.FirstOrDefault();
+        Dispatcher.BeginInvoke(() =>
+        {
+            if (results.SelectedItem != null) results.ScrollIntoView(results.SelectedItem);
+        });
         RefreshDetail();
     }
 
@@ -402,6 +454,20 @@ public sealed class PetFinderWindow : Window
         results.SelectedItem = results.Items.Cast<SearchRow>().FirstOrDefault(p => p.Result.Pet.Id == id);
         if (results.SelectedItem != null)
             results.ScrollIntoView(results.SelectedItem);
+    }
+
+    public void ShowMap(string? region = null)
+    {
+        if (region != null)
+            regionFilter.SelectedItem = region;
+        views.SelectedItem = mapTab;
+        RefreshMap();
+    }
+
+    void RefreshMap()
+    {
+        if (views.SelectedItem == mapTab)
+            mapView.ShowPet((results.SelectedItem as SearchRow)?.Result, regionFilter.SelectedIndex == 0 ? "" : (string)regionFilter.SelectedItem);
     }
 
     void Refresh()
@@ -423,6 +489,7 @@ public sealed class PetFinderWindow : Window
     void RefreshDetail()
     {
         int? selectedId = (results.SelectedItem as SearchRow)?.Result.Pet.Id;
+        RefreshMap();
         string pinKey = host.PetOverlayPreferences.PinLimit + ":" + string.Join(",", host.PetOverlayPreferences.Pins());
         var today = DateOnly.FromDateTime(DateTime.Now);
         string marketKey = string.Join(";", Offers().Where(o => o.Offer.PetId == selectedId).Select(o => $"{o.Stock.Tab}:{o.Stock.SeenUtc:O}:{o.Offer.Price}"));
@@ -430,6 +497,8 @@ public sealed class PetFinderWindow : Window
         if (detailRendered && renderedPet == selectedId && renderedPins == pinKey && renderedDate == today && renderedMarket == marketKey && renderedGoal == goalKey)
             return;
         detailRendered = true;
+        if (renderedPet != selectedId)
+            detailScroll.ScrollToTop();
         renderedPet = selectedId;
         renderedPins = pinKey;
         renderedDate = today;
@@ -520,8 +589,6 @@ public sealed class PetFinderWindow : Window
         goalStatus.SetBinding(TextBlock.TextProperty, new System.Windows.Data.Binding("FarmingGoal"));
         goalRow.Children.Add(goalStatus);
         detail.Children.Add(goalRow);
-        if (FarmingAtlas.Regions.Any(r => r.Points.Any(p => p.PetId == id)))
-            detail.Children.Add(Ui.Button("Open farming map", () => host.OpenFarmingMap(id)));
         var observed = Offers().Where(o => o.Offer.PetId == id).ToArray();
         if (observed.Length > 0)
         {
@@ -568,8 +635,9 @@ public sealed class PetFinderWindow : Window
             foreach (var map in selected.AvailableMaps.OrderBy(m => m.Region == (string?)regionFilter.SelectedItem ? 0 : 1))
             {
                 var location = new StackPanel();
-                var button = Ui.Button(map.Region + " ↗", () => Open(map.Url));
-                button.ToolTip = "Open farming map · " + map.Region;
+                bool builtIn = FarmingAtlas.Regions.Any(r => r.Name == map.Region && r.Points.Any(p => p.PetId == id));
+                var button = Ui.Button(map.Region + (builtIn ? " · View map" : " ↗"), () => { if (builtIn) ShowMap(map.Region); else Open(map.Url); });
+                button.ToolTip = (builtIn ? "Show in Map tab · " : "Open source map · ") + map.Region;
                 button.HorizontalAlignment = HorizontalAlignment.Left;
                 button.Margin = new Thickness(0, 0, 0, 8);
                 location.Children.Add(button);

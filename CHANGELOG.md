@@ -1,5 +1,18 @@
 # Release notes
 
+## 0.1.56 — Local testing, October 22, 2026
+
+- Moved the farming map into Find a pet. Details and Map share one pet list,
+  search and filters; overlay shortcuts and supported location links reuse it.
+- Kept map position and zoom when switching views or receiving collection updates.
+- Added Hide maxed to the shared rank filter and saved filters. Compact windows
+  keep filters in a popup so the map has room to display.
+- Clear map markers for empty searches and pets without mapped spawns; keep the
+  selected pet visible after changing filters and reset details when changing pets.
+
+Local test build only. Public release remains 0.1.54. Map accuracy and the
+outstanding first-unlock and merchant reports still need live verification.
+
 ## 0.1.55 — Local testing, October 22, 2026
 
 - Windows farming map for Verteron and Altgard, with pet search, family filters,

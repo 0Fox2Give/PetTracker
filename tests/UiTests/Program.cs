@@ -443,7 +443,7 @@ public static class UiChecks
 
         Check(Children(finder).OfType<ListBox>().Single().Items.Count == 1, "Finder searches mobs outside recent activity");
 
-        Check(Children(finder).OfType<Button>().Any(b => Equals(b.Content, "Verteron ↗")), "Finder offers the verified region map");
+        Check(Children(finder).OfType<Button>().Any(b => (Equals(b.Content, "Verteron · View map") || Equals(b.Content, "Verteron ↗"))), "Finder offers the verified region map");
 
         Program.Save(finder, Path.Combine(folder, "pet-finder.png"), 860, 640);
         finderSearch.Text = "Young Kailin";
@@ -460,7 +460,7 @@ public static class UiChecks
         Pump(40);
         finderSearch.Text = "Foul Skama";
         Pump(30);
-        var stableMapButton = Children(finder).OfType<Button>().Single(b => Equals(b.Content, "Verteron ↗"));
+        var stableMapButton = Children(finder).OfType<Button>().Single(b => (Equals(b.Content, "Verteron · View map") || Equals(b.Content, "Verteron ↗")));
         host.Preview(view);
         Pump(30);
         Check(Children(finder).Contains(stableMapButton), "Background status refresh preserves map controls and reading position");

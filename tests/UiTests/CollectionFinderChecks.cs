@@ -14,6 +14,11 @@ static class CollectionFinderChecks
 {
     static IEnumerable<DependencyObject> Children(DependencyObject root)
     {
+        if (root is Popup popup && popup.Child != null)
+        {
+            yield return popup.Child;
+            foreach (var child in Children(popup.Child)) yield return child;
+        }
         for (int i = 0; i < VisualTreeHelper.GetChildrenCount(root); i++)
         {
             var child = VisualTreeHelper.GetChild(root, i);
@@ -60,7 +65,7 @@ static class CollectionFinderChecks
         int expected = PetCollection.Select(entries, profile, new("Fera", CollectionRankFilter.RankTwo, "Verteron", CollectionSort.ClosestToNextRank), true).Count();
         check(expected > 0 && list.Items.Count == expected, "Finder combines family, rank and region with next-rank sorting");
         check(Children(finder).OfType<TextBlock>().Any(t => t.Text.Contains("soul") && t.Text.Contains("to Rank 3")), "Verified next-rank distances are visible in filtered rows");
-        check(Children(finder).OfType<Button>().First(b => (b.Content?.ToString() ?? "").EndsWith(" ↗")).Content?.ToString() == "Verteron ↗", "Selected farming region appears first in pet details");
+        check(Children(finder).OfType<Button>().First(b => (b.ToolTip?.ToString() ?? "").StartsWith("Show in Map tab · ") || (b.ToolTip?.ToString() ?? "").StartsWith("Open source map · ")).Content?.ToString()?.StartsWith("Verteron") == true, "Selected farming region appears first in pet details");
         Program.Save(finder, Path.Combine(folder, "collection-filtered.png"), 1000, 740);
         var reset = Children(finder).OfType<Button>().Single(b => Equals(b.Content, "Clear filters"));
         reset.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
