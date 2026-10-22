@@ -4,23 +4,30 @@ A small overlay for **AION 2** that shows your pet ranks and how many souls you 
 
 **[Download Pet Tracker for Windows](https://github.com/0Fox2Give/PetTracker/releases/download/updates/PetTracker.Desktop-win-stable-Setup.exe)**
 
-Public beta · Windows x64 · Version 0.1.52
+Public beta · Windows x64 · Version 0.1.54
 
 **Open source under GPLv3.** The application, capture worker, updater, tests and build scripts are here. [Build from source](docs/BUILDING.md) · [License](LICENSE)
 
 [Setup and troubleshooting](SUPPORT.md) · [What's new](CHANGELOG.md) · [Report a problem](https://github.com/0Fox2Give/PetTracker/issues/new?template=bug_report.md)
 
-Use the installer linked above to run the app. **Code → Download ZIP** downloads the current source. The automatic source archives on older release tags may contain only the former delivery repository; use [source-0.1.51](https://github.com/0Fox2Give/PetTracker/tree/source-0.1.51) for the initial full source snapshot. The other release assets support automatic updates and older versions.
+## New in 0.1.54
+
+- **More reliable soul tracking.** Reduced capture overhead and increased buffering to help prevent missed game traffic from interrupting collection updates. This applies across pets.
+- **Clearer sync status.** If the tracker loses collection sync, it shows **Totals paused** and keeps the last known counts. Return to character selection and log back in with the tracker open to reload them.
+- **Easier collection browsing.** Find a pet now shows totals by family, combines family, rank, region and source filters, and can sort pets by souls needed for their next rank.
+- **Custom tracker shortcut.** Choose a key or a combination with Ctrl, Alt and Shift in Settings → Overlay → More overlay options.
+
+Already installed? Open **Settings → Updates**. After updating, return to character selection and log back in with Pet Tracker running. Your saved collection, settings and pins are preserved.
 
 ## What it does
 
 - Shows recent soul gains and progress toward the next rank, with family tags and matching crystal icons.
 - Lists nearby pet mobs the tracker has detected, with an option to hide maxed pets.
-- Lets you search for a pet, check its known sources, and open a farming map. Hover a pet row to see souls remaining when its progress is known.
+- Lets you search pets or mobs, filter your collection, check known sources, and open a farming map. Hover a pet row to see souls remaining when its progress is known.
 - Lets you pin several pets in a stable order. Choose a limit from one to five in Settings → Tracking (three by default).
 - Shows a Black Cloud Merchant shopping list for chest, merchant and dungeon pets you have not maxed, with rank, soul progress and price from recently observed offers. Open the shop after your collection synchronizes.
 
-Nearby doesn't have a fixed detection radius, and some mobs aren't covered yet. Map links show spawn locations. Walking arrows and metre distances are still being worked on.
+Nearby lists mobs detected in game traffic; it doesn't have a fixed detection radius. Maps open through external links and show spawn locations. There is no built-in player-position map, walking arrow or distance display.
 
 ## Install
 
@@ -41,6 +48,14 @@ If something looks wrong, [report it here](https://github.com/0Fox2Give/PetTrack
 
 [Troubleshooting, alts and privacy](SUPPORT.md) · [Release notes](https://github.com/0Fox2Give/PetTracker/releases/tag/updates)
 
+## Known issues
+
+- Some first unlocks can remain on **Rank increase pending**. Relogging with the tracker running reloads the collection.
+- Merchant recommendations disappearing after a purchase, and some empty merchant lists, still need confirmation after the recent fixes.
+- The Linux client is experimental. Game capture under Wine/Proton and overlay placement on KDE/Wayland still need live testing.
+
+The capture changes have been tested in game, but they don't guarantee that every missing soul or sync issue is resolved. If totals pause again, include a support report from **Settings → Help** with your bug report.
+
 ## Before you use it
 
 Pet Tracker is unofficial and has no approval from NC/NCSOFT. Using third-party tools can put your game account at risk. The Windows installer is unsigned and may trigger a security warning.
@@ -56,6 +71,8 @@ and compatibility testing. Live AION 2/Wine support has not been verified; the
 download above remains the Windows release.
 
 This repository contains the full application source and official downloads. Contributions are welcome; maintainers review changes and control official releases.
+
+Use the installer above to run the app. **Code → Download ZIP** downloads source for building it yourself. Older release-tag archives may predate source publication; [source-0.1.51](https://github.com/0Fox2Give/PetTracker/tree/source-0.1.51) is the initial full source snapshot. Versioned installers remain available for earlier releases.
 
 | Looking for | Where to go |
 | --- | --- |

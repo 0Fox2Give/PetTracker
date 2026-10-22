@@ -1,14 +1,15 @@
 # Release notes
 
-## 0.1.54 — Local testing
+## 0.1.54 — October 21, 2026
 
-- Skip empty TCP acknowledgements before game-connection discovery and reserve a larger native capture buffer for traffic bursts. These changes address capture pressure seen alongside lost collection sync; live confirmation is still needed.
-- Show a visible Totals paused notice with login steps when collection sync is lost, including when pets are already displayed. Last-known progress bars turn gray; fresh collection data clears the notice. Saved totals are never increased from incomplete rewards.
-
-## 0.1.53 — Local testing
-
+- Improved soul collection reliability across pets by reducing capture overhead and increasing the buffer for traffic bursts. This addresses capture pressure that could interrupt collection sync and leave totals stuck.
+- Added a **Totals paused** notice when collection sync is lost, including when pets are already displayed. Last-known progress bars turn gray; return to character selection and log back in with the tracker open to reload the collection. The tracker does not guess missing gains.
 - Windows Find a pet now has collection totals by family, combined family/rank/region filters, and sorting by souls remaining to the next rank. Unknown ranks stay separate from uncollected pets; stale, estimated and unverified balances do not receive next-rank recommendations. The selected farming region appears first in the source details.
 - Replaced the three Windows tracker-shortcut presets with a key recorder. Choose a key alone or combine Ctrl, Alt and Shift, clear the binding, or cancel without changing it. Existing Ctrl+Alt shortcuts are preserved. Conflicting shortcuts show an error in Settings.
+
+Includes the collection and shortcut changes tested locally in 0.1.53. After updating, relog with Pet Tracker running. Saved collections, settings and pins are preserved.
+
+Live testing confirmed soul gains updating after a fresh login with no capture drops or stream gaps during the check. This does not close every collection issue: first-unlock recognition remains open, and the reported merchant-list cases and Linux overlay placement still need live confirmation.
 
 ## 0.1.52 — October 20, 2026
 

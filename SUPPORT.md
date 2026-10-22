@@ -20,7 +20,11 @@ Start the tracker before logging into your character. If it was opened after you
 
 There is no sync button. Synchronization happens automatically when the tracker receives that collection data. If capture is unavailable, fix that connection first; logging in again cannot fix a missing capture driver.
 
-In 0.1.52, Settings → Help reports collection sync separately from incoming game traffic. A connected capture session does not by itself mean your collection has loaded.
+Settings → Help reports collection sync separately from incoming game traffic. A connected capture session does not by itself mean your collection has loaded.
+
+Version 0.1.54 reduces capture overhead and increases buffering to make soul collection tracking more consistent across pets. If game traffic is still lost, the overlay shows **Totals paused**, turns the progress bars gray and keeps the last known totals. Return to character selection and log back in with Pet Tracker open. Fresh collection data clears the notice and restores the bars.
+
+If totals pause repeatedly, save a support report from **Settings → Help**. Include your version, region and the pet involved, and mention whether Recent and Nearby both stopped updating. The tracker does not guess missing soul gains.
 
 The first unlock can still leave a pet showing **Rank increase pending**. Version 0.1.51 prevents a soul deduction from falsely restarting the counter at 0/5 while rank confirmation is missing, but first-unlock recognition is still an open issue. Logging back in with the tracker running reloads the collection as a workaround. Please report the exact pet, version and region if it happens.
 
@@ -54,11 +58,17 @@ Pin pets from Find a pet, or right-click an overlay row. Pins stay in the order 
 
 Settings are grouped into Tracking, Overlay, Account, Updates and Help. Windows startup and start-hidden options have been removed. Reset this section on Tracking or Overlay preserves your collection, accounts and pinned pets. Older cosmetic preferences are preserved until you reset Overlay.
 
+## Collection filters and shortcuts
+
+Find a pet shows collection totals by family. Combine family, rank, region and source filters to narrow the list, or sort by souls remaining to the next rank. Unknown ranks stay separate from uncollected pets. Stale or estimated totals are excluded from next-rank recommendations until the tracker has confirmed progress.
+
+Open **Settings → Overlay → More overlay options** and select **Tracker shortcut** to record the key or combination you want. You can combine Ctrl, Alt and Shift with a key, clear the shortcut, or cancel without changing it. If that combination cannot be registered, Settings shows an error so you can choose another.
+
 ## Updating
 
 Open **Settings → Updates**, check for an update, and download it. Restart the tracker when you're ready. Collections and preferences are saved separately from the program files.
 
-The public installer is currently **0.1.52**. Downloads and updates are hosted here; the old PetTracker-Testing repository has been retired.
+The public installer is currently **0.1.54**. After updating, return to character selection and log back in with the tracker running to load your collection. Downloads and updates are hosted here; the old PetTracker-Testing repository has been retired.
 
 If Restart to update says **Could not safely close capture**, an older version may have missed the successful shutdown. Version 0.1.48 fixes that check. To get past it on an older copy, choose **Quit Pet Tracker** from its Windows tray icon, then download and run the current installer. Do not delete your collection folder. If Quit itself reports a save error, leave the tracker running and save a support report instead.
 
