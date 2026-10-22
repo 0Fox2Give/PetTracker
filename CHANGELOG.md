@@ -1,6 +1,6 @@
 # Release notes
 
-## Unreleased
+## 0.1.55 — Local testing, October 22, 2026
 
 - Windows farming map for Verteron and Altgard, with pet search, family filters,
   hide maxed, pan, zoom and fit-to-spawns. Bundled map data works offline. Dots
@@ -13,7 +13,7 @@
 - Up to ten saved combinations of collection filters.
 - Compact pet rows in Settings → Overlay.
 
-These changes are in development and are not in the public 0.1.54 installer.
+These changes are being tested locally and are not in the public 0.1.54 installer.
 They do not resolve the unconfirmed first-unlock or merchant reports. The new
 windows are Windows-only; shared collection data remains Linux-compatible.
 See [farming tools](docs/FARMING.md) for behavior and map-source limitations.
