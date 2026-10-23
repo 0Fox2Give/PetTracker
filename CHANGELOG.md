@@ -1,5 +1,15 @@
 # Release notes
 
+## 0.1.57 — October 23, 2026
+
+- Keep merchant status visible in Settings → Tracking after collection sync,
+  including when no shop stock has been received.
+- Add collection sync and merchant stock counts to support reports. Reports
+  still exclude pet lists, character names and packet data.
+
+This improves troubleshooting. The reported missing merchant recommendations
+are still under investigation.
+
 ## 0.1.56 — October 22, 2026
 
 - Added offline farming maps for Verteron and Altgard inside Find a pet. Details

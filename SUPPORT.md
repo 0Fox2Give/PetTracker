@@ -40,7 +40,11 @@ Version 0.1.52 adds Phantasmal Lakshmi, Black Smoke Murute, Harcon, Red Spark Ig
 
 An empty list may mean none of the observed offers qualify. Recommendations also stay hidden until the collection is synchronized. Stock expires after two minutes or at shop refresh, and clears when the connection changes. Confirm the offer in game before purchasing; the tracker does not buy or refresh anything.
 
-Settings → Tracking → Black Cloud Merchant shows guidance when capture or collection sync is missing.
+In 0.1.57, **Settings → Tracking → Black Cloud Merchant** keeps its status visible
+after collection sync. It distinguishes missing stock from received stock with no
+eligible recommendations. Support reports from **Settings → Help** include those
+counts and collection sync status, without your pet list or packet data. This
+improves diagnosis; the missing-list reports remain unresolved.
 
 If the list is missing, enable **Show merchant shopping list in overlay**, check collection sync, then open both **Special** and **Pets** in game. Both tabs are supported for the recorded stock format. Other regions or changed stock formats may need investigation. If an eligible pet is still missing, include its name, shop tab, region and tracker version with a support report. An empty list alone does not establish that tracking worked.
 
@@ -76,7 +80,7 @@ Open **Settings → Overlay → More overlay options** and select **Tracker shor
 
 Open **Settings → Updates**, check for an update, and download it. Restart the tracker when you're ready. Collections and preferences are saved separately from the program files.
 
-The public installer is currently **0.1.56**. After updating, return to character selection and log back in with the tracker running to load your collection. Downloads and updates are hosted here; the old PetTracker-Testing repository has been retired.
+The public installer is currently **0.1.57**. After updating, return to character selection and log back in with the tracker running to load your collection. Downloads and updates are hosted here; the old PetTracker-Testing repository has been retired.
 
 If Restart to update says **Could not safely close capture**, an older version may have missed the successful shutdown. Version 0.1.48 fixes that check. To get past it on an older copy, choose **Quit Pet Tracker** from its Windows tray icon, then download and run the current installer. Do not delete your collection folder. If Quit itself reports a save error, leave the tracker running and save a support report instead.
 

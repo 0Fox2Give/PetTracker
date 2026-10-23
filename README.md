@@ -4,13 +4,23 @@ A small overlay for **AION 2** that shows your pet ranks and how many souls you 
 
 **[Download Pet Tracker for Windows](https://github.com/0Fox2Give/PetTracker/releases/download/updates/PetTracker.Desktop-win-stable-Setup.exe)**
 
-Public beta · Windows x64 · Version 0.1.56
+Public beta · Windows x64 · Version 0.1.57
 
 **Open source under GPLv3.** The application, capture worker, updater, tests and build scripts are here. [Build from source](docs/BUILDING.md) · [License](LICENSE)
 
 [Setup and troubleshooting](SUPPORT.md) · [What's new](CHANGELOG.md) · [Report a problem](https://github.com/0Fox2Give/PetTracker/issues/new?template=bug_report.md)
 
-## New in 0.1.56
+## New in 0.1.57
+
+- **Merchant status stays visible.** Settings → Tracking now shows whether shop
+  stock was received even after your collection has synced.
+- **More useful support reports.** Reports include collection sync and merchant
+  stock counts, without your pet list, character names or packet data.
+
+This update helps diagnose missing merchant recommendations. It does not fix
+the reports still under investigation.
+
+## Farming tools from 0.1.56
 
 - **Pet details and maps in one window.** Open Find a pet, select a pet, then switch between **Details** and **Map**. Both use the same search and filters. Verteron and Altgard maps work offline, with pan, zoom and spawn markers.
 - **Session totals.** **This session** shows observed soul gains and pets ranked up. Reset it without changing your collection.
@@ -55,7 +65,7 @@ If something looks wrong, [report it here](https://github.com/0Fox2Give/PetTrack
 
 - Built-in map locations use approximate calibration and still need in-game alignment checks. They do not distinguish separate floors.
 - Some first unlocks can remain on **Rank increase pending**. Relogging with the tracker running reloads the collection.
-- Merchant recommendations disappearing after a purchase, and some empty merchant lists, still need confirmation after the recent fixes.
+- Some merchant lists remain empty or disappear after a purchase. These reports are still under investigation; 0.1.57 adds diagnostics.
 - The Linux client is experimental. Game capture under Wine/Proton and overlay placement on KDE/Wayland still need live testing.
 
 The capture changes have been tested in game, but they don't guarantee that every missing soul or sync issue is resolved. If totals pause again, include a support report from **Settings → Help** with your bug report.

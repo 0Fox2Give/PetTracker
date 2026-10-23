@@ -215,5 +215,40 @@ static class BlackMarketChecks
             Market = null,
             CollectionSynced = false
         }, when).Count == 0, "An older worker without optional market fields remains compatible and silent");
+
+        // Reproduce the reported collection/offer state using the supported fixture
+        // layout. This does not establish what stock bytes the reporter received.
+        var dranaProfile = new Profile { Pets = Catalog.Create() };
+        var drana = dranaProfile.Pets[1160];
+        drana.Level = 1;
+        drana.LevelVerified = true;
+        drana.ProgressNeedsSync = false;
+        drana.Souls = 5;
+        drana.Goal = 25;
+        var dranaBody = pets.ToArray();
+        BinaryPrimitives.WriteInt32LittleEndian(dranaBody.AsSpan(6), 534760186);
+        dranaBody[18] = 2;
+        BinaryPrimitives.WriteInt64LittleEndian(dranaBody.AsSpan(20), 100000);
+        BinaryPrimitives.WriteInt64LittleEndian(dranaBody.AsSpan(28), 70000);
+        var reportTime = DateTimeOffset.UtcNow;
+        BinaryPrimitives.WriteInt64LittleEndian(dranaBody.AsSpan(345), reportTime.AddMinutes(30).ToUnixTimeMilliseconds());
+        var dranaStock = BlackMarket.Decode(0x91, 0x56, dranaBody, reportTime)!;
+        check(BlackMarket.Watchlist("Drana Contaminant", dranaProfile).Single().Pet.Id == 1160, "Reported Drana Contaminant at Rank 1 is eligible for the watchlist");
+        foreach (var mode in new[] { "Recent", "Nearby" })
+        {
+            var dranaView = view with { Profile = dranaProfile, Market = new[] { dranaStock }, Settings = new() { TrackerMode = mode } };
+            var selected = new MerchantDisplay().Select(dranaView, reportTime);
+            check(selected.Count == 1 && selected[0].Offer.PetId == 1160 && selected[0].Offer.Price == 70000, "Supported Drana offer reaches " + mode + " even with no mob activity");
+        }
+
+        var reportView = view with { Profile = dranaProfile, Market = new[] { dranaStock } };
+        using var merchantReport = JsonDocument.Parse(SupportReport.Create(reportView, "test-version"));
+        var merchant = merchantReport.RootElement.GetProperty("Merchant");
+        check(merchantReport.RootElement.GetProperty("CollectionSynced").GetBoolean() && merchant.GetProperty("Enabled").GetBoolean() && merchant.GetProperty("FreshStockTabs").GetInt32() == 1 && merchant.GetProperty("MappedOffers").GetInt32() == 10 && merchant.GetProperty("EligiblePets").GetInt32() == 1, "Support report distinguishes received stock from eligible recommendations");
+        check(merchant.EnumerateObject().Select(p => p.Name).Order().SequenceEqual(new[] { "EligiblePets", "Enabled", "FreshStockTabs", "MappedOffers" }), "Merchant diagnostics contain only allowlisted counts and the setting, without stock or collection details");
+        using var noStockReport = JsonDocument.Parse(SupportReport.Create(reportView with { Market = Array.Empty<MarketStock>() }, "test-version"));
+        check(noStockReport.RootElement.GetProperty("Merchant").GetProperty("FreshStockTabs").GetInt32() == 0 && noStockReport.RootElement.GetProperty("Merchant").GetProperty("EligiblePets").GetInt32() == 0, "Support report identifies missing stock even with a synced collection");
+        using var noMatchReport = JsonDocument.Parse(SupportReport.Create(reportView with { Market = new[] { dranaStock with { Offers = Array.Empty<MarketOffer>() } } }, "test-version"));
+        check(noMatchReport.RootElement.GetProperty("Merchant").GetProperty("FreshStockTabs").GetInt32() == 1 && noMatchReport.RootElement.GetProperty("Merchant").GetProperty("EligiblePets").GetInt32() == 0, "Support report distinguishes decoded stock with no matches from missing stock");
     }
 }

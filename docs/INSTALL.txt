@@ -26,6 +26,11 @@ No purchase is made for you. Confirm the stock in game before buying.
 Offers hide after two minutes, at shop refresh, or when tracking loses continuity.
 Settings > Tracking > Black Cloud Merchant controls the shopping list. It replaces the
 desktop merchant notification; rank notification settings are separate.
+Merchant status remains visible after collection sync. It tells you whether shop
+stock was received and how many pets qualify. If a pet is missing, include a
+support report from Settings > Help with the pet name, region and shop tab.
+Some empty or disappearing lists remain under investigation; 0.1.57 adds
+diagnostics and does not claim to fix those reports.
 
 PET TRACKER
 Drag the header to move the tracker. Its gear opens Settings. Use the Windows

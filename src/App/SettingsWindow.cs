@@ -719,7 +719,6 @@ public sealed class SettingsWindow : Window
         state.Text = view?.Status ?? "Connecting to capture…";
         syncHelp.Text = view is { Devices: > 0, CollectionSynced: false } ? TrackingGuidance.Sync : "Collection syncs automatically at character login.";
         merchantStatus.Text = TrackingGuidance.Merchant(view, DateTimeOffset.UtcNow);
-        merchantStatus.Visibility = view?.CollectionSynced == true && view.Ready ? Visibility.Collapsed : Visibility.Visible;
         connection.Text = ConnectionAssessment(view, host.ConnectionError);
         hotkeyStatus.Text = host.HotkeyError;
         hotkeyStatus.Visibility = host.HotkeyError.Length == 0 ? Visibility.Collapsed : Visibility.Visible;

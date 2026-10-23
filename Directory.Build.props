@@ -6,7 +6,7 @@
     <Company>Pet Tracker</Company>
     <Product>Pet Tracker</Product>
     <Authors>Pet Tracker</Authors>
-    <Version>0.1.56</Version>
+    <Version>0.1.57</Version>
     <RuntimeFrameworkVersion>10.0.12</RuntimeFrameworkVersion>
     <NuGetAudit>true</NuGetAudit>
     <NuGetAuditMode>all</NuGetAuditMode>
