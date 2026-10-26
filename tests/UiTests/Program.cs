@@ -568,8 +568,8 @@ public static class UiChecks
 
         finderSearch.Text = "rabbit";
         Pump(30);
-        Check(Children(finder).OfType<Button>().Any(b => Equals(b.Content, "Official source")), "Shop pet has an official acquisition source");
-        Check(!Children(finder).OfType<TextBlock>().Any(t => t.Text == "Farming maps" || t.Text == "Linked mobs"), "Shop pet omits empty farming and mob panels");
+        Check(Children(finder).OfType<ListBox>().Single().Items.Count == 0, "Cash-shop aliases produce no farming results");
+        Check(!Children(finder).OfType<TextBlock>().Any(t => t.Text == "White Bunny" || t.Text.Contains("souls to unlock")), "Paid pet search clears misleading unlock progress");
         Program.Save(finder, Path.Combine(folder, "finder-shop.png"), 860, 640);
         finderSearch.Text = "twitch";
         Pump(30);
@@ -593,7 +593,7 @@ public static class UiChecks
         Program.Save(finder, Path.Combine(folder, "finder-dungeon.png"), 860, 640);
         finder.SelectPet(1363);
         Pump(30);
-        Check(Children(finder).OfType<Image>().Any(i => i.Source != null) && Children(finder).OfType<Button>().Any(b => Equals(b.Content, "Official source")), "New shop pet has artwork and its official notice");
+        Check(Children(finder).OfType<ListBox>().Single().SelectedItem == null && !Children(finder).OfType<Button>().Any(b => Equals(b.Content, "Official source")), "Direct selection cannot reopen an excluded cash-shop pet");
         Program.Save(finder, Path.Combine(folder, "finder-halloween.png"), 860, 640);
         finderSearch.Text = "Pet #";
         Pump(30);
@@ -644,6 +644,7 @@ public static class UiChecks
         Pump(30);
         Check(finderList.Items.Count == 1 && Children(finder).OfType<TextBlock>().Any(t => t.Text.Contains("80,000 Kina")), "Recent market view renders the captured price and matching collection rank");
         Check(overlay.DisplayedMerchantCount == 1 && Children(overlay).OfType<TextBlock>().Any(t => t.Text.Contains("80,000 Kina")), "Overlay shows the needed merchant pet and observed price");
+        Check(!Children(overlay).OfType<TextBlock>().Any(t => t.Text == "Souls received"), "Unbought merchant offers have no completion badge");
         Program.Save(overlay, Path.Combine(folder, "merchant-overlay.png"), 340, 360);
         var merchantGrid = Children(overlay).OfType<Grid>().Single(g => System.Windows.Automation.AutomationProperties.GetAutomationId(g) == "MerchantPet-1196");
         host.Preview(marketView);
@@ -727,11 +728,17 @@ public static class UiChecks
             completedOverlay.Refresh();
             Check(completedOverlay.DisplayedMerchantCount == 1 && completedOverlay.DisplayedPetCount == 0, "Nearby retains only the rewarded offer when shop stock clears");
             Check(Children(completedOverlay).OfType<TextBlock>().Any(t => t.Text == "Rank 1 · 15/25 souls") && !Children(completedOverlay).OfType<TextBlock>().Any(t => t.Text.Contains("clears after") || t.Text.EndsWith(" Kina")), "Completed merchant row shows updated souls without countdown chatter or another purchase price");
+            Check(Children(completedOverlay).OfType<TextBlock>().Any(t => t.Text == "Souls received"), "Completed merchant row explicitly acknowledges the received souls");
             Check(completionHost.PetOverlayPreferences.TrackerMode == "Nearby", "Merchant feedback never switches the selected tracker mode");
             var retained = Children(completedOverlay).OfType<Grid>().Single(g => System.Windows.Automation.AutomationProperties.GetAutomationId(g) == "MerchantPet-1145");
             completedOverlay.Refresh();
             Check(ReferenceEquals(retained, Children(completedOverlay).OfType<Grid>().Single(g => System.Windows.Automation.AutomationProperties.GetAutomationId(g) == "MerchantPet-1145")), "Repeated completion polling does not recreate the merchant row");
-            Program.Save(completedOverlay, Path.Combine(folder, "merchant-updated-nearby.png"), 300, 230);
+            completedOverlay.Width = 340;
+            Pump(20);
+            Program.Save(completedOverlay, Path.Combine(folder, "merchant-updated-nearby.png"), 340, 230);
+            completedOverlay.Width = 300;
+            Pump(20);
+            Program.Save(completedOverlay, Path.Combine(folder, "merchant-updated-compact.png"), 300, 230);
             clock = clock.AddSeconds(19);
             completedOverlay.UpdateStatus();
             Check(completedOverlay.DisplayedMerchantCount == 1, "Merchant feedback remains visible before its twenty-second deadline");

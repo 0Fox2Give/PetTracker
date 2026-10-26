@@ -4,6 +4,7 @@ static class PetFinderChecks
 {
     public static void Run(Action<bool, string> check)
     {
+        PaidPetChecks.Run(check);
         using var worldStream = typeof(PetFinderChecks).Assembly.GetManifestResourceStream("CatalogWorldSources.json")!;
         using var worldDoc = JsonDocument.Parse(worldStream);
         var world = worldDoc.RootElement.EnumerateArray().ToArray();
@@ -11,14 +12,14 @@ static class PetFinderChecks
         check(world.All(r => PetFinder.Directory.Rows.Single(p => p.PetId == r.GetProperty("PetId").GetInt32()).Maps.Any(m => m.Region == r.GetProperty("Region").GetString() && m.Url.EndsWith("item:" + r.GetProperty("ItemId").GetInt32()))), "Every audited soul source has a matching region and exact soul-item map filter");
         using var idsStream = typeof(PetFinderChecks).Assembly.GetManifestResourceStream("CatalogDiscoveryIds.json")!;
         var expectedIds = JsonSerializer.Deserialize<int[]>(idsStream)!;
-        check(PetFinder.Search("").Select(p => p.Pet.Id).Order().SequenceEqual(expectedIds), "Discovery covers the entire audited 208-pet reference catalog without promoting historical entries");
+        check(PetFinder.Search("").Select(p => p.Pet.Id).Order().SequenceEqual(expectedIds.Except(PaidPetChecks.Ids)), "Discovery covers audited gameplay pets without paid-only or historical entries");
         var spider = PetFinder.Entries.Single(p => p.Pet.Id == 1021);
         check(spider.Acquisition?.Instructions.Contains("Pet Soul Chest: Fera") == true && spider.Creatures.Count == 0 && spider.AvailableMaps.Count == 0, "Aberrant Odyle Spider has a chest route without inventing a world spawn");
         check(PetFinder.Entries.Single(p => p.Pet.Id == 1025).Creatures.Contains("Marsh Odyle Spider"), "The separate Mutated Aberrant Odyle Spider retains its actual mob sources");
         check(PetFinder.Search("Krao Cave").Any(p => p.Pet.Id == 1077) && PetFinder.Search("Fire Temple").Any(p => p.Pet.Id == 1192), "Dungeon names find Harcon and Silver Blade Rotan");
         check(!PetFinder.Search("Gluttonous Egetis").Any() && !PetFinder.Search("Crimson Blizzard Renulf").Any(), "Closed-region mob names do not appear as current farming sources");
         check(new CreaturePetMappings("", Catalog.Create()).Find(2101278)?.PetId == 1103, "Discovery filtering preserves historical decoder associations");
-        check(PetFinder.Search("Little Ghost").Single().Pet.Id == 1343 && PetFinder.Search("Pumpkin Carriage").Single().Pet.Id == 1363, "October shop additions use their individually sourced pet IDs");
+        check(new[] { 1343, 1363 }.All(id => PetAcquisitions.Find(id)?.RealMoneyOnly == true), "October cash-shop additions remain classified by their individually sourced pet IDs");
         check(PetAcquisitions.Find(1112)!.Instructions.Contains("500 Centuryroot Tokens"), "Wandering Merchant Lugi has its festival shop route");
         check(PetAcquisitions.Find(1021)!.SourceLabel == "Source details" && PetAcquisitions.Find(1343)!.SourceLabel == "Official source", "Community references are distinguished from official shop notices");
         check(PetFinder.AllowedSourceUrl("https://corpus.gg/games/aion-2/collections/aberrant-odyle-spider") && !PetFinder.AllowedSourceUrl("https://corpus.gg.evil.test/games/aion-2/collections/a") && !PetFinder.AllowedSourceUrl("https://user@corpus.gg/games/aion-2/collections/a") && !PetFinder.AllowedSourceUrl("https://corpus.gg/settings") && !PetFinder.AllowedSourceUrl("https://corpus.gg:444/games/aion-2/collections/a"), "New reference host accepts only HTTPS collection pages and rejects spoofed URLs");
@@ -32,7 +33,7 @@ static class PetFinderChecks
         check(!PetFinder.Entries.Any(p => p.Pet.Name.StartsWith("Pet #") || p.Pet.CatalogName == "TestDummy"), "Finder excludes unresolved and internal catalog records");
         check(Catalog.Entries.Any(p => p.Id == 1339) && Catalog.Entries.Any(p => p.Id == 9999), "Finder filtering preserves decoder catalog IDs");
         check(PetFinder.Search("twitch").Single().Pet.Id == 1299 && PetFinder.Search("2").Any(p => p.Pet.Id == 1299), "Twitch and numeric campaign aliases resolve Two");
-        check(PetFinder.Search("rabbit").Any(p => p.Pet.Id == 1240) && PetFinder.Search("hamster").Any(p => p.Pet.Id == 1278), "Shop pets resolve familiar animal names");
+        check(!PetFinder.Search("rabbit").Any(p => p.Pet.Id == 1240) && !PetFinder.Search("hamster").Any(p => p.Pet.Id == 1278), "Shop aliases do not reintroduce paid-only pets");
         check(PetAcquisitions.Entries.All(a => Catalog.Entries.Any(p => p.Id == a.PetId) && PetFinder.AllowedSourceUrl(a.SourceUrl)) && PetAcquisitions.Entries.Select(a => a.PetId).Distinct().Count() == PetAcquisitions.Entries.Count, "Acquisition records have unique known pet IDs and approved sources");
         check(!PetFinder.AllowedSourceUrl("https://lounge.plaync.com.evil.test/feed/82965") && !PetFinder.AllowedSourceUrl("https://user@lounge.plaync.com/feed/82965") && !PetFinder.AllowedSourceUrl("https://lounge.plaync.com/settings"), "Official source validation rejects spoofed hosts and unrelated routes");
         check(PetAcquisitions.Find(1299)!.Availability(new(2026, 10, 11)).Contains("has passed") && !PetAcquisitions.Find(1240)!.Availability(new(2026, 10, 11)).Contains("has passed"), "Campaign expiry differs from ongoing shop offer");

@@ -28,6 +28,7 @@ public static class BlackMarket
     // Include documented dungeon rewards as well as chest/merchant-only pets.
     // Missing source coverage must never be treated as a shop-only pet.
     public static bool WatchPet(PetSearchResult pet) =>
+        !PetAcquisitions.IsRealMoneyOnly(pet.Pet.Id) &&
         pet.Location?.SoulSources is { } sources &&
         (sources.Count == 0 || pet.Acquisition?.Kind == "Dungeon reward") &&
         pet.Acquisition?.Aliases.Contains("Black Cloud Merchants") == true &&

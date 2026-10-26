@@ -1,6 +1,7 @@
 [
   {
     "PetId": 1240,
+    "RealMoneyOnly": true,
     "Kind": "Cash shop",
     "Instructions": "In-game Menu > Shop > Atelier > Weapons/Wings/Pets > Products. Claim the purchased pet from Shop Storage.",
     "Window": "Announced offer: September 30 through October 28, 2026, before scheduled maintenance (PDT). Price and current availability are shown in your shop.",
@@ -15,6 +16,7 @@
   },
   {
     "PetId": 1278,
+    "RealMoneyOnly": true,
     "Kind": "Cash shop",
     "Instructions": "In-game Menu > Shop > Atelier > Weapons/Wings/Pets > Products. Claim the purchased pet from Shop Storage.",
     "Window": "Announced offer: September 30 through October 28, 2026, before scheduled maintenance (PDT). Price and current availability are shown in your shop.",
@@ -44,6 +46,7 @@
   },
   {
     "PetId": 1001,
+    "RealMoneyOnly": true,
     "Kind": "Ultimate Founder's Pack",
     "Instructions": "Black Dragon is included in the Ultimate Founder's Pack. Standard and Deluxe packs do not include this pet. Check your pack entitlement and the official notice.",
     "Window": "Founder entitlement; this listing does not confirm a current purchase offer.",
@@ -68,11 +71,12 @@
   },
   {
     "PetId": 1111,
+    "RealMoneyOnly": true,
     "Kind": "Daeva Pass shop",
-    "Instructions": "Swift Lugi is offered for 10,000 Daeva Pass Shop Coins: Season 1 in the Pass Shop.",
+    "Instructions": "Swift Lugi is offered for 10,000 Daeva Pass Shop Coins: Season 1 in the Pass Shop. The official coin rewards table lists these coins under Daeva Pass (Premium) rewards.",
     "Window": "Season 1 offer and shop coins expire December 15, 2026, before scheduled maintenance (PST). Check the in-game shop before saving coins.",
     "SourceUrl": "https://lounge.plaync.com/feed/82940?country=US&locale=en-US",
-    "CheckedOn": "2026-10-14",
+    "CheckedOn": "2026-10-26",
     "Aliases": [
       "daeva pass",
       "pass shop",
@@ -2929,6 +2933,7 @@
   },
   {
     "PetId": 1343,
+    "RealMoneyOnly": true,
     "Kind": "Cash shop",
     "Instructions": "In-game Menu > Shop > Atelier > Weapons/Wings/Pets > Products. Claim the purchased pet from Shop Storage.",
     "Window": "Announced October 14 to November 24, 2026, before scheduled maintenance (PST at the end). Check your shop for local pricing and availability.",
@@ -2943,6 +2948,7 @@
   },
   {
     "PetId": 1363,
+    "RealMoneyOnly": true,
     "Kind": "Cash shop",
     "Instructions": "In-game Menu > Shop > Atelier > Weapons/Wings/Pets > Products. Claim the purchased pet from Shop Storage.",
     "Window": "Announced October 14 to November 24, 2026, before scheduled maintenance (PST at the end). Check your shop for local pricing and availability.",

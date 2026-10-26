@@ -2,6 +2,7 @@ using System.Diagnostics;
 using System.ComponentModel;
 using System.Windows.Markup;
 using System.Windows.Controls.Primitives;
+using System.Windows.Input;
 
 namespace PetTracker;
 
@@ -71,7 +72,7 @@ public sealed class PetFinderWindow : Window
                 hint += "\n" + remaining;
             Brush brush = pet?.Max == true ? Ui.Muted : Ui.Ink;
             string left = collectionSynced && PetCollection.SoulsRemaining(pet) is int needed ? $"{needed} soul{(needed == 1 ? "" : "s")} to {(pet!.Level == 0 ? "unlock" : "Rank " + (pet.Level + 1))}" : "";
-            string farmingGoal = pet == null ? "No farming goal" : FarmingGoals.Describe(pet, collectionSynced);
+            string farmingGoal = pet?.TargetRank is > 0 ? FarmingGoals.Describe(pet, collectionSynced) : "";
             ProgressValue = pet?.Max == true ? 100 : pet?.CurrentSouls is int souls && pet.Goal is > 0 ? Math.Clamp(100.0 * souls / pet.Goal.Value, 0, 100) : 0;
             ProgressVisibility = pet?.Max == true || pet?.CurrentSouls != null && pet.Goal is > 0 ? Visibility.Visible : Visibility.Collapsed;
             if ((Rank, Progress, Hint, ProgressBrush, Remaining, FarmingGoal) == (rank, progress, hint, brush, left, farmingGoal))
@@ -137,16 +138,37 @@ public sealed class PetFinderWindow : Window
         System.Windows.Automation.AutomationProperties.SetAutomationId(filtersPopup, "CompactFiltersPopup");
         System.Windows.Automation.AutomationProperties.SetAutomationId(filtersButton, "CompactFilters");
         var toolbar = new Grid { Margin = new Thickness(0, 0, 0, 10) };
-        toolbar.ColumnDefinitions.Add(new() { Width = new GridLength(1, GridUnitType.Star), MaxWidth = 400 });
+        toolbar.ColumnDefinitions.Add(new() { Width = new GridLength(1, GridUnitType.Star) });
         toolbar.ColumnDefinitions.Add(new() { Width = new GridLength(212) });
         toolbar.ColumnDefinitions.Add(new() { Width = GridLength.Auto });
         search.Tag = "Search pets or mobs…";
         search.Height = 32;
         search.VerticalContentAlignment = VerticalAlignment.Center;
-        search.Padding = new Thickness(8, 2, 8, 2);
-        search.Margin = new Thickness(0, 0, 12, 0);
+        search.Padding = new Thickness(10, 2, 32, 2);
+        search.ToolTip = "Search by pet or mob name. Ctrl+F to search; Esc to clear the search.";
         System.Windows.Automation.AutomationProperties.SetAutomationId(search, "PetFinderSearch");
-        toolbar.Children.Add(search);
+        var searchBox = new Grid { Margin = new Thickness(0, 0, 12, 0) };
+        searchBox.Children.Add(search);
+        var clearSearch = Ui.Button("\uE8BB", () => { search.Clear(); search.Focus(); });
+        clearSearch.FontFamily = new FontFamily("Segoe MDL2 Assets");
+        clearSearch.FontSize = 10;
+        clearSearch.Style = (Style)FindResource("PetTrackerChromeButton");
+        clearSearch.Width = clearSearch.Height = 26;
+        clearSearch.Margin = new Thickness(0, 0, 3, 0);
+        clearSearch.HorizontalAlignment = HorizontalAlignment.Right;
+        clearSearch.VerticalAlignment = VerticalAlignment.Center;
+        clearSearch.Visibility = Visibility.Collapsed;
+        clearSearch.ToolTip = "Clear search";
+        System.Windows.Automation.AutomationProperties.SetAutomationId(clearSearch, "ClearPetSearch");
+        System.Windows.Automation.AutomationProperties.SetName(clearSearch, "Clear search");
+        searchBox.Children.Add(clearSearch);
+        toolbar.Children.Add(searchBox);
+        CommandBindings.Add(new CommandBinding(ApplicationCommands.Find, (_, e) => { search.Focus(); search.SelectAll(); e.Handled = true; }));
+        InputBindings.Add(new KeyBinding(ApplicationCommands.Find, Key.F, ModifierKeys.Control));
+        search.PreviewKeyDown += (_, e) =>
+        {
+            if (e.Key == Key.Escape && search.Text.Length > 0) { search.Clear(); e.Handled = true; }
+        };
         filter.Margin = new Thickness(0);
         filter.Height = 32;
         Grid.SetColumn(filter, 1);
@@ -230,11 +252,12 @@ public sealed class PetFinderWindow : Window
      <Grid.ColumnDefinitions><ColumnDefinition Width="42"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
      <Image Source="{Binding Portrait}" Width="34" Height="40" Stretch="Uniform" Margin="0,0,8,0"/>
      <StackPanel Grid.Column="1">
-     <TextBlock Text="{Binding Label}" FontSize="13" FontWeight="SemiBold" TextTrimming="CharacterEllipsis"/>
+     <TextBlock Text="{Binding Label}" FontSize="14" FontWeight="SemiBold" TextTrimming="CharacterEllipsis"/>
      <DockPanel Margin="0,6,0,0">
       <TextBlock DockPanel.Dock="Right" Text="{Binding Progress}" Foreground="{Binding ProgressBrush}" FontSize="10" FontWeight="SemiBold" VerticalAlignment="Center" Margin="6,0,0,0"/>
       <StackPanel Orientation="Horizontal"><TextBlock Text="{Binding Rank}" FontSize="10" Foreground="#99A3B1" VerticalAlignment="Center"/><local:PetFamilyBadge PetId="{Binding Result.Pet.Id}"/></StackPanel>
      </DockPanel>
+     <ProgressBar Value="{Binding ProgressValue, Mode=OneWay}" Visibility="{Binding ProgressVisibility}" Style="{DynamicResource FinderProgress}" Height="3" Margin="0,7,0,0" Focusable="False"/>
      <TextBlock Text="{Binding Remaining}" FontSize="10" Foreground="#91A4B5" Margin="0,5,0,0">
       <TextBlock.Style><Style TargetType="TextBlock"><Style.Triggers><Trigger Property="Text" Value=""><Setter Property="Visibility" Value="Collapsed"/></Trigger></Style.Triggers></Style></TextBlock.Style>
      </TextBlock>
@@ -287,7 +310,7 @@ public sealed class PetFinderWindow : Window
         };
         Grid.SetColumn(card, 1);
         body.Children.Add(card);
-        search.TextChanged += (s, e) => Search();
+        search.TextChanged += (s, e) => { clearSearch.Visibility = search.Text.Length > 0 ? Visibility.Visible : Visibility.Collapsed; Search(); };
         filter.SelectionChanged += (s, e) => Search();
         rankFilter.SelectionChanged += (s, e) => Search();
         regionFilter.SelectionChanged += (s, e) => Search();
@@ -342,7 +365,7 @@ public sealed class PetFinderWindow : Window
         overview.Refresh(profile);
         var totals = PetCollection.Summarize(PetFinder.Search("", profile), profile);
         string state = host.View?.CollectionSynced == true ? "Collection synced" : "Saved collection · log in with the tracker running to sync";
-        collectionStatus.Text = $"{state} · {totals.Maxed} maxed · {totals.Unknown} unknown rank";
+        collectionStatus.Text = $"{state} · {totals.Maxed} maxed" + (totals.Unknown > 0 ? $" · {totals.Unknown} unknown rank" : "");
         clearFilters.IsEnabled = search.Text.Length > 0 || filter.SelectedIndex != 0 || rankFilter.SelectedIndex != 0 || regionFilter.SelectedIndex != 0 || sort.SelectedIndex != 0 || overview.Family.Length > 0;
         int hiddenFilters = (rankFilter.SelectedIndex > 0 ? 1 : 0) + (regionFilter.SelectedIndex > 0 ? 1 : 0) + (sort.SelectedIndex > 0 ? 1 : 0) + (overview.Family.Length > 0 ? 1 : 0);
         compactFilters.Content = hiddenFilters == 0 ? "Filters" : $"Filters · {hiddenFilters}";
@@ -507,7 +530,16 @@ public sealed class PetFinderWindow : Window
         detail.Children.Clear();
         if (results.SelectedItem is not SearchRow selectedRow)
         {
-            detail.Children.Add(Ui.Text(filter.SelectedIndex == 2 ? "No recent matching shop offers. Open the Black Market in game while Pet Tracker is connected." : "No matching pets. Try another search or clear the filters.", 13, Ui.Muted));
+            var emptyHeading = Ui.Text("No matching pets", 20);
+            emptyHeading.FontWeight = FontWeights.SemiBold;
+            emptyHeading.Margin = new Thickness(0, 10, 0, 8);
+            detail.Children.Add(emptyHeading);
+            detail.Children.Add(Ui.Text(filter.SelectedIndex == 2 ? "No recent matching shop offers. Open the Black Market in game while Pet Tracker is connected." : "Try another name or clear your filters to see more pets.", 13, Ui.Muted));
+            var resetSearch = Ui.Button("Reset search and filters", ResetFilters);
+            resetSearch.HorizontalAlignment = HorizontalAlignment.Left;
+            resetSearch.Margin = new Thickness(0, 16, 0, 0);
+            System.Windows.Automation.AutomationProperties.SetAutomationId(resetSearch, "ResetEmptySearch");
+            detail.Children.Add(resetSearch);
             return;
         }
 
@@ -577,13 +609,23 @@ public sealed class PetFinderWindow : Window
         summary.Children.Add(pin);
         detail.Children.Add(summary);
         var goalRow = new StackPanel { Margin = new Thickness(0, 16, 0, 0) };
-        goalRow.Children.Add(Ui.Text("Farming goal", 11, Ui.Muted));
-        var goalChoice = new ComboBox { ItemsSource = new[] { "None", "Rank 1", "Rank 2", "Rank 3 / MAX" }, SelectedIndex = host.Tracker.Profile.Pets.GetValueOrDefault(id)?.TargetRank ?? 0, Width = 160, Height = 32, HorizontalAlignment = HorizontalAlignment.Left, IsEnabled = host.Tracker.Ready };
+        var goalControls = new DockPanel();
+        var goalLabel = Ui.Text("Farming goal", 12, Ui.Muted);
+        goalLabel.VerticalAlignment = VerticalAlignment.Center;
+        var goalChoice = new ComboBox { ItemsSource = new[] { "None", "Rank 1", "Rank 2", "Rank 3 / MAX" }, SelectedIndex = host.Tracker.Profile.Pets.GetValueOrDefault(id)?.TargetRank ?? 0, Width = 140, Height = 32, Margin = new Thickness(12, 0, 0, 0), IsEnabled = host.Tracker.Ready };
         System.Windows.Automation.AutomationProperties.SetAutomationId(goalChoice, "FarmingGoal");
         goalChoice.ToolTip = host.Tracker.Ready ? "Saved for this account. Goal alerts use your notification settings under Settings > Overlay." : "Connect your character to set a goal.";
         goalChoice.SelectionChanged += async (_, _) => await host.Change(new("farming-goal", PetId: id, TargetRank: goalChoice.SelectedIndex == 0 ? null : goalChoice.SelectedIndex));
-        goalRow.Children.Add(goalChoice);
+        DockPanel.SetDock(goalChoice, Dock.Right);
+        goalControls.Children.Add(goalChoice);
+        goalControls.Children.Add(goalLabel);
+        goalRow.Children.Add(goalControls);
         var goalStatus = Ui.Text("", 11, Ui.Muted);
+        var goalStatusStyle = new Style(typeof(TextBlock));
+        var emptyGoal = new Trigger { Property = TextBlock.TextProperty, Value = "" };
+        emptyGoal.Setters.Add(new Setter(VisibilityProperty, Visibility.Collapsed));
+        goalStatusStyle.Triggers.Add(emptyGoal);
+        goalStatus.Style = goalStatusStyle;
         goalStatus.Margin = new Thickness(0, 6, 0, 0);
         goalStatus.DataContext = selectedRow;
         goalStatus.SetBinding(TextBlock.TextProperty, new System.Windows.Data.Binding("FarmingGoal"));

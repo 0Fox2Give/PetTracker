@@ -8,6 +8,8 @@ public static class PetPins
     {
         if (petId is not int id || !Catalog.Entries.Any(p => p.Id == id))
             throw new InvalidDataException("Unknown pet.");
+        if (pinned && PetAcquisitions.IsRealMoneyOnly(id))
+            throw new InvalidOperationException("Paid-only pets cannot be pinned as farming targets.");
         var next = SettingsPatch.Apply(current, SettingsPatch.Fields());
         var pins = next.PinnedPetIds!;
         if (pinned && !pins.Contains(id))

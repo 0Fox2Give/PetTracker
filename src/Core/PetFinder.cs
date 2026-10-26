@@ -18,8 +18,10 @@ public sealed record PetSearchResult(CatalogEntry Pet, IReadOnlyList<string> Cre
     public IReadOnlyList<FarmingMap> AvailableMaps => Location?.Maps.Where(m => m.Global).ToArray() ?? Array.Empty<FarmingMap>();
 
     // Presentation gate only. Missing source coverage is not proof of unreleased
-    // content; keep the full decoder catalog and never suppress recorded progress.
-    public bool VisibleFor(Profile? profile) => AvailableMaps.Count > 0 || Acquisition != null || (profile?.Pets.TryGetValue(Pet.Id, out var progress) == true && (progress.Level > 0 || progress.CurrentSouls > 0));
+    // content. Keep decoder/progress records, but paid-only pets are not farming
+    // targets even when the selected character owns one.
+    public bool VisibleFor(Profile? profile) => !PetAcquisitions.IsRealMoneyOnly(Pet.Id) &&
+        (AvailableMaps.Count > 0 || Acquisition != null || (profile?.Pets.TryGetValue(Pet.Id, out var progress) == true && (progress.Level > 0 || progress.CurrentSouls > 0)));
 }
 
 public static class PetFinder

@@ -181,7 +181,7 @@ static class FarmingUiChecks
         check(Children(session).OfType<TextBlock>().Any(t => t.Text == "No soul rewards yet."), "Reset clears session rows");
         session.Close();
 
-        var finder = new PetFinderWindow(host, 1002);
+        var finder = new PetFinderWindow(host, 1002) { Width = 1000, Height = 740 };
         show(finder);
         pump(40);
         Control<TextBox>(finder, "PetFinderSearch").Text = "spirit";

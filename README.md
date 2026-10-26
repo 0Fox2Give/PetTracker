@@ -4,21 +4,25 @@ A small overlay for **AION 2** that shows your pet ranks and how many souls you 
 
 **[Download Pet Tracker for Windows](https://github.com/0Fox2Give/PetTracker/releases/download/updates/PetTracker.Desktop-win-stable-Setup.exe)**
 
-Public beta · Windows x64 · Version 0.1.57
+Public beta · Windows x64 · Version 0.1.59
 
 **Open source under GPLv3.** The application, capture worker, updater, tests and build scripts are here. [Build from source](docs/BUILDING.md) · [License](LICENSE)
 
 [Setup and troubleshooting](SUPPORT.md) · [What's new](CHANGELOG.md) · [Report a problem](https://github.com/0Fox2Give/PetTracker/issues/new?template=bug_report.md)
 
-## New in 0.1.57
+## New in 0.1.59
 
-- **Merchant status stays visible.** Settings → Tracking now shows whether shop
-  stock was received even after your collection has synced.
-- **More useful support reports.** Reports include collection sync and merchant
-  stock counts, without your pet list, character names or packet data.
+- **Clearer Windows interface.** Collection progress bars, a smaller goal picker,
+  clearer overlay icons and more consistent settings controls.
+- **Faster searching.** Ctrl+F selects the query. Escape or the clear button
+  clears it without changing your family, rank or region filters.
+- **Paid-only pets excluded.** Cash-shop and premium-only pets no longer appear
+  in farming lists, totals or recommendations. Saved ownership is preserved.
+- **Soul progress feedback.** Merchant recommendations briefly show **Souls
+  received** after observed progress. This is not a purchase receipt.
 
-This update helps diagnose missing merchant recommendations. It does not fix
-the reports still under investigation.
+Missing merchant lists and first-unlock recognition remain under investigation.
+Please use the [feedback board](https://jukefoxzero.com/feedback) for help.
 
 ## Farming tools from 0.1.56
 

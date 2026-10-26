@@ -1,5 +1,22 @@
 # Release notes
 
+## 0.1.59 — October 26, 2026
+
+- Refine the Windows interface with clearer overlay icons, keyboard-focus
+  feedback, consistent controls and a more readable settings sidebar.
+- Add collection-row progress bars, a compact farming-goal picker, and clearer
+  empty-search recovery. Ctrl+F selects the search; Escape or its clear button
+  clears the query without changing collection filters.
+- Exclude paid-only pets from Find a pet, collection totals, merchant
+  recommendations and overlay farming rows, including old pinned targets.
+  Saved ownership and collection records are preserved.
+
+- Added a **Souls received** badge to the Windows merchant overlay when a
+  recommended pet receives soul progress. Its current rank and soul total stay
+  visible for 20 seconds before the row leaves the shopping list.
+- This confirms observed soul progress, not a purchase receipt. Missing merchant
+  recommendations remain under investigation.
+
 ## 0.1.57 — October 23, 2026
 
 - Keep merchant status visible in Settings → Tracking after collection sync,

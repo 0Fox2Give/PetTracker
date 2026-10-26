@@ -174,9 +174,9 @@ public sealed class SettingsWindow : Window
 
         var tracker = Page("Tracking");
         var pets = Group(tracker, "Pet list");
-        Choice(pets, "Tracker mode", new[] { "Recent", "Nearby" }, host.PetOverlayPreferences.TrackerMode, v => Queue(nameof(AppSettings.TrackerMode), v));
-        Choice(pets, "Maximum shown pets", new[] { 3, 5, 8, 10 }, host.PetOverlayPreferences.RowLimit, v => Queue(nameof(AppSettings.RowLimit), v));
-        var pins = Choice(pets, "Maximum pinned pets", new[] { 1, 2, 3, 4, 5 }, host.PetOverlayPreferences.PinLimit, v => Queue(nameof(AppSettings.PinLimit), v));
+        Choice(pets, "Tracker mode", new[] { "Recent", "Nearby" }, host.PetOverlayPreferences.TrackerMode, v => Queue(nameof(AppSettings.TrackerMode), v), "Overlay view");
+        Choice(pets, "Maximum shown pets", new[] { 3, 5, 8, 10 }, host.PetOverlayPreferences.RowLimit, v => Queue(nameof(AppSettings.RowLimit), v), "Pets shown");
+        var pins = Choice(pets, "Maximum pinned pets", new[] { 1, 2, 3, 4, 5 }, host.PetOverlayPreferences.PinLimit, v => Queue(nameof(AppSettings.PinLimit), v), "Pin limit");
         pins.ToolTip = "Pin pets in Find a pet or right-click a tracker row. Pins keep their order. Lowering this limit keeps existing pins; the row limit grows when needed to leave room for activity.";
         Check(pets, "Hide maxed pets", nameof(AppSettings.HideMaxed));
         var merchant = Group(tracker, "Black Cloud Merchant");
@@ -584,11 +584,12 @@ public sealed class SettingsWindow : Window
         bindings.Add(options => checkbox.IsChecked = (bool)property.GetValue(options)!);
     }
 
-    ComboBox Choice<T>(Panel p, string label, T[] choices, T selected, Action<T> change)
+    ComboBox Choice<T>(Panel p, string label, T[] choices, T selected, Action<T> change, string? caption = null)
     {
         var combo = new ComboBox { ItemsSource = choices, SelectedItem = selected };
         System.Windows.Automation.AutomationProperties.SetAutomationId(combo, label);
-        SettingRow(p, label, combo);
+        System.Windows.Automation.AutomationProperties.SetName(combo, caption ?? label);
+        SettingRow(p, caption ?? label, combo);
         combo.SelectionChanged += (s, e) =>
         {
             if (!loading && combo.SelectedItem is T value)
@@ -691,9 +692,13 @@ public sealed class SettingsWindow : Window
         foreach (var page in pages)
             page.Value.Visibility = page.Key == name ? Visibility.Visible : Visibility.Collapsed;
         foreach (var button in navigation)
-            button.Value.Background = button.Key == name ? new SolidColorBrush(Color.FromRgb(40, 50, 66)) : Brushes.Transparent;
-        foreach (var button in navigation)
-            button.Value.Foreground = button.Key == name ? Ui.Ink : Ui.Muted;
+        {
+            bool active = button.Key == name;
+            button.Value.Background = active ? new SolidColorBrush(Color.FromRgb(18, 44, 54)) : Brushes.Transparent;
+            button.Value.BorderBrush = active ? new SolidColorBrush(Color.FromRgb(65, 159, 181)) : Brushes.Transparent;
+            button.Value.Foreground = active ? new SolidColorBrush(Color.FromRgb(156, 222, 236)) : Ui.Muted;
+            button.Value.FontWeight = active ? FontWeights.SemiBold : FontWeights.Normal;
+        }
         reset!.Visibility = name is "Tracking" or "Overlay" ? Visibility.Visible : Visibility.Collapsed;
     }
 

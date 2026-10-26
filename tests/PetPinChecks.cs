@@ -5,7 +5,7 @@ static class PetPinChecks
 {
     public static void Run(Action<bool, string> check, string root)
     {
-        var ids = Catalog.Entries.Take(6).Select(p => p.Id).ToArray();
+        var ids = PetFinder.Search("").Take(6).Select(p => p.Pet.Id).ToArray();
         var legacy = JsonSerializer.Deserialize<AppSettings>($"{{\"PinnedPetId\":{ids[0]},\"RowLimit\":3}}")!;
         legacy.Normalize();
         legacy.Normalize();

@@ -16,9 +16,10 @@ public class AppSettings
     public List<int>? PinnedPetIds { get; set; }
     public int PinLimit { get; set; } = 3;
 
-    public IReadOnlyList<int> Pins() => PinnedPetIds ?? (PinnedPetId is int id ? new List<int> { id } : new List<int>());
+    public IReadOnlyList<int> Pins() => (PinnedPetIds ?? (PinnedPetId is int id ? new List<int> { id } : new List<int>()))
+        .Where(id => !PetAcquisitions.IsRealMoneyOnly(id)).ToArray();
     public bool IsPinned(int? id) => id is int pet && Pins().Contains(pet);
-    public bool CanPin(int id) => IsPinned(id) || Pins().Count < PinLimit;
+    public bool CanPin(int id) => !PetAcquisitions.IsRealMoneyOnly(id) && (IsPinned(id) || Pins().Count < PinLimit);
     void NormalizePins()
     {
         PinLimit = PinLimit is >= 1 and <= 5 ? PinLimit : 3;

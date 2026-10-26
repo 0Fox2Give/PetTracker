@@ -97,15 +97,18 @@ public sealed class PetTrackerOverlay : Window
             var button = new Button
             {
                 Style = (Style)FindResource("PetTrackerChromeButton"),
-                Width = 22,
-                Height = 22,
+                Width = 26,
+                Height = 26,
                 Content = glyph,
+                FontFamily = new FontFamily("Segoe MDL2 Assets"),
+                FontSize = 12,
                 ToolTip = new ToolTip
                 {
                     Style = (Style)FindResource("ArcanaToolTipStyle"),
                     Content = tip
                 }
             };
+            System.Windows.Automation.AutomationProperties.SetName(button, tip);
             button.Click += (s, e) =>
             {
                 e.Handled = true;
@@ -114,9 +117,9 @@ public sealed class PetTrackerOverlay : Window
             return button;
         }
 
-        controls.Children.Add(Action("\u2315", "Find a pet or mob", () => host.OpenPetFinder()));
-        controls.Children.Add(Action("\u2699", "Tracker settings", host.OpenPetOverlaySettings));
-        controls.Children.Add(Action("\u00D7", "Hide pet tracker", () => host.SetPetOverlayVisible(false)));
+        controls.Children.Add(Action("\uE721", "Find a pet or mob", () => host.OpenPetFinder()));
+        controls.Children.Add(Action("\uE713", "Tracker settings", host.OpenPetOverlaySettings));
+        controls.Children.Add(Action("\uE8BB", "Hide pet tracker", () => host.SetPetOverlayVisible(false)));
         hideMax = new CheckBox
         {
             Content = "Hide maxed",
@@ -409,7 +412,23 @@ public sealed class PetTrackerOverlay : Window
             DockPanel.SetDock(price, Dock.Right);
             meta.Children.Add(price);
             meta.Children.Add(new TextBlock { Text = offer.Stock.TabName, Foreground = Ui.Muted, FontSize = 10 });
-            if (!offer.Updated)
+            if (offer.Updated)
+                text.Children.Add(new Border
+                {
+                    HorizontalAlignment = HorizontalAlignment.Left,
+                    Margin = new Thickness(0, 4, 0, 0),
+                    Padding = new Thickness(6, 2, 6, 2),
+                    CornerRadius = new CornerRadius(3),
+                    Background = new SolidColorBrush(Color.FromRgb(24, 49, 42)),
+                    Child = new TextBlock
+                    {
+                        Text = "Souls received",
+                        Foreground = new SolidColorBrush(Color.FromRgb(157, 223, 193)),
+                        FontSize = 10,
+                        FontWeight = FontWeights.SemiBold
+                    }
+                });
+            else
                 text.Children.Add(meta);
             grid.ToolTip = TrackingGuidance.Remaining(pet) + "\n" + (offer.Updated ? "Soul progress received after this offer was shown. This entry will leave the shopping list shortly." : "Confirm price and availability in game before purchasing.");
             System.Windows.Automation.AutomationProperties.SetAutomationId(grid, "MerchantPet-" + id);

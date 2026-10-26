@@ -172,7 +172,7 @@ static class NearbyChecks
         oldSettings.Normalize();
         check(oldSettings.NearbyStaleSeconds == 120 && new AppSettings().NearbyStaleSeconds == 60, "Existing saved timeout is preserved while new installations use sixty seconds");
         var orderedProfile = new Profile { Pets = Catalog.Create() };
-        var orderedIds = orderedProfile.Pets.Keys.Take(6).ToArray();
+        var orderedIds = PetFinder.Search("", orderedProfile).Take(6).Select(p => p.Pet.Id).ToArray();
         foreach (int id in orderedIds)
         {
             orderedProfile.Pets[id].Level = 3;
